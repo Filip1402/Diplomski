@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.17)  20 APR 2025 11:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.17)  20 APR 2025 21:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -673,40 +673,43 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \g__lipsum_par_int=\count449
 \l__lipsum_a_int=\count450
 \l__lipsum_b_int=\count451
- (c:/texlive/2025/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
+ (c:/texlive/2025/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count452
+\float@exts=\toks36
+\float@box=\box62
+\@float@everytoks=\toks37
+\@floatcapt=\box63
+)
    defining Unicode char U+0140 (decimal 320)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'croatian'.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 23.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 25.
  (c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
-) (./main.aux
-
-LaTeX Warning: Label `fig:enter-label' multiply defined.
-
-)
+) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -744,17 +747,17 @@ LaTeX Font Info:    ... okay on input line 23.
 
 (c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count452
+\scratchcounter=\count453
 \scratchdimen=\dimen198
-\scratchbox=\box62
-\nofMPsegments=\count453
-\nofMParguments=\count454
-\everyMPshowfont=\toks36
-\MPscratchCnt=\count455
+\scratchbox=\box64
+\nofMPsegments=\count454
+\nofMParguments=\count455
+\everyMPshowfont=\toks38
+\MPscratchCnt=\count456
 \MPscratchDim=\dimen199
-\MPnumerator=\count456
-\makeMPintoPDFobject=\count457
-\everyMPtoPDFconversion=\toks37
+\MPnumerator=\count457
+\makeMPintoPDFobject=\count458
+\everyMPtoPDFconversion=\toks39
 ) (c:/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -762,11 +765,12 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count458
+\c@lstlisting=\count459
 Package biblatex Info: Trying to load language 'croatian'...
 Package biblatex Info: ... file 'croatian.lbx' found.
  (c:/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/croatian.lbx
@@ -780,9 +784,9 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 23.
-Package biblatex Info: Reference segment=0 on input line 23.
-Package hyperref Info: Link coloring OFF on input line 23.
+Package biblatex Info: Reference section=0 on input line 25.
+Package biblatex Info: Reference segment=0 on input line 25.
+Package hyperref Info: Link coloring OFF on input line 25.
  (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -795,7 +799,7 @@ Package hyperref Info: Link coloring OFF on input line 23.
 
 [0]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 25.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 27.
 
 
 [1]
@@ -824,7 +828,7 @@ Poglavlje 1.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.36 \chapter
+l.38 \chapter
              {Metode i tehnike rada} [1
 
 ]
@@ -835,82 +839,59 @@ Poglavlje 2.
 
 ]
 Poglavlje 3.
-<slike/rgb_channels.png, id=125, 401.5pt x 321.2pt>
-File: slike/rgb_channels.png Graphic file (type png)
-<use slike/rgb_channels.png>
-Package pdftex.def Info: slike/rgb_channels.png  used on input line 73.
-(pdftex.def)             Requested size: 227.62206pt x 182.10077pt.
+<slike/Color_chanell_separation.png, id=140, 6180.08875pt x 3886.52pt>
+File: slike/Color_chanell_separation.png Graphic file (type png)
+<use slike/Color_chanell_separation.png>
+Package pdftex.def Info: slike/Color_chanell_separation.png  used on input line 75.
+(pdftex.def)             Requested size: 455.24411pt x 286.25772pt.
 
 
 [3
 
 ]
-
-LaTeX Warning: Citation '' on page 4 undefined on input line 86.
-
-<slike/usporedbaTipovaSlika.png, id=138, 924.45375pt x 429.85594pt>
-File: slike/usporedbaTipovaSlika.png Graphic file (type png)
-<use slike/usporedbaTipovaSlika.png>
-Package pdftex.def Info: slike/usporedbaTipovaSlika.png  used on input line 91.
-(pdftex.def)             Requested size: 455.24411pt x 211.6807pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+<slike/Grayscale.jpeg, id=153, 1541.76pt x 1927.2pt>
+File: slike/Grayscale.jpeg Graphic file (type jpg)
+<use slike/Grayscale.jpeg>
+Package pdftex.def Info: slike/Grayscale.jpeg  used on input line 90.
+(pdftex.def)             Requested size: 318.66948pt x 398.3133pt.
 
 
+[4 <./slike/Color_chanell_separation.png>]
+<slike/Binary.jpeg, id=169, 1027.84pt x 1284.8pt>
+File: slike/Binary.jpeg Graphic file (type jpg)
+<use slike/Binary.jpeg>
+Package pdftex.def Info: slike/Binary.jpeg  used on input line 109.
+(pdftex.def)             Requested size: 341.43307pt x 426.78874pt.
 
-[4 <./slike/rgb_channels.png (PNG copy)>]
 
-[5 <./slike/usporedbaTipovaSlika.png>]
-Poglavlje 4.
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 113.
-(c:/texlive/2025/texmf-dist/tex/latex/psnfss/ts1phv.fd
+[5 <./slike/Grayscale.jpeg>]
+
+[6 <./slike/Binary.jpeg>]
+<slike/Luminace vs chrominance.png, id=184, 1668.2325pt x 732.7375pt>
+File: slike/Luminace vs chrominance.png Graphic file (type png)
+<use slike/Luminace vs chrominance.png>
+Package pdftex.def Info: slike/Luminace vs chrominance.png  used on input line 140.
+(pdftex.def)             Requested size: 455.24411pt x 199.95491pt.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 146.
+ (c:/texlive/2025/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 
-[6
+[7 <./slike/Luminace vs chrominance.png>]
+
+[8]
+Poglavlje 4.
+
+
+[9
 
 ]
-<slike/slika.png, id=159, 766.36313pt x 258.9675pt>
-File: slike/slika.png Graphic file (type png)
-<use slike/slika.png>
-Package pdftex.def Info: slike/slika.png  used on input line 165.
-(pdftex.def)             Requested size: 409.71692pt x 138.45337pt.
-
-
-[7 <./slike/slika.png>] (c:/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2024/09/23 1.10c listings language file
-) (c:/texlive/2025/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
-)
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 213.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 195.
  (c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 220.
-
-
-[8]
-
-[9]
-Poglavlje 5.
-
 
 [10
-
-]
-Overfull \hbox (5.42722pt too wide) in paragraph at lines 255--255
-[]\T1/phv/m/n/10.95 Wikimedia Com-mons con-tri-bu-tors, \T1/phv/m/sl/10.95 RGB chan-nels se-pa-ra-tion\T1/phv/m/n/10.95 , Ac-ce-ssed: 2025-04-16, 2021.
- []
-
-
-Overfull \hbox (27.20425pt too wide) in paragraph at lines 255--255
-\T1/phv/m/n/10.95 adresa: []$\T1/pcr/m/n/10.95 https : / / commons . wikimedia . org / wiki / File : RGB _ channels _ separation .
- []
-
-
-
-[11
 
 ] (./main.lof)
 \tf@lof=\write7
@@ -918,7 +899,7 @@ Overfull \hbox (27.20425pt too wide) in paragraph at lines 255--255
 
 
 
-[12
+[11
 
 ] (./main.lot)
 \tf@lot=\write8
@@ -926,48 +907,32 @@ Overfull \hbox (27.20425pt too wide) in paragraph at lines 255--255
 
 
 
-[13
-
-]
-Dodatak 1.
-
-
-[14
-
-]
-Dodatak 2.
-
-
-[15
+[12
 
 ] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-03-26>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 130102A983BB57ECFC5CBC5455DD89E8;2546.
+(rerunfilecheck)             Checksum: 7DCA6767A81FA5E07DE41E97968EBEB8;3446.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24947 strings out of 469626
- 428253 string characters out of 5475183
- 1461128 words of memory out of 5000000
- 51368 multiletter control sequences out of 15000+600000
- 676789 words of font info for 96 fonts, out of 8000000 for 9000
+ 24728 strings out of 469626
+ 425779 string characters out of 5475183
+ 1349449 words of memory out of 5000000
+ 51161 multiletter control sequences out of 15000+600000
+ 682095 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,11n,84p,1232b,2612s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (20 pages, 647847 bytes).
+ 78i,12n,84p,1232b,1842s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on main.pdf (17 pages, 24702689 bytes).
 PDF statistics:
  290 PDF objects out of 1000 (max. 8388607)
- 239 compressed objects within 3 object streams
- 59 named destinations out of 1000 (max. 500000)
- 152 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 237 compressed objects within 3 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 181 words of extra memory for PDF output out of 10000 (max. 10000000)
 
