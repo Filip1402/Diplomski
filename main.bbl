@@ -1,0 +1,230 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{DigitalnaSlika}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{note}{[Online; accessed 13. Apr. 2025]}
+      \field{title}{{What Is a Digital Image? - Ricoh Scanners}}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.pfu-us.ricoh.com/blog/what-is-a-digital-image
+      \endverb
+      \verb{url}
+      \verb https://www.pfu-us.ricoh.com/blog/what-is-a-digital-image
+      \endverb
+    \endentry
+    \entry{GrayscaleSlika}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=04d3bf99b57323e945a50cfbde7bd48f}{%
+           family={Maximinusjoshus},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {featurepreneur}%
+      }
+      \strng{namehash}{04d3bf99b57323e945a50cfbde7bd48f}
+      \strng{fullhash}{04d3bf99b57323e945a50cfbde7bd48f}
+      \strng{fullhashraw}{04d3bf99b57323e945a50cfbde7bd48f}
+      \strng{bibnamehash}{04d3bf99b57323e945a50cfbde7bd48f}
+      \strng{authorbibnamehash}{04d3bf99b57323e945a50cfbde7bd48f}
+      \strng{authornamehash}{04d3bf99b57323e945a50cfbde7bd48f}
+      \strng{authorfullhash}{04d3bf99b57323e945a50cfbde7bd48f}
+      \strng{authorfullhashraw}{04d3bf99b57323e945a50cfbde7bd48f}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Medium}
+      \field{month}{10}
+      \field{title}{{Understanding the concept of Channels in an Image - featurepreneur - Medium}}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://medium.com/featurepreneur/understanding-the-concept-of-channels-in-an-image-6d59d4dafaa9
+      \endverb
+      \verb{url}
+      \verb https://medium.com/featurepreneur/understanding-the-concept-of-channels-in-an-image-6d59d4dafaa9
+      \endverb
+    \endentry
+    \entry{wikimediaRGB}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=77efa6d4da93ac74efd2ad262684cce9}{%
+           family={{Wikimedia Commons contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{77efa6d4da93ac74efd2ad262684cce9}
+      \strng{fullhash}{77efa6d4da93ac74efd2ad262684cce9}
+      \strng{fullhashraw}{77efa6d4da93ac74efd2ad262684cce9}
+      \strng{bibnamehash}{77efa6d4da93ac74efd2ad262684cce9}
+      \strng{authorbibnamehash}{77efa6d4da93ac74efd2ad262684cce9}
+      \strng{authornamehash}{77efa6d4da93ac74efd2ad262684cce9}
+      \strng{authorfullhash}{77efa6d4da93ac74efd2ad262684cce9}
+      \strng{authorfullhashraw}{77efa6d4da93ac74efd2ad262684cce9}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-04-16}
+      \field{title}{RGB channels separation}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://commons.wikimedia.org/wiki/File:RGB_channels_separation.png
+      \endverb
+      \verb{url}
+      \verb https://commons.wikimedia.org/wiki/File:RGB_channels_separation.png
+      \endverb
+    \endentry
+    \entry{Aranda2009}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=c33df07ab4bbb4e127ef7f0a890030cb}{%
+           family={Aranda},
+           familyi={A\bibinitperiod},
+           given={G},
+           giveni={G\bibinitperiod}}}%
+        {{hash=9ad9e0674ecc907f941b47c46bae46ab}{%
+           family={Botti},
+           familyi={B\bibinitperiod},
+           given={Vicente},
+           giveni={V\bibinitperiod}}}%
+        {{hash=621bc0a3fe61409964d8e08539f70604}{%
+           family={Carrascosa},
+           familyi={C\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Budapest, HU}%
+      }
+      \list{publisher}{2}{%
+        {International Foundation for Autonomous Agents}%
+        {Multiagent Systems}%
+      }
+      \strng{namehash}{45b11883a9cd256030997699698a59f3}
+      \strng{fullhash}{1e2c9b8f9f69385597fa98e42061f670}
+      \strng{fullhashraw}{1e2c9b8f9f69385597fa98e42061f670}
+      \strng{bibnamehash}{1e2c9b8f9f69385597fa98e42061f670}
+      \strng{authorbibnamehash}{1e2c9b8f9f69385597fa98e42061f670}
+      \strng{authornamehash}{45b11883a9cd256030997699698a59f3}
+      \strng{authorfullhash}{1e2c9b8f9f69385597fa98e42061f670}
+      \strng{authorfullhashraw}{1e2c9b8f9f69385597fa98e42061f670}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Massively Multiplayer Online Games present a new and exciting domain for service-oriented agent computing, Multi-Agent Systems, Agent Organizations and Electronic Institutions in order to face the challenges of designing a modern Massively Multiplayer On-line Game. This article follows previous pieces of work in the line of Multi-Agent Systems and Massively Multiplayer Online Games research being its main focus the so called MMOG Layer: a software layer which is independent of the environment simulation and the human-interface devices.}
+      \field{booktitle}{Proceedings of The 8th International Conference on Autonomous Agents and Multiagent Systems}
+      \field{title}{{MMOG based on MAS : The MMOG Layer}}
+      \field{volume}{2}
+      \field{year}{2009}
+      \field{pages}{1149\bibrangedash 1150}
+      \range{pages}{2}
+      \verb{file}
+      \verb :home/bogdan/Documents/Mendeley Desktop/Aranda, Botti, Carrascosa - 2009 - MMOG based on MAS The MMOG Layer.pdf:pdf
+      \endverb
+      \keyw{MAS,MMOG,mas,massively multiplayer online,multi-agent systems}
+    \endentry
+    \entry{caragliu2011smart}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=713e0ce1b0465ff27a4300c49c687d42}{%
+           family={Caragliu},
+           familyi={C\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=dcf8f8d321a8f720347e49c87f1377ae}{%
+           family={Del\bibnamedelima Bo},
+           familyi={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Chiara},
+           giveni={C\bibinitperiod}}}%
+        {{hash=332293a58402e75553b69f4d8de5dbf6}{%
+           family={Nijkamp},
+           familyi={N\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{fc31b86e7d756f9d20bc9a7f87842646}
+      \strng{fullhash}{d6f76fdb435a4690bd641ed2e5106366}
+      \strng{fullhashraw}{d6f76fdb435a4690bd641ed2e5106366}
+      \strng{bibnamehash}{d6f76fdb435a4690bd641ed2e5106366}
+      \strng{authorbibnamehash}{d6f76fdb435a4690bd641ed2e5106366}
+      \strng{authornamehash}{fc31b86e7d756f9d20bc9a7f87842646}
+      \strng{authorfullhash}{d6f76fdb435a4690bd641ed2e5106366}
+      \strng{authorfullhashraw}{d6f76fdb435a4690bd641ed2e5106366}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of urban technology}
+      \field{number}{2}
+      \field{title}{Smart cities in Europe}
+      \field{volume}{18}
+      \field{year}{2011}
+      \field{pages}{65\bibrangedash 82}
+      \range{pages}{18}
+    \endentry
+    \entry{SchattenEtAl2016roadmap}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=ba6cffcafe213279258212e61af0c237}{%
+           family={Schatten},
+           familyi={S\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d6c12e3427a23cc838f942dfa2249e2e}{%
+           family={Ševa},
+           familyi={Š\bibinitperiod},
+           given={Jurica},
+           giveni={J\bibinitperiod}}}%
+        {{hash=271887985ca457655f61fabcae0ee5db}{%
+           family={Tomičić},
+           familyi={T\bibinitperiod},
+           given={Igor},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{b67d5b2ea32cdc830671cf4fcfffda00}
+      \strng{fullhash}{35d3080a28f535544c13cd495655b694}
+      \strng{fullhashraw}{35d3080a28f535544c13cd495655b694}
+      \strng{bibnamehash}{35d3080a28f535544c13cd495655b694}
+      \strng{authorbibnamehash}{35d3080a28f535544c13cd495655b694}
+      \strng{authornamehash}{b67d5b2ea32cdc830671cf4fcfffda00}
+      \strng{authorfullhash}{35d3080a28f535544c13cd495655b694}
+      \strng{authorfullhashraw}{35d3080a28f535544c13cd495655b694}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Systems and Software}
+      \field{title}{A roadmap for scalable agent organizations in the Internet of Everything}
+      \field{volume}{115}
+      \field{year}{2016}
+      \field{pages}{31\bibrangedash 41}
+      \range{pages}{11}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
