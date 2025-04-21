@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 1745160257.65357 "main.bcf" "main.bbl" "main" 1745177017.90377 0
-  "lib.bib" 1745158566 1284 62e6361b177a2afd0f188693eb0f19eb ""
-  "main.bcf" 1745177017 108601 bfb962f534c3d9b64485d4bb7ce4548f "pdflatex"
+["biber main"] 1745251482.45303 "main.bcf" "main.bbl" "main" 1745263397.72681 0
+  "lib.bib" 1745251462 1703 5bb843d3dce3752171688020bb332149 ""
+  "main.bcf" 1745263397 108819 fe4e2113308253fb99a66832374aacbf "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1745177011.28461 "c:/Users/zutif/Documents/Diplomski/main.tex" "main.pdf" "main" 1745177017.90514 0
-  "c:/Users/zutif/Documents/Diplomski/main.tex" 1745177010 13985 89a01e227069bbc2fc67332cecd4adaf ""
+["pdflatex"] 1745263391.13182 "c:/Users/zutif/Documents/Diplomski/main.tex" "main.pdf" "main" 1745263397.72801 0
+  "c:/Users/zutif/Documents/Diplomski/main.tex" 1745263390 17184 5e85e610b43988de1d7cd213b5cdb335 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1744825024 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1744825599 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm" 1744824623 1292 bd42be2f344128bff6d35d98474adfe3 ""
@@ -172,14 +172,14 @@
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1744910740 3561285 bb535cd2e450ef7b6276760fd683a65a ""
   "c:/texlive/2025/texmf.cnf" 1744910191 713 e69b156964470283e0530f5060668171 ""
   "foi.cls" 1744815610 8210 2e57a0e134d9b67a1128ac854d806d02 ""
-  "main.aux" 1745177017 5237 5ecc457694b6a50260a0bb2a55db9b67 "pdflatex"
-  "main.bbl" 1745160260 4057 2646d4dadcf22612ae3048e6a5102c29 "biber main"
-  "main.lof" 1745177017 641 9794672036aaeb1b08e8f15efb2357b5 "pdflatex"
-  "main.lot" 1745177017 111 71f733ec1428d32a9e469a3c9c1a87cf "pdflatex"
-  "main.out" 1745177017 3446 7dca6767a81fa5e07de41e97968ebeb8 "pdflatex"
-  "main.run.xml" 1745177017 2396 545fa222197931919dec819c57e7bcc3 "pdflatex"
-  "main.tex" 1745177010 13985 89a01e227069bbc2fc67332cecd4adaf ""
-  "main.toc" 1745177017 1634 066e96f5a47e70161cef84f08a78a0a2 "pdflatex"
+  "main.aux" 1745263397 7440 096d5cd63dd85bb1f2166f3dc064e962 "pdflatex"
+  "main.bbl" 1745251485 5117 83b6dfae72f15d65a78e59cbb19df356 "biber main"
+  "main.lof" 1745263397 660 d5fe0df0b08e74c42d5b58f3d8bbade4 "pdflatex"
+  "main.lot" 1745263397 131 5bd39dad3c45cbe0f97d91814d109234 "pdflatex"
+  "main.out" 1745263397 6112 5cb9baa57b53bba98936e7d4c4907e32 "pdflatex"
+  "main.run.xml" 1745263397 2396 545fa222197931919dec819c57e7bcc3 "pdflatex"
+  "main.tex" 1745263390 17184 5e85e610b43988de1d7cd213b5cdb335 ""
+  "main.toc" 1745263397 2837 5ce54a12e74582ac1eebd8c3ba2a948c "pdflatex"
   "slike/Binary.jpeg" 1745145151 535339 819253f28d307c7843e4d1ee457aba4d ""
   "slike/Color_chanell_separation.png" 1745143334 20034250 ac5d32235f988d1b57db7260b91910a7 ""
   "slike/Grayscale.jpeg" 1745143654 1463999 321b5d99c32902aa7585bb3c382aa011 ""

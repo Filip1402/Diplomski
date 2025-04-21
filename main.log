@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.17)  20 APR 2025 21:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.17)  21 APR 2025 21:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -686,30 +686,30 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'croatian'.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 25.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 27.
  (c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -784,9 +784,9 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 25.
-Package biblatex Info: Reference segment=0 on input line 25.
-Package hyperref Info: Link coloring OFF on input line 25.
+Package biblatex Info: Reference section=0 on input line 27.
+Package biblatex Info: Reference segment=0 on input line 27.
+Package hyperref Info: Link coloring OFF on input line 27.
  (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -799,7 +799,7 @@ Package hyperref Info: Link coloring OFF on input line 25.
 
 [0]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 27.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 29.
 
 
 [1]
@@ -812,15 +812,17 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
  (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+)
+
+[3
+
+])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
 
 
-[3
-
-]
+[4]
 Poglavlje 1.
 
 
@@ -828,7 +830,7 @@ Poglavlje 1.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.38 \chapter
+l.40 \chapter
              {Metode i tehnike rada} [1
 
 ]
@@ -839,40 +841,40 @@ Poglavlje 2.
 
 ]
 Poglavlje 3.
-<slike/Color_chanell_separation.png, id=140, 6180.08875pt x 3886.52pt>
+<slike/Color_chanell_separation.png, id=210, 6180.08875pt x 3886.52pt>
 File: slike/Color_chanell_separation.png Graphic file (type png)
 <use slike/Color_chanell_separation.png>
-Package pdftex.def Info: slike/Color_chanell_separation.png  used on input line 75.
+Package pdftex.def Info: slike/Color_chanell_separation.png  used on input line 77.
 (pdftex.def)             Requested size: 455.24411pt x 286.25772pt.
 
 
 [3
 
 ]
-<slike/Grayscale.jpeg, id=153, 1541.76pt x 1927.2pt>
+<slike/Grayscale.jpeg, id=223, 1541.76pt x 1927.2pt>
 File: slike/Grayscale.jpeg Graphic file (type jpg)
 <use slike/Grayscale.jpeg>
-Package pdftex.def Info: slike/Grayscale.jpeg  used on input line 90.
+Package pdftex.def Info: slike/Grayscale.jpeg  used on input line 92.
 (pdftex.def)             Requested size: 318.66948pt x 398.3133pt.
 
 
 [4 <./slike/Color_chanell_separation.png>]
-<slike/Binary.jpeg, id=169, 1027.84pt x 1284.8pt>
+<slike/Binary.jpeg, id=238, 1027.84pt x 1284.8pt>
 File: slike/Binary.jpeg Graphic file (type jpg)
 <use slike/Binary.jpeg>
-Package pdftex.def Info: slike/Binary.jpeg  used on input line 109.
+Package pdftex.def Info: slike/Binary.jpeg  used on input line 111.
 (pdftex.def)             Requested size: 341.43307pt x 426.78874pt.
 
 
 [5 <./slike/Grayscale.jpeg>]
 
 [6 <./slike/Binary.jpeg>]
-<slike/Luminace vs chrominance.png, id=184, 1668.2325pt x 732.7375pt>
+<slike/Luminace vs chrominance.png, id=253, 1668.2325pt x 732.7375pt>
 File: slike/Luminace vs chrominance.png Graphic file (type png)
 <use slike/Luminace vs chrominance.png>
-Package pdftex.def Info: slike/Luminace vs chrominance.png  used on input line 140.
+Package pdftex.def Info: slike/Luminace vs chrominance.png  used on input line 142.
 (pdftex.def)             Requested size: 455.24411pt x 199.95491pt.
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 146.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 149.
  (c:/texlive/2025/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
@@ -880,18 +882,38 @@ File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 [7 <./slike/Luminace vs chrominance.png>]
 
 [8]
+Overfull \hbox (0.62154pt too wide) in paragraph at lines 202--203
+[]\T1/phv/b/n/10.95 Pretvaranje u bi-narnu sliku \T1/phv/m/n/10.95 seg-men-ta-cija slike u dvije ra-zine (bi-je-lo/-crno) po-mo¢u praga. 
+ []
+
+
+
+[9]
+
+[10]
 Poglavlje 4.
 
 
-[9
+[11
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 195.
+Poglavlje 5.
+
+
+[12
+
+]
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 251.
  (c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
+Overfull \hbox (0.43745pt too wide) in paragraph at lines 251--251
+\T1/phv/m/n/10.95 2025], tra-vanj 2025. adresa: []$\T1/pcr/m/n/10.95 https : / / www . v7labs . com / blog / image -[] processing -[]
+ []
 
-[10
+
+
+[13
 
 ] (./main.lof)
 \tf@lof=\write7
@@ -899,7 +921,7 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 
 
 
-[11
+[14
 
 ] (./main.lot)
 \tf@lot=\write8
@@ -907,7 +929,7 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 
 
 
-[12
+[15
 
 ] (./main.aux)
  ***********
@@ -915,24 +937,24 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-03-26>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7DCA6767A81FA5E07DE41E97968EBEB8;3446.
+(rerunfilecheck)             Checksum: 5CB9BAA57B53BBA98936E7D4C4907E32;6112.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24728 strings out of 469626
- 425779 string characters out of 5475183
- 1349449 words of memory out of 5000000
- 51161 multiletter control sequences out of 15000+600000
+ 24770 strings out of 469626
+ 426709 string characters out of 5475183
+ 1354593 words of memory out of 5000000
+ 51184 multiletter control sequences out of 15000+600000
  682095 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,12n,84p,1232b,1842s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 78i,12n,84p,1232b,2241s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (17 pages, 24702689 bytes).
+Output written on main.pdf (21 pages, 24710056 bytes).
 PDF statistics:
- 290 PDF objects out of 1000 (max. 8388607)
- 237 compressed objects within 3 object streams
- 47 named destinations out of 1000 (max. 500000)
- 181 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 385 PDF objects out of 1000 (max. 8388607)
+ 327 compressed objects within 4 object streams
+ 66 named destinations out of 1000 (max. 500000)
+ 285 words of extra memory for PDF output out of 10000 (max. 10000000)
 

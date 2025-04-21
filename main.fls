@@ -321,9 +321,9 @@ INPUT c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-OUTPUT main.toc
 INPUT c:/texlive/2025/texmf-dist/fonts/vf/adobe/helvetic/phvb8t.vf
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm
+OUTPUT main.toc
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvr8t.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvb8t.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvr8t.tfm

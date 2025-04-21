@@ -3,6 +3,8 @@
 \usepackage{lipsum}
 \usepackage{float}
 \usepackage{hyperref}
+\usepackage{enumitem}
+
 \DeclareUnicodeCharacter{0140}{l}
 \vrstaRada{\diplomski} % \diplomski
 \title{Izrada komponente za detekciju označenih odgovora na pismenim ispitima}
@@ -39,9 +41,9 @@ Kroz ovaj rad istražuje se razne metode za detektiranje označenih odgovora s c
 
 S obzirom na to da se radi o temi koja uključuje obradu slike, što zahtijeva opsežno istraživanja, manipulaciju parametrima i testiranje pristupa odlučeno je koristiti inkrementalan pristup razvoju. Prije same izrade rješenja, provedena je minimalno potrebna količina istraživanja, a zatim se ostatak istraživanja odvijao paralelno s razvojem.
 
-Iterativni razvoj rješenja može se podijeliti u pretprocesiranje, izdvajanje relevantnih obilježja slike i na kraju ocjenjivanje testa. Jedna od najvažnijih tehnika tijekom razvoja bila je  vizualizacija svakog koraka obrade slike. To je omogućilo izravan uvid u status i smjer razvoja. Od samog početka omogućen je uvid u mane i prednosti korištenih metoda. Ovo je značajno doprinjelo definiranju budućih razvojnih koraka, poput  dodatnog istraživanja, promjene pristupa i sl. 
+Iterativni razvoj rješenja može se podijeliti u pretprocesiranje, izdvajanje relevantnih obilježja slike i na kraju ocjenjivanje testa. Jedna od najvažnijih tehnika tijekom razvoja bila je  vizualizacija svakog koraka obrade slike. To je omogućilo izravan uvid u status i smjer razvoja. Od samog početka omogućen je uvid u mane i prednosti korištenih metoda. Ovo je značajno doprinijelo definiranju budućih razvojnih koraka, poput  dodatnog istraživanja, promjene pristupa i sl. 
 
-Da bi sama vizualizacija bila što učinkovitija korišteno je više različitih ulaznih slika matrice odgovora slikanih u različitim uvjetima. To je omogućilo verifikaciju funkcionalnosti dijelova rješenja na različitim ulaznim podacima od samog početka razvoja, što je značilo da na kraju projekta nije bilo potrebno pokrivati rubne slučajeve jer je rješenje bilo dizajnirano da ih pokriva od početka. 
+Da bi sama vizualizacija bila što učinkovitija korišteno je više različitih ulaznih slika matrice odgovora slikanih u različitim uvjetima. To je omogućilo verifikaciju funkcionalnosti dijelova rješenja na različitim ulaznim podacima od samog početka razvoja, što je značilo da na kraju projekta nije bilo potrebno pokrivati rubne slučajeve jer je rješenje bilo dizajnirano da ih pokriva od početka.
 
 Rješenje je izrađeno pomoću .NET tehnologije i C\# programskog jezika u obliku biblioteke, što omogućuje drugim rješenjima jednostavnu integraciju koristeći .dll. 
 
@@ -49,9 +51,9 @@ Kroz ovaj rad nije bio cilj razviti vlastitu biblioteku za računalni vid, kori�
 
 \chapter{Razrada teme}
 
-Kroz teoretski dio rada predočit će se cijeli proces detekcije odgovora na pismenim ispitima koristeći obradu slike pomoću računalnog vida. Analizirati će postojeća rješenja ovaog problema koja koriste računalni vidi i alternativne pristupe. 
+Kroz teoretski dio rada predočit će se cijeli proces detekcije odgovora na pismenim ispitima koristeći obradu slike pomoću računalnog vida. Analizirat će postojeća rješenja ovog problema koja koriste računalni vidi i alternativne pristupe. 
 
-    Svim ti pristupi imaju isti cilj, a to je izvlačenje relevantnih podataka iz slike, a zatim kreće obrada tih podataka. U kontektu ovog rada to bi značilo da se iz slike moraju izvući podaci o označenim odgovorima za određeno pitanje te se ti podaci uspoređuju sa listom točnih odgovora. 
+Svim ti pristupi imaju isti cilj, a to je izvlačenje relevantnih podataka iz slike, a zatim kreće obrada tih podataka. U kontekstu ovog rada to bi značilo da se iz slike moraju izvući podaci o označenim odgovorima za određeno pitanje te se ti podaci uspoređuju s listom točnih odgovora. 
 
 \section{Digitalna slika }
 
@@ -63,27 +65,27 @@ Sama boja piksela se određuje kombinacijom vrijednosti iz RGB kanala. Dok je sa
 \text{Broj boja} = 2^{8} \times 2^{8} \times 2^{8} = 2^{24} = 16,777,216
 \]
 
-S pomoću piksela se također može definirati veličinu slike to jest rezolucija. Rezolucija je sveukupan broj piksela koje neka slika sadrži i izražava se množenjem širine slike sa visinom slike npr. $1920 \times $1080. Obično veća rezolucija znači više detalja na slici. Što se više detalja nalazi na slici to su bolje šanse za izvući korisne informacije sa slike. No naravno da rezolucija sama ne određuje kvalitetu digitalne slike, već veliku ulogu igraju i fizički uvjeti u kojima je slika izrađena. Pod to spada osvjetljenje, čistoća kamere, kvaliteta senzora i sl.
+S pomoću piksela se također može definirati veličinu slike to jest rezolucija. Rezolucija je sveukupan broj piksela koje neka slika sadrži i izražava se množenjem širine slike s visinom slike npr. $1920 \times $1080. Obično veća rezolucija znači više detalja na slici. Što se više detalja nalazi na slici to su bolje šanse za izvući korisne informacije sa slike. No naravno da rezolucija sama ne određuje kvalitetu digitalne slike, već veliku ulogu igraju i fizički uvjeti u kojima je slika izrađena. Pod to spada osvjetljenje, čistoća kamere, kvaliteta senzora i sl.
 
 \subsection{Slike u boji}
-Većina digitalnih slika koje ljudi danas izrađuju su slike u boju te sadrže sva 3 kanala boje. Za razumijevanje ovog rada potrebno je razumijeti kakve informacije sadrži pojedini kanal boje. Svaki kanal predstavlja jednu primarnu boju poput crvene, zelene ili plave. I svaki piksel poprima određenu vrijednost za svaki kanal ovisno o kombinaciji bitova. Za 24-bitnu sliku svaki kanal ima 8 bitova to jest 256 mogućih vrijednosti. 
+Većina digitalnih slika koje ljudi danas izrađuju su slike u boju te sadrže sva 3 kanala boje. Za razumijevanje ovog rada potrebno je razumjeti kakve informacije sadrži pojedini kanal boje. Svaki kanal predstavlja jednu primarnu boju poput crvene, zelene ili plave. I svaki piksel poprima određenu vrijednost za svaki kanal ovisno o kombinaciji bitova. Za 24-bitnu sliku svaki kanal ima 8 bitova to jest 256 mogućih vrijednosti. 
 
 To znači da u svakom kanalu postoji vrijednost od 0 do 255 koja definira jačinu svjetlosti za tu primarnu boju. Nula bi značila kompletno crna boja dok bi 255 bila potpuno osvijetljena primarna boja ovisno o kojem se kanalu radi. Kombinacijom tih 3 kanala se zapravo dobivaju međuboje i time se stvara konačni izgled slike. \cite{GrayscaleSlika}.
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=1.0\linewidth]{slike/Color_chanell_separation.png}
-    \caption{Prikaz slike u boji i pripadajućih kanala boja u rgb modelu (vlastita izrada)}
+    \caption{Prikaz slike u boji i pripadajućih kanala boja u RGB modelu (vlastita izrada)}
     \label{fig:channels}
 \end{figure}
 
-Kao što je prikazano na slici, kanali boja prikazani su kao slike čiji pikseli poprimaju boje samo crnu, bijelu i nijanse sive boje, takozvane sive slike. Također kanali se ponekad znaju vizualizirati pomoću primarne boje kanala kojeg reprezentiraju, ali sami podaci koje digitalna slika sadrži su uvijek jednaki, jedino način njihove vizualuizacije varira. 
+Kao što je prikazano na slici, kanali boja prikazani su kao slike čiji pikseli poprimaju boje samo crnu, bijelu i nijanse sive boje, takozvane sive slike. Također kanali se ponekad znaju vizualizirati pomoću primarne boje kanala kojeg reprezentiraju, ali sami podaci koje digitalna slika sadrži su uvijek jednaki, jedino način njihove vizualizacije varira. 
 
 \subsection{Sive slike}
 
-Sive slike (\textit{eng. grayscale}) su poseban tip digitalnih slika koji ima samo jedan kanal boja. U tom kanalu vrijednosti piksela reprezentira svijetlinu piksela. Vizualizacija takvih slika poprima boje od bijele do crne uključujući nijanse sive. Na primjer za sliku sa dubinom boja od 8 bitova, nula bi predstavljala crnu boju, 255 bijelu, a vrijednosti između nijanse sive \cite{GrayscaleSlika}.
+Sive slike (\textit{eng. grayscale}) su poseban tip digitalnih slika koji ima samo jedan kanal boja. U tom kanalu vrijednosti piksela reprezentira svjetlinu piksela. Vizualizacija takvih slika poprima boje od bijele do crne uključujući nijanse sive. Na primjer za sliku sa dubinom boja od 8 bitova, nula bi predstavljala crnu boju, 255 bijelu, a vrijednosti između nijanse sive \cite{GrayscaleSlika}.
 
-Sive slike su jedan od važnijih koncepata obrade slike i računalnog vida. One su zapravo baza mnogih algoritama za procesiranje slika. Često se korsite kao prvi korak obrade. Izrazito su korisne za detekciju rubova, segmentaciju slike, prepoznavanje uzorak i slično \cite{Grayscale2}. Kroz rad će se detaljnije prikazati njihova važnost i uloga u kontekstu detektiranja označenih odgovora na pismenim ispitima. 
+Sive slike su jedan od važnijih koncepata obrade slike i računalnog vida. One su zapravo baza mnogih algoritama za procesiranje slika. Često se koriste kao prvi korak obrade. Izrazito su korisne za detekciju rubova, segmentaciju slike, prepoznavanje uzorak i slično \cite{Grayscale2}. Kroz rad će se detaljnije prikazati njihova važnost i uloga u kontekstu detektiranja označenih odgovora na pismenim ispitima. 
 
 \begin{figure}[H]
     \centering
@@ -91,7 +93,7 @@ Sive slike su jedan od važnijih koncepata obrade slike i računalnog vida. One 
     \caption{Prikaz sive slike (vlastita izrada)}
 \end{figure}
 
-Na priloženoj sivoj slici se također može vidjeti da je različita od sivih slika kanala prikazanih na \hyperref[fig:channels]{slici 1}. To je zato što se kod pretvorbe slike u boji u sivu sliku kortsite vrijednosti sva 3 kanala prema formuli:
+Na priloženoj sivoj slici se također može vidjeti da je različita od sivih slika kanala prikazanih na \hyperref[fig:channels]{slici 1}. To je zato što se kod pretvorbe slike u boji u sivu sliku uzimaju u obzir vrijednosti piksela za sva 3 kanala prema formuli:
 
 {\large
 \[
@@ -111,7 +113,7 @@ Osim slika u boji i sivih slika također postoje i binarne slike. Binarne slike 
 \end{figure}
 
 
-Sam proces izrade binarne slike je dosta jednostavan. Za početak potrebno je imati sivu sliku. Zatim se definira granica (\textit{eng. treshold}) u obliku postotka. Ta granica se zatim koristi za određivanje vrijesnoti piksela, ako je vriejdnost iznad granice onda se vrijednost postavlja na jedan, a inaće na nulu. Priložena formula prikazuje osnovni tip kreiranja binarne slike (\textit{eng. tresholding}).
+Sam proces izrade binarne slike je dosta jednostavan. Za početak potrebno je imati sivu sliku. Zatim se definira granica (\textit{eng. threshold}) u obliku postotka. Ta granica se zatim koristi za određivanje vrijednosti piksela, ako je vrijednost iznad granice onda se vrijednost postavlja na jedan, a inače na nulu. Priložena formula prikazuje osnovni tip kreiranja binarne slike (\textit{eng. tresholding}).
 
 {\large
     \[
@@ -129,67 +131,121 @@ I_{\text{binary}}(x, y) =
 
 \subsection{Važnost različitih tipova digitalnih slika}
 
-Do sada smo prošli kroz 3 najvažnija tipa digitalnih slika za ovaj rad. Kroz ovu cijelinu prikazat će se važnost pojedinog tipa slike naspram ostalih.
+Do sada smo prošli kroz 3 najvažnija tipa digitalnih slika za ovaj rad. Kroz ovu cjelinu prikazat će se važnost pojedinog tipa slike naspram ostalih.
 
 Zapravo najveća razlika između ovih tipova je broj kanala boje. Slike u boji imaju 3 kanala za razliku od sivih i binarnih slika koje imaju po jedan kanal. To zapravo znači da slike u boji sadrže značajno više informacija. 
 
-No ponekad nam te informacije nisu potrebne ovisno o problemu koji pokušavamo rješiti. Na primjer ako pokušavamo detektirati boju svjetla na semaforu onda su nam informacije o bojama izrazito važne. No ako pokušavamo pročitati tekst sa prometnog znaka onda nam informacija o boji znaka i teksta ne doprinosi rješavanju problema. Zapravo nam otežava rješavanje problema pošto moramo raditi sa nepotrebnim informacijama.
+No ponekad nam te informacije nisu potrebne ovisno o problemu koji pokušavamo riješiti. Na primjer ako pokušavamo detektirati boju svjetla na semaforu onda su nam informacije o bojama izrazito važne. No ako pokušavamo pročitati tekst sa prometnog znaka onda nam informacija o boji znaka i teksta ne doprinosi značajno rješavanju problema. Zapravo nam otežava rješavanje problema pošto moramo raditi sa nepotrebnim informacijama.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.0\linewidth]{slike/Luminace vs chrominance.png}
-    \caption{Usporedba svijetloste komponente i komponenta boja(vlastita izrada)}
+    \caption{Usporedba svjetlosne komponente i komponenta boja(vlastita izrada)}
 \end{figure}
 
-Na priloženoj slici prikazana je ista slika na raličite načine:
-\begin{itemize}
-    \item Slika u RGB formatu
-    \item Slika u YCbCr formatu
-    \begin{itemize}
-        \item Svijetlosne infromacije u Y kanalu
-        \item Inforamcije o bojama u Cb i Cr kanalima
+\begin{flushleft}
+    Na priloženoj slici prikazana je ista slika na različite načine:
+    \begin{itemize}[label=•]
+        \item Slika u RGB formatu
+        \item Slika u YCbCr formatu
+        \begin{itemize}[label=•]
+            \item Svjetlosne informacije u Y kanalu
+            \item Informacije o bojama u Cb i Cr kanalima
+        \end{itemize}
     \end{itemize}
-  \end{itemize}
+    \end{flushleft}
 
-Na ovom primjeru je prikazana činejnica da svijetlosni kanali sadrže puno više informacija o strukturnim elementima na slici. baš zbog toga se u raznim algoritmima za detektiranje značajki, filtriranje, segmentiranje i sl. korsite baš sive slike \cite{LumVsChrom}. 
+Na ovom primjeru je prikazana činjenica da svjetlosni kanali sadrže puno više informacija o strukturnim elementima na slici. baš zbog toga se u raznim algoritmima za detektiranje značajki, filtriranje, segmentiranje i sl. koriste baš sive slike \cite{LumVsChrom}. 
 
-Sive slike se korsite kada boja nije važan faktor u obradi slike. U tom slučaju je boja jednako korisna kao buka na slici pa je zbog toga uklonimo. Time se veličina slike smanje i time ubrza daljni proces obrade slike \cite{LumVsChrom}.
+Sive slike se koriste kada boja nije važan faktor u obradi slike. U tom slučaju je boja jednako korisna kao buka na slici pa je zbog toga uklonimo. Time se veličina slike smanje i time ubrza daljnji proces obrade slike \cite{LumVsChrom}.
 
-Ako je potreban još agresivniji pristup otklanjanju nepotrebnih podataka onda binarne slike mogu postati korisne. One dodatno odstranjuju nepotrebe podatke tako da povećavaju razliku u kontrastu \cite{LumVsChrom}.
+Ako je potreban još agresivniji pristup otklanjanju nepotrebnih podataka onda binarne slike mogu postati korisne. One dodatno odstranjuju nepotrebne podatke tako da povećavaju razliku u kontrastu \cite{LumVsChrom}.
 
 Važno je napomenuti da svaki tip slika ima svoju upotrebu ovisno o problemu koji se rješava. U ovom radu će veliku važnost imati sive i binarne slike pošto se radi o procesu detektiranja strukture fotografije i izvlačenja relevantnih informacija iz nje.
 
 
 \section{Digitalna obrada slike}
 
-Digitalna obrada slike podrazumijeva obradu digitalne fotografije koristeći računalne algoritme s ciljem unaprijeđivanja slike, izvlačenja korisnih informacija i sl.
+Digitalna obrada slike (\textit{eng. digital image processing}) podrazumijeva obradu digitalne fotografije koristeći računalne algoritme s ciljem unaprjeđivanja slike, izvlačenja korisnih informacija i sl. Predstavlja ključni korak u raznim primjenama računalnog vida temeljenog na dubokom učenju, poput prepoznavanja lica, detekcije objekata i kompresije slika \cite{ImageProcessing}. 
 
-Sam proces digitralne obrade slike može se podijeliti u 3 faze:
+\begin{flushleft}
+Sam proces digitralne obrade slike može se podijeliti u sljedeće faze \cite{ImageProcessing}:
 \begin{itemize}
-\item Unos slike
-\item Analiza i manipulacija slike
-\item Generiranje resultata obrade slike
+\item Pribavljanje slike (\textit{eng. image acquisition})
+\item Poboljšanje slike (\textit{eng. image enhancement})
+\item Restauracija slike (\textit{eng. image restoration})
+\item Kompresija slike (\textit{eng. image compression})
+\item Morfološka obrada (\textit{eng. morphological processing})
+\item Segmentacija slike(\textit{eng. image segmentation})
+\item Reprezentacija i opis (\textit{eng. representation and description})
+\item Detekcija i prepoznavanje objekata (\textit{eng. object detection and recognition})
+\end{itemize}
+\end{flushleft}
+
+Naravno nisu sve faze uvijek potrebne, već se radi o generalnim smjernicama koje se prema specifičnostima problema mogu modificirati, smanjiti ili proširiti. U nekim slučajevima čak se redoslijed faza može promijeniti ili se faze mogu provoditi više puta.    
+
+Te faze se dodatno podijeliti na \textbf{pretprocesiranje, procesiranje i postprocesiranje slike}. U fazu \textbf{pretprocesiranja} spadaju svi koraci koji pripremaju sliku za procesiranje, poput poboljšanja slike. Nakon pretprocesiranja slijedi \textbf{procesiranje} koje se odnosi na korištenje algoritama za detekciju i prepoznavanje objekata i transformacije. Posljednja faza uključuje korake poput pripreme rezultata za prezentaciju, vizualizaciju i daljnju analizu \cite{IamgeProcesingPhases}.
+
+
+\subsection{Pretprocesiranje slike}
+\begin{itemize}
+    \item Priprema slike za daljnju obradu
 \end{itemize}
 
+\subsubsection{Pribavljanje slike}
 
+\subsubsection{Poboljšanje slike}
+Cilj je poboljšati vizualnu kvalitetu slike te naglasiti korisne informacije. Uključuje:
+\begin{itemize}
+    \item \textbf{Pretvaranje u sivu sliku}  konverzija RGB slike u grayscale za pojednostavljenje analize.
+    \item \textbf{Smanjenje buke}  uklanjanje neželjenih šumova filtriranjem (npr. Gaussov, medijanski filter).
+    \item \textbf{Pretvaranje u binarnu sliku}  segmentacija slike u dvije razine (bijelo/crno) pomoću praga.
+\end{itemize}
 
-\subsection{Priprema slike}
+\subsubsection{Restauracija slike}
+Korištenje algoritama za rekonstrukciju oštećenih ili degradiranih dijelova slike.
 
-\subsection{Pretvaranje u sivu sliku}
+\subsection{Procesiranje slike}
+\begin{itemize}
+    \item Ekstrakcija značajki i identifikacija struktura unutar slike
+\end{itemize}
 
-\subsection{Smanjenje buke}
+\subsubsection{Segmentacija slike}
+Proces dijeljenja slike u regije koje predstavljaju različite objekte ili strukture.
 
-\subsection{Pretvaranje u binarnu sliku}
+\subsubsection{Morfološka obrada}
+Primjena morfoloških operacija (dilatacija, erozija, otvaranje, zatvaranje) za poboljšanje strukture objekata na slici.
 
-\subsection{Detektiranje kontura}
+\subsubsection{Reprezentacija i opis}
+Opis kontura, oblika i teksture objekata radi klasifikacije i analize.
 
-\subsection{Detektiranje linija}
+\subsubsection{Detekcija i prepoznavanje objekata}
+Otkrivanje i identifikacija objekata od interesa unutar slike. Uključuje:
+\begin{itemize}
+    \item \textbf{Detektiranje kontura} identifikacija granica objekata u slici.
+    \item \textbf{Detektiranje linija} prepoznavanje pravaca pomoću metoda poput Houghove transformacije.
+\end{itemize}
 
-\subsection{Izvlačenje informacija iz slike}
+\subsection{Postprocesiranje slike}
+\begin{itemize}
+    \item Završna faza koja se odnosi na pohranu, vizualizaciju ili daljnju analizu rezultata.
+\end{itemize}
 
+\subsubsection{Kompresija slike}
+
+\subsubsection{Vizualizacija rezultata}
+Prikaz konačnih rezultata analize slike u svrhu interpretacije, izvještavanja ili donošenja odluka.
+
+\section{Analiza postojećih rješenja i pristupa problemu}
+
+\chapter{Praktični dio}
+\section{Opis rješenja}
+\section{Funkcionalni zahtijevi}
+\section{Implementacija}
+\section{Analiza rezultata}
+\section{Limitacije riješenja}
+\section{Manualno testiranje rješenja}
 \chapter{Zaključak}
-
-Ovdje treba sažeto rezimirati najvažnije rezultate razrade teme rada. Potrebno je sažeto opisati što je predmet rada, koje su metode, tehnike, programski alati ili aplikacije korištene u razradi rada te koje su pretpostavke dokazane, a koje opovrgnute. Sadržajno, ono što se u uvodu rada najavljuje i kasnije je obuhvaćeno u samom radu, moralo bi biti opisano u zaključnom dijelu kroz rezultate rada. 
 
 
 \printbibliography[title=Popis literature]

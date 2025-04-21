@@ -103,6 +103,34 @@
       \verb https://stackoverflow.com/questions/12752168/why-we-should-use-gray-scale-for-image-processing
       \endverb
     \endentry
+    \entry{ImageProcessing}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{note}{[Online; accessed 21. Apr. 2025]}
+      \field{title}{{Image Processing: Techniques, Types, {\&} Applications [2024]}}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.v7labs.com/blog/image-processing-guide
+      \endverb
+      \verb{url}
+      \verb https://www.v7labs.com/blog/image-processing-guide
+      \endverb
+    \endentry
+    \entry{IamgeProcesingPhases}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{month}{4}
+      \field{note}{[Online; accessed 21. Apr. 2025]}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://dl.icdst.org/pdfs/files4/01c56e081202b62bd7d3b4f8545775fb.pdf
+      \endverb
+      \verb{url}
+      \verb https://dl.icdst.org/pdfs/files4/01c56e081202b62bd7d3b4f8545775fb.pdf
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
