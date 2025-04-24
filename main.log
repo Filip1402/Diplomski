@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.17)  22 APR 2025 21:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.17)  24 APR 2025 21:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -812,15 +812,15 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
  (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-
-[3
-
-])
+))
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
 
+
+[3
+
+]
 
 [4]
 Poglavlje 1.
@@ -841,7 +841,7 @@ Poglavlje 2.
 
 ]
 Poglavlje 3.
-<slike/Color_chanell_separation.png, id=210, 6180.08875pt x 3886.52pt>
+<slike/Color_chanell_separation.png, id=205, 6180.08875pt x 3886.52pt>
 File: slike/Color_chanell_separation.png Graphic file (type png)
 <use slike/Color_chanell_separation.png>
 Package pdftex.def Info: slike/Color_chanell_separation.png  used on input line 77.
@@ -851,7 +851,7 @@ Package pdftex.def Info: slike/Color_chanell_separation.png  used on input line 
 [3
 
 ]
-<slike/Grayscale.jpeg, id=223, 1541.76pt x 1927.2pt>
+<slike/Grayscale.jpeg, id=218, 1541.76pt x 1927.2pt>
 File: slike/Grayscale.jpeg Graphic file (type jpg)
 <use slike/Grayscale.jpeg>
 Package pdftex.def Info: slike/Grayscale.jpeg  used on input line 92.
@@ -859,7 +859,7 @@ Package pdftex.def Info: slike/Grayscale.jpeg  used on input line 92.
 
 
 [4 <./slike/Color_chanell_separation.png>]
-<slike/Binary.jpeg, id=238, 1027.84pt x 1284.8pt>
+<slike/Binary.jpeg, id=233, 1027.84pt x 1284.8pt>
 File: slike/Binary.jpeg Graphic file (type jpg)
 <use slike/Binary.jpeg>
 Package pdftex.def Info: slike/Binary.jpeg  used on input line 111.
@@ -869,7 +869,7 @@ Package pdftex.def Info: slike/Binary.jpeg  used on input line 111.
 [5 <./slike/Grayscale.jpeg>]
 
 [6 <./slike/Binary.jpeg>]
-<slike/Luminace vs chrominance.png, id=253, 1668.2325pt x 732.7375pt>
+<slike/Luminace vs chrominance.png, id=248, 1668.2325pt x 732.7375pt>
 File: slike/Luminace vs chrominance.png Graphic file (type png)
 <use slike/Luminace vs chrominance.png>
 Package pdftex.def Info: slike/Luminace vs chrominance.png  used on input line 142.
@@ -884,54 +884,103 @@ File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 [8]
 
 [9]
-<slike/MedianFiltering.png, id=286, 550.055pt x 367.3725pt>
+<slike/MedianFiltering.png, id=281, 550.055pt x 367.3725pt>
 File: slike/MedianFiltering.png Graphic file (type png)
 <use slike/MedianFiltering.png>
-Package pdftex.def Info: slike/MedianFiltering.png  used on input line 225.
-(pdftex.def)             Requested size: 455.24411pt x 304.06142pt.
+Package pdftex.def Info: slike/MedianFiltering.png  used on input line 224.
+(pdftex.def)             Requested size: 386.96027pt x 258.45389pt.
 
 
 [10 <./slike/MedianFiltering.png>]
+<slike/perspective.png, id=294, 788.9475pt x 331.2375pt>
+File: slike/perspective.png Graphic file (type png)
+<use slike/perspective.png>
+Package pdftex.def Info: slike/perspective.png  used on input line 286.
+(pdftex.def)             Requested size: 386.96027pt x 162.46446pt.
 
-[11]
+
+[11 <./slike/perspective.png (PNG copy)>]
+<slike/sesgmentacija.png, id=308, 722.7pt x 379.4175pt>
+File: slike/sesgmentacija.png Graphic file (type png)
+<use slike/sesgmentacija.png>
+Package pdftex.def Info: slike/sesgmentacija.png  used on input line 308.
+(pdftex.def)             Requested size: 386.96027pt x 203.15714pt.
+
+
+[12 <./slike/sesgmentacija.png (PNG copy)>]
+<slike/erosion.png, id=321, 770.88pt x 373.395pt>
+File: slike/erosion.png Graphic file (type png)
+<use slike/erosion.png>
+Package pdftex.def Info: slike/erosion.png  used on input line 326.
+(pdftex.def)             Requested size: 227.62206pt x 110.25313pt.
+<slike/dilatacija.png, id=324, 770.88pt x 385.44pt>
+File: slike/dilatacija.png Graphic file (type png)
+<use slike/dilatacija.png>
+Package pdftex.def Info: slike/dilatacija.png  used on input line 334.
+(pdftex.def)             Requested size: 227.62206pt x 113.80968pt.
+<slike/otvaranje_zatvaranje.png, id=328, 770.88pt x 596.2275pt>
+File: slike/otvaranje_zatvaranje.png Graphic file (type png)
+<use slike/otvaranje_zatvaranje.png>
+Package pdftex.def Info: slike/otvaranje_zatvaranje.png  used on input line 342.
+(pdftex.def)             Requested size: 318.66948pt x 246.46544pt.
+
+
+[13 <./slike/erosion.png (PNG copy)> <./slike/dilatacija.png (PNG copy)>]
+
+[14 <./slike/otvaranje_zatvaranje.png (PNG copy)>]
 Poglavlje 4.
 
 
-[12
+[15
 
 ]
 Poglavlje 5.
 
 
-[13
+[16
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 281.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 378.
  (c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Overfull \hbox (2.35927pt too wide) in paragraph at lines 281--281
+Overfull \hbox (2.35927pt too wide) in paragraph at lines 378--378
 \T1/phv/m/n/10.95 svi-banj 2024. adresa: []$\T1/pcr/m/n/10.95 https : / / www . grayscaleimage . com / why -[] use -[] grayscale -[]
  []
 
 
-Overfull \hbox (6.52557pt too wide) in paragraph at lines 281--281
+Overfull \hbox (6.52557pt too wide) in paragraph at lines 378--378
 \T1/phv/m/n/10.95 2025], tra-vanj 2025. adresa: []$\T1/pcr/m/n/10.95 https : / / www . v7labs . com / blog / image -[] processing -[]
  []
 
 
 
-[14
+[17
 
 ]
+Overfull \hbox (6.88576pt too wide) in paragraph at lines 378--378
+[]\T1/phv/m/n/10.95 P. Ch-hi-kara, ^^R  Un-der-stan-ding Morp-ho-lo-gi-cal Image Pro-ce-ssing and Its Ope-ra-ti-ons $\OMS/cmsy/m/n/10.95 j$ \T1/phv/m/n/10.95 Towards
+ []
 
-[15] (./main.lof)
+
+Overfull \hbox (43.3261pt too wide) in paragraph at lines 378--378
+\T1/phv/m/n/10.95 Data Sci-ence,^^Q \T1/phv/m/sl/10.95 Towards Data Sci-ence\T1/phv/m/n/10.95 , si-je-£anj 2025. adresa: []$\T1/pcr/m/n/10.95 https : / / towardsdatascience .
+ []
+
+
+Overfull \hbox (24.22958pt too wide) in paragraph at lines 378--378
+\T1/pcr/m/n/10.95 com / understanding -[] morphological -[] image -[] processing -[] and -[] its -[] operations -[]
+ []
+
+
+
+[18] (./main.lof)
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
 
 
-[16
+[19
 
 ] (./main.lot)
 \tf@lot=\write8
@@ -939,7 +988,7 @@ Overfull \hbox (6.52557pt too wide) in paragraph at lines 281--281
 
 
 
-[17
+[20
 
 ] (./main.aux)
  ***********
@@ -947,24 +996,24 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-03-26>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FEED5B249A09CE288CAE260093EE8FF9;6112.
+(rerunfilecheck)             Checksum: 37669E01E11856892749305ECBB43D70;5907.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24801 strings out of 469626
- 427764 string characters out of 5475183
- 1354890 words of memory out of 5000000
- 51207 multiletter control sequences out of 15000+600000
- 682095 words of font info for 99 fonts, out of 8000000 for 9000
+ 24866 strings out of 469626
+ 429622 string characters out of 5475183
+ 1355142 words of memory out of 5000000
+ 51258 multiletter control sequences out of 15000+600000
+ 683024 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,12n,84p,1232b,2410s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (23 pages, 24739635 bytes).
+ 78i,12n,84p,1232b,2418s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on main.pdf (26 pages, 25351659 bytes).
 PDF statistics:
- 423 PDF objects out of 1000 (max. 8388607)
- 360 compressed objects within 4 object streams
- 74 named destinations out of 1000 (max. 500000)
- 290 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 501 PDF objects out of 1000 (max. 8388607)
+ 418 compressed objects within 5 object streams
+ 85 named destinations out of 1000 (max. 500000)
+ 307 words of extra memory for PDF output out of 10000 (max. 10000000)
 

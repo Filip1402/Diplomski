@@ -173,7 +173,6 @@ Sam proces digitralne obrade slike može se podijeliti u sljedeće faze \cite{Im
 \begin{itemize}
 \item Pribavljanje slike (\textit{eng. image acquisition})
 \item Poboljšanje slike (\textit{eng. image enhancement})
-\item Restauracija slike (\textit{eng. image restoration})
 \item Kompresija slike (\textit{eng. image compression})
 \item Morfološka obrada (\textit{eng. morphological processing})
 \item Segmentacija slike(\textit{eng. image segmentation})
@@ -202,13 +201,13 @@ Da bi bilo kakav procesiranje moglo krenuti prvo je potrebno pribaviti sliku. Mo
 Razni algoritmi i koraci u pretprocesiranju mogu korigirati pribavljenu sliku, no to nikad nije zamjena za sliku dobre kvalitete. Dobra i loša slika mogu biti razlika između uspješnog i neuspješnog detektiranja elemenata na slici. Naravno u većini slučajeva sustavi za obradu slike ne mogu utjecati na kvalitetu slike koje će im korisnik poslati. Zbog toga je važno detaljno testirati sustav u različitim uvjetima i utvrditi što su njegove granice i je li potrebno podržati neki dodatni korisnički slučaj od onih postojećih.
 \subsubsection{Poboljšanje slike}
 
-Poboljšanje slike je ključan korak, cilj mu je modificirati sliku na način da ona postane korisnija za daljnu obradu. To se može postići na više načina poput otklanjanja buke, isticanja važnih značajki slike, poboljšanja oštrine i kontrasta slike.
+Poboljšanje slike je ključan korak, cilj mu je modificirati sliku na način da ona postane korisnija za daljnju obradu. To se može postići na više načina poput otklanjanja buke, isticanja važnih značajki slike, poboljšanja oštrine i kontrasta slike.
 
-Do sada smo spomenuli da se nepotrebene inforamcije na slici također mogu biti buka. Baš zbog toga pretvaranje u sivu i binarnu sliku spadaju pod poboljšanje slike. Oba dvije operacije uklanjaju nepotrebne inforamcije o bojama sa slike što omogučuje bržu i jednostavlniju obradu i analizu slike. naravno to ima smisla samo ako nam inforamcije o bojama nisu potrebene.
+Do sada smo spomenuli da se nepotrebne informacije na slici također mogu biti buka. Baš zbog toga pretvaranje u sivu i binarnu sliku spadaju pod poboljšanje slike. Oba dvije operacije uklanjaju nepotrebne informacije o bojama sa slike što omogućuje bržu i jednostavniju obradu i analizu slike. naravno to ima smisla samo ako nam informacije o bojama nisu potrebne.
 
-Osim nepotrebnih boja, bukom se može smatrati i nasumična razlika u boji između susjednih piksela. U digitalnoj fotografiji buka je praktički neizbježna i može se definirati kao nasumična varijacija signala u slici. Ta varijacija je reperezentirana različitim nijansama boja susjednih piksela. Buka se može smanjiti manipulacijom parametara digtalne kamera, ali ne može se kompletno ukoniti \cite{Adobe}.
+Osim nepotrebnih boja, bukom se može smatrati i nasumična razlika u boji između susjednih piksela. U digitalnoj fotografiji buka je praktički neizbježna i može se definirati kao nasumična varijacija signala u slici. Ta varijacija je reprezentirana različitim nijansama boja susjednih piksela. Buka se može smanjiti manipulacijom parametara digitalne kamera, ali ne može se kompletno ukloniti \cite{Adobe}.
 
-Takve informacije se zbog malih razlika u boji piskela većinom mogu smatrati nevažnima, a loše utiječu na daljnu obradu slike. Zbog toga postoje razne tehnike za filtriranje slike. Najpopularnije tehnike za filtriranje buke su \cite{Swain2023Jul}:
+Takve informacije se zbog malih razlika u boji piksela većinom mogu smatrati nevažnima, a loše utječu na daljnju obradu slike. Zbog toga postoje razne tehnike za filtriranje slike. Najpopularnije tehnike za filtriranje buke su \cite{Swain2023Jul}:
 
 \begin{itemize}
     \item Gaussov filter (\textit{eng. gaussian filter})
@@ -218,33 +217,131 @@ Takve informacije se zbog malih razlika u boji piskela većinom mogu smatrati ne
 \end{itemize}
 
 
-Svaki tip filtera ima svoju upotrebu i koristan je za određeni tip buke. Buka u digitalnim slikama je jako opširna tima koje se neće detaljnije objašnajvati u ovom radu.
+Svaki tip filtera ima svoju upotrebu i koristan je za određeni tip buke. Buka u digitalnim slikama je jako opširna tima koje se neće detaljnije objašnjavati u ovom radu.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\linewidth]{slike/MedianFiltering.png}
-    \caption{Primjer medijaskog filtera \cite{MeidanFilter}}
+    \includegraphics[width=0.85\linewidth]{slike/MedianFiltering.png}
+    \caption{Primjer medijanskog filtera \cite{MeidanFilter}}
 \end{figure}
 
-Na priloženoj slici je prikazan proces korištenja medijanskog filtera koji naspram matrice susjednih vrijednosti određuje vrijednost piksela koristeći medijan svih vrijednosti. 
+Na priloženoj slici je prikazan proces korištenja medijanskog filtera koji naspram matrice susjednih vrijednosti određuje vrijednost piksela koristeći medijan svih vrijednosti.
 
-Važno je napomenuti da su pojmovi poput oštrine i mutnoće  slike usko povezani s bukom. Jako često mutna slika sadrži manje buke, dok oštra slika može sadržavati više buke. Zbog toga je potrebno naći ravnotežu pri uklanjanjanju buke. Ako uklonimo previše buke, slika postaje mutna i gubi se previše informacija, obrnuto vrijedi ako uklonimo premalo buke.
+Važno je napomenuti da su pojmovi poput oštrine i mutnoće  slike usko povezani s bukom. Jako često mutna slika sadrži manje buke, dok oštra slika može sadržavati više buke. Zbog toga je potrebno naći ravnotežu pri uklanjanju buke. Ako uklonimo previše buke, slika postaje mutna i gubi se previše informacija, obrnuto vrijedi ako uklonimo premalo buke.
 
-Postoji još razne metode poboljšavanja slike poput povećavanja kontrasta, ali neće biti potrebne u ovom radu.
+Postoji još razne metode poboljšavanja slike poput povećavanja kontrasta, ali neće biti potrebne u ovom radu.Također u nekim literaturama se spominju tehnike poput smanjenja buke  i raznih drugih transformacija u kontekstu restauracije slike. Ali u ovom radi će se o tome govoriti u kontekstu poboljšanja slike.
 
-\subsubsection{Restauracija slike}
-Korištenje algoritama za rekonstrukciju oštećenih ili degradiranih dijelova slike.
+Druge važne metode poboljšavanja slike su razne geometrijske transformacije slike poput translacije, rotacije i skaliranja. No to sve te osnovne geometrijske operacije se koriste kod ispravljanja perspektive. Baš zbog toga je ispravak perspektive puno zanimljivija operacija za ovaj rad \cite{GeometryTransforms}.  
+
+Ispravljanje perspektive omogućuje da slika prikazuje na načina to da je slikana u nekom drugoj ravnini u prostoru. To omogućuje da se uklone razlike između slika poput kuta kamera naspram subjekta fotografije, u ovom slučaju papira s matricom odgovora. 
+
+Korekcija perspektive mapira točku \( \mathbf{p} = [x, y, 1]^T \) u originalnoj slici (slikanoj iz nekog neželjenog kuta) \( \mathbf{p'} = [x', y', w']^T \) u sliku ispravljene perspektive pomoću matrice \( H \) \cite{OpenCvPerpsective}.
+
+\[
+\mathbf{p'} = H \cdot \mathbf{p}
+\]
+
+Gdje \( H \) predstavlja \( 3 \times 3 \) homografsku matricu:
+
+\[
+H = 
+\begin{bmatrix}
+h_{11} & h_{12} & h_{13} \\
+h_{21} & h_{22} & h_{23} \\
+h_{31} & h_{32} & h_{33}
+\end{bmatrix}
+\]
+
+Transformirane koordinate se računaju na sljedeći način:
+
+\[
+\begin{bmatrix}
+x' \\
+y' \\
+w
+\end{bmatrix}
+=
+\begin{bmatrix}
+h_{11} & h_{12} & h_{13} \\
+h_{21} & h_{22} & h_{23} \\
+h_{31} & h_{32} & h_{33}
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+x \\
+y \\
+1
+\end{bmatrix}
+\]
+
+Da bi se koordinate bile korisne potrebno ih je normalizirati sa \( w \):
+
+\[
+x' = \frac{h_{11}x + h_{12}y + h_{13}}{h_{31}x + h_{32}y + h_{33}}, \quad
+y' = \frac{h_{21}x + h_{22}y + h_{23}}{h_{31}x + h_{32}y + h_{33}}
+\]
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\linewidth]{slike/perspective.png}
+    \caption{Prikaz procesa ispravka perspektive subjekta na slici \cite{OpenCvPerpsective}}
+\end{figure}
+
+Na priloženoj slici je prikazano kako se matrica transformacije koristi da bi se perspektiva ispravila. U praksi to funkcionira tako da se matrica transformacije računa naspram 4 izvorne i 4 odredišne točke. Te se zatim prema formuli množi sa svakom izvornom točkom da bi se izračunale odredišne točke.
 
 \subsection{Procesiranje slike}
-\begin{itemize}
-    \item Ekstrakcija značajki i identifikacija struktura unutar slike
-\end{itemize}
+
+Nakon što je faza pretprocesiranja pripremila pretvorila sliku u korisniji format, kreće glavna faza obrade to jest procesiranje slike. Glavne tehnike kod procesiranja slike su segmentacija, detekcija objekata, morfološka obrada te reprezentacija i opis.
 
 \subsubsection{Segmentacija slike}
-Proces dijeljenja slike u regije koje predstavljaju različite objekte ili strukture.
+
+Segmentacija slike je proces grupiranja piksela prema nekim obilježjima. Za razliku od običnih klasifikator poput neuronskim mreža, segmentacija nudi informacije gdje se točno na slici nalazi objekt od interesa. Isto kao u kod klasifikatora potrebno je definirati moguće klase kojima piksel može pripadati. Definiranje tih klasa se može učiniti na 3 načina prema kojima dijelimo tipove segmentacije \cite{segmentacija}:
+
+\begin{itemize}
+    \item semantička segmentacija (\textit{eng. semantic segmentation })
+    \item segmentacija instance (\textit{eng. instance segmentation})
+    \item panonička segmentacija (\textit{eng. panoptic segmentation})
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\linewidth]{slike/sesgmentacija.png}
+    \caption{Usporedba tipova segmentacije \cite{segmentacija}}
+\end{figure}
+
+Za priloženu sliku su definirane dvije klase nebo i ptice. Semantička slika je sve piksela ptica klasificirala kao jednu klasu, što znači da ne znamo točno o kojoj ptici pripada piksel. Da bi to riješili postoji segmentacija prema instanci što odvaja svaku pticu u zasebnu klasu što znači da više ne znamo koji sve pikseli pripadaju roditeljskoj klasi ptica. Da bi to riješili postoji panonička segmentacija koja kombinira ta dva pristupa i pruža informacije o klasi piksela i kojoj instanci pripada. Tip segmentacije ovisi o specifičnostima problema \cite{segmentacija}.
+
 
 \subsubsection{Morfološka obrada}
-Primjena morfoloških operacija (dilatacija, erozija, otvaranje, zatvaranje) za poboljšanje strukture objekata na slici.
+
+Morfološka obrada je skup operacija koji procesira sliku naspram oblika. Omogućuje pronalazak elemenata na slici sličnih definiranom obliku. A usporedbu oblika vrši tako da traži piksele koji odgovaraju tom obliku \cite{morph}.
+
+Morfološka obrada se u nekim segmentima preklapa sa segmentacijom slike, ali ne radi se o istim operacijama. Morfološke operacije se često koriste nakon segmentacije da uklone nedostatke iz detektiranih segmenata \cite{morph}.
+
+Dvije najvažnije morfološke operacije su erozija i dilatacija.
+Erozija funkcionira na način da uklanja piksele s ruba objekta. Vrlo je korisna u slučajevima kada je potrebno odvojiti dva objekta određenog oblika \cite{morph}. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{slike/erosion.png}
+    \caption{Prikaz erozije kao morfološke operacije \cite{morph}}
+\end{figure}
+
+Za razliku od erozije, dilatacija dodaje piksele na oko ruba objekta. Time omogućuje da se popune praznine između objekata.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{slike/dilatacija.png}
+    \caption{Prikaz dilatacije kao morfološke operacije \cite{morph}}
+\end{figure}
+
+Najčešće se te dvije operacije ne koriste zasebno već zajedno kao kompozitna morfološka operacija. Ako prvo provedemo eroziju zatim dilataciju radi se o otvaranju. Dok obrnuti redoslijed operacija čini zatvaranje \cite{morph}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{slike/otvaranje_zatvaranje.png}
+    \caption{Prikaz kompozitnih morfoloških operacija \cite{morph}}
+\end{figure}
 
 \subsubsection{Reprezentacija i opis}
 Opis kontura, oblika i teksture objekata radi klasifikacije i analize.

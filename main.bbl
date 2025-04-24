@@ -246,6 +246,121 @@
       \verb https://visns.neocities.org/MedianFiltering
       \endverb
     \endentry
+    \entry{GeometryTransforms}{misc}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Fiveable}
+      \field{month}{4}
+      \field{note}{[Online; accessed 24. Apr. 2025]}
+      \field{title}{{Image preprocessing and enhancement {$\vert$} Geospatial Engineering Class Notes {$\vert$} Fiveable}}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://fiveable.me/geospatial-engineering/unit-4/image-preprocessing-enhancement/study-guide/L5fa2eI0Xk8chrKd
+      \endverb
+      \verb{url}
+      \verb https://fiveable.me/geospatial-engineering/unit-4/image-preprocessing-enhancement/study-guide/L5fa2eI0Xk8chrKd
+      \endverb
+    \endentry
+    \entry{OpenCvPerpsective}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=5be28fd55155cf70fb038d6009d9ebe1}{%
+           family={Shaikh},
+           familyi={S\bibinitperiod},
+           given={Raqueeb},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Analytics Vidhya}%
+      }
+      \strng{namehash}{5be28fd55155cf70fb038d6009d9ebe1}
+      \strng{fullhash}{5be28fd55155cf70fb038d6009d9ebe1}
+      \strng{fullhashraw}{5be28fd55155cf70fb038d6009d9ebe1}
+      \strng{bibnamehash}{5be28fd55155cf70fb038d6009d9ebe1}
+      \strng{authorbibnamehash}{5be28fd55155cf70fb038d6009d9ebe1}
+      \strng{authornamehash}{5be28fd55155cf70fb038d6009d9ebe1}
+      \strng{authorfullhash}{5be28fd55155cf70fb038d6009d9ebe1}
+      \strng{authorfullhashraw}{5be28fd55155cf70fb038d6009d9ebe1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Medium}
+      \field{month}{2}
+      \field{title}{{OpenCv Perspective Transformation - Analytics Vidhya - Medium}}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://medium.com/analytics-vidhya/opencv-perspective-transformation-9edffefb2143
+      \endverb
+      \verb{url}
+      \verb https://medium.com/analytics-vidhya/opencv-perspective-transformation-9edffefb2143
+      \endverb
+    \endentry
+    \entry{segmentacija}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=676fb38ec990aa5d8f7d51f8dcd2c92a}{%
+           family={Pulapakura},
+           familyi={P\bibinitperiod},
+           given={Raj},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Medium}%
+      }
+      \strng{namehash}{676fb38ec990aa5d8f7d51f8dcd2c92a}
+      \strng{fullhash}{676fb38ec990aa5d8f7d51f8dcd2c92a}
+      \strng{fullhashraw}{676fb38ec990aa5d8f7d51f8dcd2c92a}
+      \strng{bibnamehash}{676fb38ec990aa5d8f7d51f8dcd2c92a}
+      \strng{authorbibnamehash}{676fb38ec990aa5d8f7d51f8dcd2c92a}
+      \strng{authornamehash}{676fb38ec990aa5d8f7d51f8dcd2c92a}
+      \strng{authorfullhash}{676fb38ec990aa5d8f7d51f8dcd2c92a}
+      \strng{authorfullhashraw}{676fb38ec990aa5d8f7d51f8dcd2c92a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Medium}
+      \field{month}{2}
+      \field{title}{{Image Segmentation {\ifmmode---\else—\fi} A Beginner{'}s Guide {$\vert$} Medium}}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://medium.com/@raj.pulapakura/image-segmentation-a-beginners-guide-0ede91052db7
+      \endverb
+      \verb{url}
+      \verb https://medium.com/@raj.pulapakura/image-segmentation-a-beginners-guide-0ede91052db7
+      \endverb
+    \endentry
+    \entry{morph}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=e49d0ea2edb753bd4f17a734ebc6c886}{%
+           family={Chhikara},
+           familyi={C\bibinitperiod},
+           given={Prateek},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{e49d0ea2edb753bd4f17a734ebc6c886}
+      \strng{fullhash}{e49d0ea2edb753bd4f17a734ebc6c886}
+      \strng{fullhashraw}{e49d0ea2edb753bd4f17a734ebc6c886}
+      \strng{bibnamehash}{e49d0ea2edb753bd4f17a734ebc6c886}
+      \strng{authorbibnamehash}{e49d0ea2edb753bd4f17a734ebc6c886}
+      \strng{authornamehash}{e49d0ea2edb753bd4f17a734ebc6c886}
+      \strng{authorfullhash}{e49d0ea2edb753bd4f17a734ebc6c886}
+      \strng{authorfullhashraw}{e49d0ea2edb753bd4f17a734ebc6c886}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Towards Data Science}
+      \field{month}{1}
+      \field{title}{{Understanding Morphological Image Processing and Its Operations {$\vert$} Towards Data Science}}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://towardsdatascience.com/understanding-morphological-image-processing-and-its-operations-7bcf1ed11756
+      \endverb
+      \verb{url}
+      \verb https://towardsdatascience.com/understanding-morphological-image-processing-and-its-operations-7bcf1ed11756
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
