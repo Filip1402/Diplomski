@@ -131,6 +131,121 @@
       \verb https://dl.icdst.org/pdfs/files4/01c56e081202b62bd7d3b4f8545775fb.pdf
       \endverb
     \endentry
+    \entry{Patel2023Oct}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=3468e496b8f9d59ece3a76804d449d58}{%
+           family={Patel},
+           familyi={P\bibinitperiod},
+           given={Maahi},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Medium}%
+      }
+      \strng{namehash}{3468e496b8f9d59ece3a76804d449d58}
+      \strng{fullhash}{3468e496b8f9d59ece3a76804d449d58}
+      \strng{fullhashraw}{3468e496b8f9d59ece3a76804d449d58}
+      \strng{bibnamehash}{3468e496b8f9d59ece3a76804d449d58}
+      \strng{authorbibnamehash}{3468e496b8f9d59ece3a76804d449d58}
+      \strng{authornamehash}{3468e496b8f9d59ece3a76804d449d58}
+      \strng{authorfullhash}{3468e496b8f9d59ece3a76804d449d58}
+      \strng{authorfullhashraw}{3468e496b8f9d59ece3a76804d449d58}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{3080-4550}
+      \field{journaltitle}{Medium}
+      \field{month}{10}
+      \field{title}{{The Complete Guide to Image Preprocessing Techniques in Python}}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://medium.com/@maahip1304/the-complete-guide-to-image-preprocessing-techniques-in-python-dca30804550c
+      \endverb
+      \verb{url}
+      \verb https://medium.com/@maahip1304/the-complete-guide-to-image-preprocessing-techniques-in-python-dca30804550c
+      \endverb
+    \endentry
+    \entry{BibEntry2025Apr}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cloudinary}
+      \field{month}{4}
+      \field{note}{[Online; accessed 22. Apr. 2025]}
+      \field{title}{{Image Acquisition {$\vert$} Cloudinary}}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://cloudinary.com/glossary/image-acquisition
+      \endverb
+      \verb{url}
+      \verb https://cloudinary.com/glossary/image-acquisition
+      \endverb
+    \endentry
+    \entry{Adobe}{misc}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{note}{[Online; accessed 22. Apr. 2025]}
+      \field{title}{{What is noise in photography}}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.adobe.com/creativecloud/photography/hub/guides/what-is-noise-in-photography.html
+      \endverb
+      \verb{url}
+      \verb https://www.adobe.com/creativecloud/photography/hub/guides/what-is-noise-in-photography.html
+      \endverb
+    \endentry
+    \entry{Swain2023Jul}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=9354e3e04e4f655cbbe47a2ad5f348c6}{%
+           family={Swain},
+           familyi={S\bibinitperiod},
+           given={Anisha},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Medium}%
+      }
+      \strng{namehash}{9354e3e04e4f655cbbe47a2ad5f348c6}
+      \strng{fullhash}{9354e3e04e4f655cbbe47a2ad5f348c6}
+      \strng{fullhashraw}{9354e3e04e4f655cbbe47a2ad5f348c6}
+      \strng{bibnamehash}{9354e3e04e4f655cbbe47a2ad5f348c6}
+      \strng{authorbibnamehash}{9354e3e04e4f655cbbe47a2ad5f348c6}
+      \strng{authornamehash}{9354e3e04e4f655cbbe47a2ad5f348c6}
+      \strng{authorfullhash}{9354e3e04e4f655cbbe47a2ad5f348c6}
+      \strng{authorfullhashraw}{9354e3e04e4f655cbbe47a2ad5f348c6}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Medium}
+      \field{month}{7}
+      \field{title}{{Noise filtering in Digital Image Processing - Anisha Swain - Medium}}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://medium.com/@anishaswain/noise-filtering-in-digital-image-processing-d12b5266847c
+      \endverb
+      \verb{url}
+      \verb https://medium.com/@anishaswain/noise-filtering-in-digital-image-processing-d12b5266847c
+      \endverb
+    \endentry
+    \entry{MeidanFilter}{misc}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{note}{[Online; accessed 22. Apr. 2025]}
+      \field{title}{{Caption for Median Filtering Illustration}}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://visns.neocities.org/MedianFiltering
+      \endverb
+      \verb{url}
+      \verb https://visns.neocities.org/MedianFiltering
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

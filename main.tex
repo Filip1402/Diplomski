@@ -186,21 +186,51 @@ Naravno nisu sve faze uvijek potrebne, već se radi o generalnim smjernicama koj
 
 Te faze se dodatno podijeliti na \textbf{pretprocesiranje, procesiranje i postprocesiranje slike}. U fazu \textbf{pretprocesiranja} spadaju svi koraci koji pripremaju sliku za procesiranje, poput poboljšanja slike. Nakon pretprocesiranja slijedi \textbf{procesiranje} koje se odnosi na korištenje algoritama za detekciju i prepoznavanje objekata i transformacije. Posljednja faza uključuje korake poput pripreme rezultata za prezentaciju, vizualizaciju i daljnju analizu \cite{IamgeProcesingPhases}.
 
-
+\pagebreak
 \subsection{Pretprocesiranje slike}
-\begin{itemize}
-    \item Priprema slike za daljnju obradu
-\end{itemize}
+
+Pretprocesiranje slike je ključan proces koji se provodi prije obrade slike. Kao ulaz prima izvornu, sirovu sliku, a kao izlaz vraća sliku u korisnijem formatu za daljnju obradu i analizu. Omogućuje da se sa slike odstrane ili istaknu područja relevantnih informacija te da se poboljša kvaliteta slike prije daljnje obrade \cite{Patel2023Oct}.
+
 
 \subsubsection{Pribavljanje slike}
 
+Pribavljanje slike je proces nastajanja digitalne slike tako da se informacije iz realnog svijeta zapiše u digitalnom obliku kojim računalo zatim može manipulirati. Slika se može pribaviti raznim uređajima poput fotoaparata, pametnog mobitela ali i drugih tehnologija poput skenera, rendgena i drugih uređaja. U ovom radu fokus će biti na fotografije probavljene uređajima koji posjeduju digitalnu kameru \cite{BibEntry2025Apr}.
+
+
+Da bi bilo kakav procesiranje moglo krenuti prvo je potrebno pribaviti sliku. Moglo bi se reći da je pribavljanje slike čak najvažniji korak u cijelom procesu obrade slike, njegov rezultat ima veliku ulogu za postizanje krajnjeg rezultata obrade i analize slike. Pribavljena slika mora biti kvalitetna da bi ostali koraci bili uspiješni. Na kvalitetu slike ne utiječe samo rezolucija, osvjetljenje i kut pod kojim je slika uslikana također imaju značajnu ulogu \cite{BibEntry2025Apr}.
+
+Razni algoritmi i koraci u pretprocesiranju mogu korigirati pribavljenu sliku, no to nikad nije zamjena za sliku dobre kvalitete. Dobra i loša slika mogu biti razlika između uspješnog i neuspješnog detektiranja elemenata na slici. Naravno u većini slučajeva sustavi za obradu slike ne mogu utjecati na kvalitetu slike koje će im korisnik poslati. Zbog toga je važno detaljno testirati sustav u različitim uvjetima i utvrditi što su njegove granice i je li potrebno podržati neki dodatni korisnički slučaj od onih postojećih.
 \subsubsection{Poboljšanje slike}
-Cilj je poboljšati vizualnu kvalitetu slike te naglasiti korisne informacije. Uključuje:
+
+Poboljšanje slike je ključan korak, cilj mu je modificirati sliku na način da ona postane korisnija za daljnu obradu. To se može postići na više načina poput otklanjanja buke, isticanja važnih značajki slike, poboljšanja oštrine i kontrasta slike.
+
+Do sada smo spomenuli da se nepotrebene inforamcije na slici također mogu biti buka. Baš zbog toga pretvaranje u sivu i binarnu sliku spadaju pod poboljšanje slike. Oba dvije operacije uklanjaju nepotrebne inforamcije o bojama sa slike što omogučuje bržu i jednostavlniju obradu i analizu slike. naravno to ima smisla samo ako nam inforamcije o bojama nisu potrebene.
+
+Osim nepotrebnih boja, bukom se može smatrati i nasumična razlika u boji između susjednih piksela. U digitalnoj fotografiji buka je praktički neizbježna i može se definirati kao nasumična varijacija signala u slici. Ta varijacija je reperezentirana različitim nijansama boja susjednih piksela. Buka se može smanjiti manipulacijom parametara digtalne kamera, ali ne može se kompletno ukoniti \cite{Adobe}.
+
+Takve informacije se zbog malih razlika u boji piskela većinom mogu smatrati nevažnima, a loše utiječu na daljnu obradu slike. Zbog toga postoje razne tehnike za filtriranje slike. Najpopularnije tehnike za filtriranje buke su \cite{Swain2023Jul}:
+
 \begin{itemize}
-    \item \textbf{Pretvaranje u sivu sliku}  konverzija RGB slike u grayscale za pojednostavljenje analize.
-    \item \textbf{Smanjenje buke}  uklanjanje neželjenih šumova filtriranjem (npr. Gaussov, medijanski filter).
-    \item \textbf{Pretvaranje u binarnu sliku}  segmentacija slike u dvije razine (bijelo/crno) pomoću praga.
+    \item Gaussov filter (\textit{eng. gaussian filter})
+    \item Srednji filter (\textit{eng. mean filter})
+    \item Medijanski filter (\textit{eng. median filter})
+    \item Bilateralni filter (\textit{eng. bilateral filter})
 \end{itemize}
+
+
+Svaki tip filtera ima svoju upotrebu i koristan je za određeni tip buke. Buka u digitalnim slikama je jako opširna tima koje se neće detaljnije objašnajvati u ovom radu.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\linewidth]{slike/MedianFiltering.png}
+    \caption{Primjer medijaskog filtera \cite{MeidanFilter}}
+\end{figure}
+
+Na priloženoj slici je prikazan proces korištenja medijanskog filtera koji naspram matrice susjednih vrijednosti određuje vrijednost piksela koristeći medijan svih vrijednosti. 
+
+Važno je napomenuti da su pojmovi poput oštrine i mutnoće  slike usko povezani s bukom. Jako često mutna slika sadrži manje buke, dok oštra slika može sadržavati više buke. Zbog toga je potrebno naći ravnotežu pri uklanjanjanju buke. Ako uklonimo previše buke, slika postaje mutna i gubi se previše informacija, obrnuto vrijedi ako uklonimo premalo buke.
+
+Postoji još razne metode poboljšavanja slike poput povećavanja kontrasta, ali neće biti potrebne u ovom radu.
 
 \subsubsection{Restauracija slike}
 Korištenje algoritama za rekonstrukciju oštećenih ili degradiranih dijelova slike.

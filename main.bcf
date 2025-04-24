@@ -2389,6 +2389,13 @@
     <bcf:citekey order="14" intorder="1">ImageProcessing</bcf:citekey>
     <bcf:citekey order="15" intorder="1">ImageProcessing</bcf:citekey>
     <bcf:citekey order="16" intorder="1">IamgeProcesingPhases</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">Patel2023Oct</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">BibEntry2025Apr</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">BibEntry2025Apr</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">Adobe</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">Swain2023Jul</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">MeidanFilter</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">MeidanFilter</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

@@ -365,6 +365,11 @@ INPUT c:/texlive/2025/texmf-dist/tex/latex/psnfss/ts1phv.fd
 INPUT c:/texlive/2025/texmf-dist/tex/latex/psnfss/ts1phv.fd
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvr8c.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/vf/adobe/helvetic/phvr8c.vf
+INPUT ./slike/MedianFiltering.png
+INPUT ./slike/MedianFiltering.png
+INPUT ./slike/MedianFiltering.png
+INPUT ./slike/MedianFiltering.png
+INPUT ./slike/MedianFiltering.png
 INPUT c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd
 INPUT c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd
 INPUT c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd

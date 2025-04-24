@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 1745251482.45303 "main.bcf" "main.bbl" "main" 1745263397.72681 0
-  "lib.bib" 1745251462 1703 5bb843d3dce3752171688020bb332149 ""
-  "main.bcf" 1745263397 108819 fe4e2113308253fb99a66832374aacbf "pdflatex"
+["biber main"] 1745347488.22029 "main.bcf" "main.bbl" "main" 1745349470.03241 0
+  "lib.bib" 1745347478 3027 52af613a60d1f5cbc6c3010df435366e ""
+  "main.bcf" 1745349469 109294 e77f91378fbb8fb41f60edf236a1f971 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1745263391.13182 "c:/Users/zutif/Documents/Diplomski/main.tex" "main.pdf" "main" 1745263397.72801 0
-  "c:/Users/zutif/Documents/Diplomski/main.tex" 1745263390 17184 5e85e610b43988de1d7cd213b5cdb335 ""
+["pdflatex"] 1745349463.26967 "c:/Users/zutif/Documents/Diplomski/main.tex" "main.pdf" "main" 1745349470.0336 0
+  "c:/Users/zutif/Documents/Diplomski/main.tex" 1745349455 21074 d71bc6edbce80c95cb94e785a966de1e ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1744825024 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1744825599 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm" 1744824623 1292 bd42be2f344128bff6d35d98474adfe3 ""
@@ -172,18 +172,19 @@
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1744910740 3561285 bb535cd2e450ef7b6276760fd683a65a ""
   "c:/texlive/2025/texmf.cnf" 1744910191 713 e69b156964470283e0530f5060668171 ""
   "foi.cls" 1744815610 8210 2e57a0e134d9b67a1128ac854d806d02 ""
-  "main.aux" 1745263397 7440 096d5cd63dd85bb1f2166f3dc064e962 "pdflatex"
-  "main.bbl" 1745251485 5117 83b6dfae72f15d65a78e59cbb19df356 "biber main"
-  "main.lof" 1745263397 660 d5fe0df0b08e74c42d5b58f3d8bbade4 "pdflatex"
-  "main.lot" 1745263397 131 5bd39dad3c45cbe0f97d91814d109234 "pdflatex"
-  "main.out" 1745263397 6112 5cb9baa57b53bba98936e7d4c4907e32 "pdflatex"
-  "main.run.xml" 1745263397 2396 545fa222197931919dec819c57e7bcc3 "pdflatex"
-  "main.tex" 1745263390 17184 5e85e610b43988de1d7cd213b5cdb335 ""
-  "main.toc" 1745263397 2837 5ce54a12e74582ac1eebd8c3ba2a948c "pdflatex"
+  "main.aux" 1745349469 8481 7ce83d900679d304cd334e811253db76 "pdflatex"
+  "main.bbl" 1745347490 9822 2ea9ba0ecfe3491e73936d9fb60283e5 "biber main"
+  "main.lof" 1745349469 809 b383307c9e56c5a606ef3fd7f2d961ac "pdflatex"
+  "main.lot" 1745349469 131 5bd39dad3c45cbe0f97d91814d109234 "pdflatex"
+  "main.out" 1745349469 6112 feed5b249a09ce288cae260093ee8ff9 "pdflatex"
+  "main.run.xml" 1745349469 2396 545fa222197931919dec819c57e7bcc3 "pdflatex"
+  "main.tex" 1745349455 21074 d71bc6edbce80c95cb94e785a966de1e ""
+  "main.toc" 1745349469 2844 cf535ce550cc683aaf015604d9c9b6fc "pdflatex"
   "slike/Binary.jpeg" 1745145151 535339 819253f28d307c7843e4d1ee457aba4d ""
   "slike/Color_chanell_separation.png" 1745143334 20034250 ac5d32235f988d1b57db7260b91910a7 ""
   "slike/Grayscale.jpeg" 1745143654 1463999 321b5d99c32902aa7585bb3c382aa011 ""
   "slike/Luminace vs chrominance.png" 1745158520 1029504 11e2963c4c6b2295dfe979fa70ed2f63 ""
+  "slike/MedianFiltering.png" 1745347385 22504 8569d7c2dba2f739bec5d72b3bd88b89 ""
   (generated)
   "main.aux"
   "main.bcf"
