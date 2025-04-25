@@ -12,5 +12,7 @@
 \contentsline {figure}{\numberline {8}{\ignorespaces Prikaz erozije kao morfološke operacije \blx@tocontentsinit {0}\cite {morph}}}{13}{figure.caption.9}%
 \contentsline {figure}{\numberline {9}{\ignorespaces Prikaz dilatacije kao morfološke operacije \blx@tocontentsinit {0}\cite {morph}}}{13}{figure.caption.10}%
 \contentsline {figure}{\numberline {10}{\ignorespaces Prikaz kompozitnih morfoloških operacija \blx@tocontentsinit {0}\cite {morph}}}{14}{figure.caption.11}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Usporedba segmentaicje i detekcije objekta \blx@tocontentsinit {0}\cite {segvsdetection_2}}}{15}{figure.caption.12}%
+\contentsline {figure}{\numberline {12}{\ignorespaces \centering Prikaz rezultata detekcije krugova pomoću kontura i CvInvoke.MinEnclosingCircle metode \blx@tocontentsinit {0}\cite {segvsdetection_2}}}{16}{figure.caption.13}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

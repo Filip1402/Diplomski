@@ -323,7 +323,7 @@ Erozija funkcionira na način da uklanja piksele s ruba objekta. Vrlo je korisna
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{slike/erosion.png}
+    \includegraphics[width=0.75\linewidth]{slike/erosion.png}
     \caption{Prikaz erozije kao morfološke operacije \cite{morph}}
 \end{figure}
 
@@ -331,7 +331,7 @@ Za razliku od erozije, dilatacija dodaje piksele na oko ruba objekta. Time omogu
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{slike/dilatacija.png}
+    \includegraphics[width=0.75\linewidth]{slike/dilatacija.png}
     \caption{Prikaz dilatacije kao morfološke operacije \cite{morph}}
 \end{figure}
 
@@ -339,19 +339,76 @@ Najčešće se te dvije operacije ne koriste zasebno već zajedno kao kompozitna
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\linewidth]{slike/otvaranje_zatvaranje.png}
+    \includegraphics[width=0.6\linewidth]{slike/otvaranje_zatvaranje.png}
     \caption{Prikaz kompozitnih morfoloških operacija \cite{morph}}
 \end{figure}
 
 \subsubsection{Reprezentacija i opis}
-Opis kontura, oblika i teksture objekata radi klasifikacije i analize.
+Nakon što je obavlejna segmentacija i po potrebi morfološka obrada većinom slijedi reprezentacija i opis segmenatiranih dijelova. Cilj reprezentacije i opisa je reprezentirati piksle na način da budu korisniji za daljnju obradu \cite{RepAndDesc}. 
+
+\begin{flushleft}
+    Dva glavna tipa reprezentacije segmenatiranih obijekata, ovisno o tome je li fokus na \cite{RepAndDesc}:
+
+\begin{itemize}
+    \item vansjkim karakterisitkama, (kontura ili rub objekta))
+    \item unutarnjim karakterisitkama (pikseli koji čine objekt)
+\end{itemize}
+\end{flushleft}
+
+Reprezentacija prema vanjskim karakteristikama se često korsiti kad nam je za obradu važan sam oblik, dok se unutarnje karakteristike koriste kada je potrebna informacija o boji i teksturi objekta.Iz dobivenih reprezenatacija je moguće izvući razne opisne vrijednosti (\textit{eng. descriptors}) koje su korisne kod daljnje obrade. Važno je napomenuti da je generalno pravilo da bi opisne vrijednosti trebale biti imune na promjenu skaliranja, translacije i rotacije \cite{RepAndDesc}.
+
+\begin{flushleft}
+Neke od korisnik opisnih vrijednosti su \cite{RepAndDesc}:
+\begin{itemize}
+    \item dužina konture objekta
+    \item promjer konture objekta
+    \item Zaobljenost
+    \item Okvirna kutija
+    \item Površina objekta
+    \item Sličnost željenom obliku
+    \item Odstupanje od simetrije
+    \item Koeficijent istezanja
+\end{itemize}
+\end{flushleft}
 
 \subsubsection{Detekcija i prepoznavanje objekata}
-Otkrivanje i identifikacija objekata od interesa unutar slike. Uključuje:
-\begin{itemize}
-    \item \textbf{Detektiranje kontura} identifikacija granica objekata u slici.
-    \item \textbf{Detektiranje linija} prepoznavanje pravaca pomoću metoda poput Houghove transformacije.
-\end{itemize}
+
+Detekcija i prepoznavanje objekata je jedna od ključmnih tehnika procesiranja sliak na tradicionalana način ali i pomoću neurosnkih mreža. Bazirano je na principu pronalaznka obijekta i crtanja okvirne kutije oko tog objekt \cite{segvsdetection, , segvsdetection_2}. 
+
+To mu je ujedno i glavna razliak naspram segmentacije slike, segmentacija dodijeljuje klasu svakom piskelu koji odgovara onome što se traži, dok detekcija obijekta to ne radi već samo locira obijekt određene klase na slici \cite{segvsdetection, segvsdetection_2}.
+
+Ponekad je samo informacija o lokaciji obijekta dovoljna, u slučaju da nije segmentacija nudi puno više informacija o samom objektu.
+
+Da bi detektiranje objekata bilo uspješno često se koriste konture. Konture su ništa drugo nego krivulje koje opisuju rubove objekata, zbog toga su jako korisne kdo detektiranja oblika. Također se ponekad koriste i kdo segmentiranja.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{slike/segVsDetec.png}
+    \caption{Usporedba segmentaicje i detekcije objekta \cite{segvsdetection_2}}
+\end{figure}
+
+Da bi se mogle pronaći konture prvo je potrebno sliku pretvoriti u binarnu sliku i zatim provesti operaciju detektiranja kontura. Konture se detektiranja na način da se traži razlika između vrijednosti pikslea na bianrnoj slici i time se utvrđuje ujedno i granica između objekata. Zatim se primjenju jedna od metoda za detekciju objekta nad tim konturama. Te metode zapravo traže konture koje odgovraju traženom obliku sa definiranim tolerancijama za oblik, veličinu i slično \cite{konturesShapes}.
+
+\begin{flushleft}
+    Pošto će se u ovom radu koristiti EmguCv nama su najzanimljive metode poput:
+    \begin{itemize}
+        \item \textbf{CvInvoke.ApproxPolyDP()} - Aproksimacija kontura u jednostavnije poligone (korisno za prepoznavanje oblika).
+        \item \textbf{CvInvoke.MinAreaRect()} - Pronalaženje minimalnog pravokutnika koji okružuje konturu (korisno za detekciju objekata u obliku pravokutnika).
+        \item \textbf{CvInvoke.FitEllipse()} - Fitting elipse na konturu (korisno za prepoznavanje eliptičnih objekata).
+        \item \textbf{CvInvoke.HoughLinesP()} - Houghova transformacija za detekciju linija.
+        \item \textbf{CvInvoke.HoughCircles()} - Houghova transformacija za detekciju krugova.
+        \item \textbf{CvInvoke.BoundingRectangle()} - Pronalaženje okvira (bounding box) koji okružuje konture objekta.
+        \item \textbf{CvInvoke.FindContoursHierarchical()} - Detekcija kontura s informacijama o hijerarhiji (za detekciju unutarnjih i vanjskih objekata).
+    \end{itemize}
+    \end{flushleft}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\linewidth]{slike/shapeDetection.png}
+    \caption{\centering Prikaz rezultata detekcije krugova pomoću kontura i CvInvoke.MinEnclosingCircle metode \cite{segvsdetection_2}}
+\end{figure}
+
+Na priloženoj slici je jasno prikazano kako se izvorna slika pretvara u bianrnu sliku i zatim se pomoću kontura i metode za detektiranje obliak naspram kontura pronalazi lokacija kruga.
 
 \subsection{Postprocesiranje slike}
 \begin{itemize}

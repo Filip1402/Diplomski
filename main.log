@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.17)  24 APR 2025 21:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.17)  25 APR 2025 19:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -908,79 +908,110 @@ Package pdftex.def Info: slike/sesgmentacija.png  used on input line 308.
 
 
 [12 <./slike/sesgmentacija.png (PNG copy)>]
-<slike/erosion.png, id=321, 770.88pt x 373.395pt>
+<slike/erosion.png, id=321, 578.16pt x 194.22563pt>
 File: slike/erosion.png Graphic file (type png)
 <use slike/erosion.png>
 Package pdftex.def Info: slike/erosion.png  used on input line 326.
-(pdftex.def)             Requested size: 227.62206pt x 110.25313pt.
-<slike/dilatacija.png, id=324, 770.88pt x 385.44pt>
+(pdftex.def)             Requested size: 341.43307pt x 114.6988pt.
+<slike/dilatacija.png, id=324, 578.16pt x 194.22563pt>
 File: slike/dilatacija.png Graphic file (type png)
 <use slike/dilatacija.png>
 Package pdftex.def Info: slike/dilatacija.png  used on input line 334.
-(pdftex.def)             Requested size: 227.62206pt x 113.80968pt.
+(pdftex.def)             Requested size: 341.43307pt x 114.6988pt.
 <slike/otvaranje_zatvaranje.png, id=328, 770.88pt x 596.2275pt>
 File: slike/otvaranje_zatvaranje.png Graphic file (type png)
 <use slike/otvaranje_zatvaranje.png>
 Package pdftex.def Info: slike/otvaranje_zatvaranje.png  used on input line 342.
-(pdftex.def)             Requested size: 318.66948pt x 246.46544pt.
+(pdftex.def)             Requested size: 273.14923pt x 211.25739pt.
 
 
-[13 <./slike/erosion.png (PNG copy)> <./slike/dilatacija.png (PNG copy)>]
+[13 <./slike/erosion.png> <./slike/dilatacija.png>]
 
 [14 <./slike/otvaranje_zatvaranje.png (PNG copy)>]
+<slike/segVsDetec.png, id=356, 602.25pt x 363.3575pt>
+File: slike/segVsDetec.png Graphic file (type png)
+<use slike/segVsDetec.png>
+Package pdftex.def Info: slike/segVsDetec.png  used on input line 386.
+(pdftex.def)             Requested size: 273.14923pt x 164.80673pt.
+
+
+[15 <./slike/segVsDetec.png (PNG copy)>]
+<slike/shapeDetection.png, id=368, 2035.605pt x 658.46pt>
+File: slike/shapeDetection.png Graphic file (type png)
+<use slike/shapeDetection.png>
+Package pdftex.def Info: slike/shapeDetection.png  used on input line 407.
+(pdftex.def)             Requested size: 455.24411pt x 147.2529pt.
+
+
+[16 <./slike/shapeDetection.png>]
 Poglavlje 4.
-
-
-[15
-
-]
-Poglavlje 5.
-
-
-[16
-
-]
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 378.
- (c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-Overfull \hbox (2.35927pt too wide) in paragraph at lines 378--378
-\T1/phv/m/n/10.95 svi-banj 2024. adresa: []$\T1/pcr/m/n/10.95 https : / / www . grayscaleimage . com / why -[] use -[] grayscale -[]
- []
-
-
-Overfull \hbox (6.52557pt too wide) in paragraph at lines 378--378
-\T1/phv/m/n/10.95 2025], tra-vanj 2025. adresa: []$\T1/pcr/m/n/10.95 https : / / www . v7labs . com / blog / image -[] processing -[]
- []
-
 
 
 [17
 
 ]
-Overfull \hbox (6.88576pt too wide) in paragraph at lines 378--378
+Poglavlje 5.
+
+
+[18
+
+]
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 435.
+ (c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Overfull \hbox (2.35927pt too wide) in paragraph at lines 435--435
+\T1/phv/m/n/10.95 svi-banj 2024. adresa: []$\T1/pcr/m/n/10.95 https : / / www . grayscaleimage . com / why -[] use -[] grayscale -[]
+ []
+
+
+Overfull \hbox (6.52557pt too wide) in paragraph at lines 435--435
+\T1/phv/m/n/10.95 2025], tra-vanj 2025. adresa: []$\T1/pcr/m/n/10.95 https : / / www . v7labs . com / blog / image -[] processing -[]
+ []
+
+
+
+[19
+
+]
+Overfull \hbox (6.88576pt too wide) in paragraph at lines 435--435
 []\T1/phv/m/n/10.95 P. Ch-hi-kara, ^^R  Un-der-stan-ding Morp-ho-lo-gi-cal Image Pro-ce-ssing and Its Ope-ra-ti-ons $\OMS/cmsy/m/n/10.95 j$ \T1/phv/m/n/10.95 Towards
  []
 
 
-Overfull \hbox (43.3261pt too wide) in paragraph at lines 378--378
+Overfull \hbox (43.3261pt too wide) in paragraph at lines 435--435
 \T1/phv/m/n/10.95 Data Sci-ence,^^Q \T1/phv/m/sl/10.95 Towards Data Sci-ence\T1/phv/m/n/10.95 , si-je-£anj 2025. adresa: []$\T1/pcr/m/n/10.95 https : / / towardsdatascience .
  []
 
 
-Overfull \hbox (24.22958pt too wide) in paragraph at lines 378--378
+Overfull \hbox (24.22958pt too wide) in paragraph at lines 435--435
 \T1/pcr/m/n/10.95 com / understanding -[] morphological -[] image -[] processing -[] and -[] its -[] operations -[]
  []
 
 
+Overfull \hbox (15.60802pt too wide) in paragraph at lines 435--435
+[]\T1/phv/m/n/10.95 M. Abra-mov, ^^R  Se-man-tic Seg-men-ta-tion vs Object De-tec-tion: Dif-fe-ren-ces $\OMS/cmsy/m/n/10.95 j$ \T1/phv/m/n/10.95 Keymakr,^^Q \T1/phv/m/sl/10.95 Keymakr\T1/phv/m/n/10.95 ,
+ []
 
-[18] (./main.lof)
+
+Overfull \hbox (27.27357pt too wide) in paragraph at lines 435--435
+\T1/pcr/m/n/10.95 classification -[] vs -[] object -[] detection -[] vs -[] image -[] segmentation -[] f36db85fe81$[]\T1/phv/m/n/10.95 . 
+ []
+
+
+
+[20] (./main.lof
+Overfull \hbox (3.45827pt too wide) in paragraph at lines 16--16
+ [][] [][]\T1/phv/m/n/10.95 Prikaz re-zul-tata de-tek-cije kru-gova po-mo¢u kon-tura i CvI-nvoke.MinEnclosingCircle 
+ []
+
+)
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
 
 
-[19
+[21
 
 ] (./main.lot)
 \tf@lot=\write8
@@ -988,7 +1019,7 @@ Overfull \hbox (24.22958pt too wide) in paragraph at lines 378--378
 
 
 
-[20
+[22
 
 ] (./main.aux)
  ***********
@@ -996,24 +1027,24 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-03-26>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 37669E01E11856892749305ECBB43D70;5907.
+(rerunfilecheck)             Checksum: 58E25FD1ECD0FF4BF7ADDC4EC60DE6B4;5907.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24866 strings out of 469626
- 429622 string characters out of 5475183
- 1355142 words of memory out of 5000000
- 51258 multiletter control sequences out of 15000+600000
+ 24900 strings out of 469626
+ 430738 string characters out of 5475183
+ 1356398 words of memory out of 5000000
+ 51284 multiletter control sequences out of 15000+600000
  683024 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,12n,84p,1232b,2418s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 78i,12n,84p,1232b,2430s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (26 pages, 25351659 bytes).
+Output written on main.pdf (28 pages, 26873556 bytes).
 PDF statistics:
- 501 PDF objects out of 1000 (max. 8388607)
- 418 compressed objects within 5 object streams
- 85 named destinations out of 1000 (max. 500000)
- 307 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 547 PDF objects out of 1000 (max. 8388607)
+ 455 compressed objects within 5 object streams
+ 93 named destinations out of 1000 (max. 500000)
+ 317 words of extra memory for PDF output out of 10000 (max. 10000000)
 

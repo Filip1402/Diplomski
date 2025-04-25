@@ -361,6 +361,119 @@
       \verb https://towardsdatascience.com/understanding-morphological-image-processing-and-its-operations-7bcf1ed11756
       \endverb
     \endentry
+    \entry{RepAndDesc}{misc}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{month}{11}
+      \field{note}{[Online; accessed 25. Apr. 2025]}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://cmrcet.ac.in/files/ECE/ececoursefile/13.pdf?utm_source=chatgpt.com
+      \endverb
+      \verb{url}
+      \verb https://cmrcet.ac.in/files/ECE/ececoursefile/13.pdf?utm_source=chatgpt.com
+      \endverb
+    \endentry
+    \entry{segvsdetection}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=1a30dffbfbccd5d9970aeaf2efb7d9eb}{%
+           family={Abramov},
+           familyi={A\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Keymakr}%
+      }
+      \strng{namehash}{1a30dffbfbccd5d9970aeaf2efb7d9eb}
+      \strng{fullhash}{1a30dffbfbccd5d9970aeaf2efb7d9eb}
+      \strng{fullhashraw}{1a30dffbfbccd5d9970aeaf2efb7d9eb}
+      \strng{bibnamehash}{1a30dffbfbccd5d9970aeaf2efb7d9eb}
+      \strng{authorbibnamehash}{1a30dffbfbccd5d9970aeaf2efb7d9eb}
+      \strng{authornamehash}{1a30dffbfbccd5d9970aeaf2efb7d9eb}
+      \strng{authorfullhash}{1a30dffbfbccd5d9970aeaf2efb7d9eb}
+      \strng{authorfullhashraw}{1a30dffbfbccd5d9970aeaf2efb7d9eb}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Keymakr}
+      \field{month}{2}
+      \field{title}{{Semantic Segmentation vs Object Detection: Differences {$\vert$} Keymakr}}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://keymakr.com/blog/semantic-segmentation-vs-object-detection-understanding-the-differences
+      \endverb
+      \verb{url}
+      \verb https://keymakr.com/blog/semantic-segmentation-vs-object-detection-understanding-the-differences
+      \endverb
+    \endentry
+    \entry{segvsdetection_2}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=a8440dcc385f51d7a59ac6e93fbbb5fe}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={Pulkit},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Analytics Vidhya}%
+      }
+      \strng{namehash}{a8440dcc385f51d7a59ac6e93fbbb5fe}
+      \strng{fullhash}{a8440dcc385f51d7a59ac6e93fbbb5fe}
+      \strng{fullhashraw}{a8440dcc385f51d7a59ac6e93fbbb5fe}
+      \strng{bibnamehash}{a8440dcc385f51d7a59ac6e93fbbb5fe}
+      \strng{authorbibnamehash}{a8440dcc385f51d7a59ac6e93fbbb5fe}
+      \strng{authornamehash}{a8440dcc385f51d7a59ac6e93fbbb5fe}
+      \strng{authorfullhash}{a8440dcc385f51d7a59ac6e93fbbb5fe}
+      \strng{authorfullhashraw}{a8440dcc385f51d7a59ac6e93fbbb5fe}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Medium}
+      \field{month}{12}
+      \field{title}{{Image Classification vs. Object Detection vs. Image Segmentation}}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://medium.com/analytics-vidhya/image-classification-vs-object-detection-vs-image-segmentation-f36db85fe81
+      \endverb
+      \verb{url}
+      \verb https://medium.com/analytics-vidhya/image-classification-vs-object-detection-vs-image-segmentation-f36db85fe81
+      \endverb
+    \endentry
+    \entry{konturesShapes}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=4ffdbed6260327006ea085d0f2e4631b}{%
+           family={siromer},
+           familyi={s\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Medium}%
+      }
+      \strng{namehash}{4ffdbed6260327006ea085d0f2e4631b}
+      \strng{fullhash}{4ffdbed6260327006ea085d0f2e4631b}
+      \strng{fullhashraw}{4ffdbed6260327006ea085d0f2e4631b}
+      \strng{bibnamehash}{4ffdbed6260327006ea085d0f2e4631b}
+      \strng{authorbibnamehash}{4ffdbed6260327006ea085d0f2e4631b}
+      \strng{authornamehash}{4ffdbed6260327006ea085d0f2e4631b}
+      \strng{authorfullhash}{4ffdbed6260327006ea085d0f2e4631b}
+      \strng{authorfullhashraw}{4ffdbed6260327006ea085d0f2e4631b}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Medium}
+      \field{month}{1}
+      \field{title}{{Contour Detection using OpenCV - siromer - Medium}}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://medium.com/@siromermer/contour-detection-using-opencv-detecting-and-counting-coins-2d5192597e3c
+      \endverb
+      \verb{url}
+      \verb https://medium.com/@siromermer/contour-detection-using-opencv-detecting-and-counting-coins-2d5192597e3c
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
