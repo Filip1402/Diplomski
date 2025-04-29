@@ -234,6 +234,8 @@ INPUT c:/texlive/2025/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
 INPUT c:/texlive/2025/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
 INPUT c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
+INPUT c:/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty
+INPUT c:/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1phv.fd
 INPUT c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1phv.fd
 INPUT c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1phv.fd
@@ -250,6 +252,8 @@ INPUT c:/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT c:/texlive/2025/texmf-dist/tex/latex/caption/ltcaption.sty
+INPUT c:/texlive/2025/texmf-dist/tex/latex/caption/ltcaption.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/croatian.lbx
 INPUT c:/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/croatian.lbx
 INPUT c:/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/croatian.lbx
@@ -321,9 +325,9 @@ INPUT c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-OUTPUT main.toc
 INPUT c:/texlive/2025/texmf-dist/fonts/vf/adobe/helvetic/phvb8t.vf
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm
+OUTPUT main.toc
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvr8t.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvb8t.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvr8t.tfm
@@ -408,6 +412,11 @@ INPUT ./slike/shapeDetection.png
 INPUT ./slike/shapeDetection.png
 INPUT ./slike/shapeDetection.png
 INPUT ./slike/shapeDetection.png
+INPUT ./slike/omr_flow.png
+INPUT ./slike/omr_flow.png
+INPUT ./slike/omr_flow.png
+INPUT ./slike/omr_flow.png
+INPUT ./slike/omr_flow.png
 INPUT c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd
 INPUT c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd
 INPUT c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd

@@ -474,6 +474,103 @@
       \verb https://medium.com/@siromermer/contour-detection-using-opencv-detecting-and-counting-coins-2d5192597e3c
       \endverb
     \endentry
+    \entry{Visulization}{misc}{}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Fiveable}
+      \field{month}{4}
+      \field{note}{[Online; accessed 28. Apr. 2025]}
+      \field{title}{{Post-processing and visualization {$\vert$} Applications of Scientific Computing Class Notes {$\vert$} Fiveable}}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://library.fiveable.me/applications-of-scientific-computing/unit-8/post-processing-visualization/study-guide/6jrpx4V64bjrgSLQ
+      \endverb
+      \verb{url}
+      \verb https://library.fiveable.me/applications-of-scientific-computing/unit-8/post-processing-visualization/study-guide/6jrpx4V64bjrgSLQ
+      \endverb
+    \endentry
+    \entry{Compression}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=327f987d97eb8ae1314cdde81b69efa8}{%
+           family={Sheldon},
+           familyi={S\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {TechTarget}%
+      }
+      \strng{namehash}{327f987d97eb8ae1314cdde81b69efa8}
+      \strng{fullhash}{327f987d97eb8ae1314cdde81b69efa8}
+      \strng{fullhashraw}{327f987d97eb8ae1314cdde81b69efa8}
+      \strng{bibnamehash}{327f987d97eb8ae1314cdde81b69efa8}
+      \strng{authorbibnamehash}{327f987d97eb8ae1314cdde81b69efa8}
+      \strng{authornamehash}{327f987d97eb8ae1314cdde81b69efa8}
+      \strng{authorfullhash}{327f987d97eb8ae1314cdde81b69efa8}
+      \strng{authorfullhashraw}{327f987d97eb8ae1314cdde81b69efa8}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{WhatIs}
+      \field{month}{7}
+      \field{title}{{image compression}}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.techtarget.com/whatis/definition/image-compression
+      \endverb
+      \verb{url}
+      \verb https://www.techtarget.com/whatis/definition/image-compression
+      \endverb
+    \endentry
+    \entry{OMRComparsion}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=a102709d3038549e79d7b492d564e708}{%
+           family={MenyePy},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {DEV Community}%
+      }
+      \strng{namehash}{a102709d3038549e79d7b492d564e708}
+      \strng{fullhash}{a102709d3038549e79d7b492d564e708}
+      \strng{fullhashraw}{a102709d3038549e79d7b492d564e708}
+      \strng{bibnamehash}{a102709d3038549e79d7b492d564e708}
+      \strng{authorbibnamehash}{a102709d3038549e79d7b492d564e708}
+      \strng{authornamehash}{a102709d3038549e79d7b492d564e708}
+      \strng{authorfullhash}{a102709d3038549e79d7b492d564e708}
+      \strng{authorfullhashraw}{a102709d3038549e79d7b492d564e708}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{DEV Community}
+      \field{month}{2}
+      \field{title}{{2 free open-source OMR grading projects on github}}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://dev.to/menyepy/2-free-open-source-omr-projects-on-github-2dl3
+      \endverb
+      \verb{url}
+      \verb https://dev.to/menyepy/2-free-open-source-omr-projects-on-github-2dl3
+      \endverb
+    \endentry
+    \entry{OMRChecker}{misc}{}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{note}{[Online; accessed 29. Apr. 2025]}
+      \field{title}{{[v1] Diagrams {$\cdot$} Udayraj123/OMRChecker Wiki}}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://github.com/Udayraj123/OMRChecker/wiki/%5Bv1%5D-Diagrams
+      \endverb
+      \verb{url}
+      \verb https://github.com/Udayraj123/OMRChecker/wiki/%5Bv1%5D-Diagrams
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

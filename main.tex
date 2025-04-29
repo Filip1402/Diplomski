@@ -4,6 +4,8 @@
 \usepackage{float}
 \usepackage{hyperref}
 \usepackage{enumitem}
+\usepackage{longtable}
+
 
 \DeclareUnicodeCharacter{0140}{l}
 \vrstaRada{\diplomski} % \diplomski
@@ -135,7 +137,7 @@ Do sada smo prošli kroz 3 najvažnija tipa digitalnih slika za ovaj rad. Kroz o
 
 Zapravo najveća razlika između ovih tipova je broj kanala boje. Slike u boji imaju 3 kanala za razliku od sivih i binarnih slika koje imaju po jedan kanal. To zapravo znači da slike u boji sadrže značajno više informacija. 
 
-No ponekad nam te informacije nisu potrebne ovisno o problemu koji pokušavamo riješiti. Na primjer ako pokušavamo detektirati boju svjetla na semaforu onda su nam informacije o bojama izrazito važne. No ako pokušavamo pročitati tekst sa prometnog znaka onda nam informacija o boji znaka i teksta ne doprinosi značajno rješavanju problema. Zapravo nam otežava rješavanje problema pošto moramo raditi sa nepotrebnim informacijama.
+No ponekad nam te informacije nisu potrebne ovisno o problemu koji pokušavamo riješiti. Na primjer ako pokušavamo detektirati boju svjetla na semaforu onda su nam informacije o bojama izrazito važne. No ako pokušavamo pročitati tekst s prometnog znaka onda nam informacija o boji znaka i teksta ne doprinosi značajno rješavanju problema. Zapravo nam otežava rješavanje problema pošto moramo raditi s nepotrebnim informacijama.
 
 \begin{figure}[H]
     \centering
@@ -196,12 +198,12 @@ Pretprocesiranje slike je ključan proces koji se provodi prije obrade slike. Ka
 Pribavljanje slike je proces nastajanja digitalne slike tako da se informacije iz realnog svijeta zapiše u digitalnom obliku kojim računalo zatim može manipulirati. Slika se može pribaviti raznim uređajima poput fotoaparata, pametnog mobitela ali i drugih tehnologija poput skenera, rendgena i drugih uređaja. U ovom radu fokus će biti na fotografije probavljene uređajima koji posjeduju digitalnu kameru \cite{BibEntry2025Apr}.
 
 
-Da bi bilo kakav procesiranje moglo krenuti prvo je potrebno pribaviti sliku. Moglo bi se reći da je pribavljanje slike čak najvažniji korak u cijelom procesu obrade slike, njegov rezultat ima veliku ulogu za postizanje krajnjeg rezultata obrade i analize slike. Pribavljena slika mora biti kvalitetna da bi ostali koraci bili uspiješni. Na kvalitetu slike ne utiječe samo rezolucija, osvjetljenje i kut pod kojim je slika uslikana također imaju značajnu ulogu \cite{BibEntry2025Apr}.
+Da bi bilo kakav procesiranje moglo krenuti prvo je potrebno pribaviti sliku. Moglo bi se reći da je pribavljanje slike čak najvažniji korak u cijelom procesu obrade slike, njegov rezultat ima veliku ulogu za postizanje krajnjeg rezultata obrade i analize slike. Pribavljena slika mora biti kvalitetna da bi ostali koraci bili uspješni. Na kvalitetu slike ne utječe samo rezolucija, osvjetljenje i kut pod kojim je slika uslikana također imaju značajnu ulogu \cite{BibEntry2025Apr}.
 
 Razni algoritmi i koraci u pretprocesiranju mogu korigirati pribavljenu sliku, no to nikad nije zamjena za sliku dobre kvalitete. Dobra i loša slika mogu biti razlika između uspješnog i neuspješnog detektiranja elemenata na slici. Naravno u većini slučajeva sustavi za obradu slike ne mogu utjecati na kvalitetu slike koje će im korisnik poslati. Zbog toga je važno detaljno testirati sustav u različitim uvjetima i utvrditi što su njegove granice i je li potrebno podržati neki dodatni korisnički slučaj od onih postojećih.
 \subsubsection{Poboljšanje slike}
 
-Poboljšanje slike je ključan korak, cilj mu je modificirati sliku na način da ona postane korisnija za daljnju obradu. To se može postići na više načina poput otklanjanja buke, isticanja važnih značajki slike, poboljšanja oštrine i kontrasta slike.
+Poboljšanje slike je ključan korak, cilj mu je modificirati sliku tako da ona postane korisnija za daljnju obradu. To se može postići na više načina poput otklanjanja buke, isticanja važnih značajki slike, poboljšanja oštrine i kontrasta slike.
 
 Do sada smo spomenuli da se nepotrebne informacije na slici također mogu biti buka. Baš zbog toga pretvaranje u sivu i binarnu sliku spadaju pod poboljšanje slike. Oba dvije operacije uklanjaju nepotrebne informacije o bojama sa slike što omogućuje bržu i jednostavniju obradu i analizu slike. naravno to ima smisla samo ako nam informacije o bojama nisu potrebne.
 
@@ -231,11 +233,11 @@ Važno je napomenuti da su pojmovi poput oštrine i mutnoće  slike usko povezan
 
 Postoji još razne metode poboljšavanja slike poput povećavanja kontrasta, ali neće biti potrebne u ovom radu.Također u nekim literaturama se spominju tehnike poput smanjenja buke  i raznih drugih transformacija u kontekstu restauracije slike. Ali u ovom radi će se o tome govoriti u kontekstu poboljšanja slike.
 
-Druge važne metode poboljšavanja slike su razne geometrijske transformacije slike poput translacije, rotacije i skaliranja. No to sve te osnovne geometrijske operacije se koriste kod ispravljanja perspektive. Baš zbog toga je ispravak perspektive puno zanimljivija operacija za ovaj rad \cite{GeometryTransforms}.  
+Druge važne metode poboljšavanja slike su razne geometrijske transformacije slike poput translacije, rotacije i skaliranja. No to sve te osnovne geometrijske operacije se koriste kod ispravljanja perspektive. Baš zbog toga je ispravak perspektive puno zanimljivija operacija za ovaj rad \cite{GeometryTransforms}.
 
 Ispravljanje perspektive omogućuje da slika prikazuje na načina to da je slikana u nekom drugoj ravnini u prostoru. To omogućuje da se uklone razlike između slika poput kuta kamera naspram subjekta fotografije, u ovom slučaju papira s matricom odgovora. 
 
-Korekcija perspektive mapira točku \( \mathbf{p} = [x, y, 1]^T \) u originalnoj slici (slikanoj iz nekog neželjenog kuta) \( \mathbf{p'} = [x', y', w']^T \) u sliku ispravljene perspektive pomoću matrice \( H \) \cite{OpenCvPerpsective}.
+Korekcija perspektive mapira točku \( \mathbf{p} = [x, y, 1]^T \) u originalnoj slici (slikanoj iz nekog neželjenog kuta) \( \mathbf{p'} = [x', y', w']^T \) u sliku ispravljene perspektive s pomoću matrice \( H \) \cite{OpenCvPerpsective}.
 
 \[
 \mathbf{p'} = H \cdot \mathbf{p}
@@ -274,7 +276,7 @@ y \\
 \end{bmatrix}
 \]
 
-Da bi se koordinate bile korisne potrebno ih je normalizirati sa \( w \):
+Da bi se koordinate bile korisne potrebno ih je normalizirati s \( w \):
 
 \[
 x' = \frac{h_{11}x + h_{12}y + h_{13}}{h_{31}x + h_{32}y + h_{33}}, \quad
@@ -344,24 +346,24 @@ Najčešće se te dvije operacije ne koriste zasebno već zajedno kao kompozitna
 \end{figure}
 
 \subsubsection{Reprezentacija i opis}
-Nakon što je obavlejna segmentacija i po potrebi morfološka obrada većinom slijedi reprezentacija i opis segmenatiranih dijelova. Cilj reprezentacije i opisa je reprezentirati piksle na način da budu korisniji za daljnju obradu \cite{RepAndDesc}. 
+Nakon što je obavljena segmentacija i po potrebi morfološka obrada većinom slijedi reprezentacija i opis segmentiranih dijelova. Cilj reprezentacije i opisa je reprezentirati piksele tako da budu korisniji za daljnju obradu \cite{RepAndDesc}. 
 
 \begin{flushleft}
-    Dva glavna tipa reprezentacije segmenatiranih obijekata, ovisno o tome je li fokus na \cite{RepAndDesc}:
+    Dva glavna tipa reprezentacije segmentiranih objekata, ovisno o tome je li fokus na \cite{RepAndDesc}:
 
 \begin{itemize}
-    \item vansjkim karakterisitkama, (kontura ili rub objekta))
-    \item unutarnjim karakterisitkama (pikseli koji čine objekt)
+    \item vanjskim karakteristikama, (kontura ili rub objekta))
+    \item unutarnjim karakteristikama (pikseli koji čine objekt)
 \end{itemize}
 \end{flushleft}
 
-Reprezentacija prema vanjskim karakteristikama se često korsiti kad nam je za obradu važan sam oblik, dok se unutarnje karakteristike koriste kada je potrebna informacija o boji i teksturi objekta.Iz dobivenih reprezenatacija je moguće izvući razne opisne vrijednosti (\textit{eng. descriptors}) koje su korisne kod daljnje obrade. Važno je napomenuti da je generalno pravilo da bi opisne vrijednosti trebale biti imune na promjenu skaliranja, translacije i rotacije \cite{RepAndDesc}.
+Reprezentacija prema vanjskim karakteristikama se često koristi kad nam je za obradu važan sam oblik, dok se unutarnje karakteristike koriste kada je potrebna informacija o boji i teksturi objekta. Iz dobivenih reprezentacija je moguće izvući razne opisne vrijednosti (\textit{eng. descriptors}) koje su korisne kod daljnje obrade. Važno je napomenuti da je generalno pravilo da bi opisne vrijednosti trebale biti imune na promjenu skaliranja, translacije i rotacije \cite{RepAndDesc}.
 
 \begin{flushleft}
 Neke od korisnik opisnih vrijednosti su \cite{RepAndDesc}:
 \begin{itemize}
-    \item dužina konture objekta
-    \item promjer konture objekta
+    \item Dužina konture objekta
+    \item Promjer konture objekta
     \item Zaobljenost
     \item Okvirna kutija
     \item Površina objekta
@@ -373,24 +375,24 @@ Neke od korisnik opisnih vrijednosti su \cite{RepAndDesc}:
 
 \subsubsection{Detekcija i prepoznavanje objekata}
 
-Detekcija i prepoznavanje objekata je jedna od ključmnih tehnika procesiranja sliak na tradicionalana način ali i pomoću neurosnkih mreža. Bazirano je na principu pronalaznka obijekta i crtanja okvirne kutije oko tog objekt \cite{segvsdetection, , segvsdetection_2}. 
+Detekcija i prepoznavanje objekata je jedna od ključnih tehnika procesiranja slika na tradicionalan način ali i s pomoću neuronskih mreža. Bazirano je na principu pronalaska objekta i crtanja okvirne kutije oko tog objekt \cite{segvsdetection, , segvsdetection_2}. 
 
-To mu je ujedno i glavna razliak naspram segmentacije slike, segmentacija dodijeljuje klasu svakom piskelu koji odgovara onome što se traži, dok detekcija obijekta to ne radi već samo locira obijekt određene klase na slici \cite{segvsdetection, segvsdetection_2}.
+To mu je ujedno i glavna razlika naspram segmentacije slike, segmentacija dodjeljuje klasu svakom pikselu koji odgovara onome što se traži, dok detekcija objekta to ne radi već samo locira objekt određene klase na slici \cite{segvsdetection, segvsdetection_2}.
 
-Ponekad je samo informacija o lokaciji obijekta dovoljna, u slučaju da nije segmentacija nudi puno više informacija o samom objektu.
+Ponekad je samo informacija o lokaciji objekta dovoljna, u slučaju da nije segmentacija nudi puno više informacija o samom objektu.
 
-Da bi detektiranje objekata bilo uspješno često se koriste konture. Konture su ništa drugo nego krivulje koje opisuju rubove objekata, zbog toga su jako korisne kdo detektiranja oblika. Također se ponekad koriste i kdo segmentiranja.
+Da bi detektiranje objekata bilo uspješno često se koriste konture. Konture su ništa drugo nego krivulje koje opisuju rubove objekata, zbog toga su jako korisne kod detektiranja oblika. Također se ponekad koriste i kod segmentiranja.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\linewidth]{slike/segVsDetec.png}
-    \caption{Usporedba segmentaicje i detekcije objekta \cite{segvsdetection_2}}
+    \caption{Usporedba segmentacije i detekcije objekta \cite{segvsdetection_2}}
 \end{figure}
 
-Da bi se mogle pronaći konture prvo je potrebno sliku pretvoriti u binarnu sliku i zatim provesti operaciju detektiranja kontura. Konture se detektiranja na način da se traži razlika između vrijednosti pikslea na bianrnoj slici i time se utvrđuje ujedno i granica između objekata. Zatim se primjenju jedna od metoda za detekciju objekta nad tim konturama. Te metode zapravo traže konture koje odgovraju traženom obliku sa definiranim tolerancijama za oblik, veličinu i slično \cite{konturesShapes}.
+Da bi se mogle pronaći konture prvo je potrebno sliku pretvoriti u binarnu sliku i zatim provesti operaciju detektiranja kontura. Konture se detektiranja tako da se traži razlika između vrijednosti piksela na binarnoj slici i time se utvrđuje ujedno i granica između objekata. Zatim se primjenjuje jedna od metoda za detekciju objekta nad tim konturama. Te metode zapravo traže konture koje odgovaraju traženom obliku s definiranim tolerancijama za oblik, veličinu i slično \cite{konturesShapes}.
 
 \begin{flushleft}
-    Pošto će se u ovom radu koristiti EmguCv nama su najzanimljive metode poput:
+    Pošto će se u ovom radu koristiti EmguCv nama su najzanimljivije metode poput:
     \begin{itemize}
         \item \textbf{CvInvoke.ApproxPolyDP()} - Aproksimacija kontura u jednostavnije poligone (korisno za prepoznavanje oblika).
         \item \textbf{CvInvoke.MinAreaRect()} - Pronalaženje minimalnog pravokutnika koji okružuje konturu (korisno za detekciju objekata u obliku pravokutnika).
@@ -400,7 +402,7 @@ Da bi se mogle pronaći konture prvo je potrebno sliku pretvoriti u binarnu slik
         \item \textbf{CvInvoke.BoundingRectangle()} - Pronalaženje okvira (bounding box) koji okružuje konture objekta.
         \item \textbf{CvInvoke.FindContoursHierarchical()} - Detekcija kontura s informacijama o hijerarhiji (za detekciju unutarnjih i vanjskih objekata).
     \end{itemize}
-    \end{flushleft}
+\end{flushleft}
 
 \begin{figure}[H]
     \centering
@@ -408,29 +410,176 @@ Da bi se mogle pronaći konture prvo je potrebno sliku pretvoriti u binarnu slik
     \caption{\centering Prikaz rezultata detekcije krugova pomoću kontura i CvInvoke.MinEnclosingCircle metode \cite{segvsdetection_2}}
 \end{figure}
 
-Na priloženoj slici je jasno prikazano kako se izvorna slika pretvara u bianrnu sliku i zatim se pomoću kontura i metode za detektiranje obliak naspram kontura pronalazi lokacija kruga.
+Na priloženoj slici je jasno prikazano kako se izvorna slika pretvara u binarnu sliku i zatim se s pomoću kontura i metode za detektiranje oblika naspram kontura pronalazi lokacija kruga.
 
 \subsection{Postprocesiranje slike}
+
+Nakon što je glavna faza obrade slike zavšrena kreću aktivnosti postprocesiranja. Prijašnja faza je izvukla korisne podatke iz slike i pripremila ih u korisnom formatu. Cilj postprocesiranje je obrada tih podataka na način da se dođe do konačnog rješenja. Osim obrade podataka, prostpecesiranje je također povezano sa aktrivnostima poput vizualizacije rezultata, kompresije i slično.
+
+\subsubsection{Obrada izvučenih podataka}
+
+\begin{flushleft}
+    Prije nego što se krene u konačnu obradu izvučenih podataka potrebno ih je pročistiti. Načini pročiščavanja podataka ovise o specifičnostima problema, ali neke od važnih metoda za ovaj rad su pročišćavanja su:
 \begin{itemize}
-    \item Završna faza koja se odnosi na pohranu, vizualizaciju ili daljnju analizu rezultata.
+    \item Filtriranje po veličini objekta
+    \item Filtriranje po obliku objekta
+    \item Filtiranje po boji objekta
+    \item Filtriranje po hijerahijskoj odnusu objekta s ostalim objektima
 \end{itemize}
+\end{flushleft}
+
+Spomenute metode bazirane su na usporebi opisnih vrijednosti iz faze reprezentacije i opisa. Nakon što su podaci pročišćeni kreće konačna faza obrade. Način konačne obrade ovisi o specifičnostima problema, ali često se koriste baze znanje.
+
+Baze znanja omogučuju usporedbu traženih podataka sa pročišćenim podataka koje omogučuje rješenje specifičnog problema. U ovom slučaju baza znajnja bi bila lista odgovora za svako pitanje podijeljenih u dvije klase koje predstavljaju točne i netočne odgovore \cite{ImageProcessing}. 
+
+\subsubsection{Vizualizacija rezultata}
+
+Naokon što su podaci obrađeni i utvrđen je rezultat jako često ga je potrebno vizualizirati. Vizualizacija nudi uvid u njihovu važnost i omogučuje da se jednostavnije analiziraju i izvode zaključi iz rezultata. 
+Tip vizializacije ovisi o doemni problema koji se rješava, može biti u raznim oblicima poput pdf izvješća, vizaulizacije rezultata nad originalnom slikom i slično  \cite{Visulization}.
+
+Kod vizualiziranja rezuktata važno je uzeti u obzir tip podataka joji se vizualizira, publiku za koju je vizualizacija namjenjena \cite{Visulization}. 
 
 \subsubsection{Kompresija slike}
 
-\subsubsection{Vizualizacija rezultata}
-Prikaz konačnih rezultata analize slike u svrhu interpretacije, izvještavanja ili donošenja odluka.
+U slučaju potrebe za smanjenjem veličine slike, često se koristi kompresija. Kompresija nastoji smanjiti veličinu slike na način da pritom zadrži kvalitetu na zadovoljavajućoj razini. Često se primjenjuje kada je potrebno smanjiti veličinu slike pri prijenosu preko mreže, spremanju u memoriju ili za ubrzanje obrade \cite{ImageProcessing}.
+
+\begin{flushleft}
+Kompresija slike dijeli se na dva glavna tipa \cite{Compression}:
+\begin{itemize}
+    \item Kompresija sa gubitkom podataka (\textit{eng. lossy})
+    \item Kompresija bez gubitka podataka (\textit{eng. lossless})
+\end{itemize}
+\end{flushleft}
+
+Oba tipa smanjuju veličinu slike, ali se razlikuju u načinu na koji to postižu.  
+Prvi pristup uklanja određene informacije iz slike kako bi smanjio njezinu veličinu (lossy), dok drugi pristup efikasnije zapisuje podatke bez gubitka informacija (lossless).  
+Važno je napomenuti da je kod kompresije uvijek potrebno balansirati veličinu slike i kvalitetu. Što je slika više komprimirana, to je izraženija distorzija slike.  
+Glavna razlika između ovih dvaju pristupa je u tome može li se originalna slika potpuno rekonstruirati iz komprimirane slike \cite{Compression}.
+
+\pagebreak
+
 
 \section{Analiza postojećih rješenja i pristupa problemu}
 
+Prije praktičnog dijela rada važno je analizirati posotjeća rjepenja na tržištu. Ova analiza fokusirat će se samo na detekciju odgovora na pismenim ispitima koristeći matricu odgovora to jest OMR tehnikom (\textit{eng. optical mark recognition}). Pod OMR spadaju sve tehnike koje su do sada obrađene. Fokus analize je samo na rješenja visoke razine točnosti.
+
+Osim korištenja računalnog vida uz OMR sve češćio su pristupi koji koriste elemente dubokog učenja samostalno ili u kombinaciji sa tradicionalnim računalnim vidom \cite{OMRComparsion}. 
+
+Analizirana su rješenmja OMRChecker i OpenOMR, radi so rješenjima izrazito visoke točnosti koji tu točnost zadržavaju i kada je slika uslikana u izrazito izazovnim uvjetima. Također oba riješenja podržavaju određeni stupanj konfiguracije liste sa odgovorima \cite{OMRComparsion}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\linewidth]{slike/omr_flow.png}
+    \caption{Prikaz dijela toka procesiranja slike kod OMRChecker-a \cite{OMRChecker}}
+\end{figure}
+
+Sa priložene slike vidljivo je da OMRChecker koristi veliku večinu metoda i tehnika koje su do sada obrađene u ovom radu, za OpenOMR je sitaucije također dosta slična.
+Kroz praktični dio rada prikazat će se koji je cilj rješenja izrađenog u skolpu ovog rada.
+
 \chapter{Praktični dio}
+
+Kroz daljni dio rada fokus će biti na izradi i prikazu komponente otvorenog koda za detekciju odgovora na psimenim testovima. Prikazati će se svi važni koraci i dizajnerske odluke koje utiječu na konačni dizajn i funkcionalnost rješenja. Izrađena komponenta će također biti ugrađena u jednostavnu stolnu aplikaciju da bi se olakšalo razvoj i vizualizirao sam rad komponente. 
+
 \section{Opis rješenja}
-\section{Funkcionalni zahtijevi}
+
+Kao što je već spomenuto cilj je izraditi komponenttu otvorenog koda za detekciju odgovora na pismenim ispitima. Fokus će biti na detektiranju odgovora na matrici odgovora. Prednost toga pristupa je to što nije potrebno slikati više stranica da bi se ocijenio jedan ispit, već je dovoljno ocijeniti samo matricu odgovora to jest obraditi samo jednu stranicu. 
+
+Detekcija odgovora na matrici odgovora je puno jednostavniji problem nego detekcija na standardnim ispita. Zbog toga što matrica može imati unaprijed defininaru i standarduziranu strukturu to jest predložak. Unatoč tome matrica limitira rješenje samo na pitanja na višestruki ili jednostruki odgovor. No to nije problem za ovaj rad pošto drugi tipovi pitanja nisu u opsegu ovog rada.
+
+Jedan od glavnih ciljeva ovog riješenja je da kozistentno pruža pozdane rezultate, čak i ako uvijeti u kojima je slika uslika nisu idealni. Ta pouzdanost se treba postići za predloške koji mogu sadržavati varijabilan broj pitanja i odgovora. Da bi izrada predložaka bila što jednostavnija rješenje bi također trebalo biti sposebno prema određenim parametrima generirati predložak matrice odgovora u obliku PDF-a. 
+
+Također da bi se ubrzao rad sa apliakcijom ideja je da korsinik ne unosi ručno podatke o točnim odgovorima za sva pitanja, već jednostavno slika ispravno rješen ispit te da komponente izvuće te inforamcije sama iz fotografije. Da bi se dodatno ubrzao proces ocijenjivanja sustav treba biti dizajniran na način da detektirane odgovore usporedi sa ispravnim odgovorima i ujedno prema korisničko definiranoj skali ocijeni ispit. Ocjenjeni ispit mora biti vizualiziran da ocijenjivać ipak može uvidjeti je li došlo do greške kod ocijenjivanja.
+
+Za svrhe razvoja, pronaska grešaka i slično sustav bi trebao imati mogučnost vizualiziranja svakog koraka obrade od samog unosa slike pa sve do riješenja. Ta opcija bi se trebala moći uključiti ili isklučiti po potrebi. 
+
+Pošto se radi o komponenti otvorenog koda želja je da se ostavi mogućnost zamjene važnih biblioteka koje će sustav koristiti, pšoput one za računalni vid. Time će se omogučiti da neko po potrebi napiše svoju implementaciju i zamjeni zadanu EmguCv biblioteku.
+
+\pagebreak
+
+\section{Funkcionalni zahtjevi}
+
+
+\begin{longtable}{|l|p{12cm}|}
+    \hline
+    \textbf{Identifikator} & FZ-01 \\ \hline
+    \textbf{Zahtjev} & Sustav mora detektirati odgovore s matrice odgovora. \\ \hline
+    \textbf{Obrazloženje} & Detekcija se temelji isključivo na obradi jedne stranice – matrice odgovora – čime se pojednostavljuje i ubrzava ocjenjivanje. \\ \hline
+    \textbf{Način provjere} & Prilikom unosa slike matrice, sustav treba pravilno označiti sve odgovore koji su označeni od strane korisnika. \\ \hline
+    \textbf{Prioritet [1--5]} &  \\ \hline
+    \multicolumn{2}{|c|}{} \\ \hline
+    
+    \textbf{Identifikator} & FZ-02 \\ \hline
+    \textbf{Zahtjev} & Sustav mora omogućiti generiranje PDF predložaka za matricu odgovora. \\ \hline
+    \textbf{Obrazloženje} & Korisnici trebaju moći jednostavno izraditi matricu s unaprijed definiranim brojem pitanja i odgovora. \\ \hline
+    \textbf{Način provjere} & Iz sustava treba biti moguće izvesti generirani predložak u PDF formatu. \\ \hline
+    \textbf{Prioritet [1--5]} &  \\ \hline
+    \multicolumn{2}{|c|}{} \\ \hline
+    
+    \textbf{Identifikator} & FZ-03 \\ \hline
+    \textbf{Zahtjev} & Sustav mora omogućiti automatsko prepoznavanje točnih odgovora iz slike ispravno riješenog ispita. \\ \hline
+    \textbf{Obrazloženje} & Korisnik ne mora ručno unositi odgovore; slika ispravnog rješenja bit će dovoljna za generiranje ključa. \\ \hline
+    \textbf{Način provjere} & Učitavanjem slike ispravno riješenog ispita sustav mora automatski prepoznati sve točne odgovore. \\ \hline
+    \textbf{Prioritet [1--5]} &  \\ \hline
+    \multicolumn{2}{|c|}{} \\ \hline
+    
+    \textbf{Identifikator} & FZ-04 \\ \hline
+    \textbf{Zahtjev} & Sustav mora usporediti odgovore s točnim rješenjem i izračunati ocjenu prema definiranoj skali. \\ \hline
+    \textbf{Obrazloženje} & Automatsko ocjenjivanje ubrzava proces ispravljanja i smanjuje mogućnost pogreške. \\ \hline
+    \textbf{Način provjere} & Nakon što se ispiti obrade, mora biti prikazana ocjena za svaki ispit u skladu sa skalom. \\ \hline
+    \textbf{Prioritet [1--5]} &  \\ \hline
+    \multicolumn{2}{|c|}{} \\ \hline
+    \pagebreak
+    \hline
+
+    \textbf{Identifikator} & FZ-05 \\ \hline
+    \textbf{Zahtjev} & Sustav mora omogućiti vizualizaciju rezultata ocjenjivanja za svakog korisnika. \\ \hline
+    \textbf{Obrazloženje} & Omogućava ljudsku kontrolu rezultata i ispravnost prepoznavanja i ocjenjivanja. \\ \hline
+    \textbf{Način provjere} & Vizualna prezentacija ispita s označenim točnim i netočnim odgovorima mora biti dostupna. \\ \hline
+    \textbf{Prioritet [1--5]} &  \\ \hline
+    \multicolumn{2}{|c|}{} \\ \hline
+    
+    \textbf{Identifikator} & FZ-06 \\ \hline
+    \textbf{Zahtjev} & Sustav mora omogućiti prikaz svih koraka obrade slike. \\ \hline
+    \textbf{Obrazloženje} & Korisnicima i developerima je korisno za praćenje grešaka i ponašanja sustava. \\ \hline
+    \textbf{Način provjere} & U postavkama sustava mora postojati opcija kojom se uključuje ili isključuje prikaz koraka obrade. \\ \hline
+    \textbf{Prioritet [1--5]} &  \\ \hline
+    
+    \textbf{Identifikator} & FZ-07 \\ \hline
+    \textbf{Zahtjev} & Sustav mora omogućiti unos varijabilnog broja pitanja i odgovora u matricu. \\ \hline
+    \textbf{Obrazloženje} & Prilagodljivost broju pitanja i odgovora ključna je za podršku različitim tipovima ispita. \\ \hline
+    \textbf{Način provjere} & Tijekom generiranja predloška korisnik može definirati broj pitanja i odgovora, koji se zatim reflektira u matrici. \\ \hline
+    \textbf{Prioritet [1--5]} &  \\ \hline
+    
+    \caption{Funkcionalni zahtjevi}
+\end{longtable}
+
+\section{Nefunkcionalni zahtjevi}
+
+\begin{longtable}{|l|p{12cm}|}
+    \hline
+    \textbf{Identifikator} & NFZ-01 \\ \hline
+    \textbf{Zahtjev} & Sustav mora pružati pouzdane rezultate čak i u slučaju loših uvjeta pri snimanju (npr. sjenke, loš kontrast, zakrenutost). \\ \hline
+    \textbf{Obrazloženje} & U praksi slike ispita neće uvijek biti idealne kvalitete, pa sustav mora biti robustan na takve uvjete. \\ \hline
+    \textbf{Način provjere} & Sustav se testira na uzorku slika s različitim uvjetima osvjetljenja, orijentacije i kvalitete. \\ \hline
+    \textbf{Prioritet [1--5]} &  \\ \hline
+    \multicolumn{2}{|c|}{} \\ \hline
+    
+    \textbf{Identifikator} & NFZ-02 \\ \hline
+    \textbf{Zahtjev} & Sustav mora omogućiti jednostavnu zamjenu vanjskih biblioteka poput one za računalni vid. \\ \hline
+    \textbf{Obrazloženje} & Komponenta je otvorenog koda, pa korisnici mogu koristiti druge biblioteke (npr. zamijeniti EmguCV). \\ \hline
+    \textbf{Način provjere} & Biblioteke se mogu zamijeniti putem konfiguracijskih postavki bez mijenjanja osnovnog koda. \\ \hline
+    \textbf{Prioritet [1--5]} &  \\ \hline
+    
+    \caption{Nefunkcionalni zahtjevi}
+\end{longtable}
+    
+
+
 \section{Implementacija}
 \section{Analiza rezultata}
-\section{Limitacije riješenja}
+\section{Limitacije rješenja}
 \section{Manualno testiranje rješenja}
 \chapter{Zaključak}
-
 
 \printbibliography[title=Popis literature]
 \addcontentsline{toc}{chapter}{Popis literature}
