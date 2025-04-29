@@ -192,7 +192,6 @@ Te faze se dodatno podijeliti na \textbf{pretprocesiranje, procesiranje i postpr
 
 Pretprocesiranje slike je ključan proces koji se provodi prije obrade slike. Kao ulaz prima izvornu, sirovu sliku, a kao izlaz vraća sliku u korisnijem formatu za daljnju obradu i analizu. Omogućuje da se sa slike odstrane ili istaknu područja relevantnih informacija te da se poboljša kvaliteta slike prije daljnje obrade \cite{Patel2023Oct}.
 
-
 \subsubsection{Pribavljanje slike}
 
 Pribavljanje slike je proces nastajanja digitalne slike tako da se informacije iz realnog svijeta zapiše u digitalnom obliku kojim računalo zatim može manipulirati. Slika se može pribaviti raznim uređajima poput fotoaparata, pametnog mobitela ali i drugih tehnologija poput skenera, rendgena i drugih uređaja. U ovom radu fokus će biti na fotografije probavljene uređajima koji posjeduju digitalnu kameru \cite{BibEntry2025Apr}.
@@ -414,30 +413,30 @@ Na priloženoj slici je jasno prikazano kako se izvorna slika pretvara u binarnu
 
 \subsection{Postprocesiranje slike}
 
-Nakon što je glavna faza obrade slike zavšrena kreću aktivnosti postprocesiranja. Prijašnja faza je izvukla korisne podatke iz slike i pripremila ih u korisnom formatu. Cilj postprocesiranje je obrada tih podataka na način da se dođe do konačnog rješenja. Osim obrade podataka, prostpecesiranje je također povezano sa aktrivnostima poput vizualizacije rezultata, kompresije i slično.
+Nakon što je glavna faza obrade slike završena kreću aktivnosti postprocesiranja. Prijašnja faza je izvukla korisne podatke iz slike i pripremila ih u korisnom formatu. Cilj postprocesiranje je obrada tih podataka tako da se dođe do konačnog rješenja. Osim obrade podataka, postprocesiranje je također povezano s aktivnostima poput vizualizacije rezultata, kompresije i slično.
 
 \subsubsection{Obrada izvučenih podataka}
 
 \begin{flushleft}
-    Prije nego što se krene u konačnu obradu izvučenih podataka potrebno ih je pročistiti. Načini pročiščavanja podataka ovise o specifičnostima problema, ali neke od važnih metoda za ovaj rad su pročišćavanja su:
+    Prije nego što se krene u konačnu obradu izvučenih podataka potrebno ih je pročistiti. Načini pročišćavanja podataka ovise o specifičnostima problema, ali neke od važnih metoda za ovaj rad su pročišćavanja su:
 \begin{itemize}
     \item Filtriranje po veličini objekta
     \item Filtriranje po obliku objekta
-    \item Filtiranje po boji objekta
-    \item Filtriranje po hijerahijskoj odnusu objekta s ostalim objektima
+    \item Filtriranje po boji objekta
+    \item Filtriranje po hijerarhijskoj odnosu objekta s ostalim objektima
 \end{itemize}
 \end{flushleft}
 
-Spomenute metode bazirane su na usporebi opisnih vrijednosti iz faze reprezentacije i opisa. Nakon što su podaci pročišćeni kreće konačna faza obrade. Način konačne obrade ovisi o specifičnostima problema, ali često se koriste baze znanje.
+Spomenute metode bazirane su na usporedbi opisnih vrijednosti iz faze reprezentacije i opisa. Nakon što su podaci pročišćeni kreće konačna faza obrade. Način konačne obrade ovisi o specifičnostima problema, ali često se koriste baze znanje.
 
-Baze znanja omogučuju usporedbu traženih podataka sa pročišćenim podataka koje omogučuje rješenje specifičnog problema. U ovom slučaju baza znajnja bi bila lista odgovora za svako pitanje podijeljenih u dvije klase koje predstavljaju točne i netočne odgovore \cite{ImageProcessing}. 
+Baze znanja omogućuju usporedbu traženih podataka s pročišćenim podataka koje omogućuje rješenje specifičnog problema. U ovom slučaju baza znanja bi bila lista odgovora za svako pitanje podijeljenih u dvije klase koje predstavljaju točne i netočne odgovore \cite{ImageProcessing}. 
 
 \subsubsection{Vizualizacija rezultata}
 
-Naokon što su podaci obrađeni i utvrđen je rezultat jako često ga je potrebno vizualizirati. Vizualizacija nudi uvid u njihovu važnost i omogučuje da se jednostavnije analiziraju i izvode zaključi iz rezultata. 
-Tip vizializacije ovisi o doemni problema koji se rješava, može biti u raznim oblicima poput pdf izvješća, vizaulizacije rezultata nad originalnom slikom i slično  \cite{Visulization}.
+Nakon što su podaci obrađeni i utvrđen je rezultat jako često ga je potrebno vizualizirati. Vizualizacija nudi uvid u njihovu važnost i omogučuje da se jednostavnije analiziraju i izvode zaključi iz rezultata. 
+Tip vizualizacije ovisi o domeni problema koji se rješava, može biti u raznim oblicima poput PDF izvješća, vizualizacije rezultata nad originalnom slikom i slično  \cite{Visulization}.
 
-Kod vizualiziranja rezuktata važno je uzeti u obzir tip podataka joji se vizualizira, publiku za koju je vizualizacija namjenjena \cite{Visulization}. 
+Kod vizualiziranja rezultata važno je uzeti u obzir tip podataka koji se vizualizira, publiku za koju je vizualizacija namijenjena \cite{Visulization}. 
 
 \subsubsection{Kompresija slike}
 
@@ -446,7 +445,7 @@ U slučaju potrebe za smanjenjem veličine slike, često se koristi kompresija. 
 \begin{flushleft}
 Kompresija slike dijeli se na dva glavna tipa \cite{Compression}:
 \begin{itemize}
-    \item Kompresija sa gubitkom podataka (\textit{eng. lossy})
+    \item Kompresija s gubitkom podataka (\textit{eng. lossy})
     \item Kompresija bez gubitka podataka (\textit{eng. lossless})
 \end{itemize}
 \end{flushleft}
@@ -461,11 +460,11 @@ Glavna razlika između ovih dvaju pristupa je u tome može li se originalna slik
 
 \section{Analiza postojećih rješenja i pristupa problemu}
 
-Prije praktičnog dijela rada važno je analizirati posotjeća rjepenja na tržištu. Ova analiza fokusirat će se samo na detekciju odgovora na pismenim ispitima koristeći matricu odgovora to jest OMR tehnikom (\textit{eng. optical mark recognition}). Pod OMR spadaju sve tehnike koje su do sada obrađene. Fokus analize je samo na rješenja visoke razine točnosti.
+Prije praktičnog dijela rada važno je analizirati postojeća rješenja na tržištu. Ova analiza fokusirat će se samo na detekciju odgovora na pismenim ispitima koristeći matricu odgovora to jest OMR tehnikom (\textit{eng. optical mark recognition}). Pod OMR spadaju sve tehnike koje su do sada obrađene. Fokus analize je samo na rješenja visoke razine točnosti.
 
-Osim korištenja računalnog vida uz OMR sve češćio su pristupi koji koriste elemente dubokog učenja samostalno ili u kombinaciji sa tradicionalnim računalnim vidom \cite{OMRComparsion}. 
+Osim korištenja računalnog vida uz OMR sve češći su pristupi koji koriste elemente dubokog učenja samostalno ili u kombinaciji s tradicionalnim računalnim vidom \cite{OMRComparsion}.
 
-Analizirana su rješenmja OMRChecker i OpenOMR, radi so rješenjima izrazito visoke točnosti koji tu točnost zadržavaju i kada je slika uslikana u izrazito izazovnim uvjetima. Također oba riješenja podržavaju određeni stupanj konfiguracije liste sa odgovorima \cite{OMRComparsion}.
+Analizirana su rješenja OMRChecker i OpenOMR, radi so rješenjima izrazito visoke točnosti koji tu točnost zadržavaju i kada je slika uslikana u izrazito izazovnim uvjetima. Također oba rješenja podržavaju određeni stupanj konfiguracije liste s odgovorima \cite{OMRComparsion}.
 
 \begin{figure}[H]
     \centering
@@ -473,26 +472,26 @@ Analizirana su rješenmja OMRChecker i OpenOMR, radi so rješenjima izrazito vis
     \caption{Prikaz dijela toka procesiranja slike kod OMRChecker-a \cite{OMRChecker}}
 \end{figure}
 
-Sa priložene slike vidljivo je da OMRChecker koristi veliku večinu metoda i tehnika koje su do sada obrađene u ovom radu, za OpenOMR je sitaucije također dosta slična.
+S priložene slike vidljivo je da OMRChecker koristi veliku večinu metoda i tehnika koje su do sada obrađene u ovom radu, za OpenOMR je sitaucije također dosta slična.
 Kroz praktični dio rada prikazat će se koji je cilj rješenja izrađenog u skolpu ovog rada.
 
 \chapter{Praktični dio}
 
-Kroz daljni dio rada fokus će biti na izradi i prikazu komponente otvorenog koda za detekciju odgovora na psimenim testovima. Prikazati će se svi važni koraci i dizajnerske odluke koje utiječu na konačni dizajn i funkcionalnost rješenja. Izrađena komponenta će također biti ugrađena u jednostavnu stolnu aplikaciju da bi se olakšalo razvoj i vizualizirao sam rad komponente. 
+Kroz daljnji dio rada fokus će biti na izradi i prikazu komponente otvorenog koda za detekciju odgovora na pismenim testovima. Prikazat će se svi važni koraci i dizajnerske odluke koje utječu na konačni dizajn i funkcionalnost rješenja. Izrađena komponenta će također biti ugrađena u jednostavnu stolnu aplikaciju da bi se olakšalo razvoj i vizualizirao sam rad komponente. 
 
 \section{Opis rješenja}
 
-Kao što je već spomenuto cilj je izraditi komponenttu otvorenog koda za detekciju odgovora na pismenim ispitima. Fokus će biti na detektiranju odgovora na matrici odgovora. Prednost toga pristupa je to što nije potrebno slikati više stranica da bi se ocijenio jedan ispit, već je dovoljno ocijeniti samo matricu odgovora to jest obraditi samo jednu stranicu. 
+Kao što je već spomenuto cilj je izraditi komponentu otvorenog koda za detekciju odgovora na pismenim ispitima. Fokus će biti na detektiranju odgovora na matrici odgovora. Prednost toga pristupa je to što nije potrebno slikati više stranica da bi se ocijenio jedan ispit, već je dovoljno ocijeniti samo matricu odgovora to jest obraditi samo jednu stranicu. 
 
-Detekcija odgovora na matrici odgovora je puno jednostavniji problem nego detekcija na standardnim ispita. Zbog toga što matrica može imati unaprijed defininaru i standarduziranu strukturu to jest predložak. Unatoč tome matrica limitira rješenje samo na pitanja na višestruki ili jednostruki odgovor. No to nije problem za ovaj rad pošto drugi tipovi pitanja nisu u opsegu ovog rada.
+Detekcija odgovora na matrici odgovora je puno jednostavniji problem nego detekcija na standardnim ispita. Zbog toga što matrica može imati unaprijed definiranu i standardiziranu strukturu to jest predložak. Unatoč tome matrica limitira rješenje samo na pitanja na višestruki ili jednostruki odgovor. No to nije problem za ovaj rad pošto drugi tipovi pitanja nisu u opsegu ovog rada.
 
-Jedan od glavnih ciljeva ovog riješenja je da kozistentno pruža pozdane rezultate, čak i ako uvijeti u kojima je slika uslika nisu idealni. Ta pouzdanost se treba postići za predloške koji mogu sadržavati varijabilan broj pitanja i odgovora. Da bi izrada predložaka bila što jednostavnija rješenje bi također trebalo biti sposebno prema određenim parametrima generirati predložak matrice odgovora u obliku PDF-a. 
+Jedan od glavnih ciljeva ovog rješenja je da konzistentno pruža pouzdane rezultate, čak i ako uvjeti u kojima je slika uslika nisu idealni. Ta pouzdanost se treba postići za predloške koji mogu sadržavati varijabilan broj pitanja i odgovora. Da bi izrada predložaka bila što jednostavnija rješenje bi također trebalo biti sposobno prema određenim parametrima generirati predložak matrice odgovora u obliku PDF-a. 
 
-Također da bi se ubrzao rad sa apliakcijom ideja je da korsinik ne unosi ručno podatke o točnim odgovorima za sva pitanja, već jednostavno slika ispravno rješen ispit te da komponente izvuće te inforamcije sama iz fotografije. Da bi se dodatno ubrzao proces ocijenjivanja sustav treba biti dizajniran na način da detektirane odgovore usporedi sa ispravnim odgovorima i ujedno prema korisničko definiranoj skali ocijeni ispit. Ocjenjeni ispit mora biti vizualiziran da ocijenjivać ipak može uvidjeti je li došlo do greške kod ocijenjivanja.
+Također da bi se ubrzao rad s aplikacijom ideja je da korisnik ne unosi ručno podatke o točnim odgovorima za sva pitanja, već jednostavno slika ispravno riješen ispit te da komponente izvući te informacije sama iz fotografije. Da bi se dodatno ubrzao proces ocjenjivanja sustav treba biti dizajniran na način da detektirane odgovore usporedi s ispravnim odgovorima i ujedno prema korisničko definiranoj skali ocijeni ispit. Ocijenjeni ispit mora biti vizualiziran da ocjenjivač ipak može uvidjeti je li došlo do greške kod ocjenjivanja.
 
-Za svrhe razvoja, pronaska grešaka i slično sustav bi trebao imati mogučnost vizualiziranja svakog koraka obrade od samog unosa slike pa sve do riješenja. Ta opcija bi se trebala moći uključiti ili isklučiti po potrebi. 
+Za svrhe razvoja, pronalaska grešaka i slično sustav bi trebao imati mogućnost vizualiziranja svakog koraka obrade od samog unosa slike pa sve do rješenja. Ta opcija bi se trebala moći uključiti ili isključiti po potrebi. 
 
-Pošto se radi o komponenti otvorenog koda želja je da se ostavi mogućnost zamjene važnih biblioteka koje će sustav koristiti, pšoput one za računalni vid. Time će se omogučiti da neko po potrebi napiše svoju implementaciju i zamjeni zadanu EmguCv biblioteku.
+Pošto se radi o komponenti otvorenog koda želja je da se ostavi mogućnost zamjene važnih biblioteka koje će sustav koristiti, poput one za računalni vid. Time će se omogućiti da neko po potrebi napiše svoju implementaciju i zamjeni zadanu EmguCv biblioteku.
 
 \pagebreak
 
@@ -503,53 +502,47 @@ Pošto se radi o komponenti otvorenog koda želja je da se ostavi mogućnost zam
     \hline
     \textbf{Identifikator} & FZ-01 \\ \hline
     \textbf{Zahtjev} & Sustav mora detektirati odgovore s matrice odgovora. \\ \hline
-    \textbf{Obrazloženje} & Detekcija se temelji isključivo na obradi jedne stranice – matrice odgovora – čime se pojednostavljuje i ubrzava ocjenjivanje. \\ \hline
-    \textbf{Način provjere} & Prilikom unosa slike matrice, sustav treba pravilno označiti sve odgovore koji su označeni od strane korisnika. \\ \hline
-    \textbf{Prioritet [1--5]} &  \\ \hline
+    \textbf{Opis} & Detekcija se temelji isključivo na obradi jedne stranice to jest matrice odgovora. Odgovori se trebaju detektirati, klasificirati prema tome jesu li označeni i zatim ih pridužiti odgovarajućem pitanju.\\ \hline
+    \textbf{Način provjere} & Prilikom unosa slike matrice odgovora, sustav treba pravilno označiti sve odgovore na slici i označitiji ih odgovarajučom bojom ovisno o klasi kojoj pripadaju. \\ \hline
+    \textbf{Prioritet [1--5]} & 5 \\ \hline
     \multicolumn{2}{|c|}{} \\ \hline
     
     \textbf{Identifikator} & FZ-02 \\ \hline
     \textbf{Zahtjev} & Sustav mora omogućiti generiranje PDF predložaka za matricu odgovora. \\ \hline
-    \textbf{Obrazloženje} & Korisnici trebaju moći jednostavno izraditi matricu s unaprijed definiranim brojem pitanja i odgovora. \\ \hline
-    \textbf{Način provjere} & Iz sustava treba biti moguće izvesti generirani predložak u PDF formatu. \\ \hline
-    \textbf{Prioritet [1--5]} &  \\ \hline
+    \textbf{Opis} & Korisnici trebaju moći jednostavno izraditi matricu s unaprijed definiranim brojem pitanja i odgovora. \\ \hline
+    \textbf{Način provjere} & Iz sustava treba biti moguće izvesti generirani predložak u PDF formatu, parametri za unos su broj pirtanja i broj odgovora po pitanju. \\ \hline
+    \textbf{Prioritet [1--5]} & 3 \\ \hline
     \multicolumn{2}{|c|}{} \\ \hline
     
     \textbf{Identifikator} & FZ-03 \\ \hline
     \textbf{Zahtjev} & Sustav mora omogućiti automatsko prepoznavanje točnih odgovora iz slike ispravno riješenog ispita. \\ \hline
-    \textbf{Obrazloženje} & Korisnik ne mora ručno unositi odgovore; slika ispravnog rješenja bit će dovoljna za generiranje ključa. \\ \hline
+    \textbf{Opis} & Korisnik ne mora ručno unositi odgovore; slika ispravnog rješenja bit će dovoljna za generiranje ključa. \\ \hline
     \textbf{Način provjere} & Učitavanjem slike ispravno riješenog ispita sustav mora automatski prepoznati sve točne odgovore. \\ \hline
-    \textbf{Prioritet [1--5]} &  \\ \hline
+    \textbf{Prioritet [1--5]} & 4 \\ \hline
     \multicolumn{2}{|c|}{} \\ \hline
     
     \textbf{Identifikator} & FZ-04 \\ \hline
-    \textbf{Zahtjev} & Sustav mora usporediti odgovore s točnim rješenjem i izračunati ocjenu prema definiranoj skali. \\ \hline
-    \textbf{Obrazloženje} & Automatsko ocjenjivanje ubrzava proces ispravljanja i smanjuje mogućnost pogreške. \\ \hline
+    \textbf{Zahtjev} & Sustav mora usporediti odgovore s točnim rješenjem i izračunati ocjenu prema skali koju je korisnik definirao. \\ \hline
+    \textbf{Opis} & Automatsko ocjenjivanje ubrzava proces ispravljanja i smanjuje mogućnost pogreške. \\ \hline
     \textbf{Način provjere} & Nakon što se ispiti obrade, mora biti prikazana ocjena za svaki ispit u skladu sa skalom. \\ \hline
-    \textbf{Prioritet [1--5]} &  \\ \hline
+    \textbf{Prioritet [1--5]} & 4 \\ \hline
     \multicolumn{2}{|c|}{} \\ \hline
     \pagebreak
     \hline
 
     \textbf{Identifikator} & FZ-05 \\ \hline
     \textbf{Zahtjev} & Sustav mora omogućiti vizualizaciju rezultata ocjenjivanja za svakog korisnika. \\ \hline
-    \textbf{Obrazloženje} & Omogućava ljudsku kontrolu rezultata i ispravnost prepoznavanja i ocjenjivanja. \\ \hline
+    \textbf{Opis} & Omogućava ljudsku kontrolu rezultata i ispravnost prepoznavanja i ocjenjivanja. \\ \hline
     \textbf{Način provjere} & Vizualna prezentacija ispita s označenim točnim i netočnim odgovorima mora biti dostupna. \\ \hline
-    \textbf{Prioritet [1--5]} &  \\ \hline
+    \textbf{Prioritet [1--5]} & 3 \\ \hline
     \multicolumn{2}{|c|}{} \\ \hline
     
     \textbf{Identifikator} & FZ-06 \\ \hline
     \textbf{Zahtjev} & Sustav mora omogućiti prikaz svih koraka obrade slike. \\ \hline
-    \textbf{Obrazloženje} & Korisnicima i developerima je korisno za praćenje grešaka i ponašanja sustava. \\ \hline
-    \textbf{Način provjere} & U postavkama sustava mora postojati opcija kojom se uključuje ili isključuje prikaz koraka obrade. \\ \hline
-    \textbf{Prioritet [1--5]} &  \\ \hline
-    
-    \textbf{Identifikator} & FZ-07 \\ \hline
-    \textbf{Zahtjev} & Sustav mora omogućiti unos varijabilnog broja pitanja i odgovora u matricu. \\ \hline
-    \textbf{Obrazloženje} & Prilagodljivost broju pitanja i odgovora ključna je za podršku različitim tipovima ispita. \\ \hline
-    \textbf{Način provjere} & Tijekom generiranja predloška korisnik može definirati broj pitanja i odgovora, koji se zatim reflektira u matrici. \\ \hline
-    \textbf{Prioritet [1--5]} &  \\ \hline
-    
+    \textbf{Opis} & Korisnicima i developerima je korisno za praćenje grešaka i ponašanja sustava. Slike se trevaju prikazati tijekom obrade i spremiti na disk računala. \\ \hline
+    \textbf{Način provjere} & Funkcionalnost prikazuje korake i sprema ih na disk ako je uključena, inače ne. \\ \hline
+    \textbf{Prioritet [1--5]} & 5  \\ \hline
+        
     \caption{Funkcionalni zahtjevi}
 \end{longtable}
 
@@ -559,22 +552,28 @@ Pošto se radi o komponenti otvorenog koda želja je da se ostavi mogućnost zam
     \hline
     \textbf{Identifikator} & NFZ-01 \\ \hline
     \textbf{Zahtjev} & Sustav mora pružati pouzdane rezultate čak i u slučaju loših uvjeta pri snimanju (npr. sjenke, loš kontrast, zakrenutost). \\ \hline
-    \textbf{Obrazloženje} & U praksi slike ispita neće uvijek biti idealne kvalitete, pa sustav mora biti robustan na takve uvjete. \\ \hline
+    \textbf{Opis} & U praksi slike ispita neće uvijek biti idealne kvalitete, sustav mora biti sposoban obraditi sliku i u takvim uvjetima. \\ \hline
     \textbf{Način provjere} & Sustav se testira na uzorku slika s različitim uvjetima osvjetljenja, orijentacije i kvalitete. \\ \hline
-    \textbf{Prioritet [1--5]} &  \\ \hline
+    \textbf{Prioritet [1--5]} & 3 \\ \hline
     \multicolumn{2}{|c|}{} \\ \hline
-    
+
     \textbf{Identifikator} & NFZ-02 \\ \hline
     \textbf{Zahtjev} & Sustav mora omogućiti jednostavnu zamjenu vanjskih biblioteka poput one za računalni vid. \\ \hline
-    \textbf{Obrazloženje} & Komponenta je otvorenog koda, pa korisnici mogu koristiti druge biblioteke (npr. zamijeniti EmguCV). \\ \hline
-    \textbf{Način provjere} & Biblioteke se mogu zamijeniti putem konfiguracijskih postavki bez mijenjanja osnovnog koda. \\ \hline
-    \textbf{Prioritet [1--5]} &  \\ \hline
+    \textbf{Opis} & Komponenta pruža sučelje koje korsinici mogu nasljediti i napisati svoju implementaciju i time zamjeniti biblioteku za CV. \\ \hline
+    \textbf{Prioritet [1--5]} & 2 \\ \hline
+
+    \pagebreak
+    
+    \hline
+    \textbf{Identifikator} & NFZ-03  \\ \hline
+    \textbf{Zahtjev} & Sustav mora moći detektirati odgovore na predlošku sa varijabilnim brojem pitanja i odgovora \\ \hline
+    \textbf{Opis} & Korsinici će moći generirati predložak sa različitim brojem pitanja i odgovora, sustav ih treba sve ispravno detektirati. \\ \hline
+    \textbf{Način provjere} & Testirati sa raznim kombinacijama matrica odgovora sposobnost detekcije sa varijablinim pitanjima i odgovorima. \\ \hline
+    \textbf{Prioritet [1--5]} & 2  \\ \hline
     
     \caption{Nefunkcionalni zahtjevi}
 \end{longtable}
     
-
-
 \section{Implementacija}
 \section{Analiza rezultata}
 \section{Limitacije rješenja}

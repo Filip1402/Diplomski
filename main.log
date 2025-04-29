@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.17)  29 APR 2025 19:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.17)  29 APR 2025 20:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -909,7 +909,7 @@ File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 <slike/MedianFiltering.png, id=291, 550.055pt x 367.3725pt>
 File: slike/MedianFiltering.png Graphic file (type png)
 <use slike/MedianFiltering.png>
-Package pdftex.def Info: slike/MedianFiltering.png  used on input line 226.
+Package pdftex.def Info: slike/MedianFiltering.png  used on input line 225.
 (pdftex.def)             Requested size: 386.96027pt x 258.45389pt.
 
 
@@ -917,7 +917,7 @@ Package pdftex.def Info: slike/MedianFiltering.png  used on input line 226.
 <slike/perspective.png, id=304, 788.9475pt x 331.2375pt>
 File: slike/perspective.png Graphic file (type png)
 <use slike/perspective.png>
-Package pdftex.def Info: slike/perspective.png  used on input line 288.
+Package pdftex.def Info: slike/perspective.png  used on input line 287.
 (pdftex.def)             Requested size: 386.96027pt x 162.46446pt.
 
 
@@ -925,7 +925,7 @@ Package pdftex.def Info: slike/perspective.png  used on input line 288.
 <slike/sesgmentacija.png, id=318, 722.7pt x 379.4175pt>
 File: slike/sesgmentacija.png Graphic file (type png)
 <use slike/sesgmentacija.png>
-Package pdftex.def Info: slike/sesgmentacija.png  used on input line 310.
+Package pdftex.def Info: slike/sesgmentacija.png  used on input line 309.
 (pdftex.def)             Requested size: 386.96027pt x 203.15714pt.
 
 
@@ -933,17 +933,17 @@ Package pdftex.def Info: slike/sesgmentacija.png  used on input line 310.
 <slike/erosion.png, id=332, 578.16pt x 194.22563pt>
 File: slike/erosion.png Graphic file (type png)
 <use slike/erosion.png>
-Package pdftex.def Info: slike/erosion.png  used on input line 328.
+Package pdftex.def Info: slike/erosion.png  used on input line 327.
 (pdftex.def)             Requested size: 341.43307pt x 114.6988pt.
 <slike/dilatacija.png, id=335, 578.16pt x 194.22563pt>
 File: slike/dilatacija.png Graphic file (type png)
 <use slike/dilatacija.png>
-Package pdftex.def Info: slike/dilatacija.png  used on input line 336.
+Package pdftex.def Info: slike/dilatacija.png  used on input line 335.
 (pdftex.def)             Requested size: 341.43307pt x 114.6988pt.
 <slike/otvaranje_zatvaranje.png, id=339, 770.88pt x 596.2275pt>
 File: slike/otvaranje_zatvaranje.png Graphic file (type png)
 <use slike/otvaranje_zatvaranje.png>
-Package pdftex.def Info: slike/otvaranje_zatvaranje.png  used on input line 344.
+Package pdftex.def Info: slike/otvaranje_zatvaranje.png  used on input line 343.
 (pdftex.def)             Requested size: 273.14923pt x 211.25739pt.
 
 
@@ -953,7 +953,7 @@ Package pdftex.def Info: slike/otvaranje_zatvaranje.png  used on input line 344.
 <slike/segVsDetec.png, id=366, 602.25pt x 363.3575pt>
 File: slike/segVsDetec.png Graphic file (type png)
 <use slike/segVsDetec.png>
-Package pdftex.def Info: slike/segVsDetec.png  used on input line 388.
+Package pdftex.def Info: slike/segVsDetec.png  used on input line 387.
 (pdftex.def)             Requested size: 273.14923pt x 164.80673pt.
 
 
@@ -961,7 +961,7 @@ Package pdftex.def Info: slike/segVsDetec.png  used on input line 388.
 <slike/shapeDetection.png, id=378, 2035.605pt x 658.46pt>
 File: slike/shapeDetection.png Graphic file (type png)
 <use slike/shapeDetection.png>
-Package pdftex.def Info: slike/shapeDetection.png  used on input line 409.
+Package pdftex.def Info: slike/shapeDetection.png  used on input line 408.
 (pdftex.def)             Requested size: 455.24411pt x 147.2529pt.
 
 
@@ -971,7 +971,7 @@ Package pdftex.def Info: slike/shapeDetection.png  used on input line 409.
 <slike/omr_flow.png, id=401, 873.2625pt x 262.9825pt>
 File: slike/omr_flow.png Graphic file (type png)
 <use slike/omr_flow.png>
-Package pdftex.def Info: slike/omr_flow.png  used on input line 472.
+Package pdftex.def Info: slike/omr_flow.png  used on input line 471.
 (pdftex.def)             Requested size: 455.24411pt x 137.09677pt.
 
 
@@ -990,17 +990,22 @@ Poglavlje 5.
 [23
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 584.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 583.
  (c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Overfull \hbox (2.35927pt too wide) in paragraph at lines 584--584
+Overfull \hbox (2.35927pt too wide) in paragraph at lines 583--583
 \T1/phv/m/n/10.95 svi-banj 2024. adresa: []$\T1/pcr/m/n/10.95 https : / / www . grayscaleimage . com / why -[] use -[] grayscale -[]
  []
 
 
-Overfull \hbox (6.52557pt too wide) in paragraph at lines 584--584
-\T1/phv/m/n/10.95 2025], tra-vanj 2025. adresa: []$\T1/pcr/m/n/10.95 https : / / www . v7labs . com / blog / image -[] processing -[]
+Overfull \hbox (8.56956pt too wide) in paragraph at lines 583--583
+\T1/phv/m/n/10.95 2025.], tra-vanj 2025. adresa: []$\T1/pcr/m/n/10.95 https : / / stackoverflow . com / questions / 12752168 /
+ []
+
+
+Overfull \hbox (4.65178pt too wide) in paragraph at lines 583--583
+[]\T1/phv/m/sl/10.95 What is no-ise in pho-to-graphy\T1/phv/m/n/10.95 , [Online; pris-tup-ljeno 22. trav-nja 2025.], tra-vanj 2025. adresa:
  []
 
 
@@ -1008,32 +1013,32 @@ Overfull \hbox (6.52557pt too wide) in paragraph at lines 584--584
 [24
 
 ]
-Overfull \hbox (6.88576pt too wide) in paragraph at lines 584--584
+Overfull \hbox (6.88576pt too wide) in paragraph at lines 583--583
 []\T1/phv/m/n/10.95 P. Ch-hi-kara, ^^R  Un-der-stan-ding Morp-ho-lo-gi-cal Image Pro-ce-ssing and Its Ope-ra-ti-ons $\OMS/cmsy/m/n/10.95 j$ \T1/phv/m/n/10.95 Towards
  []
 
 
-Overfull \hbox (43.3261pt too wide) in paragraph at lines 584--584
+Overfull \hbox (43.3261pt too wide) in paragraph at lines 583--583
 \T1/phv/m/n/10.95 Data Sci-ence,^^Q \T1/phv/m/sl/10.95 Towards Data Sci-ence\T1/phv/m/n/10.95 , si-je-£anj 2025. adresa: []$\T1/pcr/m/n/10.95 https : / / towardsdatascience .
  []
 
 
-Overfull \hbox (24.22958pt too wide) in paragraph at lines 584--584
+Overfull \hbox (24.22958pt too wide) in paragraph at lines 583--583
 \T1/pcr/m/n/10.95 com / understanding -[] morphological -[] image -[] processing -[] and -[] its -[] operations -[]
  []
 
 
-Overfull \hbox (15.60802pt too wide) in paragraph at lines 584--584
+Overfull \hbox (15.60802pt too wide) in paragraph at lines 583--583
 []\T1/phv/m/n/10.95 M. Abra-mov, ^^R  Se-man-tic Seg-men-ta-tion vs Object De-tec-tion: Dif-fe-ren-ces $\OMS/cmsy/m/n/10.95 j$ \T1/phv/m/n/10.95 Keymakr,^^Q \T1/phv/m/sl/10.95 Keymakr\T1/phv/m/n/10.95 ,
  []
 
 
-Overfull \hbox (27.27357pt too wide) in paragraph at lines 584--584
+Overfull \hbox (27.27357pt too wide) in paragraph at lines 583--583
 \T1/pcr/m/n/10.95 classification -[] vs -[] object -[] detection -[] vs -[] image -[] segmentation -[] f36db85fe81$[]\T1/phv/m/n/10.95 . 
  []
 
 
-Overfull \hbox (30.1342pt too wide) in paragraph at lines 584--584
+Overfull \hbox (30.1342pt too wide) in paragraph at lines 583--583
 []\T1/phv/m/n/10.95 R. Shel-don, ^^R  image com-pre-ssion,^^Q \T1/phv/m/sl/10.95 Wha-tIs\T1/phv/m/n/10.95 , sr-panj 2022. adresa: []$\T1/pcr/m/n/10.95 https : / / www . techtarget .
  []
 
@@ -1074,13 +1079,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  25091 strings out of 469626
  434265 string characters out of 5475183
- 1373724 words of memory out of 5000000
+ 1370724 words of memory out of 5000000
  51455 multiletter control sequences out of 15000+600000
  683024 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,12n,84p,1232b,2430s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (33 pages, 26929782 bytes).
+Output written on main.pdf (33 pages, 26929790 bytes).
 PDF statistics:
  612 PDF objects out of 1000 (max. 8388607)
  512 compressed objects within 6 object streams
