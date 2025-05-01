@@ -34,9 +34,39 @@
       \verb https://www.pfu-us.ricoh.com/blog/what-is-a-digital-image
       \endverb
     \endentry
-    \entry{GrayscaleSlika}{misc}{}{}
+    \entry{AspectRatio}{misc}{}{}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{note}{[Online; pristupljeno; 30. travnja 2025.]}
+      \field{title}{{Understanding Aspect Ratios in Photography {$\vert$} Adobe Express}}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.adobe.com/express/discover/sizes/photo-aspect-ratio
+      \endverb
+      \verb{url}
+      \verb https://www.adobe.com/express/discover/sizes/photo-aspect-ratio
+      \endverb
+    \endentry
+    \entry{ImageHistory}{misc}{}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{note}{[Online; accessed 30. Apr. 2025]}
+      \field{title}{{Color photography history, tips, and techniques - Adobe}}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.adobe.com/creativecloud/photography/type/color-photography.html
+      \endverb
+      \verb{url}
+      \verb https://www.adobe.com/creativecloud/photography/type/color-photography.html
+      \endverb
+    \endentry
+    \entry{GrayscaleSlika}{misc}{}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labeltitlesource}{title}
       \field{month}{4}
       \field{note}{[Online; pristupljeno 20. travnja 2025.]}
@@ -60,8 +90,8 @@
       \strng{authornamehash}{6a6307d6a0b5c3fa25fa0f7948b52d86}
       \strng{authorfullhash}{6a6307d6a0b5c3fa25fa0f7948b52d86}
       \strng{authorfullhashraw}{6a6307d6a0b5c3fa25fa0f7948b52d86}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Grayscale Images}
@@ -150,8 +180,8 @@
       \strng{authornamehash}{3468e496b8f9d59ece3a76804d449d58}
       \strng{authorfullhash}{3468e496b8f9d59ece3a76804d449d58}
       \strng{authorfullhashraw}{3468e496b8f9d59ece3a76804d449d58}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{3080-4550}
@@ -167,8 +197,8 @@
       \endverb
     \endentry
     \entry{BibEntry2025Apr}{misc}{}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Cloudinary}
       \field{month}{4}
@@ -315,8 +345,8 @@
       \strng{authornamehash}{676fb38ec990aa5d8f7d51f8dcd2c92a}
       \strng{authorfullhash}{676fb38ec990aa5d8f7d51f8dcd2c92a}
       \strng{authorfullhashraw}{676fb38ec990aa5d8f7d51f8dcd2c92a}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Medium}
@@ -509,8 +539,8 @@
       \strng{authornamehash}{327f987d97eb8ae1314cdde81b69efa8}
       \strng{authorfullhash}{327f987d97eb8ae1314cdde81b69efa8}
       \strng{authorfullhashraw}{327f987d97eb8ae1314cdde81b69efa8}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{WhatIs}
@@ -541,8 +571,8 @@
       \strng{authornamehash}{a102709d3038549e79d7b492d564e708}
       \strng{authorfullhash}{a102709d3038549e79d7b492d564e708}
       \strng{authorfullhashraw}{a102709d3038549e79d7b492d564e708}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{DEV Community}

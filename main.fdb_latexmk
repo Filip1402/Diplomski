@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 1745947864.48664 "main.bcf" "main.bbl" "main" 1745949736.8241 0
-  "lib.bib" 1745947854 6681 e91c8e44c0a74c85c6bfe554a0f73335 ""
-  "main.bcf" 1745949736 112057 61c0af33200736ae68f2c1401a0923d2 "pdflatex"
+["biber main"] 1746032702.35415 "main.bcf" "main.bbl" "main" 1746089448.31579 0
+  "lib.bib" 1746032394 7192 2fb3f39215c1d093ff5b1d1811696e66 ""
+  "main.bcf" 1746089447 112262 4e324c5471e6e04003e7a32b03285ef8 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1745949729.59528 "c:/Users/zutif/Documents/Diplomski/main.tex" "main.pdf" "main" 1745949736.82508 0
-  "c:/Users/zutif/Documents/Diplomski/main.tex" 1745949728 42302 b8ca3f916dd4bcf9537d9f034294c916 ""
+["pdflatex"] 1746089439.82375 "c:/Users/zutif/Documents/Diplomski/main.tex" "main.pdf" "main" 1746089448.31705 0
+  "c:/Users/zutif/Documents/Diplomski/main.tex" 1746089438 45122 e2da63a88da635a5f63c216509fc0787 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1744825024 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1744825599 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm" 1744824623 1292 bd42be2f344128bff6d35d98474adfe3 ""
@@ -180,14 +180,14 @@
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1744910740 3561285 bb535cd2e450ef7b6276760fd683a65a ""
   "c:/texlive/2025/texmf.cnf" 1744910191 713 e69b156964470283e0530f5060668171 ""
   "foi.cls" 1744815610 8210 2e57a0e134d9b67a1128ac854d806d02 ""
-  "main.aux" 1745949736 14320 0c7aafc62c3ffd145d1c1e17b796c2a2 "pdflatex"
-  "main.bbl" 1745947867 24082 1fd2bf5aa3265bbbf429269114812f7e "biber main"
-  "main.lof" 1745949736 2193 744648cec25f4460909e7eb786929b61 "pdflatex"
-  "main.lot" 1745949736 317 8d7a189130c9b31ef5c8d6e8e7604e6c "pdflatex"
-  "main.out" 1745949736 6342 e23e04a6986df8b0c2938f5a73e2d7b7 "pdflatex"
-  "main.run.xml" 1745949736 2396 545fa222197931919dec819c57e7bcc3 "pdflatex"
-  "main.tex" 1745949728 42302 b8ca3f916dd4bcf9537d9f034294c916 ""
-  "main.toc" 1745949736 2937 59d65979f2203f13d9f43b86fab23fc1 "pdflatex"
+  "main.aux" 1746089447 14870 b6dc132b0ad0da9e5a931e74edbc4844 "pdflatex"
+  "main.bbl" 1746032705 25301 1d7b03f4d837033d0af6d00717f9ec69 "biber main"
+  "main.lof" 1746089447 2345 4d7ef988736325b282fc2b2cc175af80 "pdflatex"
+  "main.lot" 1746089447 317 71c4a33a348904f247291124b100463c "pdflatex"
+  "main.out" 1746089447 6342 7d4646bc3e8ae61201112e8ee6b0d37a "pdflatex"
+  "main.run.xml" 1746089447 2396 545fa222197931919dec819c57e7bcc3 "pdflatex"
+  "main.tex" 1746089438 45122 e2da63a88da635a5f63c216509fc0787 ""
+  "main.toc" 1746089447 2940 4fe970f46c4f834be6cfcde740539481 "pdflatex"
   "slike/Binary.jpeg" 1745145151 535339 819253f28d307c7843e4d1ee457aba4d ""
   "slike/Color_chanell_separation.png" 1745143334 20034250 ac5d32235f988d1b57db7260b91910a7 ""
   "slike/Grayscale.jpeg" 1745143654 1463999 321b5d99c32902aa7585bb3c382aa011 ""
@@ -201,6 +201,7 @@
   "slike/segVsDetec.png" 1745602172 393912 be9105b9a801e681099121b61de330f4 ""
   "slike/sesgmentacija.png" 1745518267 277979 263e57a3e5de780852cb00f56dd65852 ""
   "slike/shapeDetection.png" 1745602628 1128895 f209caaf95eed1a9c3a5f427e5cd9b9c ""
+  "slike/withAndWithoutPreProcessing.png" 1746034648 3567980 0953e9b73e05c84eb8ed377170cc746c ""
   (generated)
   "main.aux"
   "main.bcf"
