@@ -569,7 +569,12 @@ Budući da se radi o komponenti otvorenog koda želja je da se ostavi mogućnost
     \textbf{Opis} & Korisnicima i developerima ova funkcionalnost je korisna za praćenje grešaka i ponašanja sustava. Slike se trebaju prikazati tijekom obrade i spremiti na disk računala. \\ \hline
     \textbf{Način provjere} & Funkcionalnost prikazuje korake i sprema ih na disk ako je uključena, inače ne. \\ \hline
     \textbf{Prioritet [1--5]} & 5  \\ \hline
-        
+    \multicolumn{2}{|c|}{} \\ \hline
+    \textbf{Identifikator} & FZ-07 \\ \hline
+    \textbf{Zahtjev} & Sustav mora podržavati pitanja s jednostrukim i višestrukim odgovorima. \\ \hline
+    \textbf{Opis} & Korisnici trebaju imati mogućnost definiranja pitanja koja imaju jedan točan odgovor (jednostruki izbor) ili više točnih odgovora (višestruki izbor). Sustav mora pravilno detektirati i ocijeniti oba tipa pitanja. \\ \hline
+    \textbf{Način provjere} & Prilikom testiranja, sustav mora ispravno ocijeniti ispite koji sadrže oba tipa pitanja. \\ \hline
+    \textbf{Prioritet [1--5]} & 4 \\ \hline
     \caption{Funkcionalni zahtjevi}
 \end{longtable}
 
@@ -582,26 +587,104 @@ Budući da se radi o komponenti otvorenog koda želja je da se ostavi mogućnost
     \textbf{Opis} & U praksi slike ispita neće uvijek biti idealne kvalitete, sustav mora biti sposoban obraditi sliku i u takvim uvjetima. \\ \hline
     \textbf{Način provjere} & Sustav se testira na uzorku slika s različitim uvjetima osvjetljenja, orijentacije i kvalitete. \\ \hline
     \textbf{Prioritet [1--5]} & 3 \\ \hline
-    \multicolumn{2}{|c|}{} \\ \hline
-
+    \pagebreak
+    
+    \hline
     \textbf{Identifikator} & NFZ-02 \\ \hline
     \textbf{Zahtjev} & Sustav mora omogućiti jednostavnu zamjenu vanjskih biblioteka poput one za računalni vid. \\ \hline
     \textbf{Opis} & Komponenta pruža sučelje koje korisnici mogu naslijediti i napisati svoju implementaciju i time zamijeniti biblioteku za CV. \\ \hline
     \textbf{Prioritet [1--5]} & 2 \\ \hline
+    \multicolumn{2}{|c|}{} \\ \hline
 
-    \pagebreak
-    
-    \hline
+
     \textbf{Identifikator} & NFZ-03  \\ \hline
     \textbf{Zahtjev} & Sustav mora moći detektirati odgovore na predlošku s varijabilnim brojem pitanja i odgovora \\ \hline
     \textbf{Opis} & Korisnici će moći generirati predložak s različitim brojem pitanja i odgovora, sustav ih treba sve ispravno detektirati. \\ \hline
     \textbf{Način provjere} & Testirati s raznim kombinacijama matrica odgovora sposobnost detekcije kada broj pitanja i odgovora nije fiksan, već varijabilan. \\ \hline
     \textbf{Prioritet [1--5]} & 2  \\ \hline
+    \multicolumn{2}{|c|}{} \\ \hline
+
+    \textbf{Identifikator} & NFZ-04 \\ \hline
+    \textbf{Zahtjev} & Sustav mora pronaći odgovore na slici unutar 500 milisekundi. \\ \hline
+    \textbf{Opis} & Nakon što korisnik učita sliku i pritisne gumb za detekciju odgovora, sustav ima najviše 500 milisekundi za obradu slike i pronalazak odgovora. Ovo vrijedi za slike koje ne prelaze 4K rezoluciju. Vrijeme učitavanja slike (I/O operacije) nije uključeno u to ograničenje. \\ \hline
+    \textbf{Način provjere} & Izmjeriti prosječno vrijeme potrebno za detekciju odgovora sa slike. \\ \hline
+    \textbf{Prioritet [1--5]} & 1 \\ \hline
     
     \caption{Nefunkcionalni zahtjevi}
 \end{longtable}
+
+\section{Slučajevi korištenja}
+
+Kroz dijagram slučajeva korištenja moguće je vidjeti koji su korisnici sustava te koja je razina njihove interakcije s određenim funkcijama i dijelovima sustava.
+Važno je napomenuti da se radi o prikazu visoke razine, čiji elementi ne moraju nužno odgovarati programskom kodu jedan-na-jedan.
+Na konkretnom primjeru ovog sustava može se uočiti da su ocjenjivači jedini korisnici. Oni imaju mogućnost iniciranja više različitih akcija unutar sustava.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\linewidth]{slike/useCase.jpg}
+    \caption{Prikaz Use-case diagrama (Vlastita izrada)}
+\end{figure}
+
+\subsection{Slučaj korištenja: Ocjenjivanje ispita}
+
+\subsubsection{Korisnici}
+Kao što je već spomenuto, ocjenjivači su jedini korisnici ovog sustava. Oni su u konačnici odgovorni za sam proces ocjenjivanja ispita, a GradeVision softversko rješenje im služi kao alat koji im u tom procesu značajno pomaže. Pomaže im tako što ubrzava sam proces ocjenjivanja, što im omogućuje da više vremena posvete ostalim obavezama, poput podizanja kvalitete nastave i sl.
+
+\subsubsection{Glavni scenarij}
+Glavni scenarij u ovom sustavu je ocjenjivanje ispita. Ocjenjivač pokreće tu aktivnost, koja zatim uključuje ostale dijelove sustava o kojima ovisi ispravan rad. To su druge aktivnosti poput generiranja PDF matrice odgovora, unosa slika i usporedbe odgovora.
+
+\subsubsection{Uključeni slučaj uporabe: Generiranje PDF matrice odgovora}
+Sustav ima mogućnost ocjenjivanja samo onih ispita koji imaju matrice odgovora u određenom formatu, stoga se prije ocjenjivanja ta matrica mora generirati. Taj format je donekle fleksibilan što se tiče broja pitanja i odgovora, ali osnovna struktura mora biti ista. Zbog toga ocjenjivač prije samog ocjenjivanja mora pokrenuti aktivnost "Generiranje PDF matrice odgovora" i definirati broj pitanja i odgovora kako bi kasnije mogao uspješno ocijeniti te matrice. Ako se ovaj korak preskoči i u sustav se učita matrica nekompatibilnog formata, sustav neće raditi.
+
+\subsubsection{Uključeni slučaj uporabe: Unos slike matrice točnih odgovora}
+Također, prije ocjenjivanja sustav mora znati koji su točni odgovori kako bi ih kasnije mogao usporediti. Stoga ocjenjivač mora učitati sliku matrice točnih odgovora čime se pokreće aktivnost "Unos slike matrice točnih odgovora".
+
+\subsubsection{Uključeni slučaj uporabe: Unos slika matrica odgovora za ocjenjivanje}
+Nakon što sustav ima učitanu sliku matrice točnih odgovora, potrebno je učitati slike matrica odgovora koje treba ocijeniti, jer bez tog koraka sustav ne zna što treba ocijeniti. Učitavanjem tih slika pokreće se aktivnost "Unos slika matrica odgovora za ocjenjivanje".
+
+\subsubsection{Uključeni slučaj uporabe: Detekcija odgovora}
+Obje aktivnosti učitavanja matrica odgovora ovise o aktivnosti "Detekcija odgovora", koja je ujedno jedna od najvažnijih aktivnosti koje sustav provodi, budući da se tu nalazi cijela logika za obradu slika i izdvajanje podataka o označenim odgovorima.
+
+\subsubsection{Uključeni slučaj uporabe: Usporedba odgovora}
+Nakon što su odgovori s učitanih matrica odgovora detektirani, pokreće se aktivnost "Usporedba odgovora", koja uspoređuje odgovore s matrica za ocjenjivanje s točnim odgovorima iz matrice točnih odgovora. Ta aktivnost također ovisi o aktivnosti "Definiranje skale ocjena", koja definira raspone za postizanje određene ocjene u postocima. U slučaju da skala nije definirana, koristi se unaprijed zadana skala.
+
+\subsubsection{Ostali slučajevi uporabe}
+Nakon što je ispit ocijenjen, pokreće se aktivnost "Prikaz rezultata", te po potrebi aktivnosti "Prikaz greške" i "Spremanje rezultata na disk". Zadnje dvije aktivnosti su opcionalne — spremanje na disk korisnik može uključiti ili isključiti, dok se greške prikazuju samo ako postoje razlike između detektiranih odgovora za ocjenjivanje i točnih odgovora. To mogu biti razlike poput različitog broja pitanja i odgovora i sl.
+
+\subsubsection{Tijek aktivnosti}
+\begin{flushleft}
+Ovo je pravilan tijek aktivnosti slučaja korištenja "Ocjenjivanje ispita":
+\begin{enumerate}
+    \item \textbf{Generiranje PDF matrice odgovora} \\
+    Ocjenjivač definira broj pitanja i odgovora te generira matricu u propisanom formatu.
     
-TODO: Dodati poglavlja sa dijagramima i slično...
+    \item \textbf{Definiranje skale ocjena} \\
+    Ocjenjivač može definirati vlastitu skalu ocjena. Ako se preskoči, koristi se zadana skala.
+    
+    \item \textbf{Unos slike matrice točnih odgovora} \\
+    Učitava se slika ispravno riješenog ispita kako bi sustav prepoznao točne odgovore.
+    
+    \item \textbf{Unos slika matrica odgovora za ocjenjivanje} \\
+    Učitavaju se slike ispita koje je potrebno ocijeniti.
+    
+    \item \textbf{Detekcija odgovora} \\
+    Sustav obrađuje slike i izdvaja označene odgovore za svako pitanje.
+    
+    \item \textbf{Usporedba odgovora} \\
+    Detektirani odgovori uspoređuju se s točnim odgovorima na temelju zadane skale ocjena.
+    
+    \item \textbf{Prikaz rezultata} \\
+    Korisniku se prikazuju ocjene i vizualna oznaka točnih/netočnih odgovora.
+    
+    \item \textbf{Spremanje rezultata na disk (ako je uključena opcija)} \\
+    Rezultati se mogu trajno pohraniti, ako je uključena ta opcija.
+    
+    \item \textbf{Prikaz greške (samo ako je potrebno)} \\
+    Ako postoji nesukladnost između matrica (npr. broj pitanja), korisniku se prikazuje obavijest o grešci.
+\end{enumerate}
+\end{flushleft}
+
+
 \section{Implementacija}
 \section{Analiza rezultata}
 \section{Limitacije rješenja}
