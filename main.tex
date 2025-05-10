@@ -684,6 +684,83 @@ Ovo je pravilan tijek aktivnosti slučaja korištenja "Ocjenjivanje ispita":
 \end{enumerate}
 \end{flushleft}
 
+\pagebreak
+\section{Dijagram klasa}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\linewidth]{slike/classDiagram.png}
+    \caption{Prikaz dijgrama klasa (Vlastita izrada)}
+\end{figure}
+
+Na priloženoj slici prikazana je struktura izrađenog sustava za detekciju odgovora na pismenim ispitima nazvanog GradeVision. Struktura je prikazana korištenjem dijagrama klasa, što omogućuje detaljan uvid u atribute, metode i međuovisnosti svake klase. Klase na ovoj slici možemo podijeliti na klase koje se bave procesiranjem slika i klase temeljne poslovne logike. Nadalje, klase za procesiranje slika mogu se podijeliti na apstraktne i specifične klase.
+
+Apstraktne klase (označene crvenom bojom) su: \texttt{ImageData}, \texttt{DetectedCircleBase} i \texttt{ImageProcessorBase}. U ovom slučaju, te klase postoje kako bi ispunile jedan od nefunkcionalnih zahtjeva (NFZ-02). Taj je zahtjev bio vezan uz jednostavnu zamjenu biblioteka za računalni vid.
+Specifične klase (označene zelenom bojom) su: \texttt{EmguCvImage}, \texttt{EmguCvCircle} i \texttt{EmguCvImageProcessor}. One predstavljaju zadanu implementaciju apstraktnih klasa, napisanu korištenjem biblioteke EmguCV za računalni vid.
+
+Važno je napomenuti da klasa \texttt{EmguCvImageProcessor} nasljeđuje apstraktnu klasu \texttt{ImageProcessorBase}, ali ne implementira sve njezine metode u jednoj C\# datoteci. Metode su implementirane u više datoteka koristeći koncept parcijalnih klasa u programskom jeziku C\#. To smanjuje potrebu za implementacijom više sučelja prilikom kreiranja nove implementacije. Klasa \texttt{EmguCvImageProcessor} definirana je kroz sljedeće datoteke, pri čemu svaka datoteka poštuje načelo jedinstvene odgovornosti (\textit{eng. Single Responsibility Principle}):
+
+\begin{itemize}
+    \item \textbf{EmguCVImageProcessor.cs}
+    \begin{itemize}
+        \item Klasa koja sadrži konstruktor te sve zajedničke i pomoćne metode koje nisu specifične za jedan korak obrade
+    \end{itemize}
+    
+    \item \textbf{EmguCVImageProcessor.CircleDetection.cs}
+    \begin{itemize}
+        \item Sadrži logiku za detekciju krugova, njihovo grupiranje, filtriranje i procjenu ispunjenosti kruga
+    \end{itemize}
+
+    \item \textbf{EmguCVImageProcessor.Denoise.cs}
+    \begin{itemize}
+        \item Sadrži logiku za uklanjanje šuma u slučaju kada je razina šuma iznad definiranog praga
+    \end{itemize}
+
+    \item \textbf{EmguCVImageProcessor.GrayscaleConvertor.cs}
+    \begin{itemize}
+        \item Sadrži logiku za pretvorbu slike u boji u sivu sliku
+    \end{itemize}
+
+    \item \textbf{EmguCVImageProcessor.PerspectiveCorrector.cs}
+    \begin{itemize}
+        \item Sadrži logiku za detekciju papira ili unutarnjih okvira ispita te ispravljanje perspektivne deformacije
+    \end{itemize}
+
+    \item \textbf{EmguCvImageProcessor.RotationCorrector.cs}
+    \begin{itemize}
+        \item Sadrži logiku za određivanje orijentacije papira i korekciju pogrešne rotacije
+    \end{itemize}
+
+    \item \textbf{EmguCVImageProcessor.Tresholding.cs}
+    \begin{itemize}
+        \item Sadrži logiku za pretvorbu sive slike u binarnu sliku korištenjem tehnike adaptivnog praga (Adaptive Thresholding)
+    \end{itemize}
+
+    \item \textbf{EmguCVImageProcessor.Visualization.cs}
+    \begin{itemize}
+        \item Sadrži logiku za vizualizaciju označenih odgovora i ocjena
+    \end{itemize}
+\end{itemize}
+
+
+Svi koraci procesiranja slike definirani su unutar klase \texttt{ImageProcessorBase}, a implementirani u klasi \texttt{EmguCvImageProcessor}. Važno je naglasiti da u tim klasama nije definiran redoslijed operacija niti samo ocjenjivanje testova. Taj je dio izdvojen u klase (označene žutom bojom): \texttt{AnswerSheetGrader}, \texttt{GradeCalculator} i \texttt{GradeScale}. To su ujedno i klase s kojima bi korisnici biblioteke trebali imati najviše interakcije.
+
+\subsection{Klase ImageData i EmguCvImage}
+
+Kako bi se omogućila zamjena biblioteke za računalni vid, bilo je potrebno koristiti podatkovni model slike koji nije vezan ni uz jednu konkretnu biblioteku. Zbog toga je kreirana apstraktna klasa \texttt{ImageData}, koja sadrži sve potrebne podatke za daljnje procesiranje slike. To uključuje naziv datoteke, širinu, visinu, broj kanala, podatke o slici u obliku niza bajtova te metodu za kloniranje. Na taj način svaka implementacija tog sučelja može biti predstavljena na isti način.
+
+Na primjer, \texttt{EmguCvImage} je implementacija koja predstavlja objekt tipa Mat iz biblioteke EmguCV u obliku sučelja \texttt{ImageData}. Također sadrži razne pomoćne metode poput ToMat, FromMat, FromFile i sličnih, što omogućuje još jednostavniji razvoj.
+
+\texttt{ImageData} se koristi u svim dijelovima koda koji moraju biti neovisni o biblioteci za računalni vid, dok se \texttt{EmguCvImage} koristi isključivo u specifičnoj implementaciji koja koristi biblioteku EmguCV.
+
+\subsection{Klase DetectedCircleBase i EmguCvCircle}
+
+\texttt{DetectedCircleBase} je klasa koja je također nastala iz potrebe da sustav bude neovisan o specifičnoj biblioteci za računalni vid. Njezina je svrha pohranjivanje svih podataka o detektiranim krugovima, dok se specifične implementacije poput \texttt{EmguCvCircle} brinu za prikaz specifičnih objekata biblioteke računalnog vida u tom obliku.
+
+\texttt{DetectedCircleBase} sadrži sve važne informacije o detektiranom krugu poput: x-koordinate, y-koordinate, radijusa i vrijednosti koja označava je li krug ispunjen. Osim toga, sadrži i metodu koja provjerava odnos jednog objekta tipa \texttt{DetectedCircleBase} u odnosu na drugi objekt iste klase. Time se može saznati radi li se o krugu koji se preklapa i slično, što će u daljnjem dijelu rada biti izuzetno važno.
+
+\texttt{EmguCvCircle} samo nasljeđuje \texttt{DetectedCircleBase} i omogućuje kreiranje objekta na temelju modela podataka \texttt{CircleF}, koji je prisutan u biblioteci EmguCV.
 
 \section{Implementacija}
 \section{Analiza rezultata}

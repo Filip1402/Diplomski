@@ -36,11 +36,14 @@
 \contentsline {subsubsection}{\numberline {4.4.1.7}Uključeni slučaj uporabe: Usporedba odgovora}{26}{subsubsection.4.4.1.7}%
 \contentsline {subsubsection}{\numberline {4.4.1.8}Ostali slučajevi uporabe}{26}{subsubsection.4.4.1.8}%
 \contentsline {subsubsection}{\numberline {4.4.1.9}Tijek aktivnosti}{27}{subsubsection.4.4.1.9}%
-\contentsline {section}{\numberline {4.5}Implementacija}{27}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Analiza rezultata}{27}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Limitacije rješenja}{27}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Manualno testiranje rješenja}{27}{section.4.8}%
-\contentsline {chapter}{\numberline {5}Zaključak}{28}{chapter.5}%
-\contentsline {chapter}{Popis literature}{31}{chapter*.17}%
-\contentsline {chapter}{Popis slika}{32}{chapter*.18}%
-\contentsline {chapter}{Popis popis tablica}{33}{chapter*.19}%
+\contentsline {section}{\numberline {4.5}Dijagram klasa}{28}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Klase ImageData i EmguCvImage}{30}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Klase DetectedCircleBase i EmguCvCircle}{30}{subsection.4.5.2}%
+\contentsline {section}{\numberline {4.6}Implementacija}{30}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Analiza rezultata}{30}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Limitacije rješenja}{30}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Manualno testiranje rješenja}{30}{section.4.9}%
+\contentsline {chapter}{\numberline {5}Zaključak}{31}{chapter.5}%
+\contentsline {chapter}{Popis literature}{34}{chapter*.18}%
+\contentsline {chapter}{Popis slika}{35}{chapter*.19}%
+\contentsline {chapter}{Popis popis tablica}{36}{chapter*.20}%
