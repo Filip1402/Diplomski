@@ -34,16 +34,27 @@
 \contentsline {subsubsection}{\numberline {4.4.1.5}Uključeni slučaj uporabe: Unos slika matrica odgovora za ocjenjivanje}{26}{subsubsection.4.4.1.5}%
 \contentsline {subsubsection}{\numberline {4.4.1.6}Uključeni slučaj uporabe: Detekcija odgovora}{26}{subsubsection.4.4.1.6}%
 \contentsline {subsubsection}{\numberline {4.4.1.7}Uključeni slučaj uporabe: Usporedba odgovora}{26}{subsubsection.4.4.1.7}%
-\contentsline {subsubsection}{\numberline {4.4.1.8}Ostali slučajevi uporabe}{26}{subsubsection.4.4.1.8}%
+\contentsline {subsubsection}{\numberline {4.4.1.8}Ostali prošireni i uključeni slučajevi uporabe}{26}{subsubsection.4.4.1.8}%
 \contentsline {subsubsection}{\numberline {4.4.1.9}Tijek aktivnosti}{27}{subsubsection.4.4.1.9}%
 \contentsline {section}{\numberline {4.5}Dijagram klasa}{28}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Klase ImageData i EmguCvImage}{30}{subsection.4.5.1}%
 \contentsline {subsection}{\numberline {4.5.2}Klase DetectedCircleBase i EmguCvCircle}{30}{subsection.4.5.2}%
-\contentsline {section}{\numberline {4.6}Implementacija}{30}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Analiza rezultata}{30}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Limitacije rješenja}{30}{section.4.8}%
-\contentsline {section}{\numberline {4.9}Manualno testiranje rješenja}{30}{section.4.9}%
-\contentsline {chapter}{\numberline {5}Zaključak}{31}{chapter.5}%
-\contentsline {chapter}{Popis literature}{34}{chapter*.18}%
-\contentsline {chapter}{Popis slika}{35}{chapter*.19}%
-\contentsline {chapter}{Popis popis tablica}{36}{chapter*.20}%
+\contentsline {subsection}{\numberline {4.5.3}Klasa EmguCvImageProcessor}{30}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}Klase GradeCalculator i GradeScale}{31}{subsection.4.5.4}%
+\contentsline {subsection}{\numberline {4.5.5}Ostale klase}{31}{subsection.4.5.5}%
+\contentsline {section}{\numberline {4.6}Dijagrami slijeda}{32}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Dijagram slijeda – Detekcija odgovora s kontrolnog ispita}{32}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Dijagram slijeda – Ocijenjivanje ispita}{34}{subsection.4.6.2}%
+\contentsline {section}{\numberline {4.7}GradeVison aplikacija}{35}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Način rada}{35}{subsection.4.7.1}%
+\contentsline {section}{\numberline {4.8}GradeVision biblioteka}{35}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Skup podataka za testiranje}{35}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Prikaz koraka obrada slike nad testnim podatcima}{35}{subsection.4.9.1}%
+\contentsline {section}{\numberline {4.10}Manualno testiranje rješenja}{35}{section.4.10}%
+\contentsline {section}{\numberline {4.11}Analiza rezultata}{35}{section.4.11}%
+\contentsline {section}{\numberline {4.12}Limitacije rješenja}{35}{section.4.12}%
+\contentsline {section}{\numberline {4.13}Poboljšanja rješenja}{35}{section.4.13}%
+\contentsline {chapter}{\numberline {5}Zaključak}{36}{chapter.5}%
+\contentsline {chapter}{Popis literature}{39}{chapter*.20}%
+\contentsline {chapter}{Popis slika}{40}{chapter*.21}%
+\contentsline {chapter}{Popis popis tablica}{41}{chapter*.22}%

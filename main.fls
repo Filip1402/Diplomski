@@ -438,6 +438,16 @@ INPUT c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/courier/pcrr8t.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/vf/adobe/courier/pcrr8t.vf
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
+INPUT ./slike/sequence1.jpg
+INPUT ./slike/sequence1.jpg
+INPUT ./slike/sequence1.jpg
+INPUT ./slike/sequence1.jpg
+INPUT ./slike/sequence1.jpg
+INPUT ./slike/sequence2.jpg
+INPUT ./slike/sequence2.jpg
+INPUT ./slike/sequence2.jpg
+INPUT ./slike/sequence2.jpg
+INPUT ./slike/sequence2.jpg
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvrc8t.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/vf/adobe/helvetic/phvb8t.vf
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm

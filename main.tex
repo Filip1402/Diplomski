@@ -606,8 +606,8 @@ Budući da se radi o komponenti otvorenog koda želja je da se ostavi mogućnost
 
     \textbf{Identifikator} & NFZ-04 \\ \hline
     \textbf{Zahtjev} & Sustav mora pronaći odgovore na slici unutar 500 milisekundi. \\ \hline
-    \textbf{Opis} & Nakon što korisnik učita sliku i pritisne gumb za detekciju odgovora, sustav ima najviše 500 milisekundi za obradu slike i pronalazak odgovora. Ovo vrijedi za slike koje ne prelaze 4K rezoluciju. Vrijeme učitavanja slike (I/O operacije) nije uključeno u to ograničenje. \\ \hline
-    \textbf{Način provjere} & Izmjeriti prosječno vrijeme potrebno za detekciju odgovora sa slike. \\ \hline
+    \textbf{Opis} & Nakon što korisnik učita sliku i pritisne gumb za detekciju odgovora, sustav ima najviše 500 milisekundi za obradu slike i pronalazak odgovora. Ovo ograničenje vrijedi za slike koje ne prelaze 2K rezoluciju te se odnosi isključivo na rad izvan načina za otklanjanje pogrešaka. Vrijeme učitavanja i spremanja slika (I/O operacije) nije uključeno u navedeno vremensko ograničenje. \\ \hline
+    \textbf{Način provjere} & Izmjeriti prosječno vrijeme potrebno za detekciju odgovora sa slike u standardnim uvjetima. \\ \hline
     \textbf{Prioritet [1--5]} & 1 \\ \hline
     
     \caption{Nefunkcionalni zahtjevi}
@@ -616,8 +616,8 @@ Budući da se radi o komponenti otvorenog koda želja je da se ostavi mogućnost
 \section{Slučajevi korištenja}
 
 Kroz dijagram slučajeva korištenja moguće je vidjeti koji su korisnici sustava te koja je razina njihove interakcije s određenim funkcijama i dijelovima sustava.
-Važno je napomenuti da se radi o prikazu visoke razine, čiji elementi ne moraju nužno odgovarati programskom kodu jedan-na-jedan.
-Na konkretnom primjeru ovog sustava može se uočiti da su ocjenjivači jedini korisnici. Oni imaju mogućnost iniciranja više različitih akcija unutar sustava.
+Važno je napomenuti da se radi o prikazu visoke razine, čiji elementi ne moraju nužno odgovarati programskom kodu jedan na jedan.
+Na konkretnom primjeru ovog sustava može se uočiti da su ocjenjivači jedini korisnici sustava. Oni imaju mogućnost iniciranja više različitih akcija unutar sustava.
 
 \begin{figure}[H]
     \centering
@@ -628,7 +628,7 @@ Na konkretnom primjeru ovog sustava može se uočiti da su ocjenjivači jedini k
 \subsection{Slučaj korištenja: Ocjenjivanje ispita}
 
 \subsubsection{Korisnici}
-Kao što je već spomenuto, ocjenjivači su jedini korisnici ovog sustava. Oni su u konačnici odgovorni za sam proces ocjenjivanja ispita, a GradeVision softversko rješenje im služi kao alat koji im u tom procesu značajno pomaže. Pomaže im tako što ubrzava sam proces ocjenjivanja, što im omogućuje da više vremena posvete ostalim obavezama, poput podizanja kvalitete nastave i sl.
+Kao što je već spomenuto, ocjenjivači su jedini korisnici ovog sustava. Oni su u konačnici odgovorni za sam proces ocjenjivanja ispita, a GradeVision softversko rješenje im služi kao alat koji im u tom procesu značajno pomaže. Pomaže im tako što ubrzava sam proces ocjenjivanja, što im omogućuje da više vremena posvete drugim obavezama, poput podizanja kvalitete nastave i sl.
 
 \subsubsection{Glavni scenarij}
 Glavni scenarij u ovom sustavu je ocjenjivanje ispita. Ocjenjivač pokreće tu aktivnost, koja zatim uključuje ostale dijelove sustava o kojima ovisi ispravan rad. To su druge aktivnosti poput generiranja PDF matrice odgovora, unosa slika i usporedbe odgovora.
@@ -640,7 +640,7 @@ Sustav ima mogućnost ocjenjivanja samo onih ispita koji imaju matrice odgovora 
 Također, prije ocjenjivanja sustav mora znati koji su točni odgovori kako bi ih kasnije mogao usporediti. Stoga ocjenjivač mora učitati sliku matrice točnih odgovora čime se pokreće aktivnost "Unos slike matrice točnih odgovora".
 
 \subsubsection{Uključeni slučaj uporabe: Unos slika matrica odgovora za ocjenjivanje}
-Nakon što sustav ima učitanu sliku matrice točnih odgovora, potrebno je učitati slike matrica odgovora koje treba ocijeniti, jer bez tog koraka sustav ne zna što treba ocijeniti. Učitavanjem tih slika pokreće se aktivnost "Unos slika matrica odgovora za ocjenjivanje".
+Nakon što sustav ima učitanu sliku matrice točnih odgovora, potrebno je učitati slike matrica odgovora koje treba ocijeniti, jer bez tog koraka sustav ne zna što je potrebno ocijeniti. Učitavanjem tih slika pokreće se aktivnost "Unos slika matrica odgovora za ocjenjivanje".
 
 \subsubsection{Uključeni slučaj uporabe: Detekcija odgovora}
 Obje aktivnosti učitavanja matrica odgovora ovise o aktivnosti "Detekcija odgovora", koja je ujedno jedna od najvažnijih aktivnosti koje sustav provodi, budući da se tu nalazi cijela logika za obradu slika i izdvajanje podataka o označenim odgovorima.
@@ -648,8 +648,8 @@ Obje aktivnosti učitavanja matrica odgovora ovise o aktivnosti "Detekcija odgov
 \subsubsection{Uključeni slučaj uporabe: Usporedba odgovora}
 Nakon što su odgovori s učitanih matrica odgovora detektirani, pokreće se aktivnost "Usporedba odgovora", koja uspoređuje odgovore s matrica za ocjenjivanje s točnim odgovorima iz matrice točnih odgovora. Ta aktivnost također ovisi o aktivnosti "Definiranje skale ocjena", koja definira raspone za postizanje određene ocjene u postocima. U slučaju da skala nije definirana, koristi se unaprijed zadana skala.
 
-\subsubsection{Ostali slučajevi uporabe}
-Nakon što je ispit ocijenjen, pokreće se aktivnost "Prikaz rezultata", te po potrebi aktivnosti "Prikaz greške" i "Spremanje rezultata na disk". Zadnje dvije aktivnosti su opcionalne — spremanje na disk korisnik može uključiti ili isključiti, dok se greške prikazuju samo ako postoje razlike između detektiranih odgovora za ocjenjivanje i točnih odgovora. To mogu biti razlike poput različitog broja pitanja i odgovora i sl.
+\subsubsection{Ostali prošireni i uključeni slučajevi uporabe}
+Nakon što je ispit ocijenjen, pokreće se aktivnost "Prikaz rezultata", te po potrebi aktivnosti "Prikaz greške" i "Spremanje rezultata na disk". Zadnje dvije aktivnosti su opcionalne. Spremanje na disk korisnik može uključiti ili isključiti, dok se greške prikazuju samo ako postoje razlike između detektiranih odgovora za ocjenjivanje i točnih odgovora. To mogu biti razlike poput različitog broja pitanja i odgovora i sl.
 
 \subsubsection{Tijek aktivnosti}
 \begin{flushleft}
@@ -668,7 +668,7 @@ Ovo je pravilan tijek aktivnosti slučaja korištenja "Ocjenjivanje ispita":
     Učitavaju se slike ispita koje je potrebno ocijeniti.
     
     \item \textbf{Detekcija odgovora} \\
-    Sustav obrađuje slike i izdvaja označene odgovore za svako pitanje.
+    Sustav obrađuje slike i detektira i klasificira odgovore za svako pitanje.
     
     \item \textbf{Usporedba odgovora} \\
     Detektirani odgovori uspoređuju se s točnim odgovorima na temelju zadane skale ocjena.
@@ -680,7 +680,7 @@ Ovo je pravilan tijek aktivnosti slučaja korištenja "Ocjenjivanje ispita":
     Rezultati se mogu trajno pohraniti, ako je uključena ta opcija.
     
     \item \textbf{Prikaz greške (samo ako je potrebno)} \\
-    Ako postoji nesukladnost između matrica (npr. broj pitanja), korisniku se prikazuje obavijest o grešci.
+    Ako postoji nesukladnost između matrica, poput razlike u broju pitanja ili odgovora, korisnik će biti obavješten o nastanku greške.
 \end{enumerate}
 \end{flushleft}
 
@@ -691,7 +691,7 @@ Ovo je pravilan tijek aktivnosti slučaja korištenja "Ocjenjivanje ispita":
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.0\linewidth]{slike/classDiagram.png}
-    \caption{Prikaz dijgrama klasa (Vlastita izrada)}
+    \caption{Prikaz dijagrama klasa (Vlastita izrada)}
 \end{figure}
 
 Na priloženoj slici prikazana je struktura izrađenog sustava za detekciju odgovora na pismenim ispitima nazvanog GradeVision. Struktura je prikazana korištenjem dijagrama klasa, što omogućuje detaljan uvid u atribute, metode i međuovisnosti svake klase. Klase na ovoj slici možemo podijeliti na klase koje se bave procesiranjem slika i klase temeljne poslovne logike. Nadalje, klase za procesiranje slika mogu se podijeliti na apstraktne i specifične klase.
@@ -704,17 +704,17 @@ Važno je napomenuti da klasa \texttt{EmguCvImageProcessor} nasljeđuje apstrakt
 \begin{itemize}
     \item \textbf{EmguCVImageProcessor.cs}
     \begin{itemize}
-        \item Klasa koja sadrži konstruktor te sve zajedničke i pomoćne metode koje nisu specifične za jedan korak obrade
+        \item Klasa koja sadrži konstruktor te sve zajedničke i pomoćne metode koje nisu specifične samo za jedan korak obrade
     \end{itemize}
     
     \item \textbf{EmguCVImageProcessor.CircleDetection.cs}
     \begin{itemize}
-        \item Sadrži logiku za detekciju krugova, njihovo grupiranje, filtriranje i procjenu ispunjenosti kruga
+        \item Sadrži logiku za detekciju krugova, njihovo grupiranje, filtriranje i klasificiranje
     \end{itemize}
 
     \item \textbf{EmguCVImageProcessor.Denoise.cs}
     \begin{itemize}
-        \item Sadrži logiku za uklanjanje šuma u slučaju kada je razina šuma iznad definiranog praga
+        \item Sadrži logiku za uklanjanje šuma u slučaju da je razina šuma iznad definiranog praga
     \end{itemize}
 
     \item \textbf{EmguCVImageProcessor.GrayscaleConvertor.cs}
@@ -734,7 +734,7 @@ Važno je napomenuti da klasa \texttt{EmguCvImageProcessor} nasljeđuje apstrakt
 
     \item \textbf{EmguCVImageProcessor.Tresholding.cs}
     \begin{itemize}
-        \item Sadrži logiku za pretvorbu sive slike u binarnu sliku korištenjem tehnike adaptivnog praga (Adaptive Thresholding)
+        \item Sadrži logiku za pretvorbu sive slike u binarnu sliku korištenjem tehnike adaptivnog praga (\textit{engl. Adaptive Thresholding})
     \end{itemize}
 
     \item \textbf{EmguCVImageProcessor.Visualization.cs}
@@ -744,13 +744,13 @@ Važno je napomenuti da klasa \texttt{EmguCvImageProcessor} nasljeđuje apstrakt
 \end{itemize}
 
 
-Svi koraci procesiranja slike definirani su unutar klase \texttt{ImageProcessorBase}, a implementirani u klasi \texttt{EmguCvImageProcessor}. Važno je naglasiti da u tim klasama nije definiran redoslijed operacija niti samo ocjenjivanje testova. Taj je dio izdvojen u klase (označene žutom bojom): \texttt{AnswerSheetGrader}, \texttt{GradeCalculator} i \texttt{GradeScale}. To su ujedno i klase s kojima bi korisnici biblioteke trebali imati najviše interakcije.
+Svi koraci procesiranja slike definirani su unutar klase \texttt{ImageProcessorBase}, a implementirani u klasi \texttt{EmguCvImageProcessor}. Važno je naglasiti da u tim klasama nije definiran ni redoslijed operacija ni logika ocjenjivanja testova. Taj je dio izdvojen u klase (označene žutom bojom): \texttt{AnswerSheetGrader}, \texttt{GradeCalculator} i \texttt{GradeScale}. To su ujedno i klase s kojima bi korisnici biblioteke trebali imati najviše interakcije.
 
 \subsection{Klase ImageData i EmguCvImage}
 
 Kako bi se omogućila zamjena biblioteke za računalni vid, bilo je potrebno koristiti podatkovni model slike koji nije vezan ni uz jednu konkretnu biblioteku. Zbog toga je kreirana apstraktna klasa \texttt{ImageData}, koja sadrži sve potrebne podatke za daljnje procesiranje slike. To uključuje naziv datoteke, širinu, visinu, broj kanala, podatke o slici u obliku niza bajtova te metodu za kloniranje. Na taj način svaka implementacija tog sučelja može biti predstavljena na isti način.
 
-Na primjer, \texttt{EmguCvImage} je implementacija koja predstavlja objekt tipa Mat iz biblioteke EmguCV u obliku sučelja \texttt{ImageData}. Također sadrži razne pomoćne metode poput ToMat, FromMat, FromFile i sličnih, što omogućuje još jednostavniji razvoj.
+Na primjer, \texttt{EmguCvImage} je implementacija koja predstavlja objekt tipa Mat iz biblioteke EmguCV u obliku \texttt{ImageData}. Također sadrži razne pomoćne metode poput ToMat, FromMat, FromFile i sličnih, što omogućuje još jednostavniji razvoj.
 
 \texttt{ImageData} se koristi u svim dijelovima koda koji moraju biti neovisni o biblioteci za računalni vid, dok se \texttt{EmguCvImage} koristi isključivo u specifičnoj implementaciji koja koristi biblioteku EmguCV.
 
@@ -758,14 +758,107 @@ Na primjer, \texttt{EmguCvImage} je implementacija koja predstavlja objekt tipa 
 
 \texttt{DetectedCircleBase} je klasa koja je također nastala iz potrebe da sustav bude neovisan o specifičnoj biblioteci za računalni vid. Njezina je svrha pohranjivanje svih podataka o detektiranim krugovima, dok se specifične implementacije poput \texttt{EmguCvCircle} brinu za prikaz specifičnih objekata biblioteke računalnog vida u tom obliku.
 
-\texttt{DetectedCircleBase} sadrži sve važne informacije o detektiranom krugu poput: x-koordinate, y-koordinate, radijusa i vrijednosti koja označava je li krug ispunjen. Osim toga, sadrži i metodu koja provjerava odnos jednog objekta tipa \texttt{DetectedCircleBase} u odnosu na drugi objekt iste klase. Time se može saznati radi li se o krugu koji se preklapa i slično, što će u daljnjem dijelu rada biti izuzetno važno.
+\texttt{DetectedCircleBase} sadrži sve važne informacije o detektiranom krugu poput: x koordinate, y koordinate, radijusa i vrijednosti koja označava je li krug ispunjen. Osim toga, sadrži i metodu koja provjerava odnos jednog objekta tipa \texttt{DetectedCircleBase} u odnosu na drugi objekt iste klase. Time se može saznati radi li se o krugu koji se preklapa i slično, što će u daljnjem dijelu rada biti iznimno važno.
 
 \texttt{EmguCvCircle} samo nasljeđuje \texttt{DetectedCircleBase} i omogućuje kreiranje objekta na temelju modela podataka \texttt{CircleF}, koji je prisutan u biblioteci EmguCV.
 
-\section{Implementacija}
+
+\subsection{Klasa EmguCvImageProcessor}
+
+Kao što je već spomenuto, \texttt{EmguCvImageProcessor} je konkretna klasa koja implementira metode naslijeđene iz apstraktne klase \texttt{ImageProcessorBase}. Budući da se radi o parcijalnoj klasi, metode su implementirane u različitim datotekama.
+
+Može se reći da je ova klasa zapravo jezgra ovog rješenja. Ona je odgovorna za sve korake koji spadaju pod pretprocesiranje, procesiranje i dio postprocesiranja.
+
+Najvažniji dijelovi logike provode se u fazi pretprocesiranja, budući da se ondje nalazi sva logika koja priprema sliku za daljnju obradu. U toj fazi također su implementirani mehanizmi koji omogućuju da sustav ispravno radi i u uvjetima koji nisu idealni.
+
+Kasnije u radu prikazat će se točan redoslijed tih operacija, koji je definiran klasom \texttt{AnswerSheetGrader}. Također će biti prikazani zanimljivi i nestandardni dijelovi implementacije za svaki od tih koraka.
+
+Sam redoslijed operacija namjerno nije definiran unutar klase \texttt{EmguCvImageProcessor}, budući da je ideja bila izdvojiti što više poslovne logike izvan klasa koje ovise o određenoj biblioteci za računalni vid. Time je omogućeno da se u budućnosti, po potrebi, napiše nova konkretna implementacija klase \texttt{ImageProcessorBase} bez potrebe za ponovnim pisanjem cijele poslovne logike. Može se reći da je u ovom slučaju \texttt{EmguCvImageProcessor} "motor" GradeVision sustava, dok je \texttt{AnswerSheetGrader} "vozač".
+
+\subsection{Klase GradeCalculator i GradeScale}
+
+Klasa \texttt{EmguCvImageProcessor} na kraju obrade slike vraća listu odgovora po pitanjima. Ta lista se zatim predaje klasi \texttt{GradeCalculator}, koja je zadužena za izračun bodova i postotka točnosti ispita, a potom uz pomoć klase \texttt{GradeScale} određuje ocjenu koja će se ispitu dodijeliti.
+
+\texttt{GradeScale} predstavlja unaprijed definiranu skalu ocijena, ali postoji i mogućnost definiranja vlastite skale, što ocjenjivačima pruža dodatnu fleksibilnost.
+
+Unutar ove dvije klase enkapsulirana je sva logika za ocjenjivanje ispita. Trenutna implementacija podržava ocjenjivanje pitanja s jednostrukim i višestrukim odgovorima. Proces bodovanja temelji se na strogoj logici: bod se dodjeljuje samo ako je odgovor u potpunosti točan, to jest nema parcijalnih bodova ni penalizacije za djelomične odgovore.
+
+Važno je napomenuti da ove dvije klase također sudjeluju u fazi postprocesiranja, točnije u konačnom koraku \texttt{Obrada izvučenih podataka}, gdje koriste prethodno definiranu bazu znanja (listu točnih odgovora iz kontrolnog ispita). Nakon toga se ocjene vizualiziraju, a za tu funkcionalnost ponovno je zadužena klasa \texttt{EmguCvImageProcessor}.
+
+\subsection{Ostale klase}
+
+Od ostalih klasa postoje \texttt{HistogramGenerator} i \texttt{AnswerSheetGenerator} klase. Radi se o generatorima sadržaja. Klasa \texttt{AnswerSheetGenerator} odgovorna je za generiranje matrice odgovora prema zadanim parametrima, kao što je definirano u funkcionalnom zahtjevu FZ-02. Za razliku od ostalih klasa, riječ je o potpuno neovisnoj komponenti sustava, čija se metoda \texttt{Generate()} može pozvati u bilo kojem trenutku izvođenja programa, bez utjecaja na njegovo daljnje izvođenje.
+
+S druge strane, klasa \texttt{HistogramGenerator} je pomoćna klasa koja ima ključnu ulogu u procesu detekcije krugova. Implementira algoritam za određivanje praga koji definira je li neki odgovor označen ili nije. Izračunati pragovi se zatim  vizualiziraju i pohranjuju u obliku histograma na disk. Histogrami se spremaju samo kada je program pokrenut u načinu rada za otklanjanje pogrešaka (\textit{engl. debug mode}), koji je definiran u funkcionalnom zahtjevu FZ-06.
+
+Važno je napomenuti da je klasa \texttt{HistogramGenerator} potpuno neovisna o bibliotekama za računalni vid, iako se primarno koristi od strane \texttt{EmguCVImageProcessor} klase. Ona prima listu decimalnih brojeva koji predstavljaju odgovore na ispitnim listovima s određenim postotkom ispunjenosti. Te podatke obrađuje i vraća prag ispunjenosti kruga u obliku postotka. Ako je postotak ispunjenosti viši od izračunatog praga, krug se smatra označenim.
+
+\section{Dijagrami slijeda}
+
+Kroz sljedeće dijagrame slijeda prikazat će se interakcije između korisnika i različitih dijelova sustava na visokoj razini, dok će se kroz daljnji rad prikazati zanimljivi dijelovi detaljnije. Svaki dijagram slijeda vezan je uz jedan od koraka koje ocjenjivač može napraviti i time pokrenuti neku interakciju sa sustavom.
+
+\subsection{Dijagram slijeda – Detekcija odgovora s kontrolnog ispita}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\linewidth]{slike/sequence1.jpg}
+\caption{Prikaz dijagrama slijeda za detekciju odgovora s kontrolnog ispita (Vlastita izrada)}
+\end{figure}
+
+Dosad se \texttt{GradeVision} spominjao samo kao biblioteka, ali za potrebe testiranja i demonstracije izrađena je jednostavna WinForms aplikacija koja koristi mogućnosti te biblioteke, a koja će se u daljnjem dijelu rada spominjati kao \texttt{GradeVision korisničko sučelje}, dok će se biblioteka spominjati kao \texttt{GradeVisionLib}. Također, u daljnjem dijelu rada spominjat će se pojmovi \texttt{kontrolni ispit} i \texttt{ispit za ocjenjivanje}. Kontrolni ispit označava ispit koji sadrži sve točne odgovore za svako pitanje, dok ispit za ocjenjivanje označava ispit čija je točnost nepoznata te se tek treba utvrditi usporedbom detektiranih odgovora s detektiranim odgovorima kontrolnog ispita (eng. control test).
+
+Priloženi dijagram prikazuje proces detekcije odgovora s kontrolnog ispita. To je vrlo važan proces, budući da je njegov konačni rezultat izrada baze znanja s točnim odgovorima za svako pitanje, koja se kasnije koristi pri ocjenjivanju.
+
+Taj proces pokreće ocjenjivač  tako da učita sliku kontrolnog ispita u \texttt{GradeVision} korisničko sučelje. Zatim aplikacija GradeVision poziva \texttt{AnswerSheetGrader}, koji je dio GradeVisionLib-a. Točnije, poziva se metoda \texttt{ProcessControlSheet(ImageData)}, čime se zapravo pokreće obrada slike. Veći dio obrade slike izvodi se u metodi \texttt{ProcessImage(ImageData rawImage, string outputDir)}, koja orkestrira sve aktivnosti pretprocesiranja pozivanjem metoda konkretne implementacije klase \texttt{ImageProcessorBase} sljedećim redoslijedom:
+
+\begin{itemize}
+\item ConvertToGrayscale(image)
+\item CorrectPerspective(image)
+\item CorrectRotation(image)
+\item Denoise(image)
+\item ApplyThresholding(image)
+\end{itemize}
+
+Naravno ove metode kasnije pozivaju svoje privatne pomoćne metode no to će uvijek ovisiti o biblioteci računalnog vida koja se koristi pa taj dio nije prikazan na dijagramu. Metoda \texttt{ProcessImage(ImageData rawImage, string outputDir)} se također koristi i kod pretprocesiranja ispita za ocijenjivanje što će u nastavku biti prikazano. Važno je napomenuti da je sam  redoslijed aktivnosti pretprocesiranja dobiven kroz opsežno testiranje i iteriranje tijekom razvoja i ova varijanta se pokazala najboljom. Kvaliteta redoslijeda tih aktivnosti bila je mjerena prema preciznosti samog sustava nad skupom podataka vlastite izrade koji će također biti priloženi uz ovaj rad.
+
+Osim toga, metoda \texttt{ProcessImage(ImageData rawImage, string outputDir)}  se također koristi pri pretprocesiranju ispita za ocjenjivanje, što će biti prikazano u nastavku.
+Naravno, ove metode kasnije pozivaju svoje privatne pomoćne metode, što će uvijek ovisiti o biblioteci računalnog vida koja se koristi, pa taj dio nije prikazan na dijagramu zbog čitljivosti.
+
+Nakon što je pretprocesiranje završeno, započinje faza procesiranja tako što \texttt{AnswerSheetGrader} poziva metodu \texttt{CircleDetection(ImageData inputImage)}. Metoda \texttt{CircleDetection} jedan je od najvažnijih dijelova ovog rada, budući da se u njoj odvija detekcija odgovora i njihovo klasificiranje u dvije klase: označen i neoznačen odgovor.
+
+Sama logika klasificiranja koristi opisne vrijednosti ispunjenosti objekta, koje izražavaju postotak u kojem je pojedini odgovor ispunjen. Međutim, samo poznavanje postotka ispunjenosti nije dovoljno za ispravnu klasifikaciju odgovora. Potrebno je odrediti prag ispunjenosti koji razdvaja te dvije klase. Taj se prag može postaviti proizvoljno, no takav pristup nije pouzdan jer ne ispunjava svaka osoba krug odgovora na isti način. Osim toga, dodatni čimbenici poput veličine kruga odgovora na papiru također utječu na rezultate.
+
+Zbog toga je bilo potrebno osmisliti preciznije rješenje. Ono je implementirano u klasi \texttt{HistogramGenerator}, unutar metode \texttt{CalculateFillPercentageThreshold(List<double> fillPercentages)}. Upravo se ta metoda poziva unutar \texttt{CircleDetection} metode prije nego što se vrati slika sa svim detektiranim odgovorima i rječnik klasificiranih odgovora grupiranih po pitanjima.
+
+Klasa \texttt{AnswerSheetGrader} zatim poziva metodu \texttt{VisualizeDetectedCircles} iz klase \texttt{ImageProcessorBase} kako bi se klasificirani odgovori vizualizirali. Nakon toga se kreirana slika vraća sve do GradeVision korisničkog sučelja, gdje je prikazana ocjenjivaču. 
+
+\subsection{Dijagram slijeda – Ocijenjivanje ispita}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\linewidth]{slike/sequence2.jpg}
+\caption{Prikaz dijagrama slijeda ocijenjivanja ispita (Vlastita izrada)}
+\end{figure}
+
+Priloženi dijagram ima mnogo sličnosti sa prijašnjim dijagramom slijeda, ali razlikuje se u par ključnih stvari. Prva razlika je da korsnik ne unosi samo jednu sliku u sustav već više njih. Zatim se poziva metoda \texttt{ProcessAnswerSheet(ImageData inputImage, Dictionary<int, List<DetectedCircleBase>> controlAnswers, GradeScale gradeScale)} koja procesira ispite za ocijenjivanje. Pretprocesiranje ponovno provodi \texttt{ProcessImage(ImageData rawImage, string outputDir)} metoda već spomenutim koracima i redoslijedom. Zatim se provodi detektiranje krugova koje je također već spomenuto, no tu sve sličnosti sa prijašnjim dijagramom završavaju. Nakon detektiranja krugova poziva se \texttt{GradeCalculator} klasa, točnije njezina metoda \texttt{GetGrade()}.
+
+Nakon što metoda vrati ocjenu i postotak riješenosti, poziva se sljedeći korak. Taj korak uključuje vizualizaciju ocjene na način da se na ispitu označe točno i krivo označeni odgovori te da se u gornjem desnom kutu slike napiše postotak i ocjena. Zatim se slika sa vizualizacijom ocjene vraća na ekran ocjenjivača i ponavlja se isti proces za ostale ispite koji još nisu ocijenjeni.
+
+Važno je napomenuti da se ovaj slijed ne može pokrenuti dok god se ne izvrše svi koraci iz prvog dijagrama slijeda za kontrolni ispit. Također, generalna struktura ispita za ocijenjivanje se mora poklapati sa kontrolnim ispitom, pod to spada isti broj pitanja i odgovora.
+
+TODO:dodati dijagram slijeda za generiranje pdf-a
+
+
+\section{GradeVison aplikacija}
+\subsection{Način rada}
+\section{GradeVision biblioteka}
+prolazak kroz kod
+\section{Skup podataka za testiranje}
+\subsection{Prikaz koraka obrada slike nad testnim podatcima}
+\section{Manualno testiranje rješenja}
 \section{Analiza rezultata}
 \section{Limitacije rješenja}
-\section{Manualno testiranje rješenja}
+\section{Poboljšanja rješenja}
 \chapter{Zaključak}
 
 \printbibliography[title=Popis literature]
