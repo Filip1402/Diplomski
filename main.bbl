@@ -19,6 +19,267 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
+    \entry{Bloomfield}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=3137985efa1c63c4e535ef3972914852}{%
+           family={Bloomfield},
+           familyi={B\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{3137985efa1c63c4e535ef3972914852}
+      \strng{fullhash}{3137985efa1c63c4e535ef3972914852}
+      \strng{fullhashraw}{3137985efa1c63c4e535ef3972914852}
+      \strng{bibnamehash}{3137985efa1c63c4e535ef3972914852}
+      \strng{authorbibnamehash}{3137985efa1c63c4e535ef3972914852}
+      \strng{authornamehash}{3137985efa1c63c4e535ef3972914852}
+      \strng{authorfullhash}{3137985efa1c63c4e535ef3972914852}
+      \strng{authorfullhashraw}{3137985efa1c63c4e535ef3972914852}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{2010 IEEE Frontiers in Education Conference (FIE)}}
+      \field{journaltitle}{Published in: 2010 IEEE Frontiers in Education Conference (FIE)}
+      \field{title}{{Evolution of a digital paper exam grading system}}
+      \field{pages}{27\bibrangedash 30}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/FIE.2010.5673292
+      \endverb
+    \endentry
+    \entry{sabbott2015Nov}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=be24c0bd1091f646501033e53deefff4}{%
+           family={sabbott},
+           familyi={s\bibinitperiod}}}%
+      }
+      \strng{namehash}{be24c0bd1091f646501033e53deefff4}
+      \strng{fullhash}{be24c0bd1091f646501033e53deefff4}
+      \strng{fullhashraw}{be24c0bd1091f646501033e53deefff4}
+      \strng{bibnamehash}{be24c0bd1091f646501033e53deefff4}
+      \strng{authorbibnamehash}{be24c0bd1091f646501033e53deefff4}
+      \strng{authornamehash}{be24c0bd1091f646501033e53deefff4}
+      \strng{authorfullhash}{be24c0bd1091f646501033e53deefff4}
+      \strng{authorfullhashraw}{be24c0bd1091f646501033e53deefff4}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Glossary of Education Reform}
+      \field{month}{11}
+      \field{title}{{Standardized Test Definition}}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://www.edglossary.org/standardized-test
+      \endverb
+      \verb{url}
+      \verb https://www.edglossary.org/standardized-test
+      \endverb
+    \endentry
+    \entry{Leonard2025Feb}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=e68580799be95106d9207573618bc5d5}{%
+           family={Leonard},
+           familyi={L\bibinitperiod},
+           given={Samantha},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e68580799be95106d9207573618bc5d5}
+      \strng{fullhash}{e68580799be95106d9207573618bc5d5}
+      \strng{fullhashraw}{e68580799be95106d9207573618bc5d5}
+      \strng{bibnamehash}{e68580799be95106d9207573618bc5d5}
+      \strng{authorbibnamehash}{e68580799be95106d9207573618bc5d5}
+      \strng{authornamehash}{e68580799be95106d9207573618bc5d5}
+      \strng{authorfullhash}{e68580799be95106d9207573618bc5d5}
+      \strng{authorfullhashraw}{e68580799be95106d9207573618bc5d5}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{TAO}
+      \field{month}{2}
+      \field{title}{{Automated Grading for Subjective Assessments: Challenges and Solutions}}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.taotesting.com/blog/automated-grading-for-subjective-assessments-challenges-and-solutions
+      \endverb
+      \verb{url}
+      \verb https://www.taotesting.com/blog/automated-grading-for-subjective-assessments-challenges-and-solutions
+      \endverb
+    \endentry
+    \entry{OMRart}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=7df88a01e2bdab87c4d3ffe28b55a4de}{%
+           family={Miguel\bibnamedelimb de\bibnamedelima Elias},
+           familyi={M\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim E\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod}}}%
+        {{hash=bccf68aa50a826f837a52af2d13608da}{%
+           family={Tasinaffo},
+           familyi={T\bibinitperiod},
+           given={Paulo},
+           giveni={P\bibinitperiod}}}%
+        {{hash=a6678e39f3a876b11267f5a7485ec9c5}{%
+           family={Hirata\bibnamedelima Jr},
+           familyi={H\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={Roberto},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{727f364bc8c38f870d38e2c72722cb7d}
+      \strng{fullhash}{84726b54bb507de7de28cd01c4519ef3}
+      \strng{fullhashraw}{84726b54bb507de7de28cd01c4519ef3}
+      \strng{bibnamehash}{84726b54bb507de7de28cd01c4519ef3}
+      \strng{authorbibnamehash}{84726b54bb507de7de28cd01c4519ef3}
+      \strng{authornamehash}{727f364bc8c38f870d38e2c72722cb7d}
+      \strng{authorfullhash}{84726b54bb507de7de28cd01c4519ef3}
+      \strng{authorfullhashraw}{84726b54bb507de7de28cd01c4519ef3}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SN Computer Science}
+      \field{month}{09}
+      \field{title}{Optical Mark Recognition: Advances, Difficulties, and Limitations}
+      \field{volume}{2}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.1007/s42979-021-00760-z
+      \endverb
+    \endentry
+    \entry{OMRImageProcessing}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{hash=12f318f9e8398436d4376735051977fc}{%
+           family={Alam},
+           familyi={A\bibinitperiod},
+           given={Md.\bibnamedelimi Eftekhar},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=24f1ee12666d2a4e12258f22ca1de8f0}{%
+           family={Akter},
+           familyi={A\bibinitperiod},
+           given={Farjana},
+           giveni={F\bibinitperiod}}}%
+        {{hash=2caf8473f299c5c645b1a0efaca3a0c3}{%
+           family={Alam},
+           familyi={A\bibinitperiod},
+           given={Tasfee},
+           giveni={T\bibinitperiod}}}%
+        {{hash=ae2d6ff61c544a0de4fdd9eca77ddff7}{%
+           family={Farid},
+           familyi={F\bibinitperiod},
+           given={Sahrin},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5bde4be4460f1b982c171b269b5caa9b}{%
+           family={Haque},
+           familyi={H\bibinitperiod},
+           given={Md.\bibnamedelimi Ismail},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=bcdebb6e874728c0ccc97228375ce20f}{%
+           family={Arefin},
+           familyi={A\bibinitperiod},
+           given={Muhammed},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{95096a4d58eb7596ed4d4f56432b2d03}
+      \strng{fullhash}{ea2a76c79cbbd4e7fc7564fe65728653}
+      \strng{fullhashraw}{ea2a76c79cbbd4e7fc7564fe65728653}
+      \strng{bibnamehash}{ea2a76c79cbbd4e7fc7564fe65728653}
+      \strng{authorbibnamehash}{ea2a76c79cbbd4e7fc7564fe65728653}
+      \strng{authornamehash}{95096a4d58eb7596ed4d4f56432b2d03}
+      \strng{authorfullhash}{ea2a76c79cbbd4e7fc7564fe65728653}
+      \strng{authorfullhashraw}{ea2a76c79cbbd4e7fc7564fe65728653}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2022 International Conference on Recent Progresses in Science, Engineering and Technology (ICRPSET)}
+      \field{title}{Approaching Computer Vision And Image Processing Technique For Optical Mark Recognition Sheet Scan And Verification}
+      \field{year}{2022}
+      \field{pages}{1\bibrangedash 5}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/ICRPSET57982.2022.10188569
+      \endverb
+      \keyw{Integrated optics;Computer vision;Image recognition;Layout;Optical imaging;Cameras;Software;OMR;warp point;recognition;assemble;sheets;edge;retaliation;detect;image;grade;grayscale;template etc}
+    \endentry
+    \entry{OMRNLP}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=4b9d5e9a19fd763827df5ebeb79d0b87}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Glenn},
+           giveni={G\bibinitperiod}}}%
+        {{hash=449a3549d1b7fadc09281eadc0fac4a2}{%
+           family={Haworth},
+           familyi={H\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c724e03a9195a93434112886b8f474bc}{%
+           family={Zitnik},
+           familyi={Z\bibinitperiod},
+           given={Slavko},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{16facb05f40a0df28c2c06ffd8f0905a}
+      \strng{fullhash}{eb615bed296ee0d527da997c2d46f1f8}
+      \strng{fullhashraw}{eb615bed296ee0d527da997c2d46f1f8}
+      \strng{bibnamehash}{eb615bed296ee0d527da997c2d46f1f8}
+      \strng{authorbibnamehash}{eb615bed296ee0d527da997c2d46f1f8}
+      \strng{authornamehash}{16facb05f40a0df28c2c06ffd8f0905a}
+      \strng{authorfullhash}{eb615bed296ee0d527da997c2d46f1f8}
+      \strng{authorfullhashraw}{eb615bed296ee0d527da997c2d46f1f8}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Educational Computing Research}
+      \field{month}{05}
+      \field{title}{Computer Science Meets Education: Natural Language Processing for Automatic Grading of Open-Ended Questions in eBooks}
+      \field{volume}{58}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.1177/0735633120927486
+      \endverb
+    \endentry
+    \entry{Saiwa2024Nov}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=d43be11aadb0bcf7246f52940002e752}{%
+           family={Saiwa},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {China}%
+      }
+      \list{publisher}{1}{%
+        {Medium}%
+      }
+      \strng{namehash}{d43be11aadb0bcf7246f52940002e752}
+      \strng{fullhash}{d43be11aadb0bcf7246f52940002e752}
+      \strng{fullhashraw}{d43be11aadb0bcf7246f52940002e752}
+      \strng{bibnamehash}{d43be11aadb0bcf7246f52940002e752}
+      \strng{authorbibnamehash}{d43be11aadb0bcf7246f52940002e752}
+      \strng{authornamehash}{d43be11aadb0bcf7246f52940002e752}
+      \strng{authorfullhash}{d43be11aadb0bcf7246f52940002e752}
+      \strng{authorfullhashraw}{d43be11aadb0bcf7246f52940002e752}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-745304301}
+      \field{journaltitle}{Medium}
+      \field{month}{11}
+      \field{title}{{Top 10 Computer Vision Libraries {$\vert$}A Comprehensive and Detailed Guide}}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://medium.com/@saiwadotai/top-10-computer-vision-libraries-a-comprehensive-and-detailed-guide-745c304e3016
+      \endverb
+      \verb{url}
+      \verb https://medium.com/@saiwadotai/top-10-computer-vision-libraries-a-comprehensive-and-detailed-guide-745c304e3016
+      \endverb
+    \endentry
     \entry{DigitalnaSlika}{misc}{}{}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -35,8 +296,8 @@
       \endverb
     \endentry
     \entry{AspectRatio}{misc}{}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
       \field{month}{4}
       \field{note}{[Online; pristupljeno; 30. travnja 2025.]}
@@ -50,8 +311,8 @@
       \endverb
     \endentry
     \entry{ImageHistory}{misc}{}{}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{month}{4}
       \field{note}{[Online; accessed 30. Apr. 2025]}
@@ -65,8 +326,8 @@
       \endverb
     \endentry
     \entry{GrayscaleSlika}{misc}{}{}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{month}{4}
       \field{note}{[Online; pristupljeno 20. travnja 2025.]}
@@ -90,8 +351,8 @@
       \strng{authornamehash}{6a6307d6a0b5c3fa25fa0f7948b52d86}
       \strng{authorfullhash}{6a6307d6a0b5c3fa25fa0f7948b52d86}
       \strng{authorfullhashraw}{6a6307d6a0b5c3fa25fa0f7948b52d86}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Grayscale Images}
@@ -106,8 +367,8 @@
       \endverb
     \endentry
     \entry{BinarySlika}{misc}{}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{month}{4}
       \field{note}{[Online; pristupljeno 16. travnja 2025.]}
@@ -118,8 +379,8 @@
       \endverb
     \endentry
     \entry{LumVsChrom}{misc}{}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Stack Overflow}
       \field{month}{4}
@@ -134,8 +395,8 @@
       \endverb
     \endentry
     \entry{ImageProcessing}{misc}{}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{month}{4}
       \field{note}{[Online; pristupljeno 21. travnja 2025.]}
@@ -149,8 +410,8 @@
       \endverb
     \endentry
     \entry{IamgeProcesingPhases}{misc}{}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{month}{4}
       \field{note}{[Online; pristupljeno 21. travnja 2025.]}
       \field{year}{2025}
@@ -180,8 +441,8 @@
       \strng{authornamehash}{3468e496b8f9d59ece3a76804d449d58}
       \strng{authorfullhash}{3468e496b8f9d59ece3a76804d449d58}
       \strng{authorfullhashraw}{3468e496b8f9d59ece3a76804d449d58}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{3080-4550}
@@ -197,8 +458,8 @@
       \endverb
     \endentry
     \entry{BibEntry2025Apr}{misc}{}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Cloudinary}
       \field{month}{4}
@@ -213,8 +474,8 @@
       \endverb
     \endentry
     \entry{Adobe}{misc}{}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{month}{4}
       \field{note}{[Online; pristupljeno 22. travnja 2025.]}
@@ -246,8 +507,8 @@
       \strng{authornamehash}{9354e3e04e4f655cbbe47a2ad5f348c6}
       \strng{authorfullhash}{9354e3e04e4f655cbbe47a2ad5f348c6}
       \strng{authorfullhashraw}{9354e3e04e4f655cbbe47a2ad5f348c6}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Medium}
@@ -262,8 +523,8 @@
       \endverb
     \endentry
     \entry{MeidanFilter}{misc}{}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labeltitlesource}{title}
       \field{month}{10}
       \field{note}{[Online; pristupljeno 22. travnja 2025.]}
@@ -277,8 +538,8 @@
       \endverb
     \endentry
     \entry{GeometryTransforms}{misc}{}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Fiveable}
       \field{month}{4}
@@ -311,8 +572,8 @@
       \strng{authornamehash}{5be28fd55155cf70fb038d6009d9ebe1}
       \strng{authorfullhash}{5be28fd55155cf70fb038d6009d9ebe1}
       \strng{authorfullhashraw}{5be28fd55155cf70fb038d6009d9ebe1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Medium}
@@ -345,8 +606,8 @@
       \strng{authornamehash}{676fb38ec990aa5d8f7d51f8dcd2c92a}
       \strng{authorfullhash}{676fb38ec990aa5d8f7d51f8dcd2c92a}
       \strng{authorfullhashraw}{676fb38ec990aa5d8f7d51f8dcd2c92a}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Medium}
@@ -376,8 +637,8 @@
       \strng{authornamehash}{e49d0ea2edb753bd4f17a734ebc6c886}
       \strng{authorfullhash}{e49d0ea2edb753bd4f17a734ebc6c886}
       \strng{authorfullhashraw}{e49d0ea2edb753bd4f17a734ebc6c886}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Towards Data Science}
@@ -392,8 +653,8 @@
       \endverb
     \endentry
     \entry{RepAndDesc}{misc}{}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{month}{11}
       \field{note}{[Online; pristupljeno 25. travnja 2025.]}
       \field{year}{2022}
@@ -423,8 +684,8 @@
       \strng{authornamehash}{1a30dffbfbccd5d9970aeaf2efb7d9eb}
       \strng{authorfullhash}{1a30dffbfbccd5d9970aeaf2efb7d9eb}
       \strng{authorfullhashraw}{1a30dffbfbccd5d9970aeaf2efb7d9eb}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Keymakr}
@@ -457,8 +718,8 @@
       \strng{authornamehash}{a8440dcc385f51d7a59ac6e93fbbb5fe}
       \strng{authorfullhash}{a8440dcc385f51d7a59ac6e93fbbb5fe}
       \strng{authorfullhashraw}{a8440dcc385f51d7a59ac6e93fbbb5fe}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Medium}
@@ -489,8 +750,8 @@
       \strng{authornamehash}{4ffdbed6260327006ea085d0f2e4631b}
       \strng{authorfullhash}{4ffdbed6260327006ea085d0f2e4631b}
       \strng{authorfullhashraw}{4ffdbed6260327006ea085d0f2e4631b}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Medium}
@@ -505,8 +766,8 @@
       \endverb
     \endentry
     \entry{Visulization}{misc}{}{}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Fiveable}
       \field{month}{4}
@@ -539,8 +800,8 @@
       \strng{authornamehash}{327f987d97eb8ae1314cdde81b69efa8}
       \strng{authorfullhash}{327f987d97eb8ae1314cdde81b69efa8}
       \strng{authorfullhashraw}{327f987d97eb8ae1314cdde81b69efa8}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{WhatIs}
@@ -571,8 +832,8 @@
       \strng{authornamehash}{a102709d3038549e79d7b492d564e708}
       \strng{authorfullhash}{a102709d3038549e79d7b492d564e708}
       \strng{authorfullhashraw}{a102709d3038549e79d7b492d564e708}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{DEV Community}
@@ -587,8 +848,8 @@
       \endverb
     \endentry
     \entry{OMRChecker}{misc}{}{}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labeltitlesource}{title}
       \field{month}{4}
       \field{note}{[Online; pristupljeno 29. travnja 2025.]}
@@ -599,6 +860,80 @@
       \endverb
       \verb{url}
       \verb https://github.com/Udayraj123/OMRChecker/wiki/%5Bv1%5D-Diagrams
+      \endverb
+    \endentry
+    \entry{OpenMCr}{misc}{}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{GitHub}
+      \field{month}{5}
+      \field{note}{[Online; accessed 25. May 2025]}
+      \field{title}{{open-mcr}}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://github.com/iansan5653/open-mcr
+      \endverb
+      \verb{url}
+      \verb https://github.com/iansan5653/open-mcr
+      \endverb
+    \endentry
+    \entry{omrnet}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=c1afff63b687cbfffd061bc418022094}{%
+           family={Mondal},
+           familyi={M\bibinitperiod},
+           given={Sayan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=8a2763e27ce5009befa6060428e3d7e0}{%
+           family={De},
+           familyi={D\bibinitperiod},
+           given={Pratyay},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c11eb132ff5f4d0896e0d71ac820c37e}{%
+           family={Malakar},
+           familyi={M\bibinitperiod},
+           given={Samir},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e6d3b987cfa8db96476d6c98b7c42022}{%
+           family={Sarkar},
+           familyi={S\bibinitperiod},
+           given={Ram},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{cf1b3d4938994703c48e05e5c1927c7c}
+      \strng{fullhash}{2e04f0e9de73d54375b5187413a14ada}
+      \strng{fullhashraw}{2e04f0e9de73d54375b5187413a14ada}
+      \strng{bibnamehash}{2e04f0e9de73d54375b5187413a14ada}
+      \strng{authorbibnamehash}{2e04f0e9de73d54375b5187413a14ada}
+      \strng{authornamehash}{cf1b3d4938994703c48e05e5c1927c7c}
+      \strng{authorfullhash}{2e04f0e9de73d54375b5187413a14ada}
+      \strng{authorfullhashraw}{2e04f0e9de73d54375b5187413a14ada}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{1380-7501, 1573-7721}
+      \field{journaltitle}{Multimedia Tools and Applications}
+      \field{month}{7}
+      \field{shorttitle}{Omrnet}
+      \field{title}{{OMRNet}: {A} lightweight deep learning model for optical mark recognition}
+      \field{urlday}{13}
+      \field{urlmonth}{7}
+      \field{urlyear}{2023}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1007/s11042-023-15408-8
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/10.1007/s11042-023-15408-8
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/10.1007/s11042-023-15408-8
       \endverb
     \endentry
   \enddatalist

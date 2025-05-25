@@ -2,23 +2,30 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1}{\ignorespaces Prikaz slike u boji i pripadajućih kanala boja u RGB modelu (vlastita izrada)}}{5}{figure.caption.2}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Prikaz sive slike (vlastita izrada)}}{6}{figure.caption.3}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Prikaz binarne slike (vlastita izrada)}}{7}{figure.caption.4}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Usporedba svjetlosne komponente i komponenta boja(vlastita izrada)}}{8}{figure.caption.5}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Primjer medijanskog filtera \blx@tocontentsinit {0}\cite {MeidanFilter}}}{11}{figure.caption.6}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Usporedba procesirane slike bez i s pretprocesiranjem (vlastita izrada)}}{12}{figure.caption.7}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Prikaz procesa ispravka perspektive subjekta na slici \blx@tocontentsinit {0}\cite {OpenCvPerpsective}}}{13}{figure.caption.8}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Usporedba tipova segmentacije \blx@tocontentsinit {0}\cite {segmentacija}}}{14}{figure.caption.9}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Prikaz erozije kao morfološke operacije \blx@tocontentsinit {0}\cite {morph}}}{15}{figure.caption.10}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Prikaz dilatacije kao morfološke operacije \blx@tocontentsinit {0}\cite {morph}}}{15}{figure.caption.11}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Prikaz kompozitnih morfoloških operacija \blx@tocontentsinit {0}\cite {morph}}}{16}{figure.caption.12}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Usporedba segmentacije i detekcije objekta \blx@tocontentsinit {0}\cite {segvsdetection_2}}}{17}{figure.caption.13}%
-\contentsline {figure}{\numberline {13}{\ignorespaces \centering Prikaz rezultata detekcije krugova pomoću kontura i CvInvoke.MinEnclosingCircle metode \blx@tocontentsinit {0}\cite {segvsdetection_2}}}{18}{figure.caption.14}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Prikaz dijela toka procesiranja slike kod OMRChecker-a \blx@tocontentsinit {0}\cite {OMRChecker}}}{20}{figure.caption.15}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Prikaz slike u boji i pripadajućih kanala boja u RGB modelu (vlastita izrada)}}{8}{figure.caption.3}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Prikaz sive slike (vlastita izrada)}}{9}{figure.caption.4}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Prikaz binarne slike (vlastita izrada)}}{10}{figure.caption.5}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Usporedba svjetlosne komponente i komponenta boja(vlastita izrada)}}{11}{figure.caption.6}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Primjer medijanskog filtera \blx@tocontentsinit {0}\cite {MeidanFilter}}}{14}{figure.caption.7}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Usporedba procesirane slike bez i s pretprocesiranjem (vlastita izrada)}}{15}{figure.caption.8}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Prikaz procesa ispravka perspektive subjekta na slici \blx@tocontentsinit {0}\cite {OpenCvPerpsective}}}{16}{figure.caption.9}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Usporedba tipova segmentacije \blx@tocontentsinit {0}\cite {segmentacija}}}{17}{figure.caption.10}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Prikaz erozije kao morfološke operacije \blx@tocontentsinit {0}\cite {morph}}}{18}{figure.caption.11}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Prikaz dilatacije kao morfološke operacije \blx@tocontentsinit {0}\cite {morph}}}{18}{figure.caption.12}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Prikaz kompozitnih morfoloških operacija \blx@tocontentsinit {0}\cite {morph}}}{19}{figure.caption.13}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Usporedba segmentacije i detekcije objekta \blx@tocontentsinit {0}\cite {segvsdetection_2}}}{20}{figure.caption.14}%
+\contentsline {figure}{\numberline {13}{\ignorespaces \centering Prikaz rezultata detekcije krugova pomoću kontura \blx@tocontentsinit {0}\cite {segvsdetection_2}}}{21}{figure.caption.15}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Prikaz dijela toka procesiranja slike kod OMRChecker-a \blx@tocontentsinit {0}\cite {OMRChecker}}}{24}{figure.caption.16}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Prikaz pomoćnih oznaka za detektiranje kutova matrice odgovora i orijentacije \blx@tocontentsinit {0}\cite {OMRChecker} \blx@tocontentsinit {0}\cite {OpenMCr}}}{25}{figure.caption.17}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Prikaz strukture OMRNet klasifikatora \blx@tocontentsinit {0}\cite {omrnet}}}{25}{figure.caption.18}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {15}{\ignorespaces Prikaz Use-case diagrama (Vlastita izrada)}}{25}{figure.caption.16}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Prikaz dijagrama klasa (Vlastita izrada)}}{28}{figure.caption.17}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Prikaz dijagrama slijeda za detekciju odgovora s kontrolnog ispita (Vlastita izrada)}}{32}{figure.caption.18}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Prikaz dijagrama slijeda ocijenjivanja ispita (Vlastita izrada)}}{34}{figure.caption.19}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Prikaz Use-case diagrama (Vlastita izrada)}}{31}{figure.caption.19}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {18}{\ignorespaces Prikaz dijagrama klasa (Vlastita izrada)}}{35}{figure.caption.20}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Prikaz dijagrama slijeda za detekciju odgovora s kontrolnog ispita (Vlastita izrada)}}{39}{figure.caption.21}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Prikaz dijagrama slijeda ocijenjivanja ispita (Vlastita izrada)}}{41}{figure.caption.22}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Prikaz dijagrama slijeda za generiranje PDF matrice odgovora (vlastita izrada)}}{42}{figure.caption.23}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Prikaz korisničkog sučelja GradeVision stolne demo aplikacije (vlastita izrada)}}{43}{figure.caption.24}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
 \addvspace {10\p@ }

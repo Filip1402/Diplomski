@@ -5,6 +5,7 @@
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{longtable}
+\usepackage{tabularx}
 
 
 \DeclareUnicodeCharacter{0140}{l}
@@ -47,17 +48,88 @@ Iterativni razvoj ovog rješenja može se podijeliti u 3 faze: pretprocesiranje,
 
 Da bi sama vizualizacija bila što učinkovitija korišteno je više različitih fotografija, slikanih u različitim uvjetima. To je omogućilo verifikaciju funkcionalnosti dijelova rješenja na različitim ulaznim podacima od samog početka razvoja, što je značilo da na kraju projekta nije bilo potrebno pokrivati rubne slučajeve jer je rješenje bilo dizajnirano da ih pokriva od samog početka.
 
+Važno je napomenuti da je ovaj rad izrađen koristeći pristup znanstvenog oblikovanja (\textit{(eng. design science)}. Znanstveno oblikovanje temelji se na razvoju i evaluaciji praktičnih rješenja, to jest artefakata. Razvijeni artefakt u ovom radu je softverska biblioteka otvorenog koda za detekciju odgovora na pismenim ispitima. Cilj tog artefakta je omogućiti fleksibilno ocjenjivanje pismenih ispita u različitim uvjetima. Sam razvoj pratio je iterativni proces uz stalnu evaluaciju pomoću vizualizacije rezultata i testiranja na raznolikim ulaznim podacima. To je ujedno bila metodologija znanstvenog oblikovanja ovog rada, koja je bila prisutna u svim fazama razvoja: dizajnu, implementaciji, testiranju i prilagodbi rješenja.
+
 Rješenje je izrađeno pomoću .NET tehnologije i C\# programskog jezika u obliku biblioteke, što omogućuje drugim rješenjima jednostavnu integraciju koristeći .dll. 
 
-Kroz ovaj rad nije bio cilj razviti vlastitu biblioteku za računalni vid, već je korištena jedna od postojećih biblioteka otvorenog koda. EmguCv je odabran pošto se radi o .NET omotaču za jednu od najpopularnijih biblioteka za računalni vid OpenCV. Osim toga, rješenje omogućuje korisnicima da koriste alternativnu biblioteku s uvjetom da izrade svoju implementaciju odgovarajućih metoda.
+Kroz ovaj rad nije bio cilj razviti vlastitu biblioteku za računalni vid, već je korištena jedna od postojećih biblioteka otvorenog koda. Osim toga, rješenje omogućuje korisnicima da koriste alternativnu biblioteku s uvjetom da izrade svoju implementaciju odgovarajućih metoda. Detaljniji razlozi odabira biblioteke prikazani su u nastavku rada.
 
-\chapter{Razrada teme}
 
-Kroz teoretski dio rada predočit će se cijeli proces detekcije odgovora na pismenim ispitima koristeći obradu slike pomoću računalnog vida. Analizirat će postojeća rješenja ovog problema koja koriste računalni vid i alternativne pristupe. 
+\chapter{Razjašnjavanje problema}
 
-Svi ti pristupi imaju isti cilj, a to je izvlačenje relevantnih podataka iz slike te naknadna obrada tih podataka. U kontekstu ovog rada to bi značilo da se iz slike moraju izvući podaci o označenim odgovorima za određeno pitanje te se ti podaci uspoređuju s listom točnih odgovora. 
+Kroz teoretski dio rada predočit će se problem, tehnologije i alati za njegovo potencijalno rješavanje, kao i cijeli proces detekcije odgovora na pismenim ispitima korištenjem odabranih tehnika. Također će se analizirati postojeća rješenja ovog problema.
 
-\section{Digitalna slika }
+Važno je napomenuti da postoje različiti pristupi rješavanju ovog problema, no svi ti pristupi imaju isti cilj. Taj cilj je izvlačenje relevantnih podataka iz slike te naknadna obrada tih podataka. U kontekstu ovog rada to znači da se iz slike moraju izvući podaci o označenim odgovorima za određeno pitanje te se ti podaci uspoređuju s listom točnih odgovora.
+
+\section{Kontekst i definicija problema}
+
+Ocjenjivanje ispita na papiru jedan je od procesa koji učiteljima, nastavnicima i profesorima oduzima značajan dio vremena, koje bi inače mogli posvetiti drugim aktivnostima, poput izrade kvalitetnijih nastavnih materijala i sličnog. Taj problem postaje još izraženiji kada se radi o velikom broju ispita koje treba ocijeniti. Upravo zbog tih izazova, ispiti namijenjeni većem broju pristupnika često se standardiziraju tako da se pitanja prilagode \cite{Bloomfield}.
+
+Najčešće ta prilagodba podrazumijeva uklanjanje pitanja koja zahtijevaju tekstualni upis, povezivanje pojmova, crtanje i slično. Takva se pitanja uglavnom izostavljaju iz ispita za masovno ocjenjivanje jer predstavljaju podatke koje je teže obraditi ili zahtijevaju  razumijevanje. Zbog toga se koriste isključivo tipovi pitanja koji imaju unaprijed definiranu strukturu i jednoznačno definiran odgovor ili odgovore. Time se problem ocjenjivanja ispita svodi na detekciju označenih odgovora i njihovu usporedbu s točnim odgovorima. Taj tip ispita značajno ubrzava sam proces ocijenjivanja kada ga provode ljudi, no može se još značajnije ubrzati koristeči sustave za automatizirano ocijenjivanje \cite{sabbott2015Nov}.
+
+Sustavi za automatizirano ocjenjivanje koriste različite tehnologije kako bi omogućili učinkovito ocjenjivanje ispita polaznika. Neke od najčešće korištenih tehnologija uključuju obradu slike, strojno učenje te, u posljednje vrijeme, umjetnu inteligenciju. Među glavnim prednostima ovih sustava ističu se brzina ocjenjivanja, konzistentnost i objektivnost, što je teško postići kada više ocjenjivača ocjenjuje stotine ili tisuće ispita \cite{Leonard2025Feb}.
+
+Ovi sustavi mogu ocjenjivati različite vrste ispita, ovisno o tipu pitanja. Najčešće se primjenjuju za ocjenjivanje pitanja tipa točno/netočno, jednostrukog i višestrukog odabira. U posljednje vrijeme sve se češće koriste i za ocjenjivanje esejskih pitanja, što je omogućeno brzim razvojem umjetne inteligencije \cite{Leonard2025Feb}.
+
+Unatoč navedenim prednostima, postoje i određene prepreke. Jedna od najvećih je ocjenjivanje odgovora u kojima je važna inovativnost, kreativnost i kvaliteta odgovora. To se uglavnom odnosi na esejska pitanja i problemske zadatke. Danas se čak i takvi odgovori mogu ocjenjivati pomoću umjetne inteligencije, no to područje je i dalje u fazi razvoja i suočeno je s brojnim otvorenim pitanjima. Jedan od ključnih izazova je sposobnost razumijevanja složenih zadataka i konteksta, kao i problemi poput halucinacija modela \cite{Leonard2025Feb}.
+
+Osim tehničkih izazova, postoji i potreba za edukacijom ocjenjivača za pravilno korištenje ovakvih sustava, kao i za provedbu mjera za prevenciju plagijata \cite{Leonard2025Feb}.
+
+Ipak, kada se radi o ocjenjivanju ispita u kojima je kriterij isključivo točnost odgovora, bez potrebe za analizom kreativnosti, može se reći da su takvi sustavi već dovoljno zreli za pouzdanu primjenu. Takvi sustavi moraju detektirati odgovore s ispita i usporediti ih s točnim odgovorima. 
+
+Prvi takav uređaj bio je Type 805, kojeg je razvio IBM 1937. godine. Taj uređaj funkcionirao je tako da je provjeravao provodljivost napona na papiru. Točnije ako je vodljivost bila veća, smatralo se da je taj dio papira označen olovkom, budući da grafit provodi struju \cite{OMRart}.
+
+Zatim je 1950-ih razvijena i optička varijanta sustava koja je provjeravala količinu reflektiranog svjetla. Ta tehnologija kasnije je nazvana OMR (eng. Optical Mark Recognition). S razvojem računala postupno se smanjila potreba za posebnim uređajima s OMR tehnologijom, jer se ista tehnologija mogla koristiti pomoću standardnog računala i uređaja za dohvat slika, poput skenera \cite{OMRart}.
+
+Iako ljudima proces detekcije odgovora i njihove usporedbe s točnim odgovorima uglavnom ne predstavlja poteškoće, kod računala je situacija znatno složenija. Ljudski mozak sposoban je prepoznati složene uzorke gotovo podsvjesno i u vrlo različitim uvjetima, dok je računalu takav zadatak izrazito zahtjevan. Zbog toga sama detekcija odgovora predstavlja jedan od najvećih izazova u razvoju sustava za automatizirano ocjenjivanje.
+
+Jedan od glavnih problema su razlike u načinu na koji je ispit fotografiran ili skeniran. Tu se ubrajaju faktori poput udaljenosti uređaja od papira, kuta snimanja, neujednačenog osvjetljenja, sjena, mrlja, kao i kvalitete senzora koji je pribavio sliku. Sve te razlike mogu značajno utjecati na točnost prepoznavanja označenih odgovora \cite{OMRart}.
+
+Osim tehničkih izazova, dodatnu složenost unosi i činjenica da korisnici često ne slijede upute o označavanju odgovora, što može dodatno otežati interpretaciju. Zbog kombinacije tih problema važno je razvijati sustave koji su dovoljno robusni da prepoznaju odgovore i u nepovoljnim uvjetima, ali i dovoljno fleksibilni da podnose razlike u načinu ispunjavanja obrazaca \cite{OMRart}.
+
+\section{Tehnička podloga i pristupi rješavanju problema}
+
+Do sada su spomeuti početci OMR tehnologije, no za ovaj rad su relevatne nove tehnike i tehnologije vezane za detekciju odgovora na pismenim ispitima. Činjenica je da je OMR tehnologija započela kao obrada slike no danas je nadograđena raznim drugim tehnikama poput računalnog vida, strojnog učenja i umjetnom inteligencijom. Svaka od navedenih tehnika pomaže riješiti određene izazove s kojima se tradicionalno OMR suočavao.
+
+Važno je napomenuti da se ove tehnike u različitoj literaturi često tretiraju kao jedinstvena tehnika, odnosno da se nerijetko koristi jedan podpojam, iako se zapravo misli na širi skup povezanih metoda. Primjerice, obrada slike tehnički spada pod računalni vid, no u mnogim radovima koristi se izraz "obrada slike" i kada se misli na šire postupke karakteristične za računalni vid. Slična je situacija i sa strojnim učenjem i umjetnom inteligencijom, gdje se strojno učenje često koristi kao sinonim za AI, iako je ono zapravo njezin podskup. Kroz ovaj rad će se također koristiti termin "obrada slike" u širem smislu, pri čemu će se pod time podrazumijevati i tehnike računalnog vida.
+
+Tradicionalno je OMR tehnologija zahtijevala specijalizirano i skupo sklopovlje, no danas se uz pomoć računalnog vida i obrade digitalne slike cijeli proces može pojednostaviti. Slika se ne pribavlja skupim uređajima već mobitelom ili skenerom, što čini cijeli proces pribavljanja slike puno jeftinijim, no ne uklanja probleme vezane za kvalitetu slike koje smo spominjali u prijašnjem poglavlju. Da bi se ti problemi riješili, koristi se računalni vid i obrada slike koji nude mogućnosti smanjivanja šuma, ispravka perspektive i slično. Ovim tehnikama se može softverski implementirati efikasniji i jeftiniji OMR sustav. No takvi sustavi imaju ograničenje da ne mogu obrađivati tekstualna pitanja, već samo detektiraju oznake \cite{OMRImageProcessing}.
+
+Da bi se podržala i takva pitanja, može se koristiti umjetna inteligencija, to jest strojno učenje, većinom sustavi za obradu prirodnog jezika NLP \textit({eng. natural language processing}). No, kao što je spomenuto u prijašnjem poglavlju, umjetna inteligencija je još uvijek jako svježa tehnologija i razina zrelosti za konzistentno i pouzdano ocjenjivanje je i dalje upitna zbog raznih problema poput halucinacija. Prema nekim istraživanjima takvi sustavi imaju otprilike 85\% točnosti. Točnost će kroz vrijeme sigurno rasti, no treba odgovoriti i na potecijalna etička pitanja \cite{OMRNLP}.
+
+Kroz ovaj rad nije cilj razviti vlastitu biblioteku za računalni vid, već će se koristiti već postojeće biblioteke ili okvire. Kroz priloženu tablicu prikazani su najpopularnije biblioteke i okviri, važno je napomenuti da se radi o bibliotekama i okvirima otvorenog koda.
+
+\begin{table}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\hline
+\textbf{Biblioteka} & \textbf{Ključne značajke} & \textbf{Prednosti} & \textbf{Nedostaci} \\
+\hline
+\textbf{OpenCV} & 2,500+ algoritama, podrška za više platformi & Optimiziran, GPU ubrzanje & Nema ugrađenu podršku za duboko učenje \\
+\hline
+\textbf{Scikit-Image} & Obrada slike s NumPy integracijom & Jednostavan, idealan za početnike & Nije optimiziran za duboko učenje  \\
+\hline
+\textbf{TensorFlow} & Modeli dubokog učenja, TensorFlow Lite za mobilne uređaje & Skalabilan, produkcijski spreman & Strma krivulja učenja \\
+\hline
+\textbf{PyTorch} & TorchScript za izvođenje modela izvan Python-a, unaprijed obučeni modeli & Fleksibilan, jednostavno za korištenje i debugiranje & Manje skalabilan od TensorFlow-a\\
+\hline
+\textbf{OpenVINO} & Duboko učenje, Optimizirano za Intel sklopovlje & Visoka učinkovitost na Intel čipovima & Ograničen na Intel platforme \\
+\hline
+\textbf{Detectron2} & Napredna segmentacija i detekcija objekata & Vrlo precizan, podrška za PyTorch & Fokusiran samo na detekciju \\
+\hline
+\end{tabularx}
+\caption{Usporedba biblioteka i okvira računalnog vida \cite{Saiwa2024Nov}}
+\label{tab:computer_vision_languages}
+\end{table}
+
+Iz priložene tablice mogu se vidjeti značajke, prednosti i nedostaci različitih biblioteka i okvira za računalni vid. Neke, poput OpenCV-a i Scikit-Image, podržavaju samo tradicionalni računalni vid i obradu slike bez korištenja dubokog učenja, dok se druge, poput TensorFlow-a i PyTorch-a, fokusiraju samo na duboko učenje. Osim razlika u domeni primjene, postoje i razlike u programskim jezicima koje biblioteke podržavaju, kao i u sklopovlju potrebnom za njihov rad. Inače je riječ je o vrlo popularnim alatima koji značajno olakšavaju razvoj softvera temeljenog na računalnom vidu \cite{Saiwa2024Nov}.
+
+Pošto će se ovaj rad više fokusirati na računalni vid temeljen na klasičnoj obradi slike, a ne na dubokom učenju, iz priložene tablice u obzir dolaze samo OpenCV i Scikit-Image biblioteke. U praktičnom dijelu rada bit će objašnjeno koja je biblioteka odabrana i koji su razlozi za njezin konačni odabir.
+
+Prije prikaza konkretnih tehnika i tehnologija koje se u tu svrhu koriste, potrebno je definirati nekoliko osnovnih pojmova poput digitalne slike.
+
+\section{Digitalna slika}
 
 Za početak važno je razumjeti što su to digitalne slike i koje sve informacije one sadrže. Digitalna slika je zapravo računalna datoteka koja reprezentira fotografiju pomoću piksela. Piksel je zapravo najmanji element slike koji je reprezentiran s 3 kanala boja: Crvena (R), zelena (G), plava (B) u RGB modelu. Postoje i drugi kanali boja, ali za potrebe ovog rada fokus će biti na RGB modelu. \cite{DigitalnaSlika}.
 
@@ -418,22 +490,23 @@ Da bi detektiranje objekata bilo uspješno često se koriste konture. Konture su
 Da bi se mogle pronaći konture prvo je potrebno sliku pretvoriti u binarnu sliku i zatim provesti operaciju detektiranja kontura. Konture se detektiraju tako da se traži razlika između kontrasta piksela na binarnoj slici i time se utvrđuje ujedno i granica između objekata. Zatim se primjenjuje jedna od metoda za detekciju objekta nad tim konturama. Te metode zapravo traže konture koje odgovaraju traženom obliku s definiranim tolerancijama za oblik, veličinu i slično \cite{konturesShapes}.
 
 \begin{flushleft}
-    Pošto će se u ovom radu koristiti EmguCv nama su najzanimljivije metode poput:
-    \begin{itemize}
-        \item \textbf{CvInvoke.ApproxPolyDP()} - Aproksimacija kontura u jednostavnije poligone (korisno za prepoznavanje oblika).
-        \item \textbf{CvInvoke.MinAreaRect()} - Pronalaženje minimalnog pravokutnika koji okružuje konturu (korisno za detekciju objekata u obliku pravokutnika).
-        \item \textbf{CvInvoke.FitEllipse()} - Fitting elipse na konturu (korisno za prepoznavanje eliptičnih objekata).
-        \item \textbf{CvInvoke.HoughLinesP()} - Houghova transformacija za detekciju linija.
-        \item \textbf{CvInvoke.HoughCircles()} - Houghova transformacija za detekciju krugova.
-        \item \textbf{CvInvoke.BoundingRectangle()} - Pronalaženje okvira (bounding box) koji okružuje konture objekta.
-        \item \textbf{CvInvoke.FindContoursHierarchical()} - Detekcija kontura s informacijama o hijerarhiji (za detekciju unutarnjih i vanjskih objekata).
-    \end{itemize}
+Budući da se u ovom radu koristi pristup temeljen na tradicionalnoj obradi slike, od posebnog su interesa sljedeće metode koje omogućuju detekciju i analizu geometrijskih oblika koristeći konture:
+
+\begin{itemize}
+\item \textbf{Aproksimacija kontura u poligone} - koristi se za pojednostavljenje kontura i prepoznavanje osnovnih geometrijskih oblika.
+\item \textbf{Izračun minimalnog pravokutnika oko konture} - omogućuje određivanje najmanjeg pravokutnika koji obuhvaća određeni objekt, što je korisno pri detekciji pravokutnih oblika.
+\item \textbf{Prilagodba elipse konturi} - koristi se za identifikaciju objekata eliptičnog oblika.
+\item \textbf{Detekcija ravnih linija Houghovom transformacijom} - omogućuje otkrivanje linijskih struktura unutar slike.
+\item \textbf{Detekcija kružnica Houghovom transformacijom} - primjenjuje se za prepoznavanje kružnih objekata.
+\item \textbf{Pronalaženje pravokutnog okvira oko konture (bounding box)} - omogućuje okvirno lociranje objekta unutar slike.
+\item \textbf{Detekcija kontura s hijerarhijskim odnosima} - omogućuje razlikovanje vanjskih i unutarnjih kontura, što je korisno pri analizi složenijih objekata.
+\end{itemize}
 \end{flushleft}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.0\linewidth]{slike/shapeDetection.png}
-    \caption{\centering Prikaz rezultata detekcije krugova pomoću kontura i CvInvoke.MinEnclosingCircle metode \cite{segvsdetection_2}}
+    \caption{\centering Prikaz rezultata detekcije krugova pomoću kontura \cite{segvsdetection_2}}
 \end{figure}
 
 Na priloženoj slici je jasno prikazano kako se izvorna slika pretvara u binarnu sliku i zatim se s pomoću kontura i metode za detektiranje oblika naspram kontura pronalazi lokacija kruga.
@@ -487,11 +560,11 @@ Glavna razlika između ovih dvaju pristupa je u tome može li se originalna slik
 
 \section{Analiza postojećih rješenja i pristupa problemu}
 
-Prije praktičnog dijela rada važno je analizirati postojeća rješenja na tržištu. Ova analiza fokusirat će se samo na detekciju odgovora na pismenim ispitima koristeći matricu odgovora to jest detekciju OMR tehnikom (\textit{eng. optical mark recognition}). Pod OMR spadaju sve tehnike koje su do sada obrađene. Fokus analize je samo na rješenja visoke razine točnosti.
+Prije praktičnog dijela rada važno je analizirati postojeća rješenja na tržištu. Ova analiza fokusirat će se samo na detekciju odgovora na pismenim ispitima koristeći matricu odgovora to jest detekciju OMR tehnikom (\textit{eng. optical mark recognition}). Pod OMR spadaju sve tehnike koje su do sada obrađene. Fokus ove analize je samo na rješenjima visoke razine točnosti.
 
 Osim korištenja računalnog vida uz OMR sve češći su pristupi koji koriste elemente dubokog učenja, samostalno ili u kombinaciji s tradicionalnim računalnim vidom \cite{OMRComparsion}.
 
-Analizirana su rješenja OMRChecker i OpenOMR, radi se o rješenjima izrazito visoke točnosti koji tu točnost zadržavaju i kada je slika uslikana u izrazito izazovnim uvjetima. Također oba rješenja podržavaju određeni stupanj konfiguracije liste s odgovorima \cite{OMRComparsion}.
+Analizirana su rješenja OMRChecker i OpenMCR, radi se o rješenjima izrazito visoke točnosti koji tu točnost zadržavaju i kada je slika uslikana u izrazito izazovnim uvjetima. Također oba rješenja podržavaju određeni stupanj konfiguracije liste s odgovorima \cite{OMRComparsion}.
 
 \begin{figure}[H]
     \centering
@@ -500,9 +573,53 @@ Analizirana su rješenja OMRChecker i OpenOMR, radi se o rješenjima izrazito vi
 \end{figure}
 
 S priložene slike vidljivo je da OMRChecker koristi veliku večinu metoda i tehnika koje su do sada obrađene u ovom radu, za OpenOMR je sitaucije također dosta slična.
-Kroz praktični dio rada prikazat će se koji je cilj rješenja izrađenog u sklopu ovog rada i usporedit će se na kraju sa postojećim rješenjima.
 
-\chapter{Praktični dio}
+Osim samih značajki sustava važno je znati kako su se ti sustavi nosili sa problemima pri detekciji odgovora spomenutih u prijašnjim poglavljima. Jedan od glavnih problema je kvaliteta pribavljene fotografije. To uključuje loše uvjete osvjetljenja, udaljenost uređaja od papira, kut snimanja i slične čimbenike.
+
+Rješenja poput OpenMCR riješila su problem kuta snimanja i rotacije papira tako da su na matricu odgovora postavljena posebne oznake pomoću kojih se precizno detektiraju kutovi matrice i određuje orijentacija papira.
+
+Na priloženoj slici prikazana su te posebne oznake koja olakšavaju detekciju kutova papira. Na lijevoj slici prikazana je matrica odgovora OMRChecker sustava, koja koristi četiri identične oznake za detekciju kutova papira. Na desnoj slici prikazana je matrica odgovora OpenMCR sustava, koja koristi tri identične oznake i jednu unikatnu. Ta različita oznaka omogućuje ne samo detekciju kutova, već i određivanje orijentacije papira.
+
+To znači da OpenMCR nudi kvalitetnije rješenje barem što se tiće korekcije kuta snimanja i rotacije papira u odnosu na OMRChecker.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{slike/CornerDetection.png}
+    \caption{Prikaz pomoćnih oznaka za detektiranje kutova matrice odgovora i orijentacije \cite{OMRChecker} \cite{OpenMCr}}
+\end{figure}
+
+Osim problema s kvalitetom pribavljene slike, postoje i problemi s neispravnim označavanjem područja za odgovor. Taj je problem teško riješiti korištenjem tradicionalne obrade slike, te stoga ima više smisla koristiti strojno učenje, odnosno određeni tip klasifikatora \cite{omrnet}.
+
+OMRNet je jedno od takvih rješenja. Ono nudi mogućnost klasifikacije područja odgovora kao označeno, neoznačeno i prekriženo. Zapravo se ne radi o cjelovitom sustavu za ocjenjivanje ispita, već o sustavu koji pruža REST API za klasifikaciju područja odgovora, te se može integrirati s drugim sustavima za detekciju odgovora i ocjenjivanje ispita \cite{omrnet}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{slike/OMRNet.png}
+    \caption{Prikaz strukture OMRNet klasifikatora \cite{omrnet}}
+\end{figure}
+
+Također, važno je napomenuti da ova konvolucijska neuronska mreža koristi metodu prijenosa znanja (eng. transfer learning) s već prethodno treniranog modela MobileNet V2 \cite{omrnet}.
+
+Cijela svrha korištenja OMRNet-a ili neke druge implementacije dubokog učenja za klasifikaciju područja odgovora jest rješavanje problema koje OMR sustavi temeljeni isključivo na tradicionalnoj obradi slike imaju \cite{omrnet}:
+
+\begin{flushleft}
+\begin{itemize}
+\item Teško je razaznati radi li se o prekriženom odgovoru ili o označenom odgovoru
+\item Problem definiranja praga koji određuje je li odgovor označen ili nije
+\end{itemize}
+\end{flushleft}
+
+Važno je napomenuti da su sva analizirana rješenja u određenoj mjeri ograničena kada je riječ o fleksibilnosti predloška matrice odgovora. Naime, postojeća rješenja očekuju da se na papiru nalaze određene strukture, poput oznaka za kutove i orijentaciju, specifičan broj pitanja i odgovora i slično. Sama fleksibilnost rješenja ovisi o tome je li sustav dizajniran da strogo slijedi zadani predložak ili je već u samom dizajnu predviđena određena razina prilagodljivosti.
+
+Također, sva rješenja variraju u razini pouzdanosti i konzistentnosti u ekstremnim uvjetima rada. Pod time se podrazumijevaju visoka razina šuma, loši uvjeti osvjetljenja, ekstremni kutovi fotografiranja i slično. Međutim, postavlja se pitanje je li uopće nužno da sustav pouzdano funkcionira u takvim ekstremnim uvjetima. Na primjer nije jednaka razina pouzdanosti potrebna sustavu za ocjenjivanje ispita i sustavu za čitanje registarskih tablica na parkiralištu. Glavni razlog za to je činjenica da ocjenjivač može u velikoj mjeri kontrolirati uvjete i način pribavljanja fotografije, dok na parkiralištu to najčešće nije moguće.
+
+Osim navedenih ograničenja, analizirana rješenja imaju i niz prednosti. Sva rješenja postižu izrazito visoku razinu točnosti koja je otprilike 99,5\%. Važno je istaknuti da za postizanje te razine preciznosti nisu potrebni značajni računalni ni vremenski resursi. Takvi sutavi također značajno skraćuju sam proces ocjenjivanja ispita u usporedbi s čovjekom. Iako ovi sustavi nisu savršeni, riječ je o zreloj i relativno jeftinoj tehnologiji koja pokazuje znatno nižu stopu pogrešaka u odnosu na čovjeka, pogotovo kada se uzme u obzir vrijeme potrebno za ocjenjivanje.
+
+Za kraj, važno je napomenuti da je takve sustave teško međusobno uspoređivati, budući da se implementacije često razlikuju samo po korištenim metodama, dok su same faze obrade u većini slučajeva jednake i već su obrađene u prijašnjim poglavljima. Dobar primjer toga je otklanjanje šuma, koje je praktički neizostavan korak u svim sustavima, razlika je jedino u konkretnoj metodi koja se koristi za tu svrhu.
+
+Ipak, postoje i inovativna rješenja koja pristupaju postojećim problemima na kreativan način. Dobar primjer za to je OMRNet klasifikator, koji primjenom metode dubokog učenja nudi novu perspektivu u detekciji označenih odgovora. Kombinacijom različitih aspekata postojećih rješenja moguće je dizajnirati kvalitetan i precizan sustav za detekciju i ocjenjivanje pismenih ispita zatvorenog tipa.
+
+\chapter{Definiranje zahtjeva}
 
 Kroz daljnji dio rada fokus će biti na izradi i prikazu komponente otvorenog koda za detekciju odgovora na pismenim testovima. Prikazat će se svi važni koraci i dizajnerske odluke koje utječu na konačni dizajn i funkcionalnost rješenja. Izrađena komponenta će također biti ugrađena u jednostavnu stolnu aplikaciju da bi se olakšalo razvoj i vizualizirao sam rad komponente. 
 
@@ -684,8 +801,22 @@ Ovo je pravilan tijek aktivnosti slučaja korištenja "Ocjenjivanje ispita":
 \end{enumerate}
 \end{flushleft}
 
-\pagebreak
-\section{Dijagram klasa}
+\chapter{Dizajn i izrada artefakta}
+
+Kroz ostatak rada fokus će biti na dizajnu i izradi artefakta za opisani problem. Artefakt će biti prikazan kroz različite dijagrame i zanimljive isječke koda.
+
+\section{Odabrane tehnologije}
+
+Prije prikaza samog rješenja, važno je razumjeti koje su tehnologije odabrane i koji su razlozi za njihov odabir. U prijašnjim poglavljima spomenute su relevantne tehnologije, odnosno biblioteke za računalni vid. Analizirane biblioteke mogu se podijeliti na biblioteke za obradu slike i biblioteke za strojno i duboko učenje. Kroz ovaj rad fokus će biti na izradi rješenja isključivo korištenjem obrade slike. Ta odluka donesena je iz osobnih preferencija. Time se izbor automatski sužava na dvije popularne biblioteke: OpenCV i Scikit-Image.
+
+Osim biblioteke, važan je i programski jezik koji je odabran. Budući da je cilj ovog rada izraditi biblioteku otvorenog koda, donesena je odluka koristiti C\# i .NET. Taj programski jezik omogućuje izradu biblioteke u obliku .dll datoteke, kao i jednostavnu izradu demo aplikacije korištenjem WinForms tehnologije, koja je također bazirana na C\#-u i .NET-u.
+
+Odabir programskog jezika ujedno je olakšao i odabir biblioteke za računalni vid. Budući da Scikit-Image ne podržava odabrane tehnologije, odlučeno je koristiti EmguCV. EmguCV je zapravo .NET omotač za OpenCV biblioteku. Odabir EmguCV-a omogućio je korištenje sve postojeće dokumentacije, materijala i više od 2500 metoda vezanih za OpenCV.
+
+Važno je napomenuti da je prije početka dizajna artefakta donesena odluka da sustav mora biti neovisan o konkretnoj biblioteci za računalni vid. To znači da će se korisnicima omogućiti izrada vlastitih implementacija koristeći bilo koju drugu biblioteku za računalni vid.
+
+Kako bi to bilo moguće, odlučeno je koristiti uzorak dizajna injektiranja ovisnosti (eng. dependency injection). Točnije, definirane su apstraktne klase koje korisnici mogu naslijediti i implementirati prema vlastitim potrebama, a zatim ih injektirati u glavnu klasu biblioteke ovog rješenja.
+\section{Strukturni model sustava} 
 
 
 \begin{figure}[H]
@@ -793,11 +924,11 @@ S druge strane, klasa \texttt{HistogramGenerator} je pomoćna klasa koja ima klj
 
 Važno je napomenuti da je klasa \texttt{HistogramGenerator} potpuno neovisna o bibliotekama za računalni vid, iako se primarno koristi od strane \texttt{EmguCVImageProcessor} klase. Ona prima listu decimalnih brojeva koji predstavljaju odgovore na ispitnim listovima s određenim postotkom ispunjenosti. Te podatke obrađuje i vraća prag ispunjenosti kruga u obliku postotka. Ako je postotak ispunjenosti viši od izračunatog praga, krug se smatra označenim.
 
-\section{Dijagrami slijeda}
+\section{Modeliranje ponašanja sustava}
 
 Kroz sljedeće dijagrame slijeda prikazat će se interakcije između korisnika i različitih dijelova sustava na visokoj razini, dok će se kroz daljnji rad prikazati zanimljivi dijelovi detaljnije. Svaki dijagram slijeda vezan je uz jedan od koraka koje ocjenjivač može napraviti i time pokrenuti neku interakciju sa sustavom.
 
-\subsection{Dijagram slijeda – Detekcija odgovora s kontrolnog ispita}
+\subsection{Ponašanje sustava tijekom detekcije odgovora s kontrolnog ispita}
 
 \begin{figure}[H]
 \centering
@@ -832,7 +963,7 @@ Zbog toga je bilo potrebno osmisliti preciznije rješenje. Ono je implementirano
 
 Klasa \texttt{AnswerSheetGrader} zatim poziva metodu \texttt{VisualizeDetectedCircles} iz klase \texttt{ImageProcessorBase} kako bi se klasificirani odgovori vizualizirali. Nakon toga se kreirana slika vraća sve do GradeVision korisničkog sučelja, gdje je prikazana ocjenjivaču. 
 
-\subsection{Dijagram slijeda – Ocijenjivanje ispita}
+\subsection{Ponašanje sustava tijekom ocjenjivanja}
 
 \begin{figure}[H]
 \centering
@@ -846,16 +977,51 @@ Nakon što metoda vrati ocjenu i postotak riješenosti, poziva se sljedeći kora
 
 Važno je napomenuti da se ovaj slijed ne može pokrenuti dok god se ne izvrše svi koraci iz prvog dijagrama slijeda za kontrolni ispit. Također, generalna struktura ispita za ocijenjivanje se mora poklapati sa kontrolnim ispitom, pod to spada isti broj pitanja i odgovora.
 
-TODO:dodati dijagram slijeda za generiranje pdf-a
+\subsection{Dijagram slijeda – Generiranje matrice odgovora}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\linewidth]{slike/sequence3.jpg}
+\caption{Prikaz dijagrama slijeda za generiranje PDF matrice odgovora (vlastita izrada)}
+\end{figure}
+
+Kroz priloženi dijagram slijeda može se vidjeti da je samo generiranje matrice odgovora u obliku PDF-a prilično jednostavno. Kako bi se PDF generirao, korisnik najprije mora definirati ukupan broj pitanja i broj ponuđenih odgovora po pitanju. Nakon što su ti parametri definirani, pritišće se gumb za generiranje PDF-a, čime se daljnja kontrola nad izvođenjem predaje klasi forme u WinForm aplikaciji. Ta klasa zatim poziva metodu \texttt{Generate()} klase \texttt{AnswerSheetGenerator}. 
+
+Metoda \texttt{Generate} je metoda bez povratnog tipa podataka, što nije problem jer ona izravno generirani PDF sprema na disk. Metoda \texttt{Generate} poziva svoje privatne metode sljedećim redoslijedom:
+
+\begin{itemize}
+\item \texttt{DrawHeader} – Crta pravokutni okvir na vrhu stranice i ispisuje tekst s poljima za ime i ocjenu osobe koja piše ispit.
+\item \texttt{DrawAnswerAreaFrame} – Crta pravokutni okvir koji označava područje u kojem se nalaze pitanja i odgovori.
+\item \texttt{DrawAllQuestionRows} – Ispisuje redove s brojevima pitanja i pripadajućim krugovima za svaki ponuđeni odgovor.
+    \begin{itemize}
+    \item \texttt{DrawCircle} – Crta jedan krug koji predstavlja ponuđeni odgovor.
+    \item \texttt{CenterTextIntoCircle} – Centrira i ispisuje pripadajuće slovo unutar prethodno nacrtanog kruga.
+    \end{itemize}
+\end{itemize}
 
 
-\section{GradeVison aplikacija}
+\section{GradeVision aplikacija}
+
+Cilj ovog rada je izrada biblioteke za detekciju odgovora, no kako bi se ista mogla testirati i demonstrirati, izrađena je GradeVision stolna aplikacija. Aplikacija je izrađena korištenjem .NET Core, C\# i WinForms tehnologija. Te su tehnologije odabrane zbog jednostavnosti i brzine izrade demo aplikacije, ali i zato što je i GradeVision biblioteka napisana korištenjem .NET Core i C\#.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\linewidth]{slike/GradeVision ui.png}
+\caption{Prikaz korisničkog sučelja GradeVision stolne demo aplikacije (vlastita izrada)}
+\end{figure}
+
+Korisničko sučelje s priložene slike možda na prvi pogled djeluje komplicirano, no zapravo je prilično jednostavno i sadrži sve potrebne elemente za testiranje i demonstraciju rada biblioteke. Glavni elementi korisničkog sučelja su tri okvira za prikaz slika. Prvi okvir prikazuje kontrolni ispit koji se, nakon učitavanja i ocjenjivanja, prikazuje na tom mjestu. U drugom okviru nalazi se izvorna slika koja se ocjenjuje, dok se desno od nje prikazuje ocijenjena verzija te slike. Također, s desne strane nalazi se i tablica koja prikazuje povijest ocjenjivanja.
+
+Osim tih elemenata, u gornjem lijevom kutu nalaze se kontrole za definiranje nove skale ocjenjivanja, ako je to potrebno. U donjem desnom kutu nalaze se parametri matrice odgovora i gumb za njezino generiranje. Također u doljnjem lijevom kutu postoji gumb za uključivanje i isklučivanje načina rada za otklanjanje grešaka.
+
 \subsection{Način rada}
 \section{GradeVision biblioteka}
 prolazak kroz kod
-\section{Skup podataka za testiranje}
+\chapter{Evaluacija}
+\section{Skup testnih podataka}
 \subsection{Prikaz koraka obrada slike nad testnim podatcima}
 \section{Manualno testiranje rješenja}
+\chapter{Diskusija}
 \section{Analiza rezultata}
 \section{Limitacije rješenja}
 \section{Poboljšanja rješenja}
