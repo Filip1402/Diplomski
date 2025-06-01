@@ -236,6 +236,9 @@ INPUT c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty
+INPUT c:/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT c:/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT c:/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1phv.fd
 INPUT c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1phv.fd
 INPUT c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1phv.fd
@@ -468,6 +471,98 @@ INPUT ./slike/GradeVision ui.png
 INPUT ./slike/GradeVision ui.png
 INPUT ./slike/GradeVision ui.png
 INPUT ./slike/GradeVision ui.png
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/courier/pcrr8t.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvr8t.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/courier/pcrb8t.tfm
+INPUT ./slike/ToGrayscale.png
+INPUT ./slike/ToGrayscale.png
+INPUT ./slike/ToGrayscale.png
+INPUT ./slike/ToGrayscale.png
+INPUT ./slike/ToGrayscale.png
+INPUT c:/texlive/2025/texmf-dist/fonts/vf/adobe/helvetic/phvr8t.vf
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvr8r.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/vf/adobe/courier/pcrb8t.vf
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/courier/pcrb8r.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/vf/adobe/courier/pcrr8t.vf
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
+INPUT ./slike/DenoiseComparison.png
+INPUT ./slike/DenoiseComparison.png
+INPUT ./slike/DenoiseComparison.png
+INPUT ./slike/DenoiseComparison.png
+INPUT ./slike/DenoiseComparison.png
+INPUT ./slike/PerspectiveComparison.png
+INPUT ./slike/PerspectiveComparison.png
+INPUT ./slike/PerspectiveComparison.png
+INPUT ./slike/PerspectiveComparison.png
+INPUT ./slike/PerspectiveComparison.png
+INPUT ./slike/RotationComparison.png
+INPUT ./slike/RotationComparison.png
+INPUT ./slike/RotationComparison.png
+INPUT ./slike/RotationComparison.png
+INPUT ./slike/RotationComparison.png
+INPUT ./slike/TresholdingComparison.png
+INPUT ./slike/TresholdingComparison.png
+INPUT ./slike/TresholdingComparison.png
+INPUT ./slike/TresholdingComparison.png
+INPUT ./slike/TresholdingComparison.png
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/courier/pcrro8t.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/vf/adobe/courier/pcrro8t.vf
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/courier/pcrro8r.tfm
+INPUT ./slike/histogram.png
+INPUT ./slike/histogram.png
+INPUT ./slike/histogram.png
+INPUT ./slike/histogram.png
+INPUT ./slike/histogram.png
+INPUT ./slike/CircleDetectionComp.png
+INPUT ./slike/CircleDetectionComp.png
+INPUT ./slike/CircleDetectionComp.png
+INPUT ./slike/CircleDetectionComp.png
+INPUT ./slike/CircleDetectionComp.png
+INPUT ./slike/Test1.png
+INPUT ./slike/Test1.png
+INPUT ./slike/Test1.png
+INPUT ./slike/Test1.png
+INPUT ./slike/Test1.png
+INPUT ./slike/Test2.png
+INPUT ./slike/Test2.png
+INPUT ./slike/Test2.png
+INPUT ./slike/Test2.png
+INPUT ./slike/Test2.png
+INPUT ./slike/Test3.png
+INPUT ./slike/Test3.png
+INPUT ./slike/Test3.png
+INPUT ./slike/Test3.png
+INPUT ./slike/Test3.png
+INPUT ./slike/Test4.png
+INPUT ./slike/Test4.png
+INPUT ./slike/Test4.png
+INPUT ./slike/Test4.png
+INPUT ./slike/Test4.png
+INPUT ./slike/null (7).png
+INPUT ./slike/null (7).png
+INPUT ./slike/null (7).png
+INPUT ./slike/null (7).png
+INPUT ./slike/null (7).png
+INPUT ./slike/null (8).png
+INPUT ./slike/null (8).png
+INPUT ./slike/null (8).png
+INPUT ./slike/null (8).png
+INPUT ./slike/null (8).png
+INPUT ./slike/null (9).png
+INPUT ./slike/null (9).png
+INPUT ./slike/null (9).png
+INPUT ./slike/null (9).png
+INPUT ./slike/null (9).png
+INPUT ./slike/null (10).png
+INPUT ./slike/null (10).png
+INPUT ./slike/null (10).png
+INPUT ./slike/null (10).png
+INPUT ./slike/null (10).png
+INPUT ./slike/08_VisualizeGrade.png
+INPUT ./slike/08_VisualizeGrade.png
+INPUT ./slike/08_VisualizeGrade.png
+INPUT ./slike/08_VisualizeGrade.png
+INPUT ./slike/08_VisualizeGrade.png
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvrc8t.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/vf/adobe/helvetic/phvb8t.vf
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm
@@ -496,7 +591,9 @@ INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb

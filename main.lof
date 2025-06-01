@@ -26,6 +26,22 @@
 \contentsline {figure}{\numberline {20}{\ignorespaces Prikaz dijagrama slijeda ocijenjivanja ispita (Vlastita izrada)}}{41}{figure.caption.22}%
 \contentsline {figure}{\numberline {21}{\ignorespaces Prikaz dijagrama slijeda za generiranje PDF matrice odgovora (vlastita izrada)}}{42}{figure.caption.23}%
 \contentsline {figure}{\numberline {22}{\ignorespaces Prikaz korisničkog sučelja GradeVision stolne demo aplikacije (vlastita izrada)}}{43}{figure.caption.24}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Prikaz ulazne i izlazne slike ConvertToGrayscale metode (vlastita izrada)}}{45}{figure.caption.26}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Prikaz ulazne i izlazne slike Denoise metode (vlastita izrada)}}{47}{figure.caption.27}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Prikaz ulazne i izlazne slike CorrectPerspective metode (vlastita izrada)}}{53}{figure.caption.28}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Prikaz ulazne i izlazne slike CorrectRotation metode (vlastita izrada)}}{54}{figure.caption.29}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Prikaz ulazne i izlazne slike ApplyThresholding metode (vlastita izrada)}}{55}{figure.caption.30}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Prikaz histograma postataka ispunjesnosti krugova (vlastita izrada)}}{59}{figure.caption.31}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Prikaz ulazne i izlazne slike CircleDetection metode (vlastita izrada)}}{60}{figure.caption.32}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {30}{\ignorespaces Prikaz različitih tipova matrica odgovora - primjer 1 (vlastita izrada)}}{61}{figure.caption.33}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Prikaz različitih tipova matrica odgovora - primjer 2 (vlastita izrada)}}{62}{figure.caption.34}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Prikaz matrica odgovora uslikanim u izazovnijim uvjetima - primjer 1 (vlastita izrada)}}{63}{figure.caption.35}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Prikaz matrica odgovora uslikanim u izazovnijim uvjetima - primjer 2 (vlastita izrada)}}{63}{figure.caption.36}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Prikaz izvorne slike i pretvorbe u sivu sliku na primjeru (vlastita izrada)}}{64}{figure.caption.37}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Prikaz ispravka perspektive i rotacije na primjeru (vlastita izrada)}}{65}{figure.caption.38}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Prikaz smanjivanja buke i pretvorbe u binarnu sliku na primjeru (vlastita izrada)}}{65}{figure.caption.39}%
+\contentsline {figure}{\numberline {37}{\ignorespaces Prikaz detekcije odgovora i vizualizacije označenih odgovora na primjeru (vlastita izrada)}}{66}{figure.caption.40}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Prikaz vizualizacije ocjene na primjeru (vlastita izrada)}}{66}{figure.caption.41}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

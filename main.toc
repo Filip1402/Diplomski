@@ -52,16 +52,16 @@
 \contentsline {subsection}{\numberline {5.3.3}Dijagram slijeda – Generiranje matrice odgovora}{42}{subsection.5.3.3}%
 \contentsline {section}{\numberline {5.4}GradeVision aplikacija}{43}{section.5.4}%
 \contentsline {subsection}{\numberline {5.4.1}Način rada}{43}{subsection.5.4.1}%
-\contentsline {section}{\numberline {5.5}GradeVision biblioteka}{43}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Evaluacija}{44}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Skup testnih podataka}{44}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Prikaz koraka obrada slike nad testnim podatcima}{44}{subsection.6.1.1}%
-\contentsline {section}{\numberline {6.2}Manualno testiranje rješenja}{44}{section.6.2}%
-\contentsline {chapter}{\numberline {7}Diskusija}{45}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Analiza rezultata}{45}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Limitacije rješenja}{45}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Poboljšanja rješenja}{45}{section.7.3}%
-\contentsline {chapter}{\numberline {8}Zaključak}{46}{chapter.8}%
-\contentsline {chapter}{Popis literature}{49}{chapter*.25}%
-\contentsline {chapter}{Popis slika}{50}{chapter*.26}%
-\contentsline {chapter}{Popis popis tablica}{51}{chapter*.27}%
+\contentsline {section}{\numberline {5.5}Značajni dijelovi koda GradeVison biblioteke}{45}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Evaluacija}{61}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Skup testnih podataka}{61}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Prikaz koraka obrada slike nad testnim podatcima}{64}{subsection.6.1.1}%
+\contentsline {section}{\numberline {6.2}Manualno testiranje rješenja}{68}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Diskusija}{69}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Analiza rezultata}{69}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Limitacije rješenja}{69}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Poboljšanja rješenja}{69}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Zaključak}{70}{chapter.8}%
+\contentsline {chapter}{Popis literature}{73}{chapter*.43}%
+\contentsline {chapter}{Popis slika}{75}{chapter*.44}%
+\contentsline {chapter}{Popis popis tablica}{76}{chapter*.45}%
