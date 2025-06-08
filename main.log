@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.17)  8 JUN 2025 12:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.17)  8 JUN 2025 17:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -921,7 +921,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--152
 [5]
 
 [6]
-<slike/Color_chanell_separation.png, id=424, 6180.08875pt x 3886.52pt>
+<slike/Color_chanell_separation.png, id=429, 6180.08875pt x 3886.52pt>
 File: slike/Color_chanell_separation.png Graphic file (type png)
 <use slike/Color_chanell_separation.png>
 Package pdftex.def Info: slike/Color_chanell_separation.png  used on input line 201.
@@ -929,7 +929,7 @@ Package pdftex.def Info: slike/Color_chanell_separation.png  used on input line 
 
 
 [7]
-<slike/Grayscale.jpeg, id=436, 1541.76pt x 1927.2pt>
+<slike/Grayscale.jpeg, id=441, 1541.76pt x 1927.2pt>
 File: slike/Grayscale.jpeg Graphic file (type jpg)
 <use slike/Grayscale.jpeg>
 Package pdftex.def Info: slike/Grayscale.jpeg  used on input line 216.
@@ -937,7 +937,7 @@ Package pdftex.def Info: slike/Grayscale.jpeg  used on input line 216.
 
 
 [8 <./slike/Color_chanell_separation.png>]
-<slike/Binary.jpeg, id=450, 1027.84pt x 1284.8pt>
+<slike/Binary.jpeg, id=455, 1027.84pt x 1284.8pt>
 File: slike/Binary.jpeg Graphic file (type jpg)
 <use slike/Binary.jpeg>
 Package pdftex.def Info: slike/Binary.jpeg  used on input line 235.
@@ -947,7 +947,7 @@ Package pdftex.def Info: slike/Binary.jpeg  used on input line 235.
 [9 <./slike/Grayscale.jpeg>]
 
 [10 <./slike/Binary.jpeg>]
-<slike/Luminace vs chrominance.png, id=465, 1668.2325pt x 732.7375pt>
+<slike/Luminace vs chrominance.png, id=469, 1668.2325pt x 732.7375pt>
 File: slike/Luminace vs chrominance.png Graphic file (type png)
 <use slike/Luminace vs chrominance.png>
 Package pdftex.def Info: slike/Luminace vs chrominance.png  used on input line 265.
@@ -962,12 +962,12 @@ File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 [12]
 
 [13]
-<slike/MedianFiltering.png, id=499, 550.055pt x 367.3725pt>
+<slike/MedianFiltering.png, id=503, 550.055pt x 367.3725pt>
 File: slike/MedianFiltering.png Graphic file (type png)
 <use slike/MedianFiltering.png>
 Package pdftex.def Info: slike/MedianFiltering.png  used on input line 345.
 (pdftex.def)             Requested size: 386.96027pt x 258.45389pt.
-<slike/withAndWithoutPreProcessing.png, id=502, 2031.59pt x 2674.99374pt>
+<slike/withAndWithoutPreProcessing.png, id=506, 2031.59pt x 2674.99374pt>
 File: slike/withAndWithoutPreProcessing.png Graphic file (type png)
 <use slike/withAndWithoutPreProcessing.png>
 Package pdftex.def Info: slike/withAndWithoutPreProcessing.png  used on input line 357.
@@ -977,7 +977,7 @@ Package pdftex.def Info: slike/withAndWithoutPreProcessing.png  used on input li
 [14 <./slike/MedianFiltering.png>]
 
 [15 <./slike/withAndWithoutPreProcessing.png>]
-<slike/perspective.png, id=519, 788.9475pt x 331.2375pt>
+<slike/perspective.png, id=523, 788.9475pt x 331.2375pt>
 File: slike/perspective.png Graphic file (type png)
 <use slike/perspective.png>
 Package pdftex.def Info: slike/perspective.png  used on input line 417.
@@ -985,7 +985,7 @@ Package pdftex.def Info: slike/perspective.png  used on input line 417.
 
 
 [16 <./slike/perspective.png (PNG copy)>]
-<slike/sesgmentacija.png, id=533, 722.7pt x 379.4175pt>
+<slike/sesgmentacija.png, id=537, 722.7pt x 379.4175pt>
 File: slike/sesgmentacija.png Graphic file (type png)
 <use slike/sesgmentacija.png>
 Package pdftex.def Info: slike/sesgmentacija.png  used on input line 439.
@@ -993,17 +993,17 @@ Package pdftex.def Info: slike/sesgmentacija.png  used on input line 439.
 
 
 [17 <./slike/sesgmentacija.png (PNG copy)>]
-<slike/erosion.png, id=546, 578.16pt x 194.22563pt>
+<slike/erosion.png, id=550, 578.16pt x 194.22563pt>
 File: slike/erosion.png Graphic file (type png)
 <use slike/erosion.png>
 Package pdftex.def Info: slike/erosion.png  used on input line 457.
 (pdftex.def)             Requested size: 341.43307pt x 114.6988pt.
-<slike/dilatacija.png, id=549, 578.16pt x 194.22563pt>
+<slike/dilatacija.png, id=553, 578.16pt x 194.22563pt>
 File: slike/dilatacija.png Graphic file (type png)
 <use slike/dilatacija.png>
 Package pdftex.def Info: slike/dilatacija.png  used on input line 465.
 (pdftex.def)             Requested size: 341.43307pt x 114.6988pt.
-<slike/otvaranje_zatvaranje.png, id=553, 770.88pt x 596.2275pt>
+<slike/otvaranje_zatvaranje.png, id=557, 770.88pt x 596.2275pt>
 File: slike/otvaranje_zatvaranje.png Graphic file (type png)
 <use slike/otvaranje_zatvaranje.png>
 Package pdftex.def Info: slike/otvaranje_zatvaranje.png  used on input line 473.
@@ -1013,7 +1013,7 @@ Package pdftex.def Info: slike/otvaranje_zatvaranje.png  used on input line 473.
 [18 <./slike/erosion.png> <./slike/dilatacija.png>]
 
 [19 <./slike/otvaranje_zatvaranje.png (PNG copy)>]
-<slike/segVsDetec.png, id=580, 602.25pt x 363.3575pt>
+<slike/segVsDetec.png, id=584, 602.25pt x 363.3575pt>
 File: slike/segVsDetec.png Graphic file (type png)
 <use slike/segVsDetec.png>
 Package pdftex.def Info: slike/segVsDetec.png  used on input line 517.
@@ -1021,7 +1021,7 @@ Package pdftex.def Info: slike/segVsDetec.png  used on input line 517.
 
 
 [20 <./slike/segVsDetec.png (PNG copy)>]
-<slike/shapeDetection.png, id=592, 2035.605pt x 658.46pt>
+<slike/shapeDetection.png, id=596, 2035.605pt x 658.46pt>
 File: slike/shapeDetection.png Graphic file (type png)
 <use slike/shapeDetection.png>
 Package pdftex.def Info: slike/shapeDetection.png  used on input line 539.
@@ -1031,29 +1031,29 @@ Package pdftex.def Info: slike/shapeDetection.png  used on input line 539.
 [21 <./slike/shapeDetection.png>]
 
 [22]
-
-[23]
 <slike/omr_flow.png, id=619, 873.2625pt x 262.9825pt>
 File: slike/omr_flow.png Graphic file (type png)
 <use slike/omr_flow.png>
-Package pdftex.def Info: slike/omr_flow.png  used on input line 602.
+Package pdftex.def Info: slike/omr_flow.png  used on input line 600.
 (pdftex.def)             Requested size: 455.24411pt x 137.09677pt.
-<slike/CornerDetection.png, id=622, 1746.525pt x 1031.855pt>
+
+
+[23 <./slike/omr_flow.png (PNG copy)>]
+<slike/CornerDetection.png, id=630, 1746.525pt x 1031.855pt>
 File: slike/CornerDetection.png Graphic file (type png)
 <use slike/CornerDetection.png>
-Package pdftex.def Info: slike/CornerDetection.png  used on input line 618.
+Package pdftex.def Info: slike/CornerDetection.png  used on input line 616.
 (pdftex.def)             Requested size: 409.71692pt x 242.06084pt.
-
-
-[24 <./slike/omr_flow.png (PNG copy)>]
 <slike/OMRNet.png, id=637, 680.5425pt x 493.845pt>
 File: slike/OMRNet.png Graphic file (type png)
 <use slike/OMRNet.png>
-Package pdftex.def Info: slike/OMRNet.png  used on input line 628.
+Package pdftex.def Info: slike/OMRNet.png  used on input line 626.
 (pdftex.def)             Requested size: 318.66948pt x 231.24812pt.
 
 
-[25 <./slike/CornerDetection.png> <./slike/OMRNet.png>]
+[24 <./slike/CornerDetection.png>]
+
+[25 <./slike/OMRNet.png>]
 
 [26]
 Poglavlje 4.
@@ -1062,10 +1062,10 @@ Poglavlje 4.
 [27
 
 ] [28] [29]
-<slike/useCase.jpg, id=671, 887.315pt x 676.5275pt>
+<slike/useCase.jpg, id=675, 887.315pt x 676.5275pt>
 File: slike/useCase.jpg Graphic file (type jpg)
 <use slike/useCase.jpg>
-Package pdftex.def Info: slike/useCase.jpg  used on input line 772.
+Package pdftex.def Info: slike/useCase.jpg  used on input line 770.
 (pdftex.def)             Requested size: 455.24411pt x 347.08905pt.
 
 
@@ -1077,10 +1077,10 @@ Package pdftex.def Info: slike/useCase.jpg  used on input line 772.
 
 [33]
 Poglavlje 5.
-<slike/classDiagram.png, id=699, 1576.89125pt x 1529.715pt>
+<slike/classDiagram.png, id=703, 1576.89125pt x 1529.715pt>
 File: slike/classDiagram.png Graphic file (type png)
 <use slike/classDiagram.png>
-Package pdftex.def Info: slike/classDiagram.png  used on input line 855.
+Package pdftex.def Info: slike/classDiagram.png  used on input line 853.
 (pdftex.def)             Requested size: 455.24411pt x 441.62196pt.
 
 
@@ -1095,13 +1095,13 @@ Package pdftex.def Info: slike/classDiagram.png  used on input line 855.
 [37]
 
 [38]
-<slike/sequence1.jpg, id=722, 1819.79875pt x 892.33376pt>
+<slike/sequence1.jpg, id=726, 1819.79875pt x 892.33376pt>
 File: slike/sequence1.jpg Graphic file (type jpg)
 <use slike/sequence1.jpg>
-Package pdftex.def Info: slike/sequence1.jpg  used on input line 966.
+Package pdftex.def Info: slike/sequence1.jpg  used on input line 964.
 (pdftex.def)             Requested size: 455.24411pt x 223.21906pt.
 
-Overfull \hbox (21.39534pt too wide) in paragraph at lines 974--975
+Overfull \hbox (21.39534pt too wide) in paragraph at lines 972--973
 \T1/phv/m/n/10.95 ni£ko su-£e-lje. Za-tim apli-ka-cija Gra-de-Vi-sion po-ziva \T1/phv/b/n/10.95 An-swer-She-et-Gra-der\T1/phv/m/n/10.95 , koji je dio GradeVisionLib-
  []
 
@@ -1110,55 +1110,55 @@ Overfull \hbox (21.39534pt too wide) in paragraph at lines 974--975
 [39 <./slike/sequence1.jpg>]
 
 [40]
-<slike/sequence2.jpg, id=732, 2110.88625pt x 1165.35374pt>
+<slike/sequence2.jpg, id=736, 2110.88625pt x 1165.35374pt>
 File: slike/sequence2.jpg Graphic file (type jpg)
 <use slike/sequence2.jpg>
-Package pdftex.def Info: slike/sequence2.jpg  used on input line 1001.
+Package pdftex.def Info: slike/sequence2.jpg  used on input line 999.
 (pdftex.def)             Requested size: 455.24411pt x 251.31079pt.
 
-Overfull \hbox (10.03993pt too wide) in paragraph at lines 1005--1006
+Overfull \hbox (10.03993pt too wide) in paragraph at lines 1003--1004
 \T1/phv/m/n/10.95 za oci-je-nji-va-nje. Pret-pro-ce-si-ra-nje po-novno pro-vodi \T1/phv/b/n/10.95 Pro-ce-ssI-mage(ImageData rawI-mage, string
  []
 
-<slike/sequence3.jpg, id=733, 1151.30125pt x 537.00626pt>
+<slike/sequence3.jpg, id=737, 1151.30125pt x 537.00626pt>
 File: slike/sequence3.jpg Graphic file (type jpg)
 <use slike/sequence3.jpg>
-Package pdftex.def Info: slike/sequence3.jpg  used on input line 1015.
+Package pdftex.def Info: slike/sequence3.jpg  used on input line 1013.
 (pdftex.def)             Requested size: 455.24411pt x 212.34048pt.
 
 
 [41 <./slike/sequence2.jpg>]
 
 [42 <./slike/sequence3.jpg>]
-<slike/GradeVision ui.png, id=745, 1181.91562pt x 566.115pt>
+<slike/GradeVision ui.png, id=749, 1181.91562pt x 566.115pt>
 File: slike/GradeVision ui.png Graphic file (type png)
 <use slike/GradeVision ui.png>
-Package pdftex.def Info: slike/GradeVision ui.png  used on input line 1040.
+Package pdftex.def Info: slike/GradeVision ui.png  used on input line 1038.
 (pdftex.def)             Requested size: 455.24411pt x 218.05429pt.
 
 
 [43 <./slike/GradeVision ui.png>]
 
 [44]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1090.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 1090.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1088.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 1088.
  (c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-<slike/ToGrayscale.png, id=758, 642.14906pt x 473.51906pt>
+<slike/ToGrayscale.png, id=762, 642.14906pt x 473.51906pt>
 File: slike/ToGrayscale.png Graphic file (type png)
 <use slike/ToGrayscale.png>
-Package pdftex.def Info: slike/ToGrayscale.png  used on input line 1103.
+Package pdftex.def Info: slike/ToGrayscale.png  used on input line 1101.
 (pdftex.def)             Requested size: 364.19667pt x 268.56474pt.
 
 
 [45 <./slike/ToGrayscale.png>]
 
 [46]
-<slike/DenoiseComparison.png, id=806, 793.46437pt x 545.78906pt>
+<slike/DenoiseComparison.png, id=810, 793.46437pt x 545.78906pt>
 File: slike/DenoiseComparison.png Graphic file (type png)
 <use slike/DenoiseComparison.png>
-Package pdftex.def Info: slike/DenoiseComparison.png  used on input line 1161.
+Package pdftex.def Info: slike/DenoiseComparison.png  used on input line 1159.
 (pdftex.def)             Requested size: 364.19667pt x 250.51636pt.
 
 
@@ -1171,51 +1171,51 @@ Package pdftex.def Info: slike/DenoiseComparison.png  used on input line 1161.
 [50]
 
 [51]
-Overfull \hbox (3.50313pt too wide) in paragraph at lines 1307--1308
+Overfull \hbox (3.50313pt too wide) in paragraph at lines 1305--1306
 \T1/phv/m/n/10.95 £u-nate, kre-ira se ma-trica tran-sfor-ma-cije ko-ris-te¢i me-todu \T1/phv/b/n/10.95 CvI-nvoke.GetPerspectiveTransform\T1/phv/m/n/10.95 ,
  []
 
-<slike/PerspectiveComparison.png, id=922, 664.73344pt x 551.81157pt>
+<slike/PerspectiveComparison.png, id=926, 664.73344pt x 551.81157pt>
 File: slike/PerspectiveComparison.png Graphic file (type png)
 <use slike/PerspectiveComparison.png>
-Package pdftex.def Info: slike/PerspectiveComparison.png  used on input line 1311.
+Package pdftex.def Info: slike/PerspectiveComparison.png  used on input line 1309.
 (pdftex.def)             Requested size: 364.19667pt x 302.32692pt.
 
 
 [52]
 
 [53 <./slike/PerspectiveComparison.png>]
-<slike/RotationComparison.png, id=968, 887.56593pt x 617.30624pt>
+<slike/RotationComparison.png, id=972, 887.56593pt x 617.30624pt>
 File: slike/RotationComparison.png Graphic file (type png)
 <use slike/RotationComparison.png>
-Package pdftex.def Info: slike/RotationComparison.png  used on input line 1356.
+Package pdftex.def Info: slike/RotationComparison.png  used on input line 1354.
 (pdftex.def)             Requested size: 318.66948pt x 221.62724pt.
 
 
 [54 <./slike/RotationComparison.png>]
-Overfull \hbox (40.49026pt too wide) in paragraph at lines 1373--1374
+Overfull \hbox (40.49026pt too wide) in paragraph at lines 1371--1372
 []\T1/phv/m/n/10.95 Priloºena me-toda po-pri-li£no je jed-nos-tavna i ba-zi-rana na me-todi \T1/phv/b/n/10.95 CvI-nvoke.AdaptiveThreshold\T1/phv/m/n/10.95 ,
  []
 
-<slike/TresholdingComparison.png, id=986, 789.70032pt x 547.2947pt>
+<slike/TresholdingComparison.png, id=990, 789.70032pt x 547.2947pt>
 File: slike/TresholdingComparison.png Graphic file (type png)
 <use slike/TresholdingComparison.png>
-Package pdftex.def Info: slike/TresholdingComparison.png  used on input line 1377.
+Package pdftex.def Info: slike/TresholdingComparison.png  used on input line 1375.
 (pdftex.def)             Requested size: 318.66948pt x 220.85143pt.
 
 
 [55 <./slike/TresholdingComparison.png>]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 1390.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 1388.
 
-Overfull \hbox (10.39964pt too wide) in paragraph at lines 1410--1411
+Overfull \hbox (10.39964pt too wide) in paragraph at lines 1408--1409
 []\T1/phv/m/n/10.95 Grupiranje i sor-ti-ra-nje kru-gova po pi-ta-njima po-mo¢u me-tode \T1/phv/b/n/10.95 Gro-upAn-d-Sort-Cir-cle-sByYPo-
  []
 
 
 
 [56]
-Overfull \hbox (10.98132pt too wide) in paragraph at lines 1441--1442
+Overfull \hbox (10.98132pt too wide) in paragraph at lines 1439--1440
 []\T1/phv/m/n/10.95 Detekcija kru-gova vr²i se pro-na-la-skom kon-tura po-mo¢u me-tode \T1/phv/b/n/10.95 CvI-nvoke.FindContours\T1/phv/m/n/10.95 ,
  []
 
@@ -1224,84 +1224,84 @@ Overfull \hbox (10.98132pt too wide) in paragraph at lines 1441--1442
 [57]
 
 [58]
-<slike/histogram.png, id=1080, 451.6875pt x 301.125pt>
+<slike/histogram.png, id=1084, 451.6875pt x 301.125pt>
 File: slike/histogram.png Graphic file (type png)
 <use slike/histogram.png>
-Package pdftex.def Info: slike/histogram.png  used on input line 1502.
+Package pdftex.def Info: slike/histogram.png  used on input line 1500.
 (pdftex.def)             Requested size: 318.66948pt x 212.45856pt.
 
 
 [59 <./slike/histogram.png>]
-<slike/CircleDetectionComp.png, id=1099, 799.48688pt x 554.82281pt>
+<slike/CircleDetectionComp.png, id=1103, 799.48688pt x 554.82281pt>
 File: slike/CircleDetectionComp.png Graphic file (type png)
 <use slike/CircleDetectionComp.png>
-Package pdftex.def Info: slike/CircleDetectionComp.png  used on input line 1514.
+Package pdftex.def Info: slike/CircleDetectionComp.png  used on input line 1512.
 (pdftex.def)             Requested size: 364.19667pt x 252.74107pt.
 
 
 [60 <./slike/CircleDetectionComp.png>]
 Poglavlje 6.
-<slike/Test1.png, id=1106, 634.62094pt x 679.03688pt>
+<slike/Test1.png, id=1110, 634.62094pt x 679.03688pt>
 File: slike/Test1.png Graphic file (type png)
 <use slike/Test1.png>
-Package pdftex.def Info: slike/Test1.png  used on input line 1532.
+Package pdftex.def Info: slike/Test1.png  used on input line 1530.
 (pdftex.def)             Requested size: 364.19667pt x 389.69716pt.
-<slike/Test2.png, id=1107, 657.95813pt x 692.5875pt>
+<slike/Test2.png, id=1111, 657.95813pt x 692.5875pt>
 File: slike/Test2.png Graphic file (type png)
 <use slike/Test2.png>
-Package pdftex.def Info: slike/Test2.png  used on input line 1538.
+Package pdftex.def Info: slike/Test2.png  used on input line 1536.
 (pdftex.def)             Requested size: 364.19667pt x 383.36551pt.
 
 
 [61
 
  <./slike/Test1.png>]
-<slike/Test3.png, id=1115, 704.6325pt x 1015.54407pt>
+<slike/Test3.png, id=1119, 704.6325pt x 1015.54407pt>
 File: slike/Test3.png Graphic file (type png)
 <use slike/Test3.png>
-Package pdftex.def Info: slike/Test3.png  used on input line 1552.
+Package pdftex.def Info: slike/Test3.png  used on input line 1550.
 (pdftex.def)             Requested size: 227.62206pt x 328.04893pt.
 
 
 [62 <./slike/Test2.png>]
-<slike/Test4.png, id=1122, 636.12656pt x 670.00313pt>
+<slike/Test4.png, id=1126, 636.12656pt x 670.00313pt>
 File: slike/Test4.png Graphic file (type png)
 <use slike/Test4.png>
-Package pdftex.def Info: slike/Test4.png  used on input line 1558.
+Package pdftex.def Info: slike/Test4.png  used on input line 1556.
 (pdftex.def)             Requested size: 250.38564pt x 263.71289pt.
 
 
 [63 <./slike/Test3.png> <./slike/Test4.png>]
-<slike/null (7).png, id=1131, 663.22781pt x 697.10437pt>
+<slike/null (7).png, id=1135, 663.22781pt x 697.10437pt>
 File: slike/null (7).png Graphic file (type png)
 <use slike/null (7).png>
-Package pdftex.def Info: slike/null (7).png  used on input line 1570.
+Package pdftex.def Info: slike/null (7).png  used on input line 1568.
 (pdftex.def)             Requested size: 386.96027pt x 406.72476pt.
-<slike/null (8).png, id=1132, 1000.48781pt x 692.5875pt>
+<slike/null (8).png, id=1136, 1000.48781pt x 692.5875pt>
 File: slike/null (8).png Graphic file (type png)
 <use slike/null (8).png>
-Package pdftex.def Info: slike/null (8).png  used on input line 1576.
+Package pdftex.def Info: slike/null (8).png  used on input line 1574.
 (pdftex.def)             Requested size: 386.96027pt x 267.86761pt.
 
 
 [64 <./slike/null (7).png>]
-<slike/null (9).png, id=1139, 1001.99344pt x 692.5875pt>
+<slike/null (9).png, id=1143, 1001.99344pt x 692.5875pt>
 File: slike/null (9).png Graphic file (type png)
 <use slike/null (9).png>
-Package pdftex.def Info: slike/null (9).png  used on input line 1582.
+Package pdftex.def Info: slike/null (9).png  used on input line 1580.
 (pdftex.def)             Requested size: 386.96027pt x 267.46603pt.
-<slike/null (10).png, id=1140, 1004.25188pt x 697.10437pt>
+<slike/null (10).png, id=1144, 1004.25188pt x 697.10437pt>
 File: slike/null (10).png Graphic file (type png)
 <use slike/null (10).png>
-Package pdftex.def Info: slike/null (10).png  used on input line 1588.
+Package pdftex.def Info: slike/null (10).png  used on input line 1586.
 (pdftex.def)             Requested size: 364.19667pt x 252.8082pt.
 
 
 [65 <./slike/null (8).png> <./slike/null (9).png>]
-<slike/08_VisualizeGrade.png, id=1149, 503.63156pt x 697.10437pt>
+<slike/08_VisualizeGrade.png, id=1153, 503.63156pt x 697.10437pt>
 File: slike/08_VisualizeGrade.png Graphic file (type png)
 <use slike/08_VisualizeGrade.png>
-Package pdftex.def Info: slike/08_VisualizeGrade.png  used on input line 1594.
+Package pdftex.def Info: slike/08_VisualizeGrade.png  used on input line 1592.
 (pdftex.def)             Requested size: 250.38564pt x 346.57285pt.
 
 
@@ -1326,18 +1326,18 @@ Poglavlje 8.
 ]
 
 [72]
-Overfull \hbox (3.90738pt too wide) in paragraph at lines 1716--1716
-\T1/phv/m/sl/10.95 ca-ti-onal Com-pu-ting Re-se-arch\T1/phv/m/n/10.95 , sv. 58, svi-banj 2020. \T1/phv/m/sc/10.95 doi\T1/phv/m/n/10.95 : []$\T1/pcr/m/n/10.95 10 . 1177 / 0735633120927486$[]\T1/phv/m/n/10.95 . 
+Overfull \hbox (4.0196pt too wide) in paragraph at lines 1714--1714
+\T1/pcr/m/n/10.95 com / blog / automated -[] grading -[] for -[] subjective -[] assessments -[] challenges -[]
  []
 
 
-Overfull \hbox (41.22684pt too wide) in paragraph at lines 1716--1716
-\T1/phv/m/n/10.95 Me-dium, stu-deni 2024., \T1/phv/m/sc/10.95 isbn\T1/phv/m/n/10.95 : 978-745304301. adresa: []$\T1/pcr/m/n/10.95 https : / / medium . com / @saiwadotai /
+Overfull \hbox (7.13664pt too wide) in paragraph at lines 1714--1714
+\T1/phv/m/n/10.95 cul-ties, and Li-mi-ta-ti-ons,^^Q \T1/phv/m/sl/10.95 SN Com-pu-ter Sci-ence\T1/phv/m/n/10.95 , sv. 2, ru-jan 2021., [pris-tu-pano 30.04.2025.]
  []
 
 
-Overfull \hbox (25.23555pt too wide) in paragraph at lines 1716--1716
-\T1/phv/m/n/10.95 2025], tra-vanj 2025. adresa: []$\T1/pcr/m/n/10.95 https : / / www . adobe . com / creativecloud / photography /
+Overfull \hbox (4.29991pt too wide) in paragraph at lines 1714--1714
+[]\T1/phv/m/sl/10.95 What Is a Di-gi-tal Image? - Ri-coh Scan-ners\T1/phv/m/n/10.95 , [pris-tu-pano 13.04.2025.], tra-vanj 2025. adresa:
  []
 
 
@@ -1345,50 +1345,55 @@ Overfull \hbox (25.23555pt too wide) in paragraph at lines 1716--1716
 [73
 
 ]
-Overfull \hbox (2.35927pt too wide) in paragraph at lines 1716--1716
-\T1/phv/m/n/10.95 svi-banj 2024. adresa: []$\T1/pcr/m/n/10.95 https : / / www . grayscaleimage . com / why -[] use -[] grayscale -[]
+Overfull \hbox (30.79958pt too wide) in paragraph at lines 1714--1714
+\T1/pcr/m/n/10.95 com / @maahip1304 / the -[] complete -[] guide -[] to -[] image -[] preprocessing -[] techniques -[]
  []
 
 
-Overfull \hbox (8.56956pt too wide) in paragraph at lines 1716--1716
-\T1/phv/m/n/10.95 2025.], tra-vanj 2025. adresa: []$\T1/pcr/m/n/10.95 https : / / stackoverflow . com / questions / 12752168 /
+Overfull \hbox (8.14113pt too wide) in paragraph at lines 1714--1714
+\T1/phv/m/n/10.95 sr-panj 2023., [pris-tu-pano 22.04.2025.] adresa: []$\T1/pcr/m/n/10.95 https : / / medium . com / @anishaswain /
  []
 
 
-Overfull \hbox (4.65178pt too wide) in paragraph at lines 1716--1716
-[]\T1/phv/m/sl/10.95 What is no-ise in pho-to-graphy\T1/phv/m/n/10.95 , [Online; pris-tup-ljeno 22. trav-nja 2025.], tra-vanj 2025. adresa:
- []
-
-
-Overfull \hbox (6.88576pt too wide) in paragraph at lines 1716--1716
-[]\T1/phv/m/n/10.95 P. Ch-hi-kara, ^^R  Un-der-stan-ding Morp-ho-lo-gi-cal Image Pro-ce-ssing and Its Ope-ra-ti-ons $\OMS/cmsy/m/n/10.95 j$ \T1/phv/m/n/10.95 Towards
- []
-
-
-Overfull \hbox (43.3261pt too wide) in paragraph at lines 1716--1716
-\T1/phv/m/n/10.95 Data Sci-ence,^^Q \T1/phv/m/sl/10.95 Towards Data Sci-ence\T1/phv/m/n/10.95 , si-je-£anj 2025. adresa: []$\T1/pcr/m/n/10.95 https : / / towardsdatascience .
- []
-
-
-Overfull \hbox (24.22958pt too wide) in paragraph at lines 1716--1716
-\T1/pcr/m/n/10.95 com / understanding -[] morphological -[] image -[] processing -[] and -[] its -[] operations -[]
+Overfull \hbox (4.18452pt too wide) in paragraph at lines 1714--1714
+\T1/phv/m/n/10.95 [pris-tu-pano 24.04.2025.], tra-vanj 2025. adresa: []$\T1/pcr/m/n/10.95 https : / / fiveable . me / geospatial -[]
  []
 
 
 
 [74]
-Overfull \hbox (15.60802pt too wide) in paragraph at lines 1716--1716
+Overfull \hbox (6.88576pt too wide) in paragraph at lines 1714--1714
+[]\T1/phv/m/n/10.95 P. Ch-hi-kara, ^^R  Un-der-stan-ding Morp-ho-lo-gi-cal Image Pro-ce-ssing and Its Ope-ra-ti-ons $\OMS/cmsy/m/n/10.95 j$ \T1/phv/m/n/10.95 Towards
+ []
+
+
+Overfull \hbox (2.5196pt too wide) in paragraph at lines 1714--1714
+[]$\T1/pcr/m/n/10.95 https : / / towardsdatascience . com / understanding -[] morphological -[] image -[]
+ []
+
+
+Overfull \hbox (15.60802pt too wide) in paragraph at lines 1714--1714
 []\T1/phv/m/n/10.95 M. Abra-mov, ^^R  Se-man-tic Seg-men-ta-tion vs Object De-tec-tion: Dif-fe-ren-ces $\OMS/cmsy/m/n/10.95 j$ \T1/phv/m/n/10.95 Keymakr,^^Q \T1/phv/m/sl/10.95 Keymakr\T1/phv/m/n/10.95 ,
  []
 
 
-Overfull \hbox (27.27357pt too wide) in paragraph at lines 1716--1716
-\T1/pcr/m/n/10.95 classification -[] vs -[] object -[] detection -[] vs -[] image -[] segmentation -[] f36db85fe81$[]\T1/phv/m/n/10.95 . 
+Overfull \hbox (0.16585pt too wide) in paragraph at lines 1714--1714
+\T1/phv/m/n/10.95 pro-si-nac 2021., [pris-tu-pano 25.04.2025.] adresa: []$\T1/pcr/m/n/10.95 https : / / medium . com / analytics -[]
  []
 
 
-Overfull \hbox (30.1342pt too wide) in paragraph at lines 1716--1716
-[]\T1/phv/m/n/10.95 R. Shel-don, ^^R  image com-pre-ssion,^^Q \T1/phv/m/sl/10.95 Wha-tIs\T1/phv/m/n/10.95 , sr-panj 2022. adresa: []$\T1/pcr/m/n/10.95 https : / / www . techtarget .
+Overfull \hbox (37.86957pt too wide) in paragraph at lines 1714--1714
+\T1/pcr/m/n/10.95 vidhya / image -[] classification -[] vs -[] object -[] detection -[] vs -[] image -[] segmentation -[]
+ []
+
+
+Overfull \hbox (0.9936pt too wide) in paragraph at lines 1714--1714
+\T1/pcr/m/n/10.95 detection -[] using -[] opencv -[] detecting -[] and -[] counting -[] coins -[] 2d5192597e3c$[]\T1/phv/m/n/10.95 . 
+ []
+
+
+Overfull \hbox (1.39775pt too wide) in paragraph at lines 1714--1714
+\T1/phv/m/sl/10.95 ve-able\T1/phv/m/n/10.95 , [pris-tu-pano 28.04.2025.], tra-vanj 2025. adresa: []$\T1/pcr/m/n/10.95 https : / / library . fiveable .
  []
 
 
@@ -1411,30 +1416,36 @@ Overfull \hbox (30.1342pt too wide) in paragraph at lines 1716--1716
 
 [78
 
+]
+Dodatak 1.
+
+
+[79
+
 ] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-03-26>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C0A81517AB472A8EED7C9C469312CF60;15017.
+(rerunfilecheck)             Checksum: CDF337F11EEB858CD74D9529EAB8522A;15107.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26362 strings out of 469626
- 456187 string characters out of 5475183
- 1532743 words of memory out of 5000000
- 52326 multiletter control sequences out of 15000+600000
+ 26360 strings out of 469626
+ 455856 string characters out of 5475183
+ 1531684 words of memory out of 5000000
+ 52323 multiletter control sequences out of 15000+600000
  687893 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,12n,84p,1232b,2430s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (84 pages, 42830189 bytes).
+Output written on main.pdf (85 pages, 42830899 bytes).
 PDF statistics:
- 1521 PDF objects out of 1728 (max. 8388607)
- 1309 compressed objects within 14 object streams
- 498 named destinations out of 1000 (max. 500000)
- 719 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1537 PDF objects out of 1728 (max. 8388607)
+ 1324 compressed objects within 14 object streams
+ 499 named destinations out of 1000 (max. 500000)
+ 727 words of extra memory for PDF output out of 10000 (max. 10000000)
 

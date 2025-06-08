@@ -22,7 +22,7 @@
 \contentsline {subsubsection}{\numberline {3.4.3.1}Obrada izvučenih podataka}{22}{subsubsection.3.4.3.1}%
 \contentsline {subsubsection}{\numberline {3.4.3.2}Vizualizacija rezultata}{22}{subsubsection.3.4.3.2}%
 \contentsline {subsubsection}{\numberline {3.4.3.3}Kompresija slike}{22}{subsubsection.3.4.3.3}%
-\contentsline {section}{\numberline {3.5}Analiza postojećih rješenja i pristupa problemu}{24}{section.3.5}%
+\contentsline {section}{\numberline {3.5}Analiza postojećih rješenja i pristupa problemu}{23}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Definiranje zahtjeva}{27}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Opis rješenja}{27}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Funkcionalni zahtjevi}{28}{section.4.2}%
@@ -49,7 +49,7 @@
 \contentsline {section}{\numberline {5.3}Modeliranje ponašanja sustava}{39}{section.5.3}%
 \contentsline {subsection}{\numberline {5.3.1}Ponašanje sustava tijekom detekcije odgovora s kontrolnog ispita}{39}{subsection.5.3.1}%
 \contentsline {subsection}{\numberline {5.3.2}Ponašanje sustava tijekom ocjenjivanja}{41}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Dijagram slijeda – Generiranje matrice odgovora}{42}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.3}Dijagram slijeda - Generiranje matrice odgovora}{42}{subsection.5.3.3}%
 \contentsline {section}{\numberline {5.4}GradeVision aplikacija}{43}{section.5.4}%
 \contentsline {subsection}{\numberline {5.4.1}Način rada}{43}{subsection.5.4.1}%
 \contentsline {section}{\numberline {5.5}Značajni dijelovi koda GradeVison biblioteke}{45}{section.5.5}%
@@ -65,3 +65,4 @@
 \contentsline {chapter}{Popis literature}{75}{chapter*.43}%
 \contentsline {chapter}{Popis slika}{77}{chapter*.44}%
 \contentsline {chapter}{Popis popis tablica}{78}{chapter*.45}%
+\contentsline {chapter}{\numberline {1}Prilozi}{79}{appendix.A}%

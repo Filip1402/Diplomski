@@ -79,7 +79,7 @@ Iterativni razvoj ovog rješenja može se podijeliti u 3 faze: pretprocesiranje,
 
 Da bi sama vizualizacija bila što učinkovitija korišteno je više različitih fotografija, slikanih u različitim uvjetima. To je omogućilo verifikaciju funkcionalnosti dijelova rješenja na različitim ulaznim podacima od samog početka razvoja, što je značilo da na kraju projekta nije bilo potrebno pokrivati rubne slučajeve jer je rješenje bilo dizajnirano da ih pokriva od samog početka.
 
-Važno je napomenuti da je ovaj rad izrađen koristeći pristup znanstvenog oblikovanja (\textit{(eng. design science)}. Znanstveno oblikovanje temelji se na razvoju i evaluaciji praktičnih rješenja, to jest artefakata. Razvijeni artefakt u ovom radu je softverska biblioteka otvorenog koda za detekciju odgovora na pismenim ispitima. Cilj tog artefakta je omogućiti fleksibilno ocjenjivanje pismenih ispita u različitim uvjetima. Sam razvoj pratio je iterativni proces uz stalnu evaluaciju pomoću vizualizacije rezultata i testiranja na raznolikim ulaznim podacima. To je ujedno bila metodologija znanstvenog oblikovanja ovog rada, koja je bila prisutna u svim fazama razvoja: dizajnu, implementaciji, testiranju i prilagodbi rješenja.
+Važno je napomenuti da je ovaj rad izrađen koristeći pristup znanstvenog oblikovanja \textit{(eng. design science)}. Znanstveno oblikovanje temelji se na razvoju i evaluaciji praktičnih rješenja, to jest artefakata. Razvijeni artefakt u ovom radu je softverska biblioteka otvorenog koda za detekciju odgovora na pismenim ispitima. Cilj tog artefakta je omogućiti fleksibilno ocjenjivanje pismenih ispita u različitim uvjetima. Sam razvoj pratio je iterativni proces uz stalnu evaluaciju pomoću vizualizacije rezultata i testiranja na raznolikim ulaznim podacima. To je ujedno bila metodologija znanstvenog oblikovanja ovog rada, koja je bila prisutna u svim fazama razvoja: dizajnu, implementaciji, testiranju i prilagodbi rješenja.
 
 Rješenje je izrađeno pomoću .NET tehnologije i C\# programskog jezika u obliku biblioteke, što omogućuje drugim rješenjima jednostavnu integraciju koristeći .dll. 
 
@@ -122,7 +122,7 @@ Osim tehničkih izazova, dodatnu složenost unosi i činjenica da korisnici čes
 
 Do sada su spomeuti početci OMR tehnologije, no za ovaj rad su relevatne nove tehnike i tehnologije vezane za detekciju odgovora na pismenim ispitima. Činjenica je da je OMR tehnologija započela kao obrada slike no danas je nadograđena raznim drugim tehnikama poput računalnog vida, strojnog učenja i umjetnom inteligencijom. Svaka od navedenih tehnika pomaže riješiti određene izazove s kojima se tradicionalno OMR suočavao.
 
-Važno je napomenuti da se ove tehnike u različitoj literaturi često tretiraju kao jedinstvena tehnika, odnosno da se nerijetko koristi jedan podpojam, iako se zapravo misli na širi skup povezanih metoda. Primjerice, obrada slike tehnički spada pod računalni vid, no u mnogim radovima koristi se izraz "obrada slike" i kada se misli na šire postupke karakteristične za računalni vid. Slična je situacija i sa strojnim učenjem i umjetnom inteligencijom, gdje se strojno učenje često koristi kao sinonim za AI, iako je ono zapravo njezin podskup. Kroz ovaj rad će se također koristiti termin "obrada slike" u širem smislu, pri čemu će se pod time podrazumijevati i tehnike računalnog vida.
+Važno je napomenuti da se ove tehnike u različitoj literaturi često tretiraju kao jedinstvena tehnika, odnosno da se nerijetko koristi jedan podpojam, iako se zapravo misli na širi skup povezanih metoda. Primjerice, obrada slike tehnički spada pod računalni vid, no u mnogim radovima koristi se izraz "obrada slike" i kada se misli na šire postupke karakteristične za računalni vid. Slična je situacija i sa strojnim učenjem i umjetnom inteligencijom, gdje se strojno učenje često koristi kao sinonim za umjetnu inteligenciju, iako je ono zapravo njezin podskup. Kroz ovaj rad će se također koristiti termin "obrada slike" u širem smislu, pri čemu će se pod time podrazumijevati i tehnike računalnog vida.
 
 Tradicionalno je OMR tehnologija zahtijevala specijalizirano i skupo sklopovlje, no danas se uz pomoć računalnog vida i obrade digitalne slike cijeli proces može pojednostaviti. Slika se ne pribavlja skupim uređajima već mobitelom ili skenerom, što čini cijeli proces pribavljanja slike puno jeftinijim, no ne uklanja probleme vezane za kvalitetu slike koje smo spominjali u prijašnjem poglavlju. Da bi se ti problemi riješili, koristi se računalni vid i obrada slike koji nude mogućnosti smanjivanja šuma, ispravka perspektive i slično. Ovim tehnikama se može softverski implementirati efikasniji i jeftiniji OMR sustav. No takvi sustavi imaju ograničenje da ne mogu obrađivati tekstualna pitanja, već samo detektiraju oznake \cite{OMRImageProcessing}.
 
@@ -164,7 +164,7 @@ Prije prikaza konkretnih tehnika i tehnologija koje se u tu svrhu koriste, potre
 
 Za početak važno je razumjeti što su to digitalne slike i koje sve informacije one sadrže. Digitalna slika je zapravo računalna datoteka koja reprezentira fotografiju pomoću piksela. Piksel je zapravo najmanji element slike koji je reprezentiran s 3 kanala boja: Crvena (R), zelena (G), plava (B) u RGB modelu. Postoje i drugi kanali boja, ali za potrebe ovog rada fokus će biti na RGB modelu. \cite{DigitalnaSlika}.
 
-Sama boja piksela se određuje kombinacijom vrijednosti iz RGB kanala. Dok je sam broj mogućih boja određen brojem bitova koji svaki RGB kanal može poprimiti. Taj koncept se još naziva dubinom boje (\textit{eng. color depth}). Na primjer, pikseli 24-bitne slike mogu poprimiti do 16,777,216 unikatnih boja pošto svaki kanal ima 8 bitova. \cite{DigitalnaSlika}:
+Sama boja piksela se određuje kombinacijom vrijednosti iz RGB kanala. Dok je sam broj mogućih boja određen brojem bitova koji svaki RGB kanal može poprimiti. Taj koncept se još naziva dubinom boje (\textit{eng. color depth}). Na primjer, pikseli 24-bitne slike mogu poprimiti do 16.777.216 unikatnih boja pošto svaki kanal ima 8 bitova. \cite{DigitalnaSlika}:
 
 \[
 \text{Broj boja} = 2^{8} \times 2^{8} \times 2^{8} = 2^{24} = 16.777.216
@@ -173,13 +173,13 @@ Sama boja piksela se određuje kombinacijom vrijednosti iz RGB kanala. Dok je sa
 S pomoću piksela se također može definirati veličinu slike, to jest rezolucija. Rezolucija je sveukupan broj piksela koje neka slika sadrži i izražava se množenjem širine slike s visinom slike:
 
 \[
-\text{Ukupan broj pikslea} = \text{Širina} \times \text{Visina}
+\text{Ukupan broj piksela} = \text{Širina} \times \text{Visina}
 \]
 
 Za sliku rezolucije $1920 \times 1080$ to je:
 
 \[
-\text{Ukupan broj pikslea} = 1920 \times 1080 = 2.073.600 \text{ piksela}
+\text{Ukupan broj piksela} = 1920 \times 1080 = 2.073.600 \text{ piksela}
 \]
 
 Obično veća rezolucija znači više detalja na slici. Što se više detalja nalazi na slici to su bolje šanse za izvući korisne informacije sa slike. No naravno da rezolucija sama ne određuje kvalitetu digitalne slike, već veliku ulogu igraju i fizički uvjeti u kojima je slika izrađena. Pod to spada osvjetljenje, čistoća kamere, kvaliteta senzora i sl.
@@ -228,7 +228,7 @@ Na priloženoj sivoj slici se također može vidjeti da je različita od sivih s
 
 \subsection{Binarne slike}
 
-Osim slika u boji i sivih slika također postoje i binarne slike. Binarne slike su poseban tip slika gdje piksel može imati samo dvije moguće vrijednosti od kud im dolazi i naziv, te vrijednosti su nula ili jedan. Binarne slike sadrže puno manje informacija od ostalih tipova slika, ali isto tako smanjuju kompleksnost same slike i omogućuju fokusiranje na važne značajke slike. Baš zbog toga se jako često koriste kod obrada slika koristeći računalni vid \cite{BinarySlika}.
+Osim slika u boji i sivih slika također postoje i binarne slike. Binarne slike su poseban tip slika gdje piksel može imati samo dvije moguće vrijednosti od kud im dolazi i naziv, te vrijednosti su nula ili jedan. Binarne slike sadrže puno manje informacija od ostalih tipova slika, ali isto tako smanjuju kompleksnost same slike i omogućuju fokusiranje na važne značajke slike. Baš zbog toga se jako često koriste kod obrada slika koristeći računalni vid \cite{GrayscaleSlika}.
 
 \begin{figure}[H]
     \centering
@@ -314,7 +314,7 @@ Pretprocesiranje slike je ključan proces koji se provodi prije obrade slike. Ka
 
 \subsubsection{Pribavljanje slike}
 
-Pribavljanje slike je proces nastajanja digitalne slike tako da se informacije iz realnog svijeta zapišu u digitalnom obliku kojim računalo zatim može manipulirati. Slika se može pribaviti raznim uređajima poput fotoaparata, pametnog mobitela i drugih tehnologija poput skenera, rendgena. U ovom radu fokus će biti na fotografije pribavljene uređajima koji posjeduju digitalnu kameru \cite{BibEntry2025Apr}.
+Pribavljanje slike je proces nastajanja digitalne slike tako da se informacije iz realnog svijeta zapišu u digitalnom obliku kojim računalo zatim može manipulirati. Slika se može pribaviti raznim uređajima poput fotoaparata, pametnog mobitela i drugih tehnologija poput skenera. U ovom radu fokus će biti na fotografije pribavljene uređajima koji posjeduju digitalnu kameru \cite{BibEntry2025Apr}.
 
 
 Da bi bilo kakvo procesiranje moglo krenuti, prvo je potrebno pribaviti sliku. Moglo bi se reći da je pribavljanje slike čak najvažniji korak u cijelom procesu obrade slike, njegov rezultat ima veliku ulogu za postizanje krajnjeg rezultata obrade i analize slike. Pribavljena slika mora biti kvalitetna da bi ostali koraci bili uspješni. Na kvalitetu slike ne utječe samo rezolucija, već osvjetljenje i kut pod kojim je slika uslikana također imaju značajnu ulogu \cite{BibEntry2025Apr}.
@@ -324,11 +324,11 @@ Razni algoritmi i koraci u pretprocesiranju mogu korigirati pribavljenu sliku, n
 
 Poboljšanje slike je ključan korak, cilj mu je modificirati sliku tako da ona postane korisnija za daljnju obradu. To se može postići na više načina poput otklanjanja buke, isticanja važnih značajki slike, poboljšanja oštrine i kontrasta slike.
 
-Do sada smo spomenuli da se nepotrebne informacije na slici također mogu biti buka. Baš zbog toga pretvaranje u sivu i binarnu sliku spada pod poboljšanje slike. Oba dvije operacije uklanjaju nepotrebne informacije o bojama sa slike što omogućuje bržu i jednostavniju obradu i analizu slike. Naravno to ima smisla samo ako nam informacije o tim bojama nisu potrebne.
+Do sada smo spomenuli da se nepotrebne informacije na slici mogu predstavljati buku. Baš zbog toga pretvaranje u sivu i binarnu sliku spada pod tehnike poboljšanja slike. Oba dvije operacije uklanjaju nepotrebne informacije o bojama sa slike što omogućuje bržu i jednostavniju obradu i analizu slike. Naravno to ima smisla samo ako nam informacije o tim bojama nisu potrebne.
 
 Osim nepotrebnih boja, bukom se može smatrati i nasumična razlika u vrijednosti između susjednih piksela. U digitalnoj fotografiji buka je praktički neizbježna i može se definirati kao nasumična varijacija signala u slici. Ta varijacija je reprezentirana različitim nijansama boja susjednih piksela. Buka se može smanjiti manipulacijom parametara digitalne kamera, ali ne može se kompletno ukloniti \cite{Adobe}.
 
-Takve informacije se zbog malih razlika u boji piksela većinom mogu smatrati nevažnima, a loše utječu na daljnju obradu slike. Zbog toga postoje razne tehnike za filtriranje slike. Najpopularnije tehnike za filtriranje buke su \cite{Swain2023Jul}:
+Takve informacije se zbog malih razlika u boji piksela većinom mogu smatrati nevažnima, a loše utječu na daljnju obradu slike. Zbog toga postoje razne tehnike za filtriranje buke. Najpopularnije tehnike za filtriranje buke su \cite{Swain2023Jul}:
 
 \begin{itemize}
     \item Gaussov filter (\textit{eng. gaussian filter})
@@ -360,7 +360,7 @@ Uklanjanje buke jedan je od najvažnijih koraka jer se nakon njega u daljnjim fa
 
 Na priloženoj slici moguće je vidjeti kako je znatno manje nevažnih informacija na desnoj binarnoj slici jer je pretprocesiranjem uklonjena buka, čime su dobiveni puno čišći podaci koji se mogu koristiti za daljnju obradu.
 
-Postoji još razne metode poboljšavanja slike poput povećavanja kontrasta, ali neće biti potrebne u ovom radu.Također u nekim literaturama se spominju tehnike poput smanjenja buke  i raznih drugih transformacija u kontekstu restauracije slike. Ali u ovom radu će se o tome govoriti u kontekstu poboljšanja slike.
+Postoje još razne metode poboljšavanja slike poput povećavanja kontrasta, ali neće biti potrebne u ovom radu.Također u nekim literaturama se spominju tehnike poput smanjenja buke  i raznih drugih transformacija u kontekstu restauracije slike. Ali u ovom radu će se o tome govoriti u kontekstu poboljšanja slike.
 
 Druge važne metode poboljšavanja slike su razne geometrijske transformacije slike poput translacije, rotacije i skaliranja. Sve te osnovne geometrijske operacije koriste se kod ispravljanja perspektive. Baš zbog toga je ispravak perspektive puno zanimljivija operacija za ovaj rad \cite{GeometryTransforms}.
 
@@ -426,7 +426,7 @@ Nakon što je faza pretprocesiranja pretvorila sliku u korisniji format, kreće 
 
 \subsubsection{Segmentacija slike}
 
-Segmentacija slike je proces grupiranja piksela prema nekim obilježjima. Za razliku od običnih klasifikatora poput neuronskih mreža, segmentacija nudi informacije gdje se točno na slici nalazi objekt od interesa i koji su sve pikseli dio tog objekta. Isto kao u kod klasifikatora potrebno je definirati moguće klase kojima piksel može pripadati. Definiranje tih klasa može se učiniti na tri načina, prema kojima dijelimo tipove segmentacije na \cite{segmentacija}:
+Segmentacija slike je proces grupiranja piksela prema nekim obilježjima. Za razliku od običnih klasifikatora poput neuronskih mreža, segmentacija nudi informacije gdje se točno na slici nalazi objekt od interesa i koji su sve pikseli dio tog objekta. Isto kao kod klasifikatora potrebno je definirati moguće klase kojima piksel može pripadati. Definiranje tih klasa može se učiniti na tri načina, prema kojima dijelimo tipove segmentacije na \cite{segmentacija}:
 
 \begin{itemize}
     \item semantička segmentacija (\textit{eng. semantic segmentation })
@@ -445,7 +445,7 @@ Na priloženoj slici definirane su dvije klase: nebo i ptice. Semantička segmen
 
 \subsubsection{Morfološka obrada}
 
-Morfološka obrada je skup operacija koje procesiraju sliku. Omogućuje pronalazak elemenata na slici sličnih definiranom obliku. Usporedbu oblika vrši tako da traži grupu piksela koji odgovaraju tom obliku \cite{morph}.
+Morfološka obrada je skup operacija koje se primjenjuju na sliku radi analize njenog oblika i strukture. Omogućuje pronalazak elemenata na slici sličnih definiranom obliku. Usporedbu oblika vrši tako da traži grupu piksela koji odgovaraju tom obliku \cite{morph}.
 
 Morfološka obrada se u nekim segmentima preklapa s segmentacijom slike, ali ne radi se o istim operacijama. Morfološke operacije se često koriste nakon segmentacije da uklone nedostatke iz detektiranih segmenata \cite{morph}.
 
@@ -478,7 +478,7 @@ Najčešće se te dvije operacije ne koriste zasebno već zajedno kao kompozitna
 Nakon što je obavljena segmentacija i po potrebi morfološka obrada većinom slijedi reprezentacija i opis segmentiranih dijelova. Cilj reprezentacije i opisa je reprezentirati piksele tako da budu korisniji za daljnju obradu \cite{RepAndDesc}. 
 
 \begin{flushleft}
-    Dva glavna tipa reprezentacije segmentiranih objekata, ovisno o tome je li fokus na \cite{RepAndDesc}:
+    Postoje dva glavna tipa reprezentacije segmentiranih objekata, ovisno o tome je li fokus na \cite{RepAndDesc}:
 
 \begin{itemize}
     \item vanjskim karakteristikama, (kontura ili rub objekta))
@@ -508,7 +508,7 @@ Detekcija i prepoznavanje objekata je jedna od ključnih tehnika procesiranja sl
 
 To mu je ujedno i glavna razlika naspram segmentacije slike, segmentacija dodjeljuje klasu svakom pikselu koji odgovara onome što se traži, dok detekcija objekta to ne radi već samo locira objekt određene klase na slici \cite{segvsdetection, segvsdetection_2}.
 
-Ponekad je samo informacija o lokaciji objekta dovoljna, u slučaju da nije segmentacija nudi puno više informacija o samom objektu.
+Ponekad je samo informacija o lokaciji objekta dovoljna, u slučaju da nije onda segmentacija nudi puno više informacija o samom objektu.
 
 Da bi detektiranje objekata bilo uspješno često se koriste konture. Konture su ništa drugo nego krivulje koje opisuju rubove objekata, zbog toga su jako korisne kod detektiranja oblika. Također se ponekad koriste i kod segmentiranja.
 
@@ -544,7 +544,7 @@ Na priloženoj slici je jasno prikazano kako se izvorna slika pretvara u binarnu
 
 \subsection{Postprocesiranje slike}
 
-Nakon što je glavna faza obrade slike završena kreću aktivnosti postprocesiranja. Prijašnja faza je izvukla korisne podatke iz slike i pripremila ih u korisnom formatu. Cilj postprocesiranje je obrada tih podataka tako da se dođe do konačnog rješenja. Osim obrade podataka, postprocesiranje je također povezano s aktivnostima poput vizualizacije rezultata, kompresije i slično.
+Nakon što je glavna faza obrade slike završena kreću aktivnosti postprocesiranja. Prijašnja faza je izvukla korisne podatke iz slike i pripremila ih u korisnom formatu. Cilj postprocesiranja je obrada tih podataka tako da se dođe do konačnog rješenja. Osim obrade podataka, postprocesiranje je također povezano s aktivnostima poput vizualizacije rezultata, kompresije i slično.
 
 \subsubsection{Obrada izvučenih podataka}
 
@@ -567,7 +567,7 @@ Baze znanja omogućuju usporedbu traženih podataka s pročišćenim podacima ko
 Nakon što su podaci obrađeni i utvrđen je rezultat jako često ga je potrebno vizualizirati. Vizualizacija nudi uvid u njihovu važnost i omogućuje da se jednostavnije analiziraju i izvode zaključci iz rezultata. 
 Tip vizualizacije ovisi o domeni problema koji se rješava. Može biti u raznim oblicima poput PDF izvješća, vizualizacije rezultata nad originalnom slikom i slično  \cite{Visulization}.
 
-Kod vizualiziranja rezultata važno je uzeti u obzir tip podataka koji se vizualizira, publiku za koju je vizualizacija namijenjena \cite{Visulization}. 
+Kod vizualiziranja rezultata važno je uzeti u obzir tip podataka koji se vizualizira i publiku za koju je vizualizacija namijenjena \cite{Visulization}. 
 
 \subsubsection{Kompresija slike}
 
@@ -585,8 +585,6 @@ Oba tipa smanjuju veličinu slike, ali se razlikuju u načinu na koji to postiž
 Prvi pristup uklanja određene informacije iz slike kako bi smanjio njezinu veličinu (lossy), dok drugi pristup efikasnije zapisuje podatke bez gubitka informacija (lossless).  
 Važno je napomenuti da je kod kompresije uvijek potrebno balansirati veličinu slike i kvalitetu. Što je slika više komprimirana, to je izraženija distorzija slike.  
 Glavna razlika između ovih dvaju pristupa je u tome može li se originalna slika potpuno rekonstruirati iz komprimirane slike \cite{Compression}.
-
-\pagebreak
 
 
 \section{Analiza postojećih rješenja i pristupa problemu}
@@ -662,11 +660,11 @@ Taj pristup detekciji odgovora je puno jednostavniji problem za riješavanje neg
 
 Jedan od glavnih ciljeva ovog rješenja je da konzistentno pruža pouzdane rezultate, čak i ako uvjeti u kojima je slika uslika nisu idealni. Ta pouzdanost se treba postići za predloške koji mogu sadržavati varijabilan broj pitanja i odgovora. Da bi izrada predložaka bila što jednostavnija, rješenje bi također trebalo biti sposobno prema određenim parametrima generirati predložak matrice odgovora u obliku PDF-a. 
 
-Također da bi se ubrzao rad s aplikacijom ideja je da korisnik ne unosi ručno podatke o točnim odgovorima za sva pitanja, već jednostavno slika ispravno riješen ispit te da komponenta sama izvuče te informacije iz fotografije. Da bi se dodatno ubrzao proces ocjenjivanja sustav treba biti dizajniran na način da detektirane odgovore usporedi s ispravnim odgovorima i ujedno prema korisnički definiranoj skali ocijeni ispit. Ocijenjeni ispit mora biti vizualiziran kako bi ocjenjivač mogao uvidjeti je li došlo do greške kod ocjenjivanja.
+Također da bi se ubrzao rad s aplikacijom ideja je da korisnik ne unosi ručno podatke o točnim odgovorima za sva pitanja, već jednostavno slika ispravno riješen ispit te da komponenta sama izvuče te informacije iz fotografije. Da bi se dodatno ubrzao proces ocjenjivanja sustav treba biti dizajniran na način da detektirane odgovore usporedi s ispravnim odgovorima i ujedno prema korisnički definiranoj skali ocijeni ispit. Ocijenjeni ispit mora biti vizualiziran kako bi ocjenjivač mogao vidjeti je li došlo do greške kod ocjenjivanja.
 
 U svrhu bržeg razvoja, pronalaska grešaka i slično sustav bi trebao imati mogućnost vizualiziranja svakog koraka obrade od samog unosa slike pa sve do rješenja. Ta opcija bi se trebala moći uključiti ili isključiti po potrebi. 
 
-Budući da se radi o komponenti otvorenog koda želja je da se ostavi mogućnost zamjene važnih biblioteka koje će sustav koristiti, poput one za računalni vid. Time će se omogućiti da netko po potrebi napiše svoju implementaciju i zamijeni zadanu EmguCv biblioteku.
+Budući da se radi o komponenti otvorenog koda želja je da se ostavi mogućnost zamjene važnih biblioteka koje će sustav koristiti, poput one za računalni vid. Time će se omogućiti da netko po potrebi napiše svoju implementaciju i zamijeni zadanu biblioteku.
 
 \pagebreak
 
@@ -1008,7 +1006,7 @@ Nakon što metoda vrati ocjenu i postotak riješenosti, poziva se sljedeći kora
 
 Važno je napomenuti da se ovaj slijed ne može pokrenuti dok god se ne izvrše svi koraci iz prvog dijagrama slijeda za kontrolni ispit. Također, generalna struktura ispita za ocijenjivanje se mora poklapati sa kontrolnim ispitom, pod to spada isti broj pitanja i odgovora.
 
-\subsection{Dijagram slijeda – Generiranje matrice odgovora}
+\subsection{Dijagram slijeda - Generiranje matrice odgovora}
 
 \begin{figure}[H]
 \centering
@@ -1077,7 +1075,7 @@ U slučaju da korisnik nije definirao vlastitu skalu ocjenjivanja, sustav korist
 
 Osim prikazanih ocjena u tablici, postoji i posebna ocjena \textbf{NOT GRADED}, koja se dodjeljuje u slučaju kada sustav zaključi da nije moguće usporediti matricu polaznika s kontrolnom matricom, iz nekog razloga.
 
-Ako ocjenjivač želi koristiti vlastitu skalu ocjenjivanja, i to je moguće. Potrebno je u gornjem lijevom kutu aplikacije upisati ime ocjene i zatim pritisnuti gumb \textbf{Define new grade}. Taj je postupak potrebno ponoviti više puta, ovisno o broju ocjena koje je potrebno definirati. Nakon što su ocjene definirane, pragovi se dodjeljuju u tablici ocjena i pragova. Prag se dodaje tako da se upiše u tablicu pod stupac \textbf{Threshold}. Važno je napomenuti da se za prvu, tj. negativnu ocjenu, ne može definirati prag — njezin prag je automatski manji od druge definirane ocjene.
+Ako ocjenjivač želi koristiti vlastitu skalu ocjenjivanja, i to je moguće. Potrebno je u gornjem lijevom kutu aplikacije upisati ime ocjene i zatim pritisnuti gumb \textbf{Define new grade}. Taj je postupak potrebno ponoviti više puta, ovisno o broju ocjena koje je potrebno definirati. Nakon što su ocjene definirane, pragovi se dodjeljuju u tablici ocjena i pragova. Prag se dodaje tako da se upiše u tablicu pod stupac \textbf{Threshold}. Važno je napomenuti da se za prvu, tj. negativnu ocjenu, ne može definirati prag. Njezin prag je automatski manji od druge definirane ocjene.
 
 Kada je skala definirana u tablici, potrebno je pritisnuti gumb \textbf{Apply grading scale} i ponovno pokrenuti proces ocjenjivanja, koji će se zatim odvijati prema novoj skali.
 
@@ -1123,7 +1121,7 @@ override public ImageData Denoise(ImageData inputImage){
 }
 \end{lstlisting}
 
-Metoda \textbf{Denoise} odgovorna je za analizu buke na slici pomoću metode \textbf{EstimateNoiseLevel} i uklanjanje buke pomoću metode \textbf{ApplyNonLocalMeansDenoising}. Buka se smanjuje samo u slučaju da je vrijednost veća od definiranog praga \textbf{NOISE\_LEVEL\_THRESHOLD}. U slučaju da je buka ispod tog praga, smatra se da se radi o dozvoljenoj razini buke, to jest razini koja ne bi trebala imati utjecaja na daljnju obradu slike. Taj prag pažljivo je kalibriran tijekom razvoja. Također, ova metoda odgovorna je za prikaz teksta o razini buke i provedenoj operaciji uklanjanja buke. Taj se tekst prikazuje na slici samo ako je sustav u načinu rada za otkrivanje grešaka.
+Metoda \textbf{Denoise} odgovorna je za analizu buke na slici pomoću metode \textbf{EstimateNoiseLevel} i uklanjanje buke pomoću metode \textbf{ApplyNonLocalMeansDenoising}. Buka se smanjuje samo u slučaju da je vrijednost veća od definiranog praga \textbf{NOISE\_LEVEL\_THRESHOLD}. U slučaju da je buka ispod tog praga, smatra se da se radi o dozvoljenoj razini buke, to jest razini koja ne bi trebala imati utjecaja na daljnju obradu slike. Taj prag pažljivo je kalibriran tijekom razvoja. Također, ova metoda je odgovorna za prikaz teksta o razini buke i provedenoj operaciji uklanjanja buke. Taj se tekst prikazuje na slici samo ako je sustav u načinu rada za otkrivanje grešaka.
 
 \begin{lstlisting}[caption={Procjena razine buke na slici}]
 private double EstimateNoiseLevel(Mat image){
@@ -1218,7 +1216,7 @@ Glavna razlika između priloženih metoda je odabrani pristup za detektiranje ru
 
 Metoda \textbf{DetectEdgesCanny} naglašava sve rubove na slici koristeći \textbf{CvInvoke.Canny} algoritam uz pomoć morfološke operacije dilatacije, koja omogućuje spajanje prekinutih rubova, što povećava preciznost sustava u ekstremnim uvjetima.
 
-Metoda \textbf{DetectEdgesAdaptive} ne koristi standardni pristup detektiranju rubova, već koristi \textbf{CvInvoke.AdaptiveThreshold} algoritam koji pretvara ulaznu sivu sliku u binarnu sliku. Ova implementacija namijenjena je specifično kreiranju binarne slike u varijabilnim uvjetima osvjetljenja. Nakon binarizacije, detektiraju se strukturni elementi te se nad njima izvršava morfološka operacija zatvaranja kako bi se povezale i očistile strukturne komponente slike.
+Dok metoda \textbf{DetectEdgesAdaptive} ne koristi standardni pristup detektiranju rubova, već koristi \textbf{CvInvoke.AdaptiveThreshold} algoritam koji pretvara ulaznu sivu sliku u binarnu sliku. Ova implementacija namijenjena je specifično kreiranju binarne slike u varijabilnim uvjetima osvjetljenja. Nakon binarizacije, detektiraju se strukturni elementi te se nad njima izvršava morfološka operacija zatvaranja kako bi se povezale i očistile strukturne komponente slike.
 
 
 Nakon što su rubovi detektirani, započinje proces analize rubova i pronalaska pravokutnika koji najbolje opisuje rub papira na slici. Za to služi metoda \textbf{FindLargestRectangleContour}:
@@ -1345,7 +1343,7 @@ private Mat RotateImage(Mat image, double angle){
 }
 \end{lstlisting}
 
-Ova metoda bila je jedna od prvih razvijenih metoda; prva iteracija obuhvaćala je izračun kuta papira i ispravak tog kuta. No, s vremenom je metoda za ispravak perspektive preuzela dio tih odgovornosti, tako da je ova metoda sada isključivo odgovorna za detekciju orijentacije papira i rotaciju za 180 stupnjeva u slučaju da je papir u krivoj orijentaciji.
+Ova metoda bila je jedna od prvih razvijenih metoda. Prva iteracija obuhvaćala je izračun kuta papira i ispravak tog kuta. Međutim s vremenom je metoda za ispravak perspektive preuzela dio tih odgovornosti, tako da je ova metoda sada isključivo odgovorna za detekciju orijentacije papira i rotaciju za 180 stupnjeva u slučaju da je papir u krivoj orijentaciji.
 
 Kao što je već spomenuto, predložak matrice odgovora ne sadrži posebne oznake za kutove i orijentaciju papira. Zbog toga je bilo potrebno pronaći druge referentne strukture na predlošku. Odlučeno je koristiti okvir u kojem se nalaze polja za ime i ocjenu polaznika. Taj okvir nalazi se pri vrhu papira, stoga u slučaju da ga se detektira na dnu, znamo da je slika naopako okrenuta te ju se rotira za 180 stupnjeva pomoću metode \textbf{RotateImage}.
 
@@ -1521,7 +1519,7 @@ Ostale metode obrade slike nisu prikazane kroz kod jer ne sadrže zanimljivu ni 
 
 \chapter{Evaluacija}
 
-Kroz ovo poglavlje fokus će biti na prikazu načina evaluacije razvijenih artefakata. Pod to spada prikaz različitih tipova testnih podataka, koraka obrade i načina manuelnog testiranja artefakata. Također će se objasniti utjecaj testiranja i testnih podataka na razvoj artefakata.
+Kroz ovo poglavlje fokus će biti na prikazu načina evaluacije razvijenih artefakata. Pod to spada prikaz različitih tipova testnih podataka, koraka obrade i načina manualnog testiranja artefakata. Također će se objasniti utjecaj testiranja i testnih podataka na razvoj artefakata.
 
 \section{Skup testnih podataka}
 
@@ -1599,7 +1597,7 @@ Sa priloženih slika vidljivi su koraci kroz koje je izvorna slika prošla da bi
 
 Od samog početka razvoja bilo je jasno da je drugi korak pretprocesiranja pretvorba slike u sivu skalu, odnosno uklanjanje boja. Testni podaci nisu značajno utjecali na ovu odluku, no imali su važnu ulogu u određivanju redoslijeda ostalih operacija u fazi pretprocesiranja.
 
-Razvoj je započeo s uklanjanjem buke kao trećom operacijom, popraćenom ispravkom rotacije. Međutim, tijekom testiranja postalo je jasno da slike ne moraju imati samo krivu rotaciju papira, već i nagib kamere u odnosu na papir, odnosno perspektivnu distorziju. Dosadašnji pristup u takvim slučajevima nije bio dovoljan, pa je razvijen korak za ispravak perspektive. Daljnjim testiranjem zaključeno je da je preciznost sustava veća ako se smanjivanje buke postavi nakon ispravka perspektive i rotacije. Tako je dobiven sljedeći redoslijed koraka:
+Razvoj je započeo s uklanjanjem buke kao trećom operacijom, popraćenom ispravkom rotacije. Međutim, tijekom testiranja postalo je jasno da slike ne moraju imati samo krivu rotaciju papira, već i kut kamere u odnosu na papir, odnosno perspektivnu distorziju. Dosadašnji pristup u takvim slučajevima nije bio dovoljan, pa je razvijen korak za ispravak perspektive. Daljnjim testiranjem zaključeno je da je preciznost sustava veća ako se smanjivanje buke postavi nakon ispravka perspektive i rotacije. Tako je dobiven sljedeći redoslijed koraka:
 
 \begin{enumerate}
     \item Unos slike u sustav
@@ -1611,7 +1609,7 @@ Razvoj je započeo s uklanjanjem buke kao trećom operacijom, popraćenom isprav
 
 Taj redoslijed opisuje gotovo cijelu fazu pretprocesiranja slike, s tim da kao završni korak pretprocesiranja nedostaje još samo pretvorba u binarnu sliku. Taj korak omogućuje uklanjanje nepotrebnih informacija i fokusiranje na ključne strukture prisutne na slici. U binarnoj slici pozadina je prikazana crnom bojom, dok su sve relevantne strukture označene bijelom bojom.
 
-Nakon završetka pretprocesiranja, slijedi faza procesiranja slike, gdje je prvi logičan korak detekcija krugova. Sama detekcija krugova relativno je jednostavna za implementirati, kao što je prikazano u priloženom kodu. Međutim, ključni dio ove faze je odvajanje relevantnih krugova od nerelevantnih te izračun praga ispunjenosti kruga. Upravo je ovaj segment sustava najviše unaprijeđen zahvaljujući raznovrsnom skupu testnih podataka.
+Nakon završetka pretprocesiranja, slijedi faza procesiranja slike, gdje je prvi logičan korak detekcija krugova. Sama detekcija krugova relativno je jednostavna za implementirati, kao što je prikazano u kodu. Međutim, ključni dio ove faze je odvajanje relevantnih krugova od nerelevantnih te izračun praga ispunjenosti kruga. Upravo je ovaj segment sustava najviše unaprijeđen zahvaljujući raznovrsnom skupu testnih podataka.
 
 Na slici 37 prikazana je vizualizacija svih koraka rada ove faze. Nakon detekcije ispunjenih krugova, slijede još dva koraka fokusirana na vizualizaciju rezultata.
 
@@ -1724,6 +1722,16 @@ Za kraj mogu reći da sam zadovoljan izrađenim rješenjem te da sam kroz ovaj r
 
 \appendix
 \renewcommand{\thechapter}{\arabic{chapter}}
+
+\chapter{Prilozi}
+
+Na priloženim linkovima nalaze se izvorni kod, izvršna verzija aplikacije i testni skup podataka:
+
+\begin{itemize}
+    \item \textbf{Test data:} \href{https://drive.google.com/file/d/1HkRVSEx1TenS-NdQvR2hqJcgpEfTY1_9/view?usp=sharing}{Preuzmi testni skup podataka}
+    \item \textbf{Demo app:} \href{https://drive.google.com/file/d/1UE2O0IZvvNFToY2gb3TK0EnUSobUZhzJ/view?usp=sharing}{Preuzmi demo aplikaciju}
+    \item \textbf{GitHub repozitorij:} \href{https://github.com/Filip1402/GradeVision}{Otvori GitHub repozitorij}
+\end{itemize}
 
 
 \end{document}

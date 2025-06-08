@@ -44,6 +44,7 @@
       \field{labeltitlesource}{title}
       \field{booktitle}{{2010 IEEE Frontiers in Education Conference (FIE)}}
       \field{journaltitle}{Published in: 2010 IEEE Frontiers in Education Conference (FIE)}
+      \field{note}{[pristupano 29.04.2025.]}
       \field{title}{{Evolution of a digital paper exam grading system}}
       \field{pages}{27\bibrangedash 30}
       \range{pages}{4}
@@ -71,6 +72,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Glossary of Education Reform}
       \field{month}{11}
+      \field{note}{[pristupano 29.04.2025.]}
       \field{title}{{Standardized Test Definition}}
       \field{year}{2015}
       \verb{urlraw}
@@ -102,6 +104,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{TAO}
       \field{month}{2}
+      \field{note}{[pristupano 29.04.2025.]}
       \field{title}{{Automated Grading for Subjective Assessments: Challenges and Solutions}}
       \field{year}{2025}
       \verb{urlraw}
@@ -143,6 +146,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{SN Computer Science}
       \field{month}{09}
+      \field{note}{[pristupano 30.04.2025.]}
       \field{title}{Optical Mark Recognition: Advances, Difficulties, and Limitations}
       \field{volume}{2}
       \field{year}{2021}
@@ -196,6 +200,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2022 International Conference on Recent Progresses in Science, Engineering and Technology (ICRPSET)}
+      \field{note}{[pristupano 30.04.2025.]}
       \field{title}{Approaching Computer Vision And Image Processing Technique For Optical Mark Recognition Sheet Scan And Verification}
       \field{year}{2022}
       \field{pages}{1\bibrangedash 5}
@@ -203,7 +208,6 @@
       \verb{doi}
       \verb 10.1109/ICRPSET57982.2022.10188569
       \endverb
-      \keyw{Integrated optics;Computer vision;Image recognition;Layout;Optical imaging;Cameras;Software;OMR;warp point;recognition;assemble;sheets;edge;retaliation;detect;image;grade;grayscale;template etc}
     \endentry
     \entry{OMRNLP}{article}{}{}
       \name{author}{3}{}{%
@@ -237,6 +241,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Educational Computing Research}
       \field{month}{05}
+      \field{note}{[pristupano 30.04.2025.]}
       \field{title}{Computer Science Meets Education: Natural Language Processing for Automatic Grading of Open-Ended Questions in eBooks}
       \field{volume}{58}
       \field{year}{2020}
@@ -271,6 +276,7 @@
       \field{isbn}{978-745304301}
       \field{journaltitle}{Medium}
       \field{month}{11}
+      \field{note}{[pristupano 30.04.2025.]}
       \field{title}{{Top 10 Computer Vision Libraries {$\vert$}A Comprehensive and Detailed Guide}}
       \field{year}{2024}
       \verb{urlraw}
@@ -285,7 +291,7 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
       \field{month}{4}
-      \field{note}{[Online; pristupljeno 13. travnja 2025.]}
+      \field{note}{[pristupano 13.04.2025.]}
       \field{title}{{What Is a Digital Image? - Ricoh Scanners}}
       \field{year}{2025}
       \verb{urlraw}
@@ -300,7 +306,7 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
       \field{month}{4}
-      \field{note}{[Online; pristupljeno; 30. travnja 2025.]}
+      \field{note}{[pristupano 30.04.2025.]}
       \field{title}{{Understanding Aspect Ratios in Photography {$\vert$} Adobe Express}}
       \field{year}{2025}
       \verb{urlraw}
@@ -315,7 +321,7 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{month}{4}
-      \field{note}{[Online; accessed 30. Apr. 2025]}
+      \field{note}{[pristupano 30.04.2025.]}
       \field{title}{{Color photography history, tips, and techniques - Adobe}}
       \field{year}{2025}
       \verb{urlraw}
@@ -330,7 +336,7 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{month}{4}
-      \field{note}{[Online; pristupljeno 20. travnja 2025.]}
+      \field{note}{[pristupano 20.04.2025.]}
       \field{title}{{Grayscale Image - an overview {$\vert$} ScienceDirect Topics}}
       \field{year}{2025}
       \verb{doi}
@@ -357,6 +363,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Grayscale Images}
       \field{month}{5}
+      \field{note}{[pristupano 21.04.2025.]}
       \field{title}{{Why use Grayscale Conversion when Processing Images?}}
       \field{year}{2024}
       \verb{urlraw}
@@ -366,25 +373,13 @@
       \verb https://www.grayscaleimage.com/why-use-grayscale-conversion-when-processing-images
       \endverb
     \endentry
-    \entry{BinarySlika}{misc}{}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labeltitlesource}{title}
-      \field{month}{4}
-      \field{note}{[Online; pristupljeno 16. travnja 2025.]}
-      \field{title}{{Grayscale Image - an overview {$\vert$} ScienceDirect Topics}}
-      \field{year}{2025}
-      \verb{doi}
-      \verb 10.1016/B978-0-12-822271-3.00013-X
-      \endverb
-    \endentry
     \entry{LumVsChrom}{misc}{}{}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Stack Overflow}
       \field{month}{4}
-      \field{note}{[Online; pristupljeno 20. travnja 2025.]}
+      \field{note}{[pristupano 20.04.2025.]}
       \field{title}{{why we should use gray scale for image processing}}
       \field{year}{2025}
       \verb{urlraw}
@@ -399,7 +394,7 @@
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{month}{4}
-      \field{note}{[Online; pristupljeno 21. travnja 2025.]}
+      \field{note}{[pristupano 21.04.2025.]}
       \field{title}{{Image Processing: Techniques, Types, {\&} Applications [2024]}}
       \field{year}{2025}
       \verb{urlraw}
@@ -409,17 +404,42 @@
       \verb https://www.v7labs.com/blog/image-processing-guide
       \endverb
     \endentry
-    \entry{IamgeProcesingPhases}{misc}{}{}
+    \entry{IamgeProcesingPhases}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=07713b8c79fe78ffaf9ab728a5f3ce88}{%
+           family={Gonzalez},
+           familyi={G\bibinitperiod},
+           given={Rafael\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=f7e4f4ce32d8e1ac04f7ee5eefcabe8f}{%
+           family={Woods},
+           familyi={W\bibinitperiod},
+           given={Richard\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Pearson}%
+      }
+      \strng{namehash}{629c2754a63b62c1f205866b8ab085f9}
+      \strng{fullhash}{629c2754a63b62c1f205866b8ab085f9}
+      \strng{fullhashraw}{629c2754a63b62c1f205866b8ab085f9}
+      \strng{bibnamehash}{629c2754a63b62c1f205866b8ab085f9}
+      \strng{authorbibnamehash}{629c2754a63b62c1f205866b8ab085f9}
+      \strng{authornamehash}{629c2754a63b62c1f205866b8ab085f9}
+      \strng{authorfullhash}{629c2754a63b62c1f205866b8ab085f9}
+      \strng{authorfullhashraw}{629c2754a63b62c1f205866b8ab085f9}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{month}{4}
-      \field{note}{[Online; pristupljeno 21. travnja 2025.]}
-      \field{year}{2025}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{4}
+      \field{note}{[pristupano 21.04.2025.]}
+      \field{title}{{Digital Image Processing}}
       \verb{urlraw}
-      \verb https://dl.icdst.org/pdfs/files4/01c56e081202b62bd7d3b4f8545775fb.pdf
+      \verb https://www.cl72.org/090imagePLib/books/Gonzales,Woods-Digital.Image.Processing.4th.Edition.pdf
       \endverb
       \verb{url}
-      \verb https://dl.icdst.org/pdfs/files4/01c56e081202b62bd7d3b4f8545775fb.pdf
+      \verb https://www.cl72.org/090imagePLib/books/Gonzales,Woods-Digital.Image.Processing.4th.Edition.pdf
       \endverb
     \endentry
     \entry{Patel2023Oct}{article}{}{}
@@ -448,6 +468,7 @@
       \field{issn}{3080-4550}
       \field{journaltitle}{Medium}
       \field{month}{10}
+      \field{note}{[pristupano 22.04.2025.]}
       \field{title}{{The Complete Guide to Image Preprocessing Techniques in Python}}
       \field{year}{2023}
       \verb{urlraw}
@@ -463,7 +484,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Cloudinary}
       \field{month}{4}
-      \field{note}{[Online; pristupljeno 22. travnja 2025.]}
+      \field{note}{[pristupano 22.04.2025.]}
       \field{title}{{Image Acquisition {$\vert$} Cloudinary}}
       \field{year}{2025}
       \verb{urlraw}
@@ -478,7 +499,7 @@
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{month}{4}
-      \field{note}{[Online; pristupljeno 22. travnja 2025.]}
+      \field{note}{[pristupano 22.04.2025.]}
       \field{title}{{What is noise in photography}}
       \field{year}{2025}
       \verb{urlraw}
@@ -513,6 +534,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Medium}
       \field{month}{7}
+      \field{note}{[pristupano 22.04.2025.]}
       \field{title}{{Noise filtering in Digital Image Processing - Anisha Swain - Medium}}
       \field{year}{2023}
       \verb{urlraw}
@@ -527,7 +549,7 @@
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labeltitlesource}{title}
       \field{month}{10}
-      \field{note}{[Online; pristupljeno 22. travnja 2025.]}
+      \field{note}{[pristupano 22.04.2025.]}
       \field{title}{{Caption for Median Filtering Illustration}}
       \field{year}{2022}
       \verb{urlraw}
@@ -543,7 +565,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Fiveable}
       \field{month}{4}
-      \field{note}{[Online; pristupljeno 24. travnja 2025.]}
+      \field{note}{[pristupano 24.04.2025.]}
       \field{title}{{Image preprocessing and enhancement {$\vert$} Geospatial Engineering Class Notes {$\vert$} Fiveable}}
       \field{year}{2025}
       \verb{urlraw}
@@ -578,6 +600,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Medium}
       \field{month}{2}
+      \field{note}{[pristupano 24.04.2025.]}
       \field{title}{{OpenCv Perspective Transformation - Analytics Vidhya - Medium}}
       \field{year}{2024}
       \verb{urlraw}
@@ -612,6 +635,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Medium}
       \field{month}{2}
+      \field{note}{[pristupano 24.04.2025.]}
       \field{title}{{Image Segmentation {\ifmmode---\else—\fi} A Beginner{'}s Guide {$\vert$} Medium}}
       \field{year}{2024}
       \verb{urlraw}
@@ -643,6 +667,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Towards Data Science}
       \field{month}{1}
+      \field{note}{[pristupano 24.04.2025.]}
       \field{title}{{Understanding Morphological Image Processing and Its Operations {$\vert$} Towards Data Science}}
       \field{year}{2025}
       \verb{urlraw}
@@ -656,7 +681,7 @@
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{month}{11}
-      \field{note}{[Online; pristupljeno 25. travnja 2025.]}
+      \field{note}{[pristupano 25.04.2025.]}
       \field{year}{2022}
       \verb{urlraw}
       \verb https://cmrcet.ac.in/files/ECE/ececoursefile/13.pdf?utm_source=chatgpt.com
@@ -690,6 +715,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Keymakr}
       \field{month}{2}
+      \field{note}{[pristupano 25.04.2025.]}
       \field{title}{{Semantic Segmentation vs Object Detection: Differences {$\vert$} Keymakr}}
       \field{year}{2025}
       \verb{urlraw}
@@ -724,6 +750,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Medium}
       \field{month}{12}
+      \field{note}{[pristupano 25.04.2025.]}
       \field{title}{{Image Classification vs. Object Detection vs. Image Segmentation}}
       \field{year}{2021}
       \verb{urlraw}
@@ -756,6 +783,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Medium}
       \field{month}{1}
+      \field{note}{[pristupano 25.04.2025.]}
       \field{title}{{Contour Detection using OpenCV - siromer - Medium}}
       \field{year}{2025}
       \verb{urlraw}
@@ -771,7 +799,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Fiveable}
       \field{month}{4}
-      \field{note}{[Online; pristupljeno 28. travnja 2025.]}
+      \field{note}{[pristupano 28.04.2025.]}
       \field{title}{{Post-processing and visualization {$\vert$} Applications of Scientific Computing Class Notes {$\vert$} Fiveable}}
       \field{year}{2025}
       \verb{urlraw}
@@ -806,6 +834,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{WhatIs}
       \field{month}{7}
+      \field{note}{[pristupano 28.04.2025.]}
       \field{title}{{image compression}}
       \field{year}{2022}
       \verb{urlraw}
@@ -838,6 +867,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{DEV Community}
       \field{month}{2}
+      \field{note}{[pristupano 28.04.2025.]}
       \field{title}{{2 free open-source OMR grading projects on github}}
       \field{year}{2022}
       \verb{urlraw}
@@ -852,7 +882,7 @@
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labeltitlesource}{title}
       \field{month}{4}
-      \field{note}{[Online; pristupljeno 29. travnja 2025.]}
+      \field{note}{[pristupano 29.04.2025.]}
       \field{title}{{[v1] Diagrams {$\cdot$} Udayraj123/OMRChecker Wiki}}
       \field{year}{2025}
       \verb{urlraw}
@@ -868,7 +898,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{GitHub}
       \field{month}{5}
-      \field{note}{[Online; accessed 25. May 2025]}
+      \field{note}{[pristupano 25.05.2025.]}
       \field{title}{{open-mcr}}
       \field{year}{2025}
       \verb{urlraw}
@@ -919,6 +949,7 @@
       \field{issn}{1380-7501, 1573-7721}
       \field{journaltitle}{Multimedia Tools and Applications}
       \field{month}{7}
+      \field{note}{[pristupano 30.04.2025.]}
       \field{shorttitle}{Omrnet}
       \field{title}{{OMRNet}: {A} lightweight deep learning model for optical mark recognition}
       \field{urlday}{13}

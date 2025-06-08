@@ -15,8 +15,8 @@
 \contentsline {figure}{\numberline {11}{\ignorespaces Prikaz kompozitnih morfoloških operacija \blx@tocontentsinit {0}\cite {morph}}}{19}{figure.caption.13}%
 \contentsline {figure}{\numberline {12}{\ignorespaces Usporedba segmentacije i detekcije objekta \blx@tocontentsinit {0}\cite {segvsdetection_2}}}{20}{figure.caption.14}%
 \contentsline {figure}{\numberline {13}{\ignorespaces \centering Prikaz rezultata detekcije krugova pomoću kontura \blx@tocontentsinit {0}\cite {segvsdetection_2}}}{21}{figure.caption.15}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Prikaz dijela toka procesiranja slike kod OMRChecker-a \blx@tocontentsinit {0}\cite {OMRChecker}}}{24}{figure.caption.16}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Prikaz pomoćnih oznaka za detektiranje kutova matrice odgovora i orijentacije \blx@tocontentsinit {0}\cite {OMRChecker} \blx@tocontentsinit {0}\cite {OpenMCr}}}{25}{figure.caption.17}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Prikaz dijela toka procesiranja slike kod OMRChecker-a \blx@tocontentsinit {0}\cite {OMRChecker}}}{23}{figure.caption.16}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Prikaz pomoćnih oznaka za detektiranje kutova matrice odgovora i orijentacije \blx@tocontentsinit {0}\cite {OMRChecker} \blx@tocontentsinit {0}\cite {OpenMCr}}}{24}{figure.caption.17}%
 \contentsline {figure}{\numberline {16}{\ignorespaces Prikaz strukture OMRNet klasifikatora \blx@tocontentsinit {0}\cite {omrnet}}}{25}{figure.caption.18}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {17}{\ignorespaces Prikaz Use-case diagrama (Vlastita izrada)}}{31}{figure.caption.19}%
@@ -43,5 +43,6 @@
 \contentsline {figure}{\numberline {36}{\ignorespaces Prikaz smanjivanja buke i pretvorbe u binarnu sliku na primjeru (vlastita izrada)}}{65}{figure.caption.39}%
 \contentsline {figure}{\numberline {37}{\ignorespaces Prikaz detekcije odgovora i vizualizacije označenih odgovora na primjeru (vlastita izrada)}}{66}{figure.caption.40}%
 \contentsline {figure}{\numberline {38}{\ignorespaces Prikaz vizualizacije ocjene na primjeru (vlastita izrada)}}{66}{figure.caption.41}%
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
