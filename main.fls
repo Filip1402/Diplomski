@@ -445,32 +445,30 @@ INPUT ./slike/classDiagram.png
 INPUT ./slike/classDiagram.png
 INPUT ./slike/classDiagram.png
 INPUT ./slike/classDiagram.png
+INPUT ./slike/sequence1.jpg
+INPUT ./slike/sequence1.jpg
+INPUT ./slike/sequence1.jpg
+INPUT ./slike/sequence1.jpg
+INPUT ./slike/sequence1.jpg
+INPUT ./slike/sequence2.jpg
+INPUT ./slike/sequence2.jpg
+INPUT ./slike/sequence2.jpg
+INPUT ./slike/sequence2.jpg
+INPUT ./slike/sequence2.jpg
+INPUT ./slike/sequence3.jpg
+INPUT ./slike/sequence3.jpg
+INPUT ./slike/sequence3.jpg
+INPUT ./slike/sequence3.jpg
+INPUT ./slike/sequence3.jpg
+INPUT ./slike/GradeVision ui.png
+INPUT ./slike/GradeVision ui.png
+INPUT ./slike/GradeVision ui.png
+INPUT ./slike/GradeVision ui.png
+INPUT ./slike/GradeVision ui.png
 INPUT c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd
 INPUT c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd
 INPUT c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/courier/pcrr8t.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/vf/adobe/courier/pcrr8t.vf
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
-INPUT ./slike/sequence1.jpg
-INPUT ./slike/sequence1.jpg
-INPUT ./slike/sequence1.jpg
-INPUT ./slike/sequence1.jpg
-INPUT ./slike/sequence1.jpg
-INPUT ./slike/sequence2.jpg
-INPUT ./slike/sequence2.jpg
-INPUT ./slike/sequence2.jpg
-INPUT ./slike/sequence2.jpg
-INPUT ./slike/sequence2.jpg
-INPUT ./slike/sequence3.jpg
-INPUT ./slike/sequence3.jpg
-INPUT ./slike/sequence3.jpg
-INPUT ./slike/sequence3.jpg
-INPUT ./slike/sequence3.jpg
-INPUT ./slike/GradeVision ui.png
-INPUT ./slike/GradeVision ui.png
-INPUT ./slike/GradeVision ui.png
-INPUT ./slike/GradeVision ui.png
-INPUT ./slike/GradeVision ui.png
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/courier/pcrr8t.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvr8t.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/courier/pcrb8t.tfm
@@ -568,6 +566,8 @@ INPUT c:/texlive/2025/texmf-dist/fonts/vf/adobe/helvetic/phvb8t.vf
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/vf/adobe/helvetic/phvrc8t.vf
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvr8r.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/vf/adobe/courier/pcrr8t.vf
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
 INPUT ./main.lof
 INPUT ./main.lof
 INPUT main.lof

@@ -48,9 +48,9 @@
 \smjer{Informacijsko i programsko inženjerstvo} % (ili Poslovni sustavi, Ekonomika poduzetništva, Primjena informacijske tehnologije u poslovanju, Informacijsko i programsko inženjerstvo, Baze podataka i baze znanja, Organizacija poslovnih sustava, Informatika u obrazovanju)
 \titulaProfesora{Doc. dr. sc.}
 
-\sazetak{Opsega od 100 do 300 riječi. Sažetak upućuje na temu rada, ukratko se iznosi čime se rad bavi, teorijsko-metodološka polazišta, glavne teze i smjer rada te zaključci.}
+\sazetak{Tema ovog rada je izrada komponente otvorenog koda za detekciju odgovora na pismenim ispitima. Rad je temeljen na design science metodologiji i prototipiranju vođenom kontinuiranim testiranjem izrađenog artefakta. Ključni pojam ovog rada je digitalna slika, budući da se cijeli sustav bazira na obradi slike s ciljem detekcije odgovora. U radu su prikazane različite tehnike i postojeći pristupi rješavanju ovog problema. Glavni cilj rada bio je izrada komponente, odnosno biblioteke, za detekciju i ocjenjivanje ispita u obliku matrice odgovora. Cilj je da ta biblioteka postiže visoku razinu preciznosti čak i kada slike ispita nisu snimljene u idealnim uvjetima. Izrađena biblioteka suočava se s tradicionalnim problemima sustava za automatizirano testiranje te ih pokušava riješiti kombinacijom tradicionalnih i novih, kreativnih pristupa. Rezultat rada je komponenta koja u idealnim uvjetima radi izrazito pouzdano, dok u ekstremnim uvjetima postoje područja koja nude prostor za poboljšanje.}
 
-\kljucneRijeci{riječ; riječ; ...riječ; Obuhvaća 7+/-2 ključna pojma koji su glavni predmet rasprave u radu.}
+\kljucneRijeci{ Automatiziranje ocjenjivanje pismenih ispita; OMR; Obrada slike; Pretprocesiranje; Postprocesiranje; Detekcija; EmguCV; C\#;}
 
 \begin{document}
 
@@ -61,9 +61,15 @@
 \pagestyle{plain}
 \chapter{Uvod}
 
-U današnjem obrazovnom sustavu nastavnici provode jako puno vremena na radnim zadacima koji ne podižu kvalitetu obrazovanja već su administrativni i često repetitivni poslovi. Jedan od tih zadataka je ocjenjivanje ispita, pogotovo ako se radi o velikoj količini pristupnika testu. Kod testova s izrazito velikom količinom pristupnika se zato koriste ispiti koji uključuju list za odgovore što olakšava ocjenjivanje. Time se značajno ubrzava cijeli proces ocjenjivanja pošto nije potrebno čitati odgovore koji su u različitim formatima i potencijalno na više stranica, ali i dalje ostaje repetitivni dio posla koji uključuje usporedbu odgovora s rješenjima. Kroz ovaj rad bit će prikazana softverska komponenta otvorenog koda koja rješava ovaj problem tako da naspram slike detektira označene odgovore i ocjenjuje ispit.
+U današnjem obrazovnom sustavu nastavnici provode mnogo vremena na radnim zadacima koji ne doprinose izravno kvaliteti obrazovanja, već su administrativne i često repetitivne prirode. Jedna od nužnih dužnosti nastavnika je evaluacija znanja učenika. Ta se evaluacija može provoditi na različite načine, poput usmenih i pismenih ispita.
 
-Kroz ovaj rad istražuje se razne metode za detektiranje označenih odgovora s ciljem izrade komponente visoke preciznosti, prateći metodologiju znanstvenog oblikovanja.
+Kod velikog broja učenika, usmeni ispiti nisu praktični zbog velike vremenske zahtjevnosti. U takvim situacijama pismeni ispiti pokazuju svoju vrijednost. Za razliku od usmenih, pismeni ispiti uvijek traju jednako, neovisno o broju pristupnika, što ih čini efikasnijim alatom u masovnim ispitivanjima.
+
+Međutim, jedna od ključnih razlika između usmenih i pismenih ispita je mogućnost komunikacije. Usmeni ispiti omogućuju raspravu između nastavnika i učenika, što nastavniku pruža uvid u način razmišljanja i kreativnost učenika. Taj je uvid teško replicirati na pismenom ispitu, ali se pokušava nadoknaditi korištenjem otvorenih pitanja ili eseja.
+
+Takav pristup omogućuje određeni stupanj uvida u razmišljanje učenika, ali ocjenjivanje tih ispita postaje vremenski zahtjevno, osobito kod velikog broja pristupnika. S druge strane, kada nije nužno evaluirati kreativnost učenika, koristi se format ispita s ponuđenim odgovorima. Takvi ispiti značajno ubrzavaju ocjenjivanje jer nastavnik uspoređuje označene odgovore s listom točnih odgovora. Time se uklanja subjektivnost, proces postaje objektivan, ali i izrazito repetitivan.
+
+Pošto je riječ o objektivnom procesu, on se može automatizirati, čime bi se nastavnicima oslobodio značajan dio vremena koji bi mogli iskoristiti na kvalitetnije zadatke. Kroz ovaj će rad biti prikazana softverska komponenta otvorenog koda koja rješava taj problem automatizacijom procesa ocjenjivanja korištenjem tehnika obrade slike. Cilj je izraditi komponentu koja ostvaruje visoku razinu preciznosti, čak i u neidealnim uvjetima.
 
 \chapter{Metode i tehnike rada}
 
@@ -852,10 +858,10 @@ Kako bi to bilo moguće, odlučeno je koristiti uzorak dizajna injektiranja ovis
 
 Na priloženoj slici prikazana je struktura izrađenog sustava za detekciju odgovora na pismenim ispitima nazvanog GradeVision. Struktura je prikazana korištenjem dijagrama klasa, što omogućuje detaljan uvid u atribute, metode i međuovisnosti svake klase. Klase na ovoj slici možemo podijeliti na klase koje se bave procesiranjem slika i klase temeljne poslovne logike. Nadalje, klase za procesiranje slika mogu se podijeliti na apstraktne i specifične klase.
 
-Apstraktne klase (označene crvenom bojom) su: \texttt{ImageData}, \texttt{DetectedCircleBase} i \texttt{ImageProcessorBase}. U ovom slučaju, te klase postoje kako bi ispunile jedan od nefunkcionalnih zahtjeva (NFZ-02). Taj je zahtjev bio vezan uz jednostavnu zamjenu biblioteka za računalni vid.
-Specifične klase (označene zelenom bojom) su: \texttt{EmguCvImage}, \texttt{EmguCvCircle} i \texttt{EmguCvImageProcessor}. One predstavljaju zadanu implementaciju apstraktnih klasa, napisanu korištenjem biblioteke EmguCV za računalni vid.
+Apstraktne klase (označene crvenom bojom) su: \textbf{ImageData}, \textbf{DetectedCircleBase} i \textbf{ImageProcessorBase}. U ovom slučaju, te klase postoje kako bi ispunile jedan od nefunkcionalnih zahtjeva (NFZ-02). Taj je zahtjev bio vezan uz jednostavnu zamjenu biblioteka za računalni vid.
+Specifične klase (označene zelenom bojom) su: \textbf{EmguCvImage}, \textbf{EmguCvCircle} i \textbf{EmguCvImageProcessor}. One predstavljaju zadanu implementaciju apstraktnih klasa, napisanu korištenjem biblioteke EmguCV za računalni vid.
 
-Važno je napomenuti da klasa \texttt{EmguCvImageProcessor} nasljeđuje apstraktnu klasu \texttt{ImageProcessorBase}, ali ne implementira sve njezine metode u jednoj C\# datoteci. Metode su implementirane u više datoteka koristeći koncept parcijalnih klasa u programskom jeziku C\#. To smanjuje potrebu za implementacijom više sučelja prilikom kreiranja nove implementacije. Klasa \texttt{EmguCvImageProcessor} definirana je kroz sljedeće datoteke, pri čemu svaka datoteka poštuje načelo jedinstvene odgovornosti (\textit{eng. Single Responsibility Principle}):
+Važno je napomenuti da klasa \textbf{EmguCvImageProcessor} nasljeđuje apstraktnu klasu \textbf{ImageProcessorBase}, ali ne implementira sve njezine metode u jednoj C\# datoteci. Metode su implementirane u više datoteka koristeći koncept parcijalnih klasa u programskom jeziku C\#. To smanjuje potrebu za implementacijom više sučelja prilikom kreiranja nove implementacije. Klasa \textbf{EmguCvImageProcessor} definirana je kroz sljedeće datoteke, pri čemu svaka datoteka poštuje načelo jedinstvene odgovornosti (\textit{eng. Single Responsibility Principle}):
 
 \begin{itemize}
     \item \textbf{EmguCVImageProcessor.cs}
@@ -900,54 +906,54 @@ Važno je napomenuti da klasa \texttt{EmguCvImageProcessor} nasljeđuje apstrakt
 \end{itemize}
 
 
-Svi koraci procesiranja slike definirani su unutar klase \texttt{ImageProcessorBase}, a implementirani u klasi \texttt{EmguCvImageProcessor}. Važno je naglasiti da u tim klasama nije definiran ni redoslijed operacija ni logika ocjenjivanja testova. Taj je dio izdvojen u klase (označene žutom bojom): \texttt{AnswerSheetGrader}, \texttt{GradeCalculator} i \texttt{GradeScale}. To su ujedno i klase s kojima bi korisnici biblioteke trebali imati najviše interakcije.
+Svi koraci procesiranja slike definirani su unutar klase \textbf{ImageProcessorBase}, a implementirani u klasi \textbf{EmguCvImageProcessor}. Važno je naglasiti da u tim klasama nije definiran ni redoslijed operacija ni logika ocjenjivanja testova. Taj je dio izdvojen u klase (označene žutom bojom): \textbf{AnswerSheetGrader}, \textbf{GradeCalculator} i \textbf{GradeScale}. To su ujedno i klase s kojima bi korisnici biblioteke trebali imati najviše interakcije.
 
 \subsection{Klase ImageData i EmguCvImage}
 
-Kako bi se omogućila zamjena biblioteke za računalni vid, bilo je potrebno koristiti podatkovni model slike koji nije vezan ni uz jednu konkretnu biblioteku. Zbog toga je kreirana apstraktna klasa \texttt{ImageData}, koja sadrži sve potrebne podatke za daljnje procesiranje slike. To uključuje naziv datoteke, širinu, visinu, broj kanala, podatke o slici u obliku niza bajtova te metodu za kloniranje. Na taj način svaka implementacija tog sučelja može biti predstavljena na isti način.
+Kako bi se omogućila zamjena biblioteke za računalni vid, bilo je potrebno koristiti podatkovni model slike koji nije vezan ni uz jednu konkretnu biblioteku. Zbog toga je kreirana apstraktna klasa \textbf{ImageData}, koja sadrži sve potrebne podatke za daljnje procesiranje slike. To uključuje naziv datoteke, širinu, visinu, broj kanala, podatke o slici u obliku niza bajtova te metodu za kloniranje. Na taj način svaka implementacija tog sučelja može biti predstavljena na isti način.
 
-Na primjer, \texttt{EmguCvImage} je implementacija koja predstavlja objekt tipa Mat iz biblioteke EmguCV u obliku \texttt{ImageData}. Također sadrži razne pomoćne metode poput ToMat, FromMat, FromFile i sličnih, što omogućuje još jednostavniji razvoj.
+Na primjer, \textbf{EmguCvImage} je implementacija koja predstavlja objekt tipa Mat iz biblioteke EmguCV u obliku \textbf{ImageData}. Također sadrži razne pomoćne metode poput ToMat, FromMat, FromFile i sličnih, što omogućuje još jednostavniji razvoj.
 
-\texttt{ImageData} se koristi u svim dijelovima koda koji moraju biti neovisni o biblioteci za računalni vid, dok se \texttt{EmguCvImage} koristi isključivo u specifičnoj implementaciji koja koristi biblioteku EmguCV.
+\textbf{ImageData} se koristi u svim dijelovima koda koji moraju biti neovisni o biblioteci za računalni vid, dok se \textbf{EmguCvImage} koristi isključivo u specifičnoj implementaciji koja koristi biblioteku EmguCV.
 
 \subsection{Klase DetectedCircleBase i EmguCvCircle}
 
-\texttt{DetectedCircleBase} je klasa koja je također nastala iz potrebe da sustav bude neovisan o specifičnoj biblioteci za računalni vid. Njezina je svrha pohranjivanje svih podataka o detektiranim krugovima, dok se specifične implementacije poput \texttt{EmguCvCircle} brinu za prikaz specifičnih objekata biblioteke računalnog vida u tom obliku.
+\textbf{DetectedCircleBase} je klasa koja je također nastala iz potrebe da sustav bude neovisan o specifičnoj biblioteci za računalni vid. Njezina je svrha pohranjivanje svih podataka o detektiranim krugovima, dok se specifične implementacije poput \textbf{EmguCvCircle} brinu za prikaz specifičnih objekata biblioteke računalnog vida u tom obliku.
 
-\texttt{DetectedCircleBase} sadrži sve važne informacije o detektiranom krugu poput: x koordinate, y koordinate, radijusa i vrijednosti koja označava je li krug ispunjen. Osim toga, sadrži i metodu koja provjerava odnos jednog objekta tipa \texttt{DetectedCircleBase} u odnosu na drugi objekt iste klase. Time se može saznati radi li se o krugu koji se preklapa i slično, što će u daljnjem dijelu rada biti iznimno važno.
+\textbf{DetectedCircleBase} sadrži sve važne informacije o detektiranom krugu poput: x koordinate, y koordinate, radijusa i vrijednosti koja označava je li krug ispunjen. Osim toga, sadrži i metodu koja provjerava odnos jednog objekta tipa \textbf{DetectedCircleBase} u odnosu na drugi objekt iste klase. Time se može saznati radi li se o krugu koji se preklapa i slično, što će u daljnjem dijelu rada biti iznimno važno.
 
-\texttt{EmguCvCircle} samo nasljeđuje \texttt{DetectedCircleBase} i omogućuje kreiranje objekta na temelju modela podataka \texttt{CircleF}, koji je prisutan u biblioteci EmguCV.
+\textbf{EmguCvCircle} samo nasljeđuje \textbf{DetectedCircleBase} i omogućuje kreiranje objekta na temelju modela podataka \textbf{CircleF}, koji je prisutan u biblioteci EmguCV.
 
 
 \subsection{Klasa EmguCvImageProcessor}
 
-Kao što je već spomenuto, \texttt{EmguCvImageProcessor} je konkretna klasa koja implementira metode naslijeđene iz apstraktne klase \texttt{ImageProcessorBase}. Budući da se radi o parcijalnoj klasi, metode su implementirane u različitim datotekama.
+Kao što je već spomenuto, \textbf{EmguCvImageProcessor} je konkretna klasa koja implementira metode naslijeđene iz apstraktne klase \textbf{ImageProcessorBase}. Budući da se radi o parcijalnoj klasi, metode su implementirane u različitim datotekama.
 
 Može se reći da je ova klasa zapravo jezgra ovog rješenja. Ona je odgovorna za sve korake koji spadaju pod pretprocesiranje, procesiranje i dio postprocesiranja.
 
 Najvažniji dijelovi logike provode se u fazi pretprocesiranja, budući da se ondje nalazi sva logika koja priprema sliku za daljnju obradu. U toj fazi također su implementirani mehanizmi koji omogućuju da sustav ispravno radi i u uvjetima koji nisu idealni.
 
-Kasnije u radu prikazat će se točan redoslijed tih operacija, koji je definiran klasom \texttt{AnswerSheetGrader}. Također će biti prikazani zanimljivi i nestandardni dijelovi implementacije za svaki od tih koraka.
+Kasnije u radu prikazat će se točan redoslijed tih operacija, koji je definiran klasom \textbf{AnswerSheetGrader}. Također će biti prikazani zanimljivi i nestandardni dijelovi implementacije za svaki od tih koraka.
 
-Sam redoslijed operacija namjerno nije definiran unutar klase \texttt{EmguCvImageProcessor}, budući da je ideja bila izdvojiti što više poslovne logike izvan klasa koje ovise o određenoj biblioteci za računalni vid. Time je omogućeno da se u budućnosti, po potrebi, napiše nova konkretna implementacija klase \texttt{ImageProcessorBase} bez potrebe za ponovnim pisanjem cijele poslovne logike. Može se reći da je u ovom slučaju \texttt{EmguCvImageProcessor} "motor" GradeVision sustava, dok je \texttt{AnswerSheetGrader} "vozač".
+Sam redoslijed operacija namjerno nije definiran unutar klase \textbf{EmguCvImageProcessor}, budući da je ideja bila izdvojiti što više poslovne logike izvan klasa koje ovise o određenoj biblioteci za računalni vid. Time je omogućeno da se u budućnosti, po potrebi, napiše nova konkretna implementacija klase \textbf{ImageProcessorBase} bez potrebe za ponovnim pisanjem cijele poslovne logike. Može se reći da je u ovom slučaju \textbf{EmguCvImageProcessor} "motor" GradeVision sustava, dok je \textbf{AnswerSheetGrader} "vozač".
 
 \subsection{Klase GradeCalculator i GradeScale}
 
-Klasa \texttt{EmguCvImageProcessor} na kraju obrade slike vraća listu odgovora po pitanjima. Ta lista se zatim predaje klasi \texttt{GradeCalculator}, koja je zadužena za izračun bodova i postotka točnosti ispita, a potom uz pomoć klase \texttt{GradeScale} određuje ocjenu koja će se ispitu dodijeliti.
+Klasa \textbf{EmguCvImageProcessor} na kraju obrade slike vraća listu odgovora po pitanjima. Ta lista se zatim predaje klasi \textbf{GradeCalculator}, koja je zadužena za izračun bodova i postotka točnosti ispita, a potom uz pomoć klase \textbf{GradeScale} određuje ocjenu koja će se ispitu dodijeliti.
 
-\texttt{GradeScale} predstavlja unaprijed definiranu skalu ocijena, ali postoji i mogućnost definiranja vlastite skale, što ocjenjivačima pruža dodatnu fleksibilnost.
+\textbf{GradeScale} predstavlja unaprijed definiranu skalu ocijena, ali postoji i mogućnost definiranja vlastite skale, što ocjenjivačima pruža dodatnu fleksibilnost.
 
 Unutar ove dvije klase enkapsulirana je sva logika za ocjenjivanje ispita. Trenutna implementacija podržava ocjenjivanje pitanja s jednostrukim i višestrukim odgovorima. Proces bodovanja temelji se na strogoj logici: bod se dodjeljuje samo ako je odgovor u potpunosti točan, to jest nema parcijalnih bodova ni penalizacije za djelomične odgovore.
 
-Važno je napomenuti da ove dvije klase također sudjeluju u fazi postprocesiranja, točnije u konačnom koraku \texttt{Obrada izvučenih podataka}, gdje koriste prethodno definiranu bazu znanja (listu točnih odgovora iz kontrolnog ispita). Nakon toga se ocjene vizualiziraju, a za tu funkcionalnost ponovno je zadužena klasa \texttt{EmguCvImageProcessor}.
+Važno je napomenuti da ove dvije klase također sudjeluju u fazi postprocesiranja, točnije u konačnom koraku \textbf{Obrada izvučenih podataka}, gdje koriste prethodno definiranu bazu znanja (listu točnih odgovora iz kontrolnog ispita). Nakon toga se ocjene vizualiziraju, a za tu funkcionalnost ponovno je zadužena klasa \textbf{EmguCvImageProcessor}.
 
 \subsection{Ostale klase}
 
-Od ostalih klasa postoje \texttt{HistogramGenerator} i \texttt{AnswerSheetGenerator} klase. Radi se o generatorima sadržaja. Klasa \texttt{AnswerSheetGenerator} odgovorna je za generiranje matrice odgovora prema zadanim parametrima, kao što je definirano u funkcionalnom zahtjevu FZ-02. Za razliku od ostalih klasa, riječ je o potpuno neovisnoj komponenti sustava, čija se metoda \texttt{Generate()} može pozvati u bilo kojem trenutku izvođenja programa, bez utjecaja na njegovo daljnje izvođenje.
+Od ostalih klasa postoje \textbf{HistogramGenerator} i \textbf{AnswerSheetGenerator} klase. Radi se o generatorima sadržaja. Klasa \textbf{AnswerSheetGenerator} odgovorna je za generiranje matrice odgovora prema zadanim parametrima, kao što je definirano u funkcionalnom zahtjevu FZ-02. Za razliku od ostalih klasa, riječ je o potpuno neovisnoj komponenti sustava, čija se metoda \textbf{Generate()} može pozvati u bilo kojem trenutku izvođenja programa, bez utjecaja na njegovo daljnje izvođenje.
 
-S druge strane, klasa \texttt{HistogramGenerator} je pomoćna klasa koja ima ključnu ulogu u procesu detekcije krugova. Implementira algoritam za određivanje praga koji definira je li neki odgovor označen ili nije. Izračunati pragovi se zatim  vizualiziraju i pohranjuju u obliku histograma na disk. Histogrami se spremaju samo kada je program pokrenut u načinu rada za otklanjanje pogrešaka (\textit{engl. debug mode}), koji je definiran u funkcionalnom zahtjevu FZ-06.
+S druge strane, klasa \textbf{HistogramGenerator} je pomoćna klasa koja ima ključnu ulogu u procesu detekcije krugova. Implementira algoritam za određivanje praga koji definira je li neki odgovor označen ili nije. Izračunati pragovi se zatim  vizualiziraju i pohranjuju u obliku histograma na disk. Histogrami se spremaju samo kada je program pokrenut u načinu rada za otklanjanje pogrešaka (\textit{engl. debug mode}), koji je definiran u funkcionalnom zahtjevu FZ-06.
 
-Važno je napomenuti da je klasa \texttt{HistogramGenerator} potpuno neovisna o bibliotekama za računalni vid, iako se primarno koristi od strane \texttt{EmguCVImageProcessor} klase. Ona prima listu decimalnih brojeva koji predstavljaju odgovore na ispitnim listovima s određenim postotkom ispunjenosti. Te podatke obrađuje i vraća prag ispunjenosti kruga u obliku postotka. Ako je postotak ispunjenosti viši od izračunatog praga, krug se smatra označenim.
+Važno je napomenuti da je klasa \textbf{HistogramGenerator} potpuno neovisna o bibliotekama za računalni vid, iako se primarno koristi od strane \textbf{EmguCVImageProcessor} klase. Ona prima listu decimalnih brojeva koji predstavljaju odgovore na ispitnim listovima s određenim postotkom ispunjenosti. Te podatke obrađuje i vraća prag ispunjenosti kruga u obliku postotka. Ako je postotak ispunjenosti viši od izračunatog praga, krug se smatra označenim.
 
 \section{Modeliranje ponašanja sustava}
 
@@ -961,11 +967,11 @@ Kroz sljedeće dijagrame slijeda prikazat će se interakcije između korisnika i
 \caption{Prikaz dijagrama slijeda za detekciju odgovora s kontrolnog ispita (Vlastita izrada)}
 \end{figure}
 
-Dosad se \texttt{GradeVision} spominjao samo kao biblioteka, ali za potrebe testiranja i demonstracije izrađena je jednostavna WinForms aplikacija koja koristi mogućnosti te biblioteke, a koja će se u daljnjem dijelu rada spominjati kao \texttt{GradeVision korisničko sučelje}, dok će se biblioteka spominjati kao \texttt{GradeVisionLib}. Također, u daljnjem dijelu rada spominjat će se pojmovi \texttt{kontrolni ispit} i \texttt{ispit za ocjenjivanje}. Kontrolni ispit označava ispit koji sadrži sve točne odgovore za svako pitanje, dok ispit za ocjenjivanje označava ispit čija je točnost nepoznata te se tek treba utvrditi usporedbom detektiranih odgovora s detektiranim odgovorima kontrolnog ispita (eng. control test).
+Dosad se \textbf{GradeVision} spominjao samo kao biblioteka, ali za potrebe testiranja i demonstracije izrađena je jednostavna WinForms aplikacija koja koristi mogućnosti te biblioteke, a koja će se u daljnjem dijelu rada spominjati kao \textbf{GradeVision korisničko sučelje}, dok će se biblioteka spominjati kao \textbf{GradeVisionLib}. Također, u daljnjem dijelu rada spominjat će se pojmovi \textbf{kontrolni ispit} i \textbf{ispit za ocjenjivanje}. Kontrolni ispit označava ispit koji sadrži sve točne odgovore za svako pitanje, dok ispit za ocjenjivanje označava ispit čija je točnost nepoznata te se tek treba utvrditi usporedbom detektiranih odgovora s detektiranim odgovorima kontrolnog ispita (eng. control test).
 
 Priloženi dijagram prikazuje proces detekcije odgovora s kontrolnog ispita. To je vrlo važan proces, budući da je njegov konačni rezultat izrada baze znanja s točnim odgovorima za svako pitanje, koja se kasnije koristi pri ocjenjivanju.
 
-Taj proces pokreće ocjenjivač  tako da učita sliku kontrolnog ispita u \texttt{GradeVision} korisničko sučelje. Zatim aplikacija GradeVision poziva \texttt{AnswerSheetGrader}, koji je dio GradeVisionLib-a. Točnije, poziva se metoda \texttt{ProcessControlSheet(ImageData)}, čime se zapravo pokreće obrada slike. Veći dio obrade slike izvodi se u metodi \texttt{ProcessImage(ImageData rawImage, string outputDir)}, koja orkestrira sve aktivnosti pretprocesiranja pozivanjem metoda konkretne implementacije klase \texttt{ImageProcessorBase} sljedećim redoslijedom:
+Taj proces pokreće ocjenjivač  tako da učita sliku kontrolnog ispita u \textbf{GradeVision} korisničko sučelje. Zatim aplikacija GradeVision poziva \textbf{AnswerSheetGrader}, koji je dio GradeVisionLib-a. Točnije, poziva se metoda \textbf{ProcessControlSheet(ImageData)}, čime se zapravo pokreće obrada slike. Veći dio obrade slike izvodi se u metodi \textbf{ProcessImage(ImageData rawImage, string outputDir)}, koja orkestrira sve aktivnosti pretprocesiranja pozivanjem metoda konkretne implementacije klase \textbf{ImageProcessorBase} sljedećim redoslijedom:
 
 \begin{itemize}
 \item ConvertToGrayscale(image)
@@ -975,18 +981,18 @@ Taj proces pokreće ocjenjivač  tako da učita sliku kontrolnog ispita u \textt
 \item ApplyThresholding(image)
 \end{itemize}
 
-Naravno ove metode kasnije pozivaju svoje privatne pomoćne metode no to će uvijek ovisiti o biblioteci računalnog vida koja se koristi pa taj dio nije prikazan na dijagramu. Metoda \texttt{ProcessImage(ImageData rawImage, string outputDir)} se također koristi i kod pretprocesiranja ispita za ocijenjivanje što će u nastavku biti prikazano. Važno je napomenuti da je sam  redoslijed aktivnosti pretprocesiranja dobiven kroz opsežno testiranje i iteriranje tijekom razvoja i ova varijanta se pokazala najboljom. Kvaliteta redoslijeda tih aktivnosti bila je mjerena prema preciznosti samog sustava nad skupom podataka vlastite izrade koji će također biti priloženi uz ovaj rad.
+Naravno ove metode kasnije pozivaju svoje privatne pomoćne metode no to će uvijek ovisiti o biblioteci računalnog vida koja se koristi pa taj dio nije prikazan na dijagramu. Metoda \textbf{ProcessImage(ImageData rawImage, string outputDir)} se također koristi i kod pretprocesiranja ispita za ocijenjivanje što će u nastavku biti prikazano. Važno je napomenuti da je sam  redoslijed aktivnosti pretprocesiranja dobiven kroz opsežno testiranje i iteriranje tijekom razvoja i ova varijanta se pokazala najboljom. Kvaliteta redoslijeda tih aktivnosti bila je mjerena prema preciznosti samog sustava nad skupom podataka vlastite izrade koji će također biti priloženi uz ovaj rad.
 
-Osim toga, metoda \texttt{ProcessImage(ImageData rawImage, string outputDir)}  se također koristi pri pretprocesiranju ispita za ocjenjivanje, što će biti prikazano u nastavku.
+Osim toga, metoda \textbf{ProcessImage(ImageData rawImage, string outputDir)}  se također koristi pri pretprocesiranju ispita za ocjenjivanje, što će biti prikazano u nastavku.
 Naravno, ove metode kasnije pozivaju svoje privatne pomoćne metode, što će uvijek ovisiti o biblioteci računalnog vida koja se koristi, pa taj dio nije prikazan na dijagramu zbog čitljivosti.
 
-Nakon što je pretprocesiranje završeno, započinje faza procesiranja tako što \texttt{AnswerSheetGrader} poziva metodu \texttt{CircleDetection(ImageData inputImage)}. Metoda \texttt{CircleDetection} jedan je od najvažnijih dijelova ovog rada, budući da se u njoj odvija detekcija odgovora i njihovo klasificiranje u dvije klase: označen i neoznačen odgovor.
+Nakon što je pretprocesiranje završeno, započinje faza procesiranja tako što \textbf{AnswerSheetGrader} poziva metodu \textbf{CircleDetection(ImageData inputImage)}. Metoda \textbf{CircleDetection} jedan je od najvažnijih dijelova ovog rada, budući da se u njoj odvija detekcija odgovora i njihovo klasificiranje u dvije klase: označen i neoznačen odgovor.
 
 Sama logika klasificiranja koristi opisne vrijednosti ispunjenosti objekta, koje izražavaju postotak u kojem je pojedini odgovor ispunjen. Međutim, samo poznavanje postotka ispunjenosti nije dovoljno za ispravnu klasifikaciju odgovora. Potrebno je odrediti prag ispunjenosti koji razdvaja te dvije klase. Taj se prag može postaviti proizvoljno, no takav pristup nije pouzdan jer ne ispunjava svaka osoba krug odgovora na isti način. Osim toga, dodatni čimbenici poput veličine kruga odgovora na papiru također utječu na rezultate.
 
-Zbog toga je bilo potrebno osmisliti preciznije rješenje. Ono je implementirano u klasi \texttt{HistogramGenerator}, unutar metode \texttt{CalculateFillPercentageThreshold(List<double> fillPercentages)}. Upravo se ta metoda poziva unutar \texttt{CircleDetection} metode prije nego što se vrati slika sa svim detektiranim odgovorima i rječnik klasificiranih odgovora grupiranih po pitanjima.
+Zbog toga je bilo potrebno osmisliti preciznije rješenje. Ono je implementirano u klasi \textbf{HistogramGenerator}, unutar metode \textbf{CalculateFillPercentageThreshold(List<double> fillPercentages)}. Upravo se ta metoda poziva unutar \textbf{CircleDetection} metode prije nego što se vrati slika sa svim detektiranim odgovorima i rječnik klasificiranih odgovora grupiranih po pitanjima.
 
-Klasa \texttt{AnswerSheetGrader} zatim poziva metodu \texttt{VisualizeDetectedCircles} iz klase \texttt{ImageProcessorBase} kako bi se klasificirani odgovori vizualizirali. Nakon toga se kreirana slika vraća sve do GradeVision korisničkog sučelja, gdje je prikazana ocjenjivaču. 
+Klasa \textbf{AnswerSheetGrader} zatim poziva metodu \textbf{VisualizeDetectedCircles} iz klase \textbf{ImageProcessorBase} kako bi se klasificirani odgovori vizualizirali. Nakon toga se kreirana slika vraća sve do GradeVision korisničkog sučelja, gdje je prikazana ocjenjivaču. 
 
 \subsection{Ponašanje sustava tijekom ocjenjivanja}
 
@@ -996,7 +1002,7 @@ Klasa \texttt{AnswerSheetGrader} zatim poziva metodu \texttt{VisualizeDetectedCi
 \caption{Prikaz dijagrama slijeda ocijenjivanja ispita (Vlastita izrada)}
 \end{figure}
 
-Priloženi dijagram ima mnogo sličnosti sa prijašnjim dijagramom slijeda, ali razlikuje se u par ključnih stvari. Prva razlika je da korsnik ne unosi samo jednu sliku u sustav već više njih. Zatim se poziva metoda \texttt{ProcessAnswerSheet(ImageData inputImage, Dictionary<int, List<DetectedCircleBase>> controlAnswers, GradeScale gradeScale)} koja procesira ispite za ocijenjivanje. Pretprocesiranje ponovno provodi \texttt{ProcessImage(ImageData rawImage, string outputDir)} metoda već spomenutim koracima i redoslijedom. Zatim se provodi detektiranje krugova koje je također već spomenuto, no tu sve sličnosti sa prijašnjim dijagramom završavaju. Nakon detektiranja krugova poziva se \texttt{GradeCalculator} klasa, točnije njezina metoda \texttt{GetGrade()}.
+Priloženi dijagram ima mnogo sličnosti sa prijašnjim dijagramom slijeda, ali razlikuje se u par ključnih stvari. Prva razlika je da korsnik ne unosi samo jednu sliku u sustav već više njih. Zatim se poziva metoda \textbf{ProcessAnswerSheet(ImageData inputImage, Dictionary<int, List<DetectedCircleBase>> controlAnswers, GradeScale gradeScale)} koja procesira ispite za ocijenjivanje. Pretprocesiranje ponovno provodi \textbf{ProcessImage(ImageData rawImage, string outputDir)} metoda već spomenutim koracima i redoslijedom. Zatim se provodi detektiranje krugova koje je također već spomenuto, no tu sve sličnosti sa prijašnjim dijagramom završavaju. Nakon detektiranja krugova poziva se \textbf{GradeCalculator} klasa, točnije njezina metoda \textbf{GetGrade()}.
 
 Nakon što metoda vrati ocjenu i postotak riješenosti, poziva se sljedeći korak. Taj korak uključuje vizualizaciju ocjene na način da se na ispitu označe točno i krivo označeni odgovori te da se u gornjem desnom kutu slike napiše postotak i ocjena. Zatim se slika sa vizualizacijom ocjene vraća na ekran ocjenjivača i ponavlja se isti proces za ostale ispite koji još nisu ocijenjeni.
 
@@ -1010,17 +1016,17 @@ Važno je napomenuti da se ovaj slijed ne može pokrenuti dok god se ne izvrše 
 \caption{Prikaz dijagrama slijeda za generiranje PDF matrice odgovora (vlastita izrada)}
 \end{figure}
 
-Kroz priloženi dijagram slijeda može se vidjeti da je samo generiranje matrice odgovora u obliku PDF-a prilično jednostavno. Kako bi se PDF generirao, korisnik najprije mora definirati ukupan broj pitanja i broj ponuđenih odgovora po pitanju. Nakon što su ti parametri definirani, pritišće se gumb za generiranje PDF-a, čime se daljnja kontrola nad izvođenjem predaje klasi forme u WinForm aplikaciji. Ta klasa zatim poziva metodu \texttt{Generate()} klase \texttt{AnswerSheetGenerator}. 
+Kroz priloženi dijagram slijeda može se vidjeti da je samo generiranje matrice odgovora u obliku PDF-a prilično jednostavno. Kako bi se PDF generirao, korisnik najprije mora definirati ukupan broj pitanja i broj ponuđenih odgovora po pitanju. Nakon što su ti parametri definirani, pritišće se gumb za generiranje PDF-a, čime se daljnja kontrola nad izvođenjem predaje klasi forme u WinForm aplikaciji. Ta klasa zatim poziva metodu \textbf{Generate()} klase \textbf{AnswerSheetGenerator}. 
 
-Metoda \texttt{Generate} je metoda bez povratnog tipa podataka, što nije problem jer ona izravno generirani PDF sprema na disk. Metoda \texttt{Generate} poziva svoje privatne metode sljedećim redoslijedom:
+Metoda \textbf{Generate} je metoda bez povratnog tipa podataka, što nije problem jer ona izravno generirani PDF sprema na disk. Metoda \textbf{Generate} poziva svoje privatne metode sljedećim redoslijedom:
 
 \begin{itemize}
-\item \texttt{DrawHeader} - Crta pravokutni okvir na vrhu stranice i ispisuje tekst s poljima za ime i ocjenu osobe koja piše ispit.
-\item \texttt{DrawAnswerAreaFrame} - Crta pravokutni okvir koji označava područje u kojem se nalaze pitanja i odgovori.
-\item \texttt{DrawAllQuestionRows} - Ispisuje redove s brojevima pitanja i pripadajućim krugovima za svaki ponuđeni odgovor.
+\item \textbf{DrawHeader} - Crta pravokutni okvir na vrhu stranice i ispisuje tekst s poljima za ime i ocjenu osobe koja piše ispit.
+\item \textbf{DrawAnswerAreaFrame} - Crta pravokutni okvir koji označava područje u kojem se nalaze pitanja i odgovori.
+\item \textbf{DrawAllQuestionRows} - Ispisuje redove s brojevima pitanja i pripadajućim krugovima za svaki ponuđeni odgovor.
     \begin{itemize}
-    \item \texttt{DrawCircle} - Crta jedan krug koji predstavlja ponuđeni odgovor.
-    \item \texttt{CenterTextIntoCircle} - Centrira i ispisuje pripadajuće slovo unutar prethodno nacrtanog kruga.
+    \item \textbf{DrawCircle} - Crta jedan krug koji predstavlja ponuđeni odgovor.
+    \item \textbf{CenterTextIntoCircle} - Centrira i ispisuje pripadajuće slovo unutar prethodno nacrtanog kruga.
     \end{itemize}
 \end{itemize}
 
@@ -1043,13 +1049,13 @@ Osim tih elemenata, u gornjem lijevom kutu nalaze se kontrole za definiranje nov
 
 GradeVison demo aplikacija vrlo je jednostavna za korištenje. Na slici 22 označeni su koraci za korištenje raznih funkcionalnosti aplikacije.
 
-Kako bi se prikazala cjelokupna funkcionalnost aplikacije, najbolje je za početak generirati PDF predložak matrice odgovora. Za generiranje predloška potrebno je u donjem desnom kutu aplikacije odabrati broj pitanja i broj odgovora po pitanju. Zatim je potrebno pritisnuti gumb Generate, koji će generirati PDF matricu odgovora i spremiti je na radnu površinu računala u mapu \texttt{ProcessedImages}. Važno je napomenuti da PDF matrica ima određenu razinu fleksibilnosti što se tiče broja pitanja i odgovora, no broj pitanja je ograničen na minimalno 8, a maksimalno 20, dok je minimalan broj odgovora 4, a maksimalan 8.
+Kako bi se prikazala cjelokupna funkcionalnost aplikacije, najbolje je za početak generirati PDF predložak matrice odgovora. Za generiranje predloška potrebno je u donjem desnom kutu aplikacije odabrati broj pitanja i broj odgovora po pitanju. Zatim je potrebno pritisnuti gumb Generate, koji će generirati PDF matricu odgovora i spremiti je na radnu površinu računala u mapu \textbf{ProcessedImages}. Važno je napomenuti da PDF matrica ima određenu razinu fleksibilnosti što se tiče broja pitanja i odgovora, no broj pitanja je ograničen na minimalno 8, a maksimalno 20, dok je minimalan broj odgovora 4, a maksimalan 8.
 
 Nakon što je matrica odgovora generirana, potrebno ju je isprintati i podijeliti pristupnicima ispita na rješavanje. Osim toga, ocjenjivač treba jednu matricu odgovora riješiti potpuno točno. Slijedi fotografiranje matrica odgovora i unos slika matrica u sustav.
 
-Za unos kontrolne matrice u sustav potrebno je u donjem lijevom kutu aplikacije pritisnuti gumb \texttt{Load test with correct answers} i zatim u datotečnom sustavu odabrati fotografiju kontrolne matrice. Čim se slika učita, automatski se pokreće proces detekcije označenih odgovora na matrici. Kada taj proces završi, izvorna slika u prvom okviru zamjenjuje se slikom s detektiranim odgovorima. Time se omogućuje ocjenjivaču uvid u rad sustava i provjera njegove ispravnosti.
+Za unos kontrolne matrice u sustav potrebno je u donjem lijevom kutu aplikacije pritisnuti gumb \textbf{Load test with correct answers} i zatim u datotečnom sustavu odabrati fotografiju kontrolne matrice. Čim se slika učita, automatski se pokreće proces detekcije označenih odgovora na matrici. Kada taj proces završi, izvorna slika u prvom okviru zamjenjuje se slikom s detektiranim odgovorima. Time se omogućuje ocjenjivaču uvid u rad sustava i provjera njegove ispravnosti.
 
-Nakon unosa kontrolne matrice potrebno je unijeti slike matrica odgovora polaznika. Za to je potrebno pritisnuti gumb \texttt{Load tests to grade} i zatim u datotečnom sustavu odabrati slike matrica koje je potrebno ocijeniti. Nakon što su matrice učitane, potrebno je pritisnuti gumb \texttt{Grade all tests}, koji pokreće detekciju odgovora i ocjenjivanje matrica polaznika. Ocijenjeni ispiti vizualiziraju se tijekom ocjenjivanja, a rezultati se upisuju u tablicu na desnoj strani aplikacije. U slučaju da je potrebna dodatna vizualizacija cijelog procesa, moguće je uključiti \texttt{debug mode} klikom na potvrdni okvir u donjem lijevom kutu.
+Nakon unosa kontrolne matrice potrebno je unijeti slike matrica odgovora polaznika. Za to je potrebno pritisnuti gumb \textbf{Load tests to grade} i zatim u datotečnom sustavu odabrati slike matrica koje je potrebno ocijeniti. Nakon što su matrice učitane, potrebno je pritisnuti gumb \textbf{Grade all tests}, koji pokreće detekciju odgovora i ocjenjivanje matrica polaznika. Ocijenjeni ispiti vizualiziraju se tijekom ocjenjivanja, a rezultati se upisuju u tablicu na desnoj strani aplikacije. U slučaju da je potrebna dodatna vizualizacija cijelog procesa, moguće je uključiti \textbf{debug mode} klikom na potvrdni okvir u donjem lijevom kutu.
 
 U slučaju da korisnik nije definirao vlastitu skalu ocjenjivanja, sustav koristi unaprijed definiranu skalu:
 
@@ -1069,17 +1075,17 @@ U slučaju da korisnik nije definirao vlastitu skalu ocjenjivanja, sustav korist
 \caption{Unaprijed definirane ocjene i odgovarajući pragovi u obliku postotka}
 \end{table}
 
-Osim prikazanih ocjena u tablici, postoji i posebna ocjena \texttt{NOT GRADED}, koja se dodjeljuje u slučaju kada sustav zaključi da nije moguće usporediti matricu polaznika s kontrolnom matricom, iz nekog razloga.
+Osim prikazanih ocjena u tablici, postoji i posebna ocjena \textbf{NOT GRADED}, koja se dodjeljuje u slučaju kada sustav zaključi da nije moguće usporediti matricu polaznika s kontrolnom matricom, iz nekog razloga.
 
-Ako ocjenjivač želi koristiti vlastitu skalu ocjenjivanja, i to je moguće. Potrebno je u gornjem lijevom kutu aplikacije upisati ime ocjene i zatim pritisnuti gumb \texttt{Define new grade}. Taj je postupak potrebno ponoviti više puta, ovisno o broju ocjena koje je potrebno definirati. Nakon što su ocjene definirane, pragovi se dodjeljuju u tablici ocjena i pragova. Prag se dodaje tako da se upiše u tablicu pod stupac \texttt{Threshold}. Važno je napomenuti da se za prvu, tj. negativnu ocjenu, ne može definirati prag — njezin prag je automatski manji od druge definirane ocjene.
+Ako ocjenjivač želi koristiti vlastitu skalu ocjenjivanja, i to je moguće. Potrebno je u gornjem lijevom kutu aplikacije upisati ime ocjene i zatim pritisnuti gumb \textbf{Define new grade}. Taj je postupak potrebno ponoviti više puta, ovisno o broju ocjena koje je potrebno definirati. Nakon što su ocjene definirane, pragovi se dodjeljuju u tablici ocjena i pragova. Prag se dodaje tako da se upiše u tablicu pod stupac \textbf{Threshold}. Važno je napomenuti da se za prvu, tj. negativnu ocjenu, ne može definirati prag — njezin prag je automatski manji od druge definirane ocjene.
 
-Kada je skala definirana u tablici, potrebno je pritisnuti gumb \texttt{Apply grading scale} i ponovno pokrenuti proces ocjenjivanja, koji će se zatim odvijati prema novoj skali.
+Kada je skala definirana u tablici, potrebno je pritisnuti gumb \textbf{Apply grading scale} i ponovno pokrenuti proces ocjenjivanja, koji će se zatim odvijati prema novoj skali.
 
 \section{Značajni dijelovi koda GradeVison biblioteke}
 
-Kroz ovo poglavlje fokus je na prikazu interesantnih dijelova koda GradeVision biblioteke. Sama analiza prolazit će kroz redoslijed operacija prikazan na dijagramu slijeda na slici 20, a fokus će većinski biti na analizi implementacije metoda \texttt{ImageProcessorBase} koristeći EmguCV biblioteku.
+Kroz ovo poglavlje fokus je na prikazu interesantnih dijelova koda GradeVision biblioteke. Sama analiza prolazit će kroz redoslijed operacija prikazan na dijagramu slijeda na slici 20, a fokus će većinski biti na analizi implementacije metoda \textbf{ImageProcessorBase} koristeći EmguCV biblioteku.
 
-Prvi korak procesiranja slike je pretvorba slike u boji u sivu sliku. Za to je odgovorna metoda \texttt{ConvertToGrayscale}:
+Prvi korak procesiranja slike je pretvorba slike u boji u sivu sliku. Za to je odgovorna metoda \textbf{ConvertToGrayscale}:
 
 \begin{lstlisting}[caption={Metoda za konverziju slike u boji u sivu sliku}]
 override public ImageData ConvertToGrayscale(ImageData inputImage){
@@ -1090,7 +1096,7 @@ override public ImageData ConvertToGrayscale(ImageData inputImage){
 }
 \end{lstlisting} 
 
-Priložena metoda zapravo je prvi korak pretprocesiranja slike. Metoda prvo iz apstraktne klase \texttt{InputImage} izvlači \texttt{Mat} objekt, koji je zapravo reprezentacija slike u EmguCV biblioteci. Zatim se pomoću operacije \texttt{CvInvoke.CvtColor} početna matrica pretvara u matricu sive slike koristeći mod konverzije \texttt{ColorConversion.Bgr2Gray}. Na priloženoj slici moguće je vidjeti ulaz i izlaz \texttt{ConvertToGrayscale} metode.
+Priložena metoda zapravo je prvi korak pretprocesiranja slike. Metoda prvo iz apstraktne klase \textbf{InputImage} izvlači \textbf{Mat} objekt, koji je zapravo reprezentacija slike u EmguCV biblioteci. Zatim se pomoću operacije \textbf{CvInvoke.CvtColor} početna matrica pretvara u matricu sive slike koristeći mod konverzije \textbf{ColorConversion.Bgr2Gray}. Na priloženoj slici moguće je vidjeti ulaz i izlaz \textbf{ConvertToGrayscale} metode.
 
 \begin{figure}[H]
 \centering
@@ -1117,7 +1123,7 @@ override public ImageData Denoise(ImageData inputImage){
 }
 \end{lstlisting}
 
-Metoda \texttt{Denoise} odgovorna je za analizu buke na slici pomoću metode \texttt{EstimateNoiseLevel} i uklanjanje buke pomoću metode \texttt{ApplyNonLocalMeansDenoising}. Buka se smanjuje samo u slučaju da je vrijednost veća od definiranog praga \texttt{NOISE\_LEVEL\_THRESHOLD}. U slučaju da je buka ispod tog praga, smatra se da se radi o dozvoljenoj razini buke, to jest razini koja ne bi trebala imati utjecaja na daljnju obradu slike. Taj prag pažljivo je kalibriran tijekom razvoja. Također, ova metoda odgovorna je za prikaz teksta o razini buke i provedenoj operaciji uklanjanja buke. Taj se tekst prikazuje na slici samo ako je sustav u načinu rada za otkrivanje grešaka.
+Metoda \textbf{Denoise} odgovorna je za analizu buke na slici pomoću metode \textbf{EstimateNoiseLevel} i uklanjanje buke pomoću metode \textbf{ApplyNonLocalMeansDenoising}. Buka se smanjuje samo u slučaju da je vrijednost veća od definiranog praga \textbf{NOISE\_LEVEL\_THRESHOLD}. U slučaju da je buka ispod tog praga, smatra se da se radi o dozvoljenoj razini buke, to jest razini koja ne bi trebala imati utjecaja na daljnju obradu slike. Taj prag pažljivo je kalibriran tijekom razvoja. Također, ova metoda odgovorna je za prikaz teksta o razini buke i provedenoj operaciji uklanjanja buke. Taj se tekst prikazuje na slici samo ako je sustav u načinu rada za otkrivanje grešaka.
 
 \begin{lstlisting}[caption={Procjena razine buke na slici}]
 private double EstimateNoiseLevel(Mat image){
@@ -1134,7 +1140,7 @@ private double EstimateNoiseLevel(Mat image){
 }
 \end{lstlisting}
 
-Priloženi isječak koda odgovoran je za procjenu buke spomenutu u prijašnjem isječku. Procjena buke izvodi se tako da se na pomoćnom \texttt{Mat} objektu smanji buka pomoću metode \texttt{CvInvoke.MedianBlur}, a zatim se metodom \texttt{CvInvoke.Subtract} oduzmu \texttt{Mat} objekti te se nad rezultatom pronađe standardna devijacija. Važno je napomenuti da ova metoda daje dobre rezultate za sitnu buku visoke frekvencije, što je u ovom slučaju i potrebno. Rezultat ove metode naknadno se uspoređuje s definiranim pragom i utvrđuje se je li potrebno provesti operaciju uklanjanja buke. Ako je potrebno, tada se izvršava metoda iz sljedećeg isječka.
+Priloženi isječak koda odgovoran je za procjenu buke spomenutu u prijašnjem isječku. Procjena buke izvodi se tako da se na pomoćnom \textbf{Mat} objektu smanji buka pomoću metode \textbf{CvInvoke.MedianBlur}, a zatim se metodom \textbf{CvInvoke.Subtract} oduzmu \textbf{Mat} objekti te se nad rezultatom pronađe standardna devijacija. Važno je napomenuti da ova metoda daje dobre rezultate za sitnu buku visoke frekvencije, što je u ovom slučaju i potrebno. Rezultat ove metode naknadno se uspoređuje s definiranim pragom i utvrđuje se je li potrebno provesti operaciju uklanjanja buke. Ako je potrebno, tada se izvršava metoda iz sljedećeg isječka.
 
 \begin{lstlisting}[caption={Metoda za smanjenje buke}]
 private Mat ApplyNonLocalMeansDenoising(Mat image){
@@ -1147,7 +1153,7 @@ private Mat ApplyNonLocalMeansDenoising(Mat image){
 }
 \end{lstlisting}
 
-Priložena metoda smanjuje buku koristeći metodu \texttt{CvInvoke.FastNlMeansDenoising}. Radi se o algoritmu poznatom po očuvanju detalja i smanjenju buke, posebno na fotografijama sa sitnim detaljima. Odluka za korištenje ovog algoritma donesena je kroz testiranje raznih algoritama i usporedbu preciznosti cijelog sustava. Na kraju je odlučeno da je ovo najkonzistentnija opcija. Metoda \texttt{CvInvoke.FastNlMeansDenoising} prima tri argumenta koja opisuju jačinu uklanjanja buke i veličinu matrice za pretraživanje i usporedbu blokova piksela.
+Priložena metoda smanjuje buku koristeći metodu \textbf{CvInvoke.FastNlMeansDenoising}. Radi se o algoritmu poznatom po očuvanju detalja i smanjenju buke, posebno na fotografijama sa sitnim detaljima. Odluka za korištenje ovog algoritma donesena je kroz testiranje raznih algoritama i usporedbu preciznosti cijelog sustava. Na kraju je odlučeno da je ovo najkonzistentnija opcija. Metoda \textbf{CvInvoke.FastNlMeansDenoising} prima tri argumenta koja opisuju jačinu uklanjanja buke i veličinu matrice za pretraživanje i usporedbu blokova piksela.
 
 
 \begin{figure}[H]
@@ -1179,7 +1185,7 @@ override public ImageData CorrectPerspective(ImageData inputImage){
 }
 \end{lstlisting}
 
-Iz priloženog koda vidljivo je da se pokušavaju detektirati rubovi svih struktura na slici koristeći dvije različite metode: \texttt{DetectEdgesCanny} i \texttt{DetectEdgesAdaptive}. Zatim se pokušavaju pronaći dvije najveće pravokutne konture koje odgovaraju veličini papira. Zatim se pomoću metode \texttt{ChooseBestRectangle} zaključuje koji je pravokutnik bolji odabir za ispravak perspektive, te se perspektiva ispravlja pomoću metode \texttt{ApplyPerspectiveCorrection}.
+Iz priloženog koda vidljivo je da se pokušavaju detektirati rubovi svih struktura na slici koristeći dvije različite metode: \textbf{DetectEdgesCanny} i \textbf{DetectEdgesAdaptive}. Zatim se pokušavaju pronaći dvije najveće pravokutne konture koje odgovaraju veličini papira. Zatim se pomoću metode \textbf{ChooseBestRectangle} zaključuje koji je pravokutnik bolji odabir za ispravak perspektive, te se perspektiva ispravlja pomoću metode \textbf{ApplyPerspectiveCorrection}.
 
 Zanimljivost ove metode je u tome što zapravo koristi dva različita pristupa za detekciju rubova. Analiza sljedećih isječaka prikazuje primijenjene metode i objašnjava prednosti i mane oba pristupa.
 
@@ -1210,12 +1216,12 @@ private Mat DetectEdgesAdaptive(Mat image){
 
 Glavna razlika između priloženih metoda je odabrani pristup za detektiranje rubova.
 
-Metoda \texttt{DetectEdgesCanny} naglašava sve rubove na slici koristeći \texttt{CvInvoke.Canny} algoritam uz pomoć morfološke operacije dilatacije, koja omogućuje spajanje prekinutih rubova, što povećava preciznost sustava u ekstremnim uvjetima.
+Metoda \textbf{DetectEdgesCanny} naglašava sve rubove na slici koristeći \textbf{CvInvoke.Canny} algoritam uz pomoć morfološke operacije dilatacije, koja omogućuje spajanje prekinutih rubova, što povećava preciznost sustava u ekstremnim uvjetima.
 
-Metoda \texttt{DetectEdgesAdaptive} ne koristi standardni pristup detektiranju rubova, već koristi \texttt{CvInvoke.AdaptiveThreshold} algoritam koji pretvara ulaznu sivu sliku u binarnu sliku. Ova implementacija namijenjena je specifično kreiranju binarne slike u varijabilnim uvjetima osvjetljenja. Nakon binarizacije, detektiraju se strukturni elementi te se nad njima izvršava morfološka operacija zatvaranja kako bi se povezale i očistile strukturne komponente slike.
+Metoda \textbf{DetectEdgesAdaptive} ne koristi standardni pristup detektiranju rubova, već koristi \textbf{CvInvoke.AdaptiveThreshold} algoritam koji pretvara ulaznu sivu sliku u binarnu sliku. Ova implementacija namijenjena je specifično kreiranju binarne slike u varijabilnim uvjetima osvjetljenja. Nakon binarizacije, detektiraju se strukturni elementi te se nad njima izvršava morfološka operacija zatvaranja kako bi se povezale i očistile strukturne komponente slike.
 
 
-Nakon što su rubovi detektirani, započinje proces analize rubova i pronalaska pravokutnika koji najbolje opisuje rub papira na slici. Za to služi metoda \texttt{FindLargestRectangleContour}:
+Nakon što su rubovi detektirani, započinje proces analize rubova i pronalaska pravokutnika koji najbolje opisuje rub papira na slici. Za to služi metoda \textbf{FindLargestRectangleContour}:
 
 \pagebreak
 \begin{lstlisting}[caption={Metoda za pronalazak najvećeg pravokutnika koji predstavlja papir}]
@@ -1243,10 +1249,10 @@ private VectorOfPoint FindLargestRectangleContour(Mat edges){
 }
 \end{lstlisting}
 
-Ova metoda funkcionira tako da pomoću metode \texttt{CvInvoke.FindContours} pronalazi sve konture na slici. Zatim se izračunava površina konture pomoću \texttt{CvInvoke.ContourArea}. Ako je površina manja od unaprijed definirane minimalne vrijednosti \texttt{MinContourArea}, kontura se preskače. U slučaju da je površina dovoljno velika, kontura se aproksimira u poligon pomoću metode \texttt{CvInvoke.ApproxPolyDP}. Taj aproksimirani poligon mora imati točno četiri vrha, tj. mora biti pravokutnik. Ako je takav pravokutnik veći od prethodno pronađenog najvećeg, tada se postavlja kao novi najveći pravokutnik.
+Ova metoda funkcionira tako da pomoću metode \textbf{CvInvoke.FindContours} pronalazi sve konture na slici. Zatim se izračunava površina konture pomoću \textbf{CvInvoke.ContourArea}. Ako je površina manja od unaprijed definirane minimalne vrijednosti \textbf{MinContourArea}, kontura se preskače. U slučaju da je površina dovoljno velika, kontura se aproksimira u poligon pomoću metode \textbf{CvInvoke.ApproxPolyDP}. Taj aproksimirani poligon mora imati točno četiri vrha, tj. mora biti pravokutnik. Ako je takav pravokutnik veći od prethodno pronađenog najvećeg, tada se postavlja kao novi najveći pravokutnik.
 
 
-Nakon što su izračunata dva najveća pravokutnika prema podacima iz metoda \texttt{DetectEdgesCanny} i \texttt{DetectEdgesAdaptive}, potrebno je odlučiti koji je pravokutnik zapravo najviše sličan obrisu papira. Za to se koristi metoda \texttt{ChooseBestRectangle}:
+Nakon što su izračunata dva najveća pravokutnika prema podacima iz metoda \textbf{DetectEdgesCanny} i \textbf{DetectEdgesAdaptive}, potrebno je odlučiti koji je pravokutnik zapravo najviše sličan obrisu papira. Za to se koristi metoda \textbf{ChooseBestRectangle}:
 \pagebreak
 \begin{lstlisting}[caption={Metoda za odabir najboljeg pravokutnika}]
 private VectorOfPoint ChooseBestRectangle(VectorOfPoint rect1, VectorOfPoint rect2){
@@ -1270,7 +1276,7 @@ private VectorOfPoint ChooseBestRectangle(VectorOfPoint rect1, VectorOfPoint rec
 }
 \end{lstlisting}
 
-Radi se o metodi koja u slučaju da je detektiran samo jedan pravokutnik vraća taj pravokutnik, dok u slučaju da su pronađena dva pravokutnika analizira koji je bolji prema određenim parametrima. Parametri za provjeru su omjeri stranica pravokutnika i jednakonst paralelnih stranica pravokutnika. Za te provjere su zadužene pomoćne metode \texttt{GetAspectRatio} i \texttt{GetUniformity} koji nisu prikazane kroz ovaj rad. Na kraju se vraća pravokutnik koji najbolje zadovoljava sve spomenute parametre.
+Radi se o metodi koja u slučaju da je detektiran samo jedan pravokutnik vraća taj pravokutnik, dok u slučaju da su pronađena dva pravokutnika analizira koji je bolji prema određenim parametrima. Parametri za provjeru su omjeri stranica pravokutnika i jednakonst paralelnih stranica pravokutnika. Za te provjere su zadužene pomoćne metode \textbf{GetAspectRatio} i \textbf{GetUniformity} koji nisu prikazane kroz ovaj rad. Na kraju se vraća pravokutnik koji najbolje zadovoljava sve spomenute parametre.
 
 \pagebreak
 Pomoću tog pravokutnika zatim se ispravlja perspektiva slike koristeći metodu:
@@ -1298,7 +1304,7 @@ private Mat ApplyPerspectiveCorrection(Mat image, VectorOfPoint largestRectangle
 }
 \end{lstlisting}
 
-\texttt{ApplyPerspectiveCorrection} metoda koristi razne pomoćne metode, ali glavna logika odnosi se na izračun faktora skaliranja i izračun matrice transformacije te njezinu primjenu na originalnoj slici. Za izračun faktora skaliranja pronalaze se trenutna širina i visina slike pomoću metode \texttt{CalculateDistance}, a zatim se dijele s unaprijed definiranim vrijednostima širine i visine koje predstavljaju papir u A4 formatu. Nakon što je skaliranje gotovo, izračunavaju se destinacijske točke pomoću metode \texttt{GetDestinationPointsWithPadding}. Nakon što su točke izračunate, kreira se matrica transformacije koristeći metodu \texttt{CvInvoke.GetPerspectiveTransform}, te se zatim primjenjuje koristeći metodu \texttt{CvInvoke.WarpPerspective}. Na priloženoj fotografiji vidljiv je rezultat metoda za ispravak perspektive.
+\textbf{ApplyPerspectiveCorrection} metoda koristi razne pomoćne metode, ali glavna logika odnosi se na izračun faktora skaliranja i izračun matrice transformacije te njezinu primjenu na originalnoj slici. Za izračun faktora skaliranja pronalaze se trenutna širina i visina slike pomoću metode \textbf{CalculateDistance}, a zatim se dijele s unaprijed definiranim vrijednostima širine i visine koje predstavljaju papir u A4 formatu. Nakon što je skaliranje gotovo, izračunavaju se destinacijske točke pomoću metode \textbf{GetDestinationPointsWithPadding}. Nakon što su točke izračunate, kreira se matrica transformacije koristeći metodu \textbf{CvInvoke.GetPerspectiveTransform}, te se zatim primjenjuje koristeći metodu \textbf{CvInvoke.WarpPerspective}. Na priloženoj fotografiji vidljiv je rezultat metoda za ispravak perspektive.
 
 \begin{figure}[H]
 \centering
@@ -1308,7 +1314,7 @@ private Mat ApplyPerspectiveCorrection(Mat image, VectorOfPoint largestRectangle
 
 Jedna od zanimljivosti ovog pristupa je to što se jako jednostavno može podržati ispravak perspektive slike na kojoj se ne nalazi cijeli papir. U tom slučaju pokušat će se i dalje pronaći najveći pravokutnik željenih proporcija, što u praksi znači da će se jedan od unutarnjih okvira sa slike uzeti u obzir. Time samo rješenje postaje još fleksibilnije.
 
-Ispravak perspektive daje dobre rezultate, kao što je vidljivo na slici. Na slikama koje su također rotirane, rezultati su izrazito dobri jer ispravak perspektive ujedno ispravlja i rotaciju. No, u određenim slučajevima događa se da ispravak perspektive ne okrene papir pravilno, već je papir krivo orijentiran. Za takve situacije implementirana je sljedeća faza pretprocesiranja slike pomoću metode \texttt{CorrectRotation}:
+Ispravak perspektive daje dobre rezultate, kao što je vidljivo na slici. Na slikama koje su također rotirane, rezultati su izrazito dobri jer ispravak perspektive ujedno ispravlja i rotaciju. No, u određenim slučajevima događa se da ispravak perspektive ne okrene papir pravilno, već je papir krivo orijentiran. Za takve situacije implementirana je sljedeća faza pretprocesiranja slike pomoću metode \textbf{CorrectRotation}:
 
 
 \begin{lstlisting}[caption={Metoda za provjeru i ispravak orijentacije slike}]
@@ -1341,9 +1347,9 @@ private Mat RotateImage(Mat image, double angle){
 
 Ova metoda bila je jedna od prvih razvijenih metoda; prva iteracija obuhvaćala je izračun kuta papira i ispravak tog kuta. No, s vremenom je metoda za ispravak perspektive preuzela dio tih odgovornosti, tako da je ova metoda sada isključivo odgovorna za detekciju orijentacije papira i rotaciju za 180 stupnjeva u slučaju da je papir u krivoj orijentaciji.
 
-Kao što je već spomenuto, predložak matrice odgovora ne sadrži posebne oznake za kutove i orijentaciju papira. Zbog toga je bilo potrebno pronaći druge referentne strukture na predlošku. Odlučeno je koristiti okvir u kojem se nalaze polja za ime i ocjenu polaznika. Taj okvir nalazi se pri vrhu papira, stoga u slučaju da ga se detektira na dnu, znamo da je slika naopako okrenuta te ju se rotira za 180 stupnjeva pomoću metode \texttt{RotateImage}.
+Kao što je već spomenuto, predložak matrice odgovora ne sadrži posebne oznake za kutove i orijentaciju papira. Zbog toga je bilo potrebno pronaći druge referentne strukture na predlošku. Odlučeno je koristiti okvir u kojem se nalaze polja za ime i ocjenu polaznika. Taj okvir nalazi se pri vrhu papira, stoga u slučaju da ga se detektira na dnu, znamo da je slika naopako okrenuta te ju se rotira za 180 stupnjeva pomoću metode \textbf{RotateImage}.
 
-Ta je metoda bazirana na izračunu matrice rotacije koja se zatim primjenjuje na originalnu sliku. Matrica se izračunava pomoću metode \texttt{CvInvoke.GetRotationMatrix2D} i primjenjuje pomoću metode \texttt{CvInvoke.WarpAffine}.
+Ta je metoda bazirana na izračunu matrice rotacije koja se zatim primjenjuje na originalnu sliku. Matrica se izračunava pomoću metode \textbf{CvInvoke.GetRotationMatrix2D} i primjenjuje pomoću metode \textbf{CvInvoke.WarpAffine}.
 
 \begin{figure}[H]
 \centering
@@ -1351,9 +1357,9 @@ Ta je metoda bazirana na izračunu matrice rotacije koja se zatim primjenjuje na
 \caption{Prikaz ulazne i izlazne slike CorrectRotation metode (vlastita izrada)}
 \end{figure}
 
-Sa priložene slike vidljiv je rad \texttt{CorrectRotation} metode. S lijeve strane je ulazna slika s ispravljenom perspektivom, ali s krivom orijentacijom. S desne strane je rezultat metode koji prikazuje detektirani okvir za ime i ocjene te sliku nakon ispravka orijentacije.
+Sa priložene slike vidljiv je rad \textbf{CorrectRotation} metode. S lijeve strane je ulazna slika s ispravljenom perspektivom, ali s krivom orijentacijom. S desne strane je rezultat metode koji prikazuje detektirani okvir za ime i ocjene te sliku nakon ispravka orijentacije.
 
-Nakon provođenja svih dosad spomenutih operacija, rezultat je siva slika ispravne perspektive i orijentacije, sa smanjenom razinom buke. Prije nego što je moguće krenuti u analizu struktura radi pronalaska krugova, potrebno je ukloniti ostatak nepotrebnih informacija, poput nijansi sive boje. Upravo zbog toga proces izrade binarne slike provodi se pomoću metode \texttt{ApplyThresholding}:
+Nakon provođenja svih dosad spomenutih operacija, rezultat je siva slika ispravne perspektive i orijentacije, sa smanjenom razinom buke. Prije nego što je moguće krenuti u analizu struktura radi pronalaska krugova, potrebno je ukloniti ostatak nepotrebnih informacija, poput nijansi sive boje. Upravo zbog toga proces izrade binarne slike provodi se pomoću metode \textbf{ApplyThresholding}:
 
 \begin{lstlisting}[caption={Metoda za pretvorbu sive slike u binarnu sliku}]
 override public ImageData ApplyThresholding(ImageData inputImage){
@@ -1364,7 +1370,7 @@ override public ImageData ApplyThresholding(ImageData inputImage){
 }
 \end{lstlisting}
 
-Priložena metoda poprilično je jednostavna i bazirana na metodi \texttt{CvInvoke.AdaptiveThreshold}, koja omogućuje bolje rezultate u varirajućim uvjetima osvjetljenja u usporedbi s klasičnom metodom \texttt{CvInvoke.Threshold}. Ovaj dio rada konstantno se mijenjao i kalibrirao tijekom razvoja. Na početku se koristila metoda \texttt{CvInvoke.Threshold}, što se pokazalo nedovoljnim kada je testni skup podataka proširen slikama koje sadrže sjene i slično. U tom trenutku počela se koristiti adaptivna verzija te metode. Osim toga, testirani su različiti algoritmi te metode, a na kraju je odabran GaussianC algoritam zbog manje količine buke u usporedbi s ostalim ponuđenim algoritmima.
+Priložena metoda poprilično je jednostavna i bazirana na metodi \textbf{CvInvoke.AdaptiveThreshold}, koja omogućuje bolje rezultate u varirajućim uvjetima osvjetljenja u usporedbi s klasičnom metodom \textbf{CvInvoke.Threshold}. Ovaj dio rada konstantno se mijenjao i kalibrirao tijekom razvoja. Na početku se koristila metoda \textbf{CvInvoke.Threshold}, što se pokazalo nedovoljnim kada je testni skup podataka proširen slikama koje sadrže sjene i slično. U tom trenutku počela se koristiti adaptivna verzija te metode. Osim toga, testirani su različiti algoritmi te metode, a na kraju je odabran GaussianC algoritam zbog manje količine buke u usporedbi s ostalim ponuđenim algoritmima.
 
 \begin{figure}[H]
 \centering
@@ -1375,7 +1381,7 @@ Priložena metoda poprilično je jednostavna i bazirana na metodi \texttt{CvInvo
 \pagebreak
 Na lijevoj slici vidljivo je da je gornji dio slike jače osvijetljen naspram donjeg dijela slike, no na desnoj slici vidljivo je da je metoda uspjela izraditi ujednačenu binarnu sliku unatoč lošim uvjetima.
 
-Time završava faza pretprocesiranja slike, što znači da je slika spremna za detektiranje strukturnih elemenata i njihovu analizu. Za taj dio odgovorna je metoda \texttt{CircleDetection}. Radi se o metodi koja zajedno s metodom za ispravak perspektive čini najkompleksniji dio sustava. Iz tog razloga primjeri prikazuju samo najznačajnije dijelove koda.
+Time završava faza pretprocesiranja slike, što znači da je slika spremna za detektiranje strukturnih elemenata i njihovu analizu. Za taj dio odgovorna je metoda \textbf{CircleDetection}. Radi se o metodi koja zajedno s metodom za ispravak perspektive čini najkompleksniji dio sustava. Iz tog razloga primjeri prikazuju samo najznačajnije dijelove koda.
 
 \begin{lstlisting}[caption={Metoda za detektiranje odgovora na slici}]
 override public (ImageData, Dictionary<int, List<DetectedCircleBase>>) CircleDetection(ImageData input){
@@ -1398,12 +1404,12 @@ override public (ImageData, Dictionary<int, List<DetectedCircleBase>>) CircleDet
 }
 \end{lstlisting}
 
-Kroz kod može se vidjeti da je metoda \texttt{CircleDetection} odgovorna za:
+Kroz kod može se vidjeti da je metoda \textbf{CircleDetection} odgovorna za:
 \begin{enumerate}
-    \item Detekciju svih krugova pomoću metode \texttt{DetectAllCircles}
-    \item Grupiranje i sortiranje krugova po pitanjima pomoću metode \texttt{GroupAndSortCirclesByYPosition}
-    \item Uklanjanje neispravnih krugova i grupa krugova pomoću metode \texttt{FilterInvalidGroups}
-    \item Izračun praga za označenost pitanja pomoću klase \texttt{HistogramGenerator} i metode \texttt{CalculateFillPercentageThreshold}   
+    \item Detekciju svih krugova pomoću metode \textbf{DetectAllCircles}
+    \item Grupiranje i sortiranje krugova po pitanjima pomoću metode \textbf{GroupAndSortCirclesByYPosition}
+    \item Uklanjanje neispravnih krugova i grupa krugova pomoću metode \textbf{FilterInvalidGroups}
+    \item Izračun praga za označenost pitanja pomoću klase \textbf{HistogramGenerator} i metode \textbf{CalculateFillPercentageThreshold}   
 \end{enumerate}
 
 Osim navedenih odgovornosti, ova metoda odgovorna je i za vizualizaciju svih koraka koje obavlja, no taj dio koda nema prevelik značaj.
@@ -1432,7 +1438,7 @@ private List<DetectedCircleBase> DetectAllCircles(Mat grayMat, Mat outputImage){
 }
 \end{lstlisting}
 
-Detekcija krugova vrši se pronalaskom kontura pomoću metode \texttt{CvInvoke.FindContours}, a zatim pronalaskom kontura koje odgovaraju krugovima pomoću metode \texttt{CvInvoke.FitEllipse}. Osim same detekcije krugova, ova metoda obavlja i validaciju krugova te naknadno filtriranje. Validacije se odnose na provjeru broja točaka od kojih se kontura sastoji. Što više točaka kontura ima, to je vjerojatnije da je ta kontura relevantna. Ako je kontura relevantan krug, provjerava se je li taj krug unutar očekivanog raspona što se tiče radijusa. Ako jest, onda se dodaje u listu koja se zatim filtrira tako da se uklanjaju duplikati, to jest slični krugovi koji se preklapaju. Nakon toga lista krugova još se filtrira tako da se iz nje uklone svi krugovi koji se nalaze unutar drugih krugova.
+Detekcija krugova vrši se pronalaskom kontura pomoću metode \textbf{CvInvoke.FindContours}, a zatim pronalaskom kontura koje odgovaraju krugovima pomoću metode \textbf{CvInvoke.FitEllipse}. Osim same detekcije krugova, ova metoda obavlja i validaciju krugova te naknadno filtriranje. Validacije se odnose na provjeru broja točaka od kojih se kontura sastoji. Što više točaka kontura ima, to je vjerojatnije da je ta kontura relevantna. Ako je kontura relevantan krug, provjerava se je li taj krug unutar očekivanog raspona što se tiče radijusa. Ako jest, onda se dodaje u listu koja se zatim filtrira tako da se uklanjaju duplikati, to jest slični krugovi koji se preklapaju. Nakon toga lista krugova još se filtrira tako da se iz nje uklone svi krugovi koji se nalaze unutar drugih krugova.
 
 
 \pagebreak
@@ -1454,7 +1460,7 @@ private Dictionary<int, List<DetectedCircleBase>> FilterInvalidGroups(Dictionary
 }
 \end{lstlisting}
 
-Prije same validacije, krugovi se za svako pitanje sortiraju po x koordinati, što osigurava ispravan redoslijed odgovora. Zatim se dohvaćaju samo krugovi koji se ne nalaze unutar drugih krugova. Tim krugovima dodatno se validira jednakost radijusa i validnost grupe, to jest validnost razmaka između odgovora. Ovo je jedna od najvažnijih metoda, budući da uklanja nerelevantne i neispravno detektirane krugove. Rezultat ove metode je lista ispravnih krugova grupiranih po pitanjima. Zatim slijedi izračun praga ispunjenosti kruga pomoću metode \texttt{}:
+Prije same validacije, krugovi se za svako pitanje sortiraju po x koordinati, što osigurava ispravan redoslijed odgovora. Zatim se dohvaćaju samo krugovi koji se ne nalaze unutar drugih krugova. Tim krugovima dodatno se validira jednakost radijusa i validnost grupe, to jest validnost razmaka između odgovora. Ovo je jedna od najvažnijih metoda, budući da uklanja nerelevantne i neispravno detektirane krugove. Rezultat ove metode je lista ispravnih krugova grupiranih po pitanjima. Zatim slijedi izračun praga ispunjenosti kruga pomoću metode \textbf{}:
 
 
 
@@ -1471,7 +1477,7 @@ private double GetFillPercentage(Mat thresholdedImage, EmguCVCircle circle){
 
 Ova metoda izračunava postotak ispunjenosti tako da uspoređuje prosječnu vrijednost piksela unutar originalnog kruga s vrijednostima unutar binariziranog (crnog) kruga. Rezultat se vraća kao postotak ispunjenosti.
 \pagebreak
-No, da bi se moglo zaključiti je li krug ispunjen ili ne, potrebno je dobivenu vrijednost usporediti s pragom ispunjenosti koji je izračunat pomoću klase \texttt{HistogramGenerator} i metode \texttt{CalculateFillPercentageThreshold}:
+No, da bi se moglo zaključiti je li krug ispunjen ili ne, potrebno je dobivenu vrijednost usporediti s pragom ispunjenosti koji je izračunat pomoću klase \textbf{HistogramGenerator} i metode \textbf{CalculateFillPercentageThreshold}:
 
 \begin{lstlisting}[caption={Metoda za filtriranje neispravnih krugova i pitanja}]
 public static double CalculateFillPercentageTreshold(List<double> fillPercentages){
@@ -1499,7 +1505,7 @@ Zbog toga definiranje praga pomoću konstante više nije bilo adekvatno rješenj
 \pagebreak
 Sa priložene slike bilo je jasno da postoje dva jasno definirana i odvojena dijela grafa. Prvi dio podataka prikazuje postotak ispunjenost za prazne krugove, dok drugi dio prikazuje postotak ispunjenosti za ispunjene krugove. Važno je napomenuti i da prazni krugovi imaju određeni postotak ispunjenosti zbog oznaka odgovora koje mogu biti od slova A do H.
 
-Nakon analize histograma bilo je jasno da je prag ispunjenosti kraj prvog seta podataka na grafu. Točno to se vidi u metodi \texttt{CalculateFillPercentageThreshold}. Pronalazi se početak prvog seta podataka, a zatim prvo točka koja nakon sebe ima barem dva prazna postotna boda, što znači da je zapravo to ispravna granica. Ovo rješenje automatski rješava jedan od tradicionalnih problema OMR sustava, gdje korisnici ne prate upute za ispunjavanje odgovora.
+Nakon analize histograma bilo je jasno da je prag ispunjenosti kraj prvog seta podataka na grafu. Točno to se vidi u metodi \textbf{CalculateFillPercentageThreshold}. Pronalazi se početak prvog seta podataka, a zatim prvo točka koja nakon sebe ima barem dva prazna postotna boda, što znači da je zapravo to ispravna granica. Ovo rješenje automatski rješava jedan od tradicionalnih problema OMR sustava, gdje korisnici ne prate upute za ispunjavanje odgovora.
 
 Prikazane metode zajedno omogućuju detekciju odgovora i pitanja prikazanu na priloženoj slici.
 
@@ -1509,7 +1515,7 @@ Prikazane metode zajedno omogućuju detekciju odgovora i pitanja prikazanu na pr
 \caption{Prikaz ulazne i izlazne slike CircleDetection metode (vlastita izrada)}
 \end{figure}
 
-Lijeva slika prikazuje ulazne podatke metode \texttt{CircleDetection}, dok desna slika prikazuje dio izlaznih podataka te metode. Na desnoj slici vidljivi su krugovi u raznim bojama, gdje svaka boja označava grupu pitanja. Važno je napomenuti da ta slika sadrži i nevažeće krugove koji su bili uklonjeni. Ta slika sadrži sve te podatke radi lakšeg pronalaska grešaka. Do sada su svim metodama za obradu slike glavni rezultati također bile slike, no ovdje je glavni rezultat lista validnih odgovora grupiranih i sortiranih po pitanjima.
+Lijeva slika prikazuje ulazne podatke metode \textbf{CircleDetection}, dok desna slika prikazuje dio izlaznih podataka te metode. Na desnoj slici vidljivi su krugovi u raznim bojama, gdje svaka boja označava grupu pitanja. Važno je napomenuti da ta slika sadrži i nevažeće krugove koji su bili uklonjeni. Ta slika sadrži sve te podatke radi lakšeg pronalaska grešaka. Do sada su svim metodama za obradu slike glavni rezultati također bile slike, no ovdje je glavni rezultat lista validnih odgovora grupiranih i sortiranih po pitanjima.
 
 Ostale metode obrade slike nisu prikazane kroz kod jer ne sadrže zanimljivu ni značajnu logiku. Većinom se radi o metodama za vizualizaciju rezultata ocjenjivanja i klasama za ocjenjivanje koje su bazirane na usporedbi lista odgovora.
 
@@ -1656,11 +1662,56 @@ Važno je istaknuti da su priložene slike generirane u načinu rada za otklanja
 Ovo su glavni scenariji prema kojima se testiralo rješenje tijekom razvoja. Upute za sve scenarije su iste i uključuju pokretanje sustava nad cijelim skupom testnih podataka te verifikaciju ishoda u sučelju ili analizu datoteka generiranih u načinu rada za otklanjanje grešaka.
 
 \chapter{Diskusija}
+
+Kroz ovaj rad često su se spominjale prednosti, nedostaci i različite metrike kojima se opisuju rješenja za ocjenjivanje pismenih ispita. Cilj ovog poglavlja je staviti u kontekst rezultate ovog rada i izrađenog artefakta, istaknuti njegova ograničenja te ukazati na područja koja bi se dodatnim razvojem i istraživanjem mogla dodatno unaprijediti.
 \section{Analiza rezultata}
+
+Da bi se sami rezultati mogli pravilno analizirati, važno je ponovno istaknuti ciljeve ovog rada. Glavni cilj bio je izraditi biblioteku otvorenog koda za detekciju odgovora na pismenim ispitima. Budući da je detekcija odgovora na pismenim ispitima vrlo širok pojam, ovaj rad fokusirao se specifično na detekciju odgovora na matricama odgovora koje mogu sadržavati pitanja s jednim ili više točnih odgovora.
+
+Glavna metrika koju je ovaj rad nastojao postići bila je što viša razina preciznosti. Kao što je već ranije spomenuto, sustav je testiran na raznovrsnom skupu podataka koji je uključivao slike kako iz idealnih uvjeta, tako i one koje predstavljaju ekstremne slučajeve.
+
+
+Na kombiniranom skupu podataka razvijeno rješenje postiglo je preciznost od 90\%. Ta je preciznost izračunata na temelju skupa od 30 ispita, od kojih je 27 uspješno ocijenjeno, dok 3 ispita nisu. Važno je napomenuti da se u sva tri slučaja radilo o slikama snimljenima u ekstremnim uvjetima koji nadilaze očekivane radne uvjete sustava. Međutim, sustav je u tim slučajevima ispravno detektirao problem te je slike označio oznakom NOT\_GRADED, što je znatno prihvatljivije od mogućnosti pogrešnog ocjenjivanja. Dodatno, svi ispiti snimljeni u uobičajenim radnim uvjetima uspješno su i točno ocijenjeni.
+
+
+Osim same preciznosti, uspješnost rada može se analizirati i kroz funkcionalne i nefunkcionalne zahtjeve. Svi funkcionalni zahtjevi uspješno su implementirani, a isto vrijedi i za nefunkcionalne. Jedna od važnijih značajki ovog rješenja je njegova učinkovitost, sustav ne zahtijeva značajne računalne resurse, a vrijeme obrade slike izrazito je kratko.
+
+Nefunkcionalni zahtjev NFZ-04 specificirao je da sustav mora biti sposoban obraditi i ocijeniti sliku unutar 500 ms, pod uvjetom da slika nije veća od 2K rezolucije i da sustav nije u načinu rada za otklanjanje grešaka. Sustav je ne samo zadovoljio taj zahtjev, već ga je i nadmašio. Prema aritmetičkoj sredini vremena obrade u više mjerenja provedenih nad cijelim skupom testnih podataka, prosječno vrijeme obrade iznosilo je 253 milisekunde.
+
 \section{Limitacije rješenja}
+Nijedan sustav nije bez ograničenja, pa tako i ovo rješenje ima svoje specifične izazove. Kroz rad su istaknuti tradicionalni problemi OMR sustava, poput kvalitete ulazne slike i ljudskih faktora pri ispunjavanju ispita. U ovom radu tim je izazovima pristupljeno na kreativan i netradicionalan način, osobito u kontekstu detekcije odgovora.
+
+Tijekom testiranja, najveća ograničenja pokazala su se u fazi pretprocesiranja slike. To je bilo očito u tri testna slučaja u kojima sustav nije uspješno ocijenio ispit. Zajednička karakteristika tih primjera bila je neuspješna korekcija perspektive. Zbog toga su svi kasniji koraci, koji očekuju ispravno poravnatu sliku, ostvarili slabije rezultate. Analizom je utvrđeno da se ti problemi javljaju kada je slika snimljena s neuobičajeno velike udaljenosti te u prisutnosti brojnih vizualnih smetnji, što može otežati pravilno prepoznavanje papira i ispravljanje perspektive.
+
+Osim izazova s korekcijom perspektive, moguće je da sustav u određenim slučajevima ne prepozna označeni odgovor ako je krug vrlo slabo ispunjen. U takvim situacijama, postotak ispunjenosti može biti sličan onome kod praznih krugova, što otežava ispravnu klasifikaciju.
+
 \section{Poboljšanja rješenja}
 
+Kroz razvoj rješenja identificirana su i potencijalna poboljšanja koja bi mogla značajno unaprijediti preciznost i pouzdanost sustava. Jedno od prvih područja koje bi se moglo unaprijediti odnosi se na logiku za ispravak perspektive. To poboljšanje uključivalo bi kvalitetniju detekciju papira na slici. Tijekom izrade ovog rada korištena je isključivo EmguCV biblioteka za obradu slike, no uključivanje dodatnih specijaliziranih biblioteka za detekciju rubova papira moglo bi uvelike povećati točnost i robusnost sustava.
+
+Drugo ključno područje za nadogradnju odnosi se na logiku klasifikacije ispunjenosti krugova. Trenutačno se koristi pristup temeljen na pragu ispunjenosti koji dijeli odgovore na označene i neoznačene. Iako je ovaj pristup jednostavan za implementaciju, pokazao je određene slabosti. Jedno moguće rješenje bilo bi korištenje klasifikatora temeljenog na konvolucijskoj neuronskoj mreži. Na taj način sustav bi mogao samostalno prepoznavati lokacije odgovora na papiru te preciznije klasificirati je li krug označen ili nije, na temelju naučenih značajki.
+
+Navedena poboljšanja odnose se na sustav za detekciju odgovora, no dodatni iskoraci mogući su i u dijelu sustava za ocjenjivanje. Sustav bi se mogao proširiti podrškom za različita pravila ocjenjivanja, poput parcijalnog bodovanja, negativnih bodova, različitih bodovnih vrijednosti po pitanju i slično.
+
+Bilo bi također zanimljivo istražiti načine kako sustav učiniti još fleksibilnijim u pogledu dizajna predloška matrice odgovora. Iako je trenutna fleksibilnost sustava već na visokoj razini zbog neovisnosti o veličini, poziciji te broju pitanja i odgovora, daljnji razvoj u tom smjeru mogao bi dodatno povećati upotrebljivost i primjenjivost sustava u različitim kontekstima.
+
 \chapter{Zaključak}
+
+Cilj ovog rada bila je izrada komponente otvorenog koda za detekciju odgovora na pismenim ispitima. Da bi se taj cilj ostvario, bilo je potrebno razumjeti koji problem ovaj sustav pokušava riješiti te koje su sve metode, tehnike i alati potrebni za njegovo rješavanje. Problem koji se rješava zapravo je ubrzavanje procesa ocjenjivanja pismenih ispita koji sadrže pitanja s ponuđenim odgovorima. Ocjenjivanje takvih ispita ne zahtijeva kreativno razmišljanje, već se radi o usporedbi označenih odgovora polaznikovog ispita s kontrolnim ispitom. Takvi zadatci mogu se okarakterizirati kao repetitivni i dosadni, no još je važnije da oduzimaju značajan dio vremena ocjenjivačima, koji bi svoje kompetencije mogli koristiti na puno značajnije načine.
+
+Radi se o vrlo starom problemu, pogotovo kada se ispiti provode za veliki broj ljudi. Zbog toga je već krajem 1930-ih nastao prvi OMR sustav s ciljem automatizacije procesa ocjenjivanja. U početku su takvi sustavi ovisili o posebnom i skupocjenom sklopovlju, no s ubrzanim razvojem tehnologije te su se limitacije postupno uklonile. Danas se takvi sustavi mogu koristiti uz pomoć osobnog računala i uređaja za pribavljanje slike poput skenera ili pametnog telefona.
+
+Takvi sustavi tradicionalno koriste računalni vid, odnosno obradu digitalne slike, no danas se pojavljuju i druge tehnologije poput umjetne inteligencije koje mogu unaprijediti tradicionalni pristup.
+
+Ovaj rad fokusirao se na tradicionalan pristup OMR tehnologiji koristeći obradu slike. Važno je napomenuti da se radi o zreloj grani računalnog vida i da su preciznost i pouzdanost takvih sustava dokazane kroz brojna istraživanja i praktičnu primjenu. No, i dalje se to područje suočava s problemima vezanim uz kvalitetu pribavljene slike, neispravno ispunjavanje ispita i ovisnost sustava o predlošcima. Ti se problemi u OMR sustavima najčešće pokušavaju mitigirati kroz fazu pretprocesiranja – primjerice, ispravkom perspektive, smanjivanjem buke i sličnim tehnikama.
+
+Jedna od početnih ideja za dizajn GradeVision sustava bila je izrada što jednostavnijeg sustava te brzo prototipiranje vođeno rezultatima kontinuiranog testiranja. Testiranje i analiza rezultata pokazali su se kao ključni dijelovi rada, jer su pružali povratne informacije o dijelovima sustava koji zahtijevaju poboljšanja. Taj je pristup omogućio da se sustav od samog početka dizajnira za rad sa slikama snimljenima u ekstremnim uvjetima.
+
+Sam pristup rješavanju problema u određenim se aspektima razlikovao od postojećih sustava. Dobar primjer toga je odluka da predlošci neće sadržavati posebne oznake za rubove papira. Takve su odluke sustav učinile fleksibilnijim u smislu podrške različitim predlošcima, ali i osjetljivijim kada se slike snimaju u izrazito nepovoljnim uvjetima.
+
+Važno je napomenuti da je sustav izrazito točan kada se slike pribavljaju u razumnim uvjetima, iako podržava i izazovnije scenarije. No, postoje područja koja bi se mogla značajno unaprijediti daljnjim razvojem i primjenom tehnologija poput neuronskih mreža.
+
+Za kraj mogu reći da sam zadovoljan izrađenim rješenjem te da sam kroz ovaj rad naučio mnogo o računalnom vidu i općenito o računalnoj obradi slike. Smatram da su određeni problemi riješeni na kreativan i nekonvencionalan način, što je sustav poboljšalo u nekim segmentima. No, također je važno poznavati postojeća rješenja kako bi se iz njihovih mana mogao pronaći prostor za daljnji napredak.
 
 \printbibliography[title=Popis literature]
 \addcontentsline{toc}{chapter}{Popis literature}

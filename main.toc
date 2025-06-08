@@ -60,8 +60,8 @@
 \contentsline {chapter}{\numberline {7}Diskusija}{69}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Analiza rezultata}{69}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Limitacije rješenja}{69}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Poboljšanja rješenja}{69}{section.7.3}%
-\contentsline {chapter}{\numberline {8}Zaključak}{70}{chapter.8}%
-\contentsline {chapter}{Popis literature}{73}{chapter*.43}%
-\contentsline {chapter}{Popis slika}{75}{chapter*.44}%
-\contentsline {chapter}{Popis popis tablica}{76}{chapter*.45}%
+\contentsline {section}{\numberline {7.3}Poboljšanja rješenja}{70}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Zaključak}{71}{chapter.8}%
+\contentsline {chapter}{Popis literature}{75}{chapter*.43}%
+\contentsline {chapter}{Popis slika}{77}{chapter*.44}%
+\contentsline {chapter}{Popis popis tablica}{78}{chapter*.45}%
